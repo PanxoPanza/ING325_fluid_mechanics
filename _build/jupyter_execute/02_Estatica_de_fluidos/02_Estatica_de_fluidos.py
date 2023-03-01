@@ -13,7 +13,7 @@
 
 # Analicemos el problema de uno y dos cuerpos sólidos en reposo, ambos con densidad $\rho$.
 
-# <img src="./figures/stationary_solids.png" width="300px" align= center>
+# <img src="./figures/stationary_solids.png" width="350px" align= center>
 
 # Como ilustra el diagrama de cuerpo libre, el cuerpo sólido de volumen $V$ está sugeto a fuerzas iguales y contrarias, equivalentes al peso del mismo, $\rho V g$.
 
@@ -21,7 +21,7 @@
 
 # La situación es similar para un líquido contenido en un estanque. Es decir, un elemento diferencial a una distancia $h$ de la superficie libre está sujeto a una fuerza equivalente a la columna de fluido sobre él.
 
-# <img src="./figures/hydrostatic_presure.png" width="300px" align= center>
+# <img src="./figures/hydrostatic_presure.png" width="350px" align= center>
 
 # 
 # 
@@ -31,7 +31,7 @@
 
 # Debido a que el líquido es un elemento deformable e incompresible, la presión estática actúa sobre todas las caras del elemento diferencial.
 
-# <img src="./figures/pressure_point.png" width="200px" align= center>
+# <img src="./figures/pressure_point.png" width="300px" align= center>
 
 # En general, la presión en un punto es igual en todas las direcciones. Esto se conoce como el ***principio de Pascal***
 
@@ -61,7 +61,7 @@
 
 # De igual forma, los gases atmosféricos, atraídos por la fuerza de gravedad, generan una presión sobre todos los cuerpos en la tierra.
 
-# <img src="./figures/atmospheric_presure.png" width="350px" align= center>
+# <img src="./figures/atmospheric_presure.png" width="400px" align= center>
 
 # **La presión atmosférica**, así, es el resultado de la columna de gases atmosférico sobre una superficie.
 
@@ -73,7 +73,7 @@
 
 # La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en logitudes de escala de $1000~\mathrm{m}$, debido a que la densidad de los gases atmosféricos es mucho menor que los líquidos.
 
-# <img src="./figures/atmospheric_pressure_altitude.png" width="350px" align= center>
+# <img src="./figures/atmospheric_pressure_altitude.png" width="400px" align= center>
 
 # En la figura, $P_{\mathrm{O}_2}$, es la *presión parcial de oxígeno* (no es relevante para el curso).
 
@@ -83,13 +83,13 @@
 
 # En resumen, **la presión hidroestática en un punto depende de la columna de fluido sobre él y, por lo tanto, cambia sólamente con la profundidad**.
 # 
-# <img src="./figures/equal_hydrostatic_presure.png" width="800px" align= center>
+# <img src="./figures/equal_hydrostatic_presure.png" width="850px" align= center>
 
 # > Notar que **la presión en dos fluidos distintos a la misma profundidad no es la misma**, debido a la diferencia de densidades.
 
 # A partir del principio de Pascal, podemos explicar el funcionamiento de una gata hidráulica
 
-# <img src="./figures/gata_hidraulica.png" width="300px" align= center>
+# <img src="./figures/gata_hidraulica.png" width="350px" align= center>
 
 # En el ejemplo, $A_1 < A_2$.
 
@@ -120,7 +120,7 @@
 # \end{equation}
 # 
 # El instrumento para medir $P_\mathrm{man}$ es el **manómetro**
-# <img src="./figures/manometer.png" width="700px" align= center>
+# <img src="./figures/manometer.png" width="850px" align= center>
 
 # Llamamos ***presión vacuométrica o de vacío ($P_\mathrm{vac}$), a la diferencia entre la presión atmosférica y la absoluta***,
 # 
@@ -129,7 +129,7 @@
 # \end{equation}
 
 # El instrumento de medida se llama **vacuómetro**.
-# <img src="./figures/vacuometer.jpg" width="300px" align= center>
+# <img src="./figures/vacuometer.jpg" width="350px" align= center>
 
 # Por lo general, la presión de vacío se indica con un valor negativo, para mejor interpretación, es decir $P_\mathrm{vac} = P_\mathrm{abs} - P_\mathrm{atm}$.
 
@@ -137,12 +137,12 @@
 # 
 # Comúnmente, se mide en *milimetros de Mercurio*, $\mathrm{mmHg}$, o *hectapascales*, $\mathrm{hPa}$. El instrumento de medida es el **barómetro**.
 
-# <img src="./figures/barometer.png" width="700px" align= center>
+# <img src="./figures/barometer.png" width="750px" align= center>
 
 # La conversión de unidades es $760~\mathrm{mmHg} = 1013.2~\mathrm{hPa} = 1~\mathrm{atm}$
 
 # La siguiente figura ilustra todas las presiones
-# <img src="./figures/all_pressures.png" width="700px" align= center>
+# <img src="./figures/all_pressures.png" width="750px" align= center>
 
 # ## Fuerza hidrostática sobre superficies
 
@@ -150,11 +150,11 @@
 # 
 # El principio de Pascal nos permite determinar la fuerza resultante sobre superficies planas. En el caso de **superficies rectangulares**, *la distribución de presiones forma un trapecio rectángulo de sección cuadrada*. **Las fórmulas de fuerza resultante ($F_R$) y línea de acción ($y_p$),** así, corresponden al **área y centroide del trapecio, respectivamente**.
 # 
-# <img src="./figures/force_rectangular_plate.png" width="900px" align= center>
+# <img src="./figures/force_rectangular_plate.png" width="950px" align= center>
 
 # En el caso de superficies de geometría irregular, las solución es más compleja.
 # 
-# <img src="./figures/force_irregular_plate.png" width="750px" align= center>
+# <img src="./figures/force_irregular_plate.png" width="800px" align= center>
 
 # Para una superficie de área $A$, es posible demostrar que la fuerza resultante es:
 # 
@@ -164,7 +164,7 @@
 # 
 # donde $h_C = y_C\sin\theta$ es la **distancia vertical del centroide de la superfice ($y_C$) al nivel libre del líquido**.
 
-# <img src="./figures/yforce_irregular_plate.png" width="370px" align= center>
+# <img src="./figures/yforce_irregular_plate.png" width="400px" align= center>
 
 # La línea de acción ($y_p$), está dada por la relación:
 # 
@@ -180,13 +180,13 @@
 # 
 # En el caso de superficies curvas, la fuerza resultante se puede obtener mediante un diagrama de cuerpo libre sobre un volumen de fluido, convenientemente seleccionado. 
 # 
-# <img src="./figures/Force_curved_surface_theory.png" width="800px" align= center>
+# <img src="./figures/Force_curved_surface_theory.png" width="900px" align= center>
 
 # Según el diagrama, tenemos: $F_H = F_x$, y $F_V = F_y + W$, donde $W$ es el peso del bloque de fluido.
 
 # Podemos aplicar la misma técnica para una superficie curva en la parte superior.
 
-# <img src="./figures/Force_curved_surface_upwards.png" width="300px" align= center>
+# <img src="./figures/Force_curved_surface_upwards.png" width="400px" align= center>
 
 # En este ejemplo,
 # \begin{align*}
@@ -196,7 +196,7 @@
 
 # **Cuando la superficie es un arco circular, la línea de acción de la fuerza resultante coincide con el centro del arco**
 
-# <img src="./figures/Force_curved_surface_excercise.png" width="300px" align= center>
+# <img src="./figures/Force_curved_surface_excercise.png" width="350px" align= center>
 
 # Esto se debe a que la presión en cada punto de la superficie es normal a su área y, por lo tanto, su línea de acción pasa por el centro del arco circular.
 
@@ -204,7 +204,7 @@
 # 
 # Analicemos la fuerza resultante que actúa sobre una placa horizontal sumergida en un fluido de densidad $\rho$.
 
-# <img src="./figures/Buoyancy_derivation.png" width="300px" align= center>
+# <img src="./figures/Buoyancy_derivation.png" width="400px" align= center>
 
 # La fuerza resultante en los bordes es 0 debido al equilibro de fuerzas.
 
@@ -221,11 +221,11 @@
 
 # El resultado es similar en cuerpos de forma arbitraria. Concluimos que ***la fuerza de flotación que actúa sobre un cuerpo sumergido, es igual al peso del volumen de líquido desplazado por el cuerpo***
 
-# <img src="./figures/Buoyancy_principle.png" width="350px" align= center>
+# <img src="./figures/Buoyancy_principle.png" width="400px" align= center>
 
 # La posición de un cuerpo, así, depende de la relación entre la densidad del cuerpo $\rho$ y la densidad del fluido $\rho_f$
 # 
-# <img src="./figures/Buoyancy_example.png" width="350px" align= center>
+# <img src="./figures/Buoyancy_example.png" width="400px" align= center>
 
 # ## Referencias
 # **Çengel Y. A. y Cimbala M. J. *Mecánica de Fluidos: Fundamentos y Aplicaciones*, 4ta Ed., McGraw Hill, 2018**
