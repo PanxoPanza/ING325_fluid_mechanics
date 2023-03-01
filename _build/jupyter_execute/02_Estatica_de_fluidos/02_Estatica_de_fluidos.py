@@ -225,7 +225,7 @@
 
 # La posición de un cuerpo, así, depende de la relación entre la densidad del cuerpo $\rho$ y la densidad del fluido $\rho_f$
 # 
-# <img src="./figures/Buoyancy_example.png" width="400px" align= center>
+# <img src="./figures/Buoyancy_example.png" width="350px" align= center>
 
 # ## Referencias
 # **Çengel Y. A. y Cimbala M. J. *Mecánica de Fluidos: Fundamentos y Aplicaciones*, 4ta Ed., McGraw Hill, 2018**
