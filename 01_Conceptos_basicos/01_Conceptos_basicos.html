@@ -1,48 +1,56 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Introducción a la mecánica de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,56 +60,238 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_Conceptos_basicos/01_Conceptos_basicos';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Estática de fluidos" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" />
     <link rel="prev" title="Bienvenidos al curso" href="../intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+  
 
-    <div class="container-xl">
-      <div class="row">
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Introducción a la mecánica de fluidos
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">
+                        Estática de fluidos
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
       
       
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
       
-      <h1 class="site-logo" id="site-title">ING325 - Mecánica de Fluidos</h1>
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
       
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Introducción a la mecánica de fluidos
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">
+                        Estática de fluidos
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -110,310 +300,196 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Parte 1. Fundamentos de estática y dinámica de fluidos
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de estática y dinámica de fluidos</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   1. Introducción a la mecánica de fluidos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">
-   2. Estática de fluidos
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introducción a la mecánica de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">2. Estática de fluidos</a></li>
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
+</nav>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  </div>
+  
 
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
 
-          
+  
+  <div id="rtd-footer-container"></div>
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+      </div>
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/01_Conceptos_basicos/01_Conceptos_basicos.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
+  <ul class="dropdown-menu">
+  </ul>
 </div>
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
+  class="btn btn-sm"
   data-toggle="tooltip"
 data-placement="bottom"
 title="Fullscreen mode"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/01_Conceptos_basicos/01_Conceptos_basicos.ipynb"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/01_Conceptos_basicos/01_Conceptos_basicos.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Download source file"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</a>
       
       <li>
-        
 <button onclick="printPdf(this)"
-  class="headerbtn"
+  class="btn btn-sm dropdown-item"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aspectos-generales">
-   1.1. Aspectos generales
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definicion-de-un-fluido">
-     1.1.1. Definición de un fluido
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clasificacion-de-flujos">
-     1.1.2. Clasificación de flujos
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mecanica-de-fluidos-en-la-ingenieria">
-     1.1.3. Mécanica de fluidos en la ingeniería
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#propiedades-de-los-fluidos">
-   1.2. Propiedades de los fluidos
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densidad-y-variables-asociadas">
-     1.2.1. Densidad y variables asociadas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#viscosidad">
-     1.2.2. Viscosidad
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   1.3. Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introducción a la mecánica de fluidos</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aspectos-generales">
-   1.1. Aspectos generales
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#definicion-de-un-fluido">
-     1.1.1. Definición de un fluido
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clasificacion-de-flujos">
-     1.1.2. Clasificación de flujos
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mecanica-de-fluidos-en-la-ingenieria">
-     1.1.3. Mécanica de fluidos en la ingeniería
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#propiedades-de-los-fluidos">
-   1.2. Propiedades de los fluidos
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#densidad-y-variables-asociadas">
-     1.2.1. Densidad y variables asociadas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#viscosidad">
-     1.2.2. Viscosidad
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   1.3. Referencias
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introducción a la mecánica de fluidos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aspectos-generales">
+   1.1. Aspectos generales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicion-de-un-fluido">
+     1.1.1. Definición de un fluido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clasificacion-de-flujos">
+     1.1.2. Clasificación de flujos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mecanica-de-fluidos-en-la-ingenieria">
+     1.1.3. Mécanica de fluidos en la ingeniería
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#propiedades-de-los-fluidos">
+   1.2. Propiedades de los fluidos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densidad-y-variables-asociadas">
+     1.2.1. Densidad y variables asociadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viscosidad">
+     1.2.2. Viscosidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   1.3. Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
   <p><font size="6">ING325 - Mecánica de Fluidos</font></p>
 <section class="tex2jax_ignore mathjax_ignore" id="introduccion-a-la-mecanica-de-fluidos">
-<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Permalink to this heading">#</a></h1>
 <p><br><br><br><br>
 Profesor: Francisco Ramírez Cuevas<br>
 Fecha: 2 de Marzo 2023</p>
 <section id="aspectos-generales">
-<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permalink to this heading">#</a></h2>
 <section id="definicion-de-un-fluido">
-<h3><span class="section-number">1.1.1. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Sustancia en fase líquida o gaseosa</p></li>
 <li><p>En comparación con un sólido, los enlaces entre moléculas son débiles y no elásticos.</p></li>
@@ -431,7 +507,7 @@ Fecha: 2 de Marzo 2023</p>
 </ul>
 </section>
 <section id="clasificacion-de-flujos">
-<h3><span class="section-number">1.1.2. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.1.2. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Permalink to this heading">#</a></h3>
 <p><em><strong>Flujo externo/interno.</strong></em>
 Se define dependiendo si el fluido fluye por un canal confinado (interno), o sobre alrededor de una superficie (externo).</p>
 <a class="reference internal image-reference" href="../_images/external_vs_internal_flow.png"><img alt="../_images/external_vs_internal_flow.png" class="align-center" src="../_images/external_vs_internal_flow.png" style="width: 700px;" /></a>
@@ -458,15 +534,15 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <p>Si el flujo es estacionario las propiedades del fluido pueden cambiar en el espacio, pero en un punto fijo permanecen constantes.</p>
 </section>
 <section id="mecanica-de-fluidos-en-la-ingenieria">
-<h3><span class="section-number">1.1.3. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.1.3. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Permalink to this heading">#</a></h3>
 <p>Existen innumerables aplicaciones donde la mecánica de fluidos juega un rol central, tales como conversión de energía, procesos industriales (como minería), medio ambiente, aerodinámica, etc.</p>
 <a class="reference internal image-reference" href="../_images/aplicaciones.png"><img alt="../_images/aplicaciones.png" class="align-center" src="../_images/aplicaciones.png" style="width: 800px;" /></a>
 </section>
 </section>
 <section id="propiedades-de-los-fluidos">
-<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Permalink to this heading">#</a></h2>
 <section id="densidad-y-variables-asociadas">
-<h3><span class="section-number">1.2.1. </span>Densidad y variables asociadas<a class="headerlink" href="#densidad-y-variables-asociadas" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Densidad y variables asociadas<a class="headerlink" href="#densidad-y-variables-asociadas" title="Permalink to this heading">#</a></h3>
 <p><strong>Densidad (<span class="math notranslate nohighlight">\(\rho\)</span>).</strong> Se define como <em>la masa por unidad de volúmen</em>.</p>
 <p>Comúnmente se mide en <span class="math notranslate nohighlight">\(\mathrm{kg/m^3}\)</span> o <span class="math notranslate nohighlight">\(\mathrm{g/cm^3}\)</span>.</p>
 <p>El recíproco de la densidad es el <strong>volumen específico</strong> <span class="math notranslate nohighlight">\(v = 1/\rho\)</span>.</p>
@@ -479,20 +555,20 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 </ul>
 <p><strong>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).</strong> Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26460f7f-a986-4663-99d5-76f6ce8a4ab7">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-26460f7f-a986-4663-99d5-76f6ce8a4ab7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4af8d20b-8c2f-4b6a-8f40-e44a249666d0">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-4af8d20b-8c2f-4b6a-8f40-e44a249666d0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 300px;" /></a>
 <p><strong>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>).</strong> Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c420ab1-d97b-446d-8ca5-4bca64c8e97d">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-7c420ab1-d97b-446d-8ca5-4bca64c8e97d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1886c6a0-8f70-48bb-b48d-e6ffdebe6999">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-1886c6a0-8f70-48bb-b48d-e6ffdebe6999" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g\quad\quad\frac{\mathrm{N}}{m^3}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
 </section>
 <section id="viscosidad">
-<h3><span class="section-number">1.2.2. </span>Viscosidad<a class="headerlink" href="#viscosidad" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>Viscosidad<a class="headerlink" href="#viscosidad" title="Permalink to this heading">#</a></h3>
 <p>Corresponde a la resistencia de un fluido al movimiento o, en otras palabras, a la “fluidez”. <strong>Esta propiedad establece una relación entre los esfuerzos cortantes (<span class="math notranslate nohighlight">\(\tau\)</span>) y la taza de deformación de un fluido.</strong></p>
 <p>Recordemos que, a diferencia de un sólido, un fluido se deforma constantemente frente a un esfuerzo cortante. Así, <strong>en el caso de fluidos es importante considerar <em>la taza de cambio de la deformación en el tiempo</em></strong>, y no la deformación instantanea (como en el caso de sólidos).</p>
 <p>Un ejemplo simple es el que se ilustra en la figura. En este caso, el cuerpo (sólido o líquido) entre dos placas planas es sometido a una fuerza cortante debido al movimiento relativo entre ellas.
@@ -501,8 +577,8 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <p>Matemáticamente, <strong>la taza de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" /></a>
 <p>En algunos fluidos (como el agua, aire y aceites), la taza de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e1096318-221d-467e-a547-13b27fbcf459">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-e1096318-221d-467e-a547-13b27fbcf459" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0fba3e75-adb1-4ae5-83f4-239e2d728faf">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-0fba3e75-adb1-4ae5-83f4-239e2d728faf" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\frac{\mathrm{N}}{\mathrm{m}^2}
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>
@@ -521,15 +597,15 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
-<iframe
-    width="700"
-    height="400"
-    src="https://www.youtube.com/embed/RIUEZ3AhrVE"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
+        <iframe
+            width="700"
+            height="400"
+            src="https://www.youtube.com/embed/RIUEZ3AhrVE"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 <p>Con frecuencia, en algunas ecuaciones aparece la razón entre la viscocidad dinámica y a densidad. Esta variables, denominada <strong>viscocidad cinemática  (<span class="math notranslate nohighlight">\(\nu = \mu/\rho\)</span>),</strong> representa la capacidad de fluidez frente a la fuerza de gravedad.</p>
 <a class="reference internal image-reference" href="../_images/Viscosities.gif"><img alt="../_images/Viscosities.gif" class="align-center" src="../_images/Viscosities.gif" style="width: 400px;" /></a>
@@ -547,7 +623,7 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">1.3. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.3. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 1: Introducción y conceptos básicos</p></li>
@@ -572,7 +648,7 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./01_Conceptos_basicos"
         },
         predefinedOutput: true
@@ -580,50 +656,144 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bienvenidos al curso</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Estática de fluidos</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+  <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Bienvenidos al curso</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title"><span class="section-number">2. </span>Estática de fluidos</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
   
-    By Francisco V. Ramirez-Cuevas<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aspectos-generales">
+   1.1. Aspectos generales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definicion-de-un-fluido">
+     1.1.1. Definición de un fluido
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clasificacion-de-flujos">
+     1.1.2. Clasificación de flujos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mecanica-de-fluidos-en-la-ingenieria">
+     1.1.3. Mécanica de fluidos en la ingeniería
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#propiedades-de-los-fluidos">
+   1.2. Propiedades de los fluidos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#densidad-y-variables-asociadas">
+     1.2.1. Densidad y variables asociadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viscosidad">
+     1.2.2. Viscosidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   1.3. Referencias
+  </a>
+ </li>
+</ul>
+
+</nav>
 </div>
 
-
-      </div>
-    </div>
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco V. Ramirez-Cuevas
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   </body>
 </html>
