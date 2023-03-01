@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>1. Introducción a la mecánica de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
     
@@ -32,8 +32,9 @@
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -56,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="2. Estática de fluidos" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" />
     <link rel="prev" title="Bienvenidos al curso" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
@@ -405,14 +406,14 @@ title="Print to PDF"
                 
   <p><font size="6">ING325 - Mecánica de Fluidos</font></p>
 <section class="tex2jax_ignore mathjax_ignore" id="introduccion-a-la-mecanica-de-fluidos">
-<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Permalink to this headline">#</a></h1>
 <p><br><br><br><br>
 Profesor: Francisco Ramírez Cuevas<br>
 Fecha: 2 de Marzo 2023</p>
 <section id="aspectos-generales">
-<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permalink to this headline">#</a></h2>
 <section id="definicion-de-un-fluido">
-<h3><span class="section-number">1.1.1. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Sustancia en fase líquida o gaseosa</p></li>
 <li><p>En comparación con un sólido, los enlaces entre moléculas son débiles y no elásticos.</p></li>
@@ -430,7 +431,7 @@ Fecha: 2 de Marzo 2023</p>
 </ul>
 </section>
 <section id="clasificacion-de-flujos">
-<h3><span class="section-number">1.1.2. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.2. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Permalink to this headline">#</a></h3>
 <p><em><strong>Flujo externo/interno.</strong></em>
 Se define dependiendo si el fluido fluye por un canal confinado (interno), o sobre alrededor de una superficie (externo).</p>
 <a class="reference internal image-reference" href="../_images/external_vs_internal_flow.png"><img alt="../_images/external_vs_internal_flow.png" class="align-center" src="../_images/external_vs_internal_flow.png" style="width: 700px;" /></a>
@@ -457,15 +458,15 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <p>Si el flujo es estacionario las propiedades del fluido pueden cambiar en el espacio, pero en un punto fijo permanecen constantes.</p>
 </section>
 <section id="mecanica-de-fluidos-en-la-ingenieria">
-<h3><span class="section-number">1.1.3. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Permalink to this headline">#</a></h3>
 <p>Existen innumerables aplicaciones donde la mecánica de fluidos juega un rol central, tales como conversión de energía, procesos industriales (como minería), medio ambiente, aerodinámica, etc.</p>
 <a class="reference internal image-reference" href="../_images/aplicaciones.png"><img alt="../_images/aplicaciones.png" class="align-center" src="../_images/aplicaciones.png" style="width: 800px;" /></a>
 </section>
 </section>
 <section id="propiedades-de-los-fluidos">
-<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Permalink to this headline">#</a></h2>
 <section id="densidad-y-variables-asociadas">
-<h3><span class="section-number">1.2.1. </span>Densidad y variables asociadas<a class="headerlink" href="#densidad-y-variables-asociadas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Densidad y variables asociadas<a class="headerlink" href="#densidad-y-variables-asociadas" title="Permalink to this headline">#</a></h3>
 <p><strong>Densidad (<span class="math notranslate nohighlight">\(\rho\)</span>).</strong> Se define como <em>la masa por unidad de volúmen</em>.</p>
 <p>Comúnmente se mide en <span class="math notranslate nohighlight">\(\mathrm{kg/m^3}\)</span> o <span class="math notranslate nohighlight">\(\mathrm{g/cm^3}\)</span>.</p>
 <p>El recíproco de la densidad es el <strong>volumen específico</strong> <span class="math notranslate nohighlight">\(v = 1/\rho\)</span>.</p>
@@ -478,20 +479,20 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 </ul>
 <p><strong>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).</strong> Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af8ebea7-2ae7-473c-bef9-520ee9e949f7">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-af8ebea7-2ae7-473c-bef9-520ee9e949f7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26460f7f-a986-4663-99d5-76f6ce8a4ab7">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-26460f7f-a986-4663-99d5-76f6ce8a4ab7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 300px;" /></a>
 <p><strong>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>).</strong> Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f97dfca7-cac7-42fd-8d3a-815e2369bd6d">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-f97dfca7-cac7-42fd-8d3a-815e2369bd6d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7c420ab1-d97b-446d-8ca5-4bca64c8e97d">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-7c420ab1-d97b-446d-8ca5-4bca64c8e97d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g\quad\quad\frac{\mathrm{N}}{m^3}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
 </section>
 <section id="viscosidad">
-<h3><span class="section-number">1.2.2. </span>Viscosidad<a class="headerlink" href="#viscosidad" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>Viscosidad<a class="headerlink" href="#viscosidad" title="Permalink to this headline">#</a></h3>
 <p>Corresponde a la resistencia de un fluido al movimiento o, en otras palabras, a la “fluidez”. <strong>Esta propiedad establece una relación entre los esfuerzos cortantes (<span class="math notranslate nohighlight">\(\tau\)</span>) y la taza de deformación de un fluido.</strong></p>
 <p>Recordemos que, a diferencia de un sólido, un fluido se deforma constantemente frente a un esfuerzo cortante. Así, <strong>en el caso de fluidos es importante considerar <em>la taza de cambio de la deformación en el tiempo</em></strong>, y no la deformación instantanea (como en el caso de sólidos).</p>
 <p>Un ejemplo simple es el que se ilustra en la figura. En este caso, el cuerpo (sólido o líquido) entre dos placas planas es sometido a una fuerza cortante debido al movimiento relativo entre ellas.
@@ -500,8 +501,8 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <p>Matemáticamente, <strong>la taza de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" /></a>
 <p>En algunos fluidos (como el agua, aire y aceites), la taza de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50b281c6-375d-41c0-bdb5-10e268451cf0">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-50b281c6-375d-41c0-bdb5-10e268451cf0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e1096318-221d-467e-a547-13b27fbcf459">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-e1096318-221d-467e-a547-13b27fbcf459" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\frac{\mathrm{N}}{\mathrm{m}^2}
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>
@@ -546,7 +547,7 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">1.3. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.3. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 1: Introducción y conceptos básicos</p></li>
@@ -571,7 +572,7 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./01_Conceptos_basicos"
         },
         predefinedOutput: true
