@@ -5,7 +5,7 @@ format: jb-book
 root: intro
 parts:
   - caption: Parte 1. Fundamentos de estática y dinámica de fluidos
-    numbered: true
+    numbered: True
     chapters:
     - file: 01_Conceptos_basicos/01_Conceptos_basicos
     - file: 02_Estatica_de_fluidos/02_Estatica_de_fluidos

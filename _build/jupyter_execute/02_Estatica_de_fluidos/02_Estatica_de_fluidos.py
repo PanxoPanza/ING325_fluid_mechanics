@@ -39,9 +39,9 @@
 
 # La unidad de medida fundamental de la presión es el **pascal** ($\mathrm{Pa}$):
 # 
-# \begin{equation}
+# \begin{equation*}
 # 1~\mathrm{Pa} = 1~\mathrm{N}/\mathrm{m}^2
-# \end{equation}
+# \end{equation*}
 
 # Sin embargo, en la práctica, esta unidad es muy pequeña. Es, por lo tanto, común el uso de múltiplos como el *kilopascal* ($1~\mathrm{kPa} = 10^3~\mathrm{Pa}$).
 

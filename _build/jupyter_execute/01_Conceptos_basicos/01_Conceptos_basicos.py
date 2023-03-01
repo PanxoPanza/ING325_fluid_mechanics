@@ -89,17 +89,17 @@
 # **Gravedad específica ($\mathrm{GE}$).** Se define como *la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica* (por lo general, agua a $4°\mathrm{C}$, tal que $\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3$).
 
 #  Es decir:
-# \begin{equation*}
+# \begin{equation}
 # \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
-# \end{equation*}
+# \end{equation}
 
 # <img src="./figures/specific_gravity.png" width="300" align= center>
 
 # **Peso específico ($\gamma$).** Se define como el *peso por unidad de volúmen*, y se expresa como:
 # 
-# \begin{equation*}
+# \begin{equation}
 # \gamma = \rho g\quad\quad\frac{\mathrm{N}}{m^3}
-# \end{equation*}
+# \end{equation}
 # 
 # donde $g$ es la aceleración gravitacional.
 
@@ -120,9 +120,9 @@
 
 # En algunos fluidos (como el agua, aire y aceites), la taza de deformación es proporcional al esfuerzo cortante
 # 
-# \begin{equation*}
+# \begin{equation}
 # \tau = \mu\frac{du}{dy},\quad\quad\frac{\mathrm{N}}{\mathrm{m}^2}
-# \end{equation*}
+# \end{equation}
 # 
 # y se denominan **fluidos newtonianos.** 
 
