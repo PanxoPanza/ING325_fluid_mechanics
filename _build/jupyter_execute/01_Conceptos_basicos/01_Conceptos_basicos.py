@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <font size="6">ING325 - Mecánica de Fluidos</font>
 # # Introducción a la mecánica de fluidos
-# <br><br><br><br>
-# Profesor: Francisco Ramírez Cuevas<br>
-# Fecha: 2 de Marzo 2023
 
 # ## Aspectos generales
 

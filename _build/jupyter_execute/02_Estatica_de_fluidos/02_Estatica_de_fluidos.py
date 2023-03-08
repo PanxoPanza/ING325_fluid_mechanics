@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <font size="6">ING325 - Mecánica de Fluidos</font>
 # # Estática de fluidos
-# <br><br><br><br>
-# Profesor: Francisco Ramírez Cuevas<br>
-# Fecha: 9 de Marzo 2023
 
 # ## Presión hidroestática
 
@@ -42,7 +38,7 @@
 # \begin{equation*}
 # 1~\mathrm{Pa} = 1~\mathrm{N}/\mathrm{m}^2
 # \end{equation*}
-
+# 
 # Sin embargo, en la práctica, esta unidad es muy pequeña. Es, por lo tanto, común el uso de múltiplos como el *kilopascal* ($1~\mathrm{kPa} = 10^3~\mathrm{Pa}$).
 
 # Otras unidades comúnes son:
@@ -146,35 +142,44 @@
 
 # ## Fuerza hidrostática sobre superficies
 
-# ### Superficicies planas
-# 
-# El principio de Pascal nos permite determinar la fuerza resultante sobre superficies planas. En el caso de **superficies rectangulares**, *la distribución de presiones forma un trapecio rectángulo de sección cuadrada*. **Las fórmulas de fuerza resultante ($F_R$) y línea de acción ($y_p$),** así, corresponden al **área y centroide del trapecio, respectivamente**.
-# 
-# <img src="./figures/force_rectangular_plate.png" width="950px" align= center>
-
-# En el caso de superficies de geometría irregular, las solución es más compleja.
-# 
-# <img src="./figures/force_irregular_plate.png" width="800px" align= center>
-
-# Para una superficie de área $A$, es posible demostrar que la fuerza resultante es:
+# ### Formulación general para superficies planas
+# El principio de Pascal nos permite determinar la **fuerza resultante ($F_R$) sobre la cara de una superficie plana de área $A$:**
 # 
 # \begin{equation}
 # F_R = (P_0 + \rho g h_C)A
 # \end{equation}
 # 
-# donde $h_C = y_C\sin\theta$ es la **distancia vertical del centroide de la superfice ($y_C$) al nivel libre del líquido**.
+# donde $h_C = y_C\sin\theta$ es la **distancia vertical del centroide de la superfice ($y_C$) al nivel libre del líquido,** y **$P_0$ es la presión absoluta sobre el líquido** (comúnmente, presión atmosférica).
 
-# <img src="./figures/yforce_irregular_plate.png" width="400px" align= center>
+# <img src="./figures/force_irregular_plate.png" width="800px" align= center>
 
-# La línea de acción ($y_p$), está dada por la relación:
+# La **línea de acción ($y_p$)**, está dada por la relación:
 # 
 # \begin{equation}
-# y_pF_R = P_0y_CA + \rho g \sin\theta I_{xx,O}
+# y_p = y_C + \frac{I_{xx,C}}{[y_C + P_0/(\rho g\sin\theta)]A}
 # \end{equation}
 # 
-# donde $I_{xx,O} = \int y^2dA$ es el *segundo momento de inercia del área*
+# donde $I_{xx,C}$ es el *segundo momento de área respecto al eje $x$ que para por el centroide de la superficie*.
 
-# La demostración de las ecuaciones para $F_R$ y $y_p$, se deja como ejercicio.
+# <img src="./figures/yforce_irregular_plate.png" width="700px" align= center>
+
+# Las fórmulas de $I_{xx,C}$ depende de la geometría de la superficie.
+
+# <img src="./figures/momento_intercia_xx.png" width="700px" align= center>
+
+# ### Superficicies planas rectangulares
+# 
+# En el caso de **superficies rectangulares**, *la distribución de presiones forma un trapecio rectángulo de sección cuadrada*.
+
+# <img src="./figures/presiones_placa_cuadrada.png" width="800px" align= center>
+
+# Las fórmulas de **fuerza resultante ($F_R$), así, corresponde al área del trapecio**. Por el contrario, **la línea de acción ($y_p$)** *no necesariamente coincide con el centroide del trapecio.* Está dada por la fórmula:
+# 
+# \begin{equation}
+# y_P = s+\frac{b}{2} + \frac{b^2}{12[s+b/2+P_0/(\rho g\sin\theta)]}
+# \end{equation}
+
+# <img src="./figures/force_rectangular_plate.png" width="850px" align= center>
 
 # ### Superficies curvas
 # 
