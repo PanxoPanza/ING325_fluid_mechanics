@@ -205,7 +205,7 @@
 
 # Esto se debe a que la presión en cada punto de la superficie es normal a su área y, por lo tanto, su línea de acción pasa por el centro del arco circular.
 
-# ### Flotación
+# ## Flotación
 # 
 # Analicemos la fuerza resultante que actúa sobre una placa horizontal sumergida en un fluido de densidad $\rho$.
 
