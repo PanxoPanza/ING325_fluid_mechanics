@@ -215,10 +215,10 @@
 
 # ### Ejemplo
 
-# <img src="./figures/estanque.png" width="350px" align= center>
-
 # Un tanque cilíndrico abierto a la atmósfera está lleno con agua. Al quitar el tapón de descarga, la velocidad promedio a la salida es $V = \sqrt{2gh}$, donde $h$ es el nivel instantáneo de agua en el tanque
 # medida desde el centro del agujero, y $g$ es la aceleración de gravedad. **Determíne el tiempo para que el nivel del agua descienda de $h_0$ hasta $h_2$.**
+
+# <img src="./figures/estanque.png" width="350px" align= center>
 
 # ## Ecuación de conservación de momentum lineal
 
@@ -252,14 +252,14 @@
 
 # ### Ejemplo
 
-# <img src="./figures/momento_lineal_ejercicio.png" width="350px" align= center>
-
 # Un chorro de agua de velocidad $V_j$ incide perpendicularmente a una placa plana que se mueve hacia la derecha a velocidad $V_c$. 
 # 
 # Calcule la fuerza necesaria para mantener la placa en movimiento a velocidad constante si la densidad del chorro es $1000~\mathrm{kg/m^3}$, la sección del chorro es $3~\mathrm{cm^2}$ y $V_j$ y $V_c$ son 20 y $15~\mathrm{m/s}$, respectivamente. 
 # 
 # *Desprecie el peso del chorro y de la placa y suponga que el chorro se divide en dos chorros iguales,
 # uno hacia arriba y otro hacia abajo.*
+
+# <img src="./figures/momento_lineal_ejercicio.png" width="350px" align= center>
 
 # ## Referencias
 # **Çengel Y. A. y Cimbala M. J. *Mecánica de Fluidos: Fundamentos y Aplicaciones*, 4ta Ed., McGraw Hill, 2018**
