@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Introducción a la dinámica de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="2. Estática de fluidos" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">ING325 - Mecánica de Fluidos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenidos al curso
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Parte 1. Fundamentos de estática y dinámica de fluidos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Conceptos_basicos/01_Conceptos_basicos.html">
+   1. Introducción a la mecánica de fluidos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">
+   2. Estática de fluidos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Introducción a la dinámica de fluidos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-y-volumen-de-control">
+   3.1. Sistema y volúmen de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistema">
+     3.1.1. Sistema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volumen-de-control">
+     3.1.2. Volumen de control
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descripcion-lagrangiana-y-euleriana">
+   3.2. Descripción lagrangiana y euleriana
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teorema-de-transporte-de-reynolds-ttr">
+   3.3. Teorema de transporte de Reynolds (TTR)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leyes-de-conservacion-aplicadas-a-un-sistema">
+     3.3.1. Leyes de conservación aplicadas a un sistema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion-general">
+     3.3.2. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion-simplificada">
+     3.3.3. Formulación simplificada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-masa">
+   3.4. Ecuación de conservación de masa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     3.4.1. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-relevantes">
+     3.4.2. Variables relevantes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo">
+     3.4.3. Ejemplo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-momentum-lineal">
+   3.5. Ecuación de conservación de momentum lineal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.5.1. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.5.2. Ejemplo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   3.6. Referencias
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introducción a la dinámica de fluidos</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistema-y-volumen-de-control">
+   3.1. Sistema y volúmen de control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistema">
+     3.1.1. Sistema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volumen-de-control">
+     3.1.2. Volumen de control
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descripcion-lagrangiana-y-euleriana">
+   3.2. Descripción lagrangiana y euleriana
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teorema-de-transporte-de-reynolds-ttr">
+   3.3. Teorema de transporte de Reynolds (TTR)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leyes-de-conservacion-aplicadas-a-un-sistema">
+     3.3.1. Leyes de conservación aplicadas a un sistema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion-general">
+     3.3.2. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulacion-simplificada">
+     3.3.3. Formulación simplificada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-masa">
+   3.4. Ecuación de conservación de masa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     3.4.1. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-relevantes">
+     3.4.2. Variables relevantes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo">
+     3.4.3. Ejemplo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-momentum-lineal">
+   3.5. Ecuación de conservación de momentum lineal
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.5.1. Formulación general
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     3.5.2. Ejemplo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   3.6. Referencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="introduccion-a-la-dinamica-de-fluidos">
+<h1><span class="section-number">3. </span>Introducción a la dinámica de fluidos<a class="headerlink" href="#introduccion-a-la-dinamica-de-fluidos" title="Permalink to this headline">#</a></h1>
+<section id="sistema-y-volumen-de-control">
+<h2><span class="section-number">3.1. </span>Sistema y volúmen de control<a class="headerlink" href="#sistema-y-volumen-de-control" title="Permalink to this headline">#</a></h2>
+<section id="sistema">
+<h3><span class="section-number">3.1.1. </span>Sistema<a class="headerlink" href="#sistema" title="Permalink to this headline">#</a></h3>
+<p>Definimos como <strong>sistema</strong> a una <em>cantidad de materia de masa fija elegida para el estudio</em></p>
+<p>En general, para el estudio de <strong>sólidos</strong>, la definición de sistema es sencilla, ya que este considera la interacción del cuerpo con las fuerzas externas.</p>
+<p>Sin embargo, en el caso de <strong>fluidos</strong>, la definición no es tan sensilla ya que el sistema ocupa un espacio infinito.</p>
+</section>
+<section id="volumen-de-control">
+<h3><span class="section-number">3.1.2. </span>Volumen de control<a class="headerlink" href="#volumen-de-control" title="Permalink to this headline">#</a></h3>
+<p>Para estudiar dinámica de fluidos utilizamos el <strong>volúmen de control</strong>, <em>una región imagniaria en el espacio para analizar la dinámica de fluidos.</em></p>
+<a class="reference internal image-reference" href="../_images/control_volume.png"><img alt="../_images/control_volume.png" class="align-center" src="../_images/control_volume.png" style="width: 700px;" /></a>
+<blockquote>
+<div><p><strong>Nota.</strong> Las frontera de un volumen de control pueden ser permeables o impermeables, móbiles o fijas.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="descripcion-lagrangiana-y-euleriana">
+<h2><span class="section-number">3.2. </span>Descripción lagrangiana y euleriana<a class="headerlink" href="#descripcion-lagrangiana-y-euleriana" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>Descripción lagrangiana</strong> consiste en hacer un seguimiento de las partículas materiales. Este enfoque es comúnmente utilizado en dinámica de sólidos.</p></li>
+<li><p><strong>Descripción euleriana</strong> consiste en medir lo que pasa en puntos fijos del espacio. Este enfoque es comúnmente utilizado en dinámica de sólidos.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/lagrangian_eulerian.png"><img alt="../_images/lagrangian_eulerian.png" class="align-center" src="../_images/lagrangian_eulerian.png" style="width: 800px;" /></a>
+<p><strong>En el análisis lagrangiano se rastrea la <em>trayectoria y la velocidad de cada sistema,</em></strong> las cuales dependen del tiempo (<span class="math notranslate nohighlight">\(t\)</span>), únicamente. Por ejemplo, considerando un sistema con múltiples objetos <span class="math notranslate nohighlight">\(A, B, C, \cdots\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\vec{x}_A(t), \vec{x}_B(t), \vec{x}_C(t), \cdots&amp;\quad\quad\mathrm{Trayectoria}\\
+\vec{V}_A(t), \vec{V}_B(t), \vec{V}_C(t), \cdots&amp;\quad\quad\mathrm{Velocidad}
+\end{align*}\]</div>
+<p><strong>En el análisis euleriano se definen <em>variables de campo</em></strong>, es decir, variables en funcion del tiempo y del espacio  dentro del volumen de control (<span class="math notranslate nohighlight">\(x, y,z\)</span>). Por ejemplo:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión}\\
+\rho(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~densidad}\\
+\vec{V}(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~velocidad}
+\end{align*}\]</div>
+<p>Notar que <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\( \rho\)</span> son un <strong>campo escalar <em>(valor escalar que cambia en el espacio)</em></strong>, mientras que <span class="math notranslate nohighlight">\(\vec{V}\)</span> es un <strong>campo vectorial <em>(vector cuya magnitud y dirección cambia en el espacio)</em></strong></p>
+<p>Así, <span class="math notranslate nohighlight">\(\vec{V}\)</span> se puede desarrollar, por ejemplo, en coordenadas cartesianas:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1a215927-9959-452e-a763-6298902885ac">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-1a215927-9959-452e-a763-6298902885ac" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\vec{V} = u(x,y,z,t)~\hat{x} + v(x,y,z,t)~\hat{y} + w(x,y,z,t)~\hat{z}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> y <span class="math notranslate nohighlight">\(w\)</span> son las componentes de la velocidad e direcciones <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> y <span class="math notranslate nohighlight">\(z\)</span>, respectivamente.</p>
+</section>
+<section id="teorema-de-transporte-de-reynolds-ttr">
+<h2><span class="section-number">3.3. </span>Teorema de transporte de Reynolds (TTR)<a class="headerlink" href="#teorema-de-transporte-de-reynolds-ttr" title="Permalink to this headline">#</a></h2>
+<section id="leyes-de-conservacion-aplicadas-a-un-sistema">
+<h3><span class="section-number">3.3.1. </span>Leyes de conservación aplicadas a un sistema<a class="headerlink" href="#leyes-de-conservacion-aplicadas-a-un-sistema" title="Permalink to this headline">#</a></h3>
+<p>Consideremos algunas <strong>leyes de conservación fundamentales</strong> aplicadas a un sistema:</p>
+<ul class="simple">
+<li><p>Masa (<span class="math notranslate nohighlight">\(m_\mathrm{sys}\)</span>),</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}m_\mathrm{sys} = 0\]</div>
+<ul class="simple">
+<li><p>Momento lineal <span class="math notranslate nohighlight">\((m\vec{V})_\mathrm{sys}\)</span>,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}(m\vec{V})_\mathrm{sys} = \vec{F}_\mathrm{neta}\]</div>
+<ul class="simple">
+<li><p>Momento angular <span class="math notranslate nohighlight">\((\vec{r}\times m\vec{V})_\mathrm{sys}\)</span>,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}(\vec{r}\times m\vec{V})_\mathrm{sys} = \vec{M}_\mathrm{neto}\]</div>
+<ul class="simple">
+<li><p>Energía <span class="math notranslate nohighlight">\(E_\mathrm{sys} =(m\tilde{e})_\mathrm{sys}\)</span>,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}(m\tilde{e})_\mathrm{sys} = \dot{Q} - \dot{W}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\vec{F}_\mathrm{neta}\)</span> y <span class="math notranslate nohighlight">\(\vec{M}_\mathrm{neto}\)</span> son, respectivamente, <em>la fuerza y torque aplicado sobre el sistema</em>, <span class="math notranslate nohighlight">\(\tilde{e}\)</span> es la <em>energía específica (energía por unidad de masa)</em>, <span class="math notranslate nohighlight">\(\dot{Q}\)</span> es la <em>tasa de transferencia de calor</em>, y <span class="math notranslate nohighlight">\(\dot{W}\)</span> es <em>potencia</em>.</p>
+<p>En cada ley de conservación notamos que hay una <em><strong>propiedad extensiva (por ejemplo, <span class="math notranslate nohighlight">\(E_\mathrm{sys}\)</span>)</strong></em>, y una <em><strong>propiedad intensiva (por ejemplo, <span class="math notranslate nohighlight">\(\tilde{e}_\mathrm{sys} = E_\mathrm{sys}/m_\mathrm{sys}\)</span>)</strong></em></p>
+</section>
+<section id="formulacion-general">
+<h3><span class="section-number">3.3.2. </span>Formulación general<a class="headerlink" href="#formulacion-general" title="Permalink to this headline">#</a></h3>
+<p>El <strong>teorema de transporte de Reynolds</strong> establece una relación entre la <strong>variación temporal de una propiedad extensiva del sistema (<span class="math notranslate nohighlight">\(B_\mathrm{sys}\)</span>)</strong> y su respectiva <strong>propiedad intensiva dentro del volumen de control (<span class="math notranslate nohighlight">\(\beta\)</span>)</strong></p>
+<p>En su forma más general, para un <strong>volumen de control móvil y deformable</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a0ad70b2-e35e-41fe-af28-0165a0746da5">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-a0ad70b2-e35e-41fe-af28-0165a0746da5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall + \int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>El término a la izquierda representa la <strong>tasa de cambio de <span class="math notranslate nohighlight">\(B_\mathrm{sys}\)</span> en el sistema.</strong></p></li>
+<li><p>El primer término a la derecha representa la <strong>tasa de cambio de <span class="math notranslate nohighlight">\(\beta\)</span> en el volúmen de control <span class="math notranslate nohighlight">\(\mathrm{VC}\)</span>.</strong></p></li>
+<li><p>El segundo término a la derecha representa el <strong>flujo de <span class="math notranslate nohighlight">\(\beta\)</span> a través de las fronteras del volúmen de control (<span class="math notranslate nohighlight">\(\mathrm{VC}\)</span>)</strong></p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\vec{V}\)</span> es la <em>velocidad relativa</em> del flujo que cruza la frontera del volúmen de control,</strong> respecto de la velocidad de la frontera<span class="math notranslate nohighlight">\(\vec{V}_s\)</span>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/Reynolds_theorem_general.png"><img alt="../_images/Reynolds_theorem_general.png" class="align-center" src="../_images/Reynolds_theorem_general.png" style="width: 400px;" /></a>
+<p>Notar que el rol de la normal a la superficie del volumen de control (<span class="math notranslate nohighlight">\(\hat{n}\)</span>) en la ecuación, que define un <strong>valor positivo para flujos que salen del volúmen de control</strong>, y un <strong>valor negativo para los flujos que entran</strong>.</p>
+<p>Matemáticamente, el flujo neto de la propiedad <span class="math notranslate nohighlight">\(B\)</span> en el volúmen de control:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\dot{B}_\mathrm{neto} = \dot{B}_\mathrm{sale} - \dot{B}_\mathrm{entra} = \int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA
+\end{equation*}\]</div>
+</section>
+<section id="formulacion-simplificada">
+<h3><span class="section-number">3.3.3. </span>Formulación simplificada<a class="headerlink" href="#formulacion-simplificada" title="Permalink to this headline">#</a></h3>
+<p>En muchas aplicaciones prácticas de ingeniería solo se conocen valores promedios del flujo, obtenidos a través de mediciones. En estos casos, las siguientes aproximaciones son útiles:</p>
+<ul class="simple">
+<li><p><strong>Propiedades approximadamente uniformes dentro del volúmen de control</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-badd66dc-9984-4aff-8091-4326a9b21571">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-badd66dc-9984-4aff-8091-4326a9b21571" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall \approx \frac{d}{dt}(\rho\beta \forall)
+\end{equation}\]</div>
+<ul class="simple">
+<li><p><strong>Valores promedio en la entrada y salida</strong></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-237bd658-07e0-4e47-9d6c-d7fd7d0df1b6">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-237bd658-07e0-4e47-9d6c-d7fd7d0df1b6" title="Permalink to this equation">#</a></span>\[\begin{equation}\int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA \approx \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\bar{\beta}\)</span> y <span class="math notranslate nohighlight">\(\overline{\rho}\)</span> representan, respectivamente, el <strong>valor promedio por área de la propiedad intensiva <span class="math notranslate nohighlight">\(\beta\)</span> y de la densidad <span class="math notranslate nohighlight">\(\rho\)</span></strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-f723695b-d1b3-4c31-bb2b-beaa335ca8a0">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-f723695b-d1b3-4c31-bb2b-beaa335ca8a0" title="Permalink to this equation">#</a></span>\[\begin{align}
+\bar{\beta} &amp;= \frac{1}{A}\int_A \beta dA \\
+\bar{\rho} &amp;= \frac{1}{A}\int_A \rho dA,
+\end{align}\]</div>
+<p>y <span class="math notranslate nohighlight">\(\overline{V}\)</span> es la <strong>velocidad promedio respecto al área <span class="math notranslate nohighlight">\(A\)</span></strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-1731eb2a-9a84-46b4-981e-9beb12cd32c9">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-1731eb2a-9a84-46b4-981e-9beb12cd32c9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\overline{V} = \frac{1}{A}\int_A \vec{V}\cdot\hat{n}dA.
+\end{equation}\]</div>
+<a class="reference internal image-reference" href="../_images/average_velocity.png"><img alt="../_images/average_velocity.png" class="align-center" src="../_images/average_velocity.png" style="width: 250px;" /></a>
+<p>A partir de estas aproximaciones deducimos la formulación simplificada del teorema de transporte de Reynolds:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-41e34367-8fac-4935-bdb7-78cf3ad1b4e4">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-41e34367-8fac-4935-bdb7-78cf3ad1b4e4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(\rho\beta \forall) + \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
+\end{equation}\]</div>
+</section>
+</section>
+<section id="ecuacion-de-conservacion-de-masa">
+<h2><span class="section-number">3.4. </span>Ecuación de conservación de masa<a class="headerlink" href="#ecuacion-de-conservacion-de-masa" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">3.4.1. </span>Formulación general<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>En el caso de la conservación de masa del sistema</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}m_\mathrm{sys} = 0\]</div>
+<p>Aplicando el teorema de transporte de Reynold con <span class="math notranslate nohighlight">\(B_\mathrm{sys} = m_\mathrm{sys}\)</span> y <span class="math notranslate nohighlight">\(\beta = 1\)</span>, deducimos la ecuación de <strong>conservación de masa para un volúmen de control</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-28ecd435-f69f-44a4-89ae-7b9d04ee6e38">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-28ecd435-f69f-44a4-89ae-7b9d04ee6e38" title="Permalink to this equation">#</a></span>\[\begin{equation}
+0 = \frac{d}{dt}\int_\mathrm{VC} \rho d\forall + \int_\mathrm{VC} \rho\vec{V}\cdot\hat{n}dA
+\end{equation}\]</div>
+<p>Lidiamos con la ecuación de conservación de masa a menúdo en nuestra vida cotidiana</p>
+<a class="reference internal image-reference" href="../_images/conservacion_masa_manguera.png"><img alt="../_images/conservacion_masa_manguera.png" class="align-center" src="../_images/conservacion_masa_manguera.png" style="width: 700px;" /></a>
+<p>Aplicando la ecuación de conservación de masa al ejemplo, tenemos:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+0 = 0 + \rho V_2 A_2 - \rho V_1 A_1 \Rightarrow 
+V_2 = V_1 \frac{A_1}{A_2}
+\end{equation*}\]</div>
+<p>Debido a que <span class="math notranslate nohighlight">\(A_1 &gt; A_2\)</span>, entonces:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+V_2 &gt; V_1
+\end{equation*}\]</div>
+</section>
+<section id="variables-relevantes">
+<h3><span class="section-number">3.4.2. </span>Variables relevantes<a class="headerlink" href="#variables-relevantes" title="Permalink to this headline">#</a></h3>
+<p>Aprovechamos esta ecuación para definir algunas variables relevantes:</p>
+<p><strong>Caudal (<span class="math notranslate nohighlight">\(Q\)</span>),</strong> se define como la tasa de cambio del volúmen de fluido que cruza un área, matemáticamente:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0d5b3b9b-5720-4902-a9ac-acf364023a92">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-0d5b3b9b-5720-4902-a9ac-acf364023a92" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\begin{split}
+Q &amp;= \int_A \vec{V}\cdot\hat{n}dA&amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
+\\
+Q &amp;=  \overline{V}A &amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad\mathrm{(valores~promedio)}
+\end{split}
+\end{eqnarray}\]</div>
+<p><strong>Flujo másico (<span class="math notranslate nohighlight">\(\dot{m}\)</span>),</strong> se define como la tasa de cambio de la mása que cruza un área, matemáticamente:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-861b4f36-3d40-4fe3-bd58-39408aae1d8c">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-861b4f36-3d40-4fe3-bd58-39408aae1d8c" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+\begin{split}
+\dot{m} &amp;= \int_A \rho \vec{V}\cdot\hat{n}dA &amp;\quad\left(\mathrm{\frac{kg}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
+\\
+\dot{m} &amp;= \overline{\rho} \overline{V}A = \rho Q &amp;\quad\left(\mathrm{\frac{kg}{s}}\right) &amp;\quad\mathrm{(valores~promedio)}
+\end{split}
+\end{eqnarray}\]</div>
+<p>Si aplicamos esto considerando valores promedio y que la densidad dentro del volúmen de controle es uniforme, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-61ed0eaf-2e1f-4ae0-8cf1-a67daed656dc">
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-61ed0eaf-2e1f-4ae0-8cf1-a67daed656dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+0 = \frac{d}{d t} \rho \forall + \sum_\mathrm{sale}\dot{m} - \sum_\mathrm{entra}\dot{m}
+\end{equation}\]</div>
+<p>En el caso de un fluido incompresible:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6f145ba5-633b-41d7-a1a1-ff99330bedca">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-6f145ba5-633b-41d7-a1a1-ff99330bedca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+0 = \frac{d}{d t} \forall + \sum_\mathrm{sale}Q - \sum_\mathrm{entra}Q
+\end{equation}\]</div>
+</section>
+<section id="ejemplo">
+<h3><span class="section-number">3.4.3. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">#</a></h3>
+<a class="reference internal image-reference" href="../_images/estanque.png"><img alt="../_images/estanque.png" class="align-center" src="../_images/estanque.png" style="width: 350px;" /></a>
+<p>Un tanque cilíndrico abierto a la atmósfera está lleno con agua. Al quitar el tapón de descarga, la velocidad promedio a la salida es <span class="math notranslate nohighlight">\(V = \sqrt{2gh}\)</span>, donde <span class="math notranslate nohighlight">\(h\)</span> es el nivel instantáneo de agua en el tanque
+medida desde el centro del agujero, y <span class="math notranslate nohighlight">\(g\)</span> es la aceleración de gravedad. <strong>Determíne el tiempo para que el nivel del agua descienda de <span class="math notranslate nohighlight">\(h_0\)</span> hasta <span class="math notranslate nohighlight">\(h_2\)</span>.</strong></p>
+</section>
+</section>
+<section id="ecuacion-de-conservacion-de-momentum-lineal">
+<h2><span class="section-number">3.5. </span>Ecuación de conservación de momentum lineal<a class="headerlink" href="#ecuacion-de-conservacion-de-momentum-lineal" title="Permalink to this headline">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">3.5.1. </span>Formulación general<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Según la ley de Newton, la <strong>ecuación de conservación de momento lineal,</strong> es:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{d}{dt}(m\vec{V})_\mathrm{sys} = \sum\vec{F}_\mathrm{ext}
+\end{equation*}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\vec{F}_\mathrm{ext}\)</span> representa la fuerza externa neta sobre el sistema.</p>
+<p>Aplicamos el teorema de transporte de Reynolds considerando:</p>
+<ul class="simple">
+<li><p>Propiedad intensiva del momento lineal, <span class="math notranslate nohighlight">\(\beta = \vec{V}\)</span></p></li>
+<li><p>Conservación de momento lineal aplicado al sistema <span class="math notranslate nohighlight">\(\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(m\vec{V})_\mathrm{sys} = \sum\vec{F}_\mathrm{ext}\)</span>.</p></li>
+</ul>
+<p>La <strong>ecuación de conservación de momento lineal para un V.C.</strong> es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5880630f-1c45-4576-ae11-0261008a7d30">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-5880630f-1c45-4576-ae11-0261008a7d30" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\sum\vec{F}_\mathrm{ext} = \frac{d}{dt}\int_\mathrm{VC} \rho\vec{V} d\forall + \int_\mathrm{VC} \rho\vec{V}(\vec{V}\cdot\hat{n})dA
+\end{equation}\]</div>
+<p><em>la suma de fuerzas externas aplicadas en un V.C. es igual a la tasa de cambio de momento lineal dentro del V.C. y al balance de momento lineal en la entrada y salida del V.C.</em></p>
+<p>Si aplicamos esto considerando valores promedio y que la densidad dentro del volúmen de controle es uniforme, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2af01cca-f378-404b-8298-a5fecc0685a1">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-2af01cca-f378-404b-8298-a5fecc0685a1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\sum \vec{F}_\mathrm{ext} = \frac{d}{d t} \rho \vec{V}\forall + \sum_\mathrm{sale}\dot{m}\vec{V} - \sum_\mathrm{entra}\dot{m}\vec{V}
+\end{equation}\]</div>
+</section>
+<section id="id3">
+<h3><span class="section-number">3.5.2. </span>Ejemplo<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<a class="reference internal image-reference" href="../_images/momento_lineal_ejercicio.png"><img alt="../_images/momento_lineal_ejercicio.png" class="align-center" src="../_images/momento_lineal_ejercicio.png" style="width: 350px;" /></a>
+<p>Un chorro de agua de velocidad <span class="math notranslate nohighlight">\(V_j\)</span> incide perpendicularmente a una placa plana que se mueve hacia la derecha a velocidad <span class="math notranslate nohighlight">\(V_c\)</span>.</p>
+<p>Calcule la fuerza necesaria para mantener la placa en movimiento a velocidad constante si la densidad del chorro es <span class="math notranslate nohighlight">\(1000~\mathrm{kg/m^3}\)</span>, la sección del chorro es <span class="math notranslate nohighlight">\(3~\mathrm{cm^2}\)</span> y <span class="math notranslate nohighlight">\(V_j\)</span> y <span class="math notranslate nohighlight">\(V_c\)</span> son 20 y <span class="math notranslate nohighlight">\(15~\mathrm{m/s}\)</span>, respectivamente.</p>
+<p><em>Desprecie el peso del chorro y de la placa y suponga que el chorro se divide en dos chorros iguales,
+uno hacia arriba y otro hacia abajo.</em></p>
+</section>
+</section>
+<section id="referencias">
+<h2><span class="section-number">3.6. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
+<ul class="simple">
+<li><p>Capitulo 4.1: Descripciones lagrangiana y euleriana</p></li>
+<li><p>Capítulo 4.6: Teorema de transporte de Reynolds</p></li>
+<li><p>Capítulo 5.2: Conservación de la masa</p></li>
+<li><p>Capítulo 6.1: Leyes de Newton</p></li>
+<li><p>Capítulo 6.4: La ecuación de conservación de la canrtidad de movimiento lineal</p></li>
+</ul>
+<p><strong>White F. M. <em>Mecánica de Fluidos</em>, 5ta Ed., McGraw Hill, 2004</strong></p>
+<ul class="simple">
+<li><p>Capítulo 3.1: Leyes básicas de la mecánica de fluidos</p></li>
+<li><p>Capítulo 3.2: Teorema de transporte de Reynolds</p></li>
+<li><p>Capítulo 3.3: Conservación de masa</p></li>
+<li><p>Capítulo 3.4: Conservación de cantidad de movimiento</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./03_Intro_dinamica_de_fluidos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Estática de fluidos</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Francisco V. Ramirez-Cuevas<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
