@@ -9,20 +9,19 @@ parts:
     chapters:
     - file: 01_Conceptos_basicos/01_Conceptos_basicos
     - file: 02_Estatica_de_fluidos/02_Estatica_de_fluidos
-    - file: 03_Conservacion_masa/03_Conservacion_masa
-#    - file: 04_Cons_momento_lineal/04_Cons_momento_lineal
+    - file: 03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos
 #  - caption: Parte 2. Turbomáquinas y diseño de sistemas hidráulicos
 #    numbered: true
 #    chapters:
-#    - file: 05_Perdida_de_carga/05_Perdida_de_carga
-#    - file: 06_Turbomaquinas/06_Turbomaquinas
-#    - file: 07_Analisis_adimensional/07_Analisis_adimensional
+#    - file: 04_Perdida_de_carga/04_Perdida_de_carga
+#    - file: 05_Turbomaquinas/05_Turbomaquinas
+#    - file: 06_Analisis_adimensional/06_Analisis_adimensional
 #  - caption: Parte 3. Flujo externo y análisis diferencial de flujos
 #    numbered: true
 #    chapters:
-#    - file: 08_Flujo_externo/08_Flujo_externo
-#    - file: 09_Analisis_diferencial_intro/09_Analisis_diferencial_intro
-#    - file: 10_Flujos_caracteristicos/10_Flujos_caracteristicos
+#    - file: 07_Flujo_externo/07_Flujo_externo
+#    - file: 08_Analisis_diferencial_intro/08_Analisis_diferencial_intro
+#    - file: 09_Flujos_caracteristicos/09_Flujos_caracteristicos
 #  - caption: Apéndice
 #    numbered: false
 #    chapters:
