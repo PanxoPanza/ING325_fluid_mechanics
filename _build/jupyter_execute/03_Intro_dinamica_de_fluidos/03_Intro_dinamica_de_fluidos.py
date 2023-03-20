@@ -125,10 +125,12 @@
 
 # donde $\bar{\beta}$ y $\overline{\rho}$ representan, respectivamente, el **valor promedio por área de la propiedad intensiva $\beta$ y de la densidad $\rho$**
 # 
-# \begin{align}
+# \begin{equation}
+# \begin{aligned}
 # \bar{\beta} &= \frac{1}{A}\int_A \beta dA \\
 # \bar{\rho} &= \frac{1}{A}\int_A \rho dA,
-# \end{align}
+# \end{aligned}
+# \end{equation}
 
 # y $\overline{V}$ es la **velocidad promedio respecto al área $A$**
 # 
