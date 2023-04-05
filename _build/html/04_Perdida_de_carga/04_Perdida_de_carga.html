@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Conservación de energía y pérdida de carga en ductos &#8212; ING325 - Mecánica de Fluidos</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Laboratorio 1. Pérdidas de carga" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" />
+    <link rel="prev" title="3. Introducción a la dinámica de fluidos" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">ING325 - Mecánica de Fluidos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenidos al curso
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Parte 1. Fundamentos de estática y dinámica de fluidos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01_Conceptos_basicos/01_Conceptos_basicos.html">
+   1. Introducción a la mecánica de fluidos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02_Estatica_de_fluidos/02_Estatica_de_fluidos.html">
+   2. Estática de fluidos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html">
+   3. Introducción a la dinámica de fluidos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Conservación de energía y pérdida de carga en ductos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Apéndice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html">
+   Laboratorio 1. Pérdidas de carga
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/04_Perdida_de_carga/04_Perdida_de_carga.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/04_Perdida_de_carga/04_Perdida_de_carga.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia">
+   4.1. Ecuación de conservación de energía
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energia-del-fluido-tilde-e">
+     4.1.1. Energía del fluido (
+     <span class="math notranslate nohighlight">
+      \(\tilde{e}\)
+     </span>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transferencia-de-calor-dot-q">
+     4.1.2. Transferencia de calor (
+     <span class="math notranslate nohighlight">
+      \(\dot{Q}\)
+     </span>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transferencia-de-trabajo-dot-w">
+     4.1.3. Transferencia de trabajo (
+     <span class="math notranslate nohighlight">
+      \(\dot{W}\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulaciones-practicas">
+   4.2. Formulaciones prácticas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forma-general-de-la-ecuacion-de-conservacion-de-energia">
+     4.2.1. Forma general de la ecuación de conservación de energía
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otras-formulaciones-practicas">
+     4.2.2. Otras formulaciones prácticas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">
+     4.2.3. Ecuación de conservación de energía para una línea de flujo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuacion-de-bernoulli">
+     4.2.4. Ecuación de Bernoulli
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flujo-laminar-y-turbulento">
+   4.3. Flujo laminar y turbulento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numero-de-reynolds">
+     4.3.1. Número de Reynolds
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perdida-de-carga">
+   4.4. Pérdida de carga
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perdida-de-carga-en-la-longitud-mayores">
+     4.4.1. Pérdida de carga en la longitud (mayores)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-laminar">
+       4.4.1.1. Factor de fricción para flujo laminar
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-turbulento">
+       4.4.1.2. Factor de fricción para flujo turbulento
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perdidas-de-carga-por-singularidades-menores">
+     4.4.2. Pérdidas de carga por singularidades (menores)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   4.5. Referencias
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conservación de energía y pérdida de carga en ductos</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia">
+   4.1. Ecuación de conservación de energía
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energia-del-fluido-tilde-e">
+     4.1.1. Energía del fluido (
+     <span class="math notranslate nohighlight">
+      \(\tilde{e}\)
+     </span>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transferencia-de-calor-dot-q">
+     4.1.2. Transferencia de calor (
+     <span class="math notranslate nohighlight">
+      \(\dot{Q}\)
+     </span>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transferencia-de-trabajo-dot-w">
+     4.1.3. Transferencia de trabajo (
+     <span class="math notranslate nohighlight">
+      \(\dot{W}\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formulaciones-practicas">
+   4.2. Formulaciones prácticas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#forma-general-de-la-ecuacion-de-conservacion-de-energia">
+     4.2.1. Forma general de la ecuación de conservación de energía
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#otras-formulaciones-practicas">
+     4.2.2. Otras formulaciones prácticas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">
+     4.2.3. Ecuación de conservación de energía para una línea de flujo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuacion-de-bernoulli">
+     4.2.4. Ecuación de Bernoulli
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flujo-laminar-y-turbulento">
+   4.3. Flujo laminar y turbulento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numero-de-reynolds">
+     4.3.1. Número de Reynolds
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perdida-de-carga">
+   4.4. Pérdida de carga
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perdida-de-carga-en-la-longitud-mayores">
+     4.4.1. Pérdida de carga en la longitud (mayores)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-laminar">
+       4.4.1.1. Factor de fricción para flujo laminar
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-turbulento">
+       4.4.1.2. Factor de fricción para flujo turbulento
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perdidas-de-carga-por-singularidades-menores">
+     4.4.2. Pérdidas de carga por singularidades (menores)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   4.5. Referencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="conservacion-de-energia-y-perdida-de-carga-en-ductos">
+<h1><span class="section-number">4. </span>Conservación de energía y pérdida de carga en ductos<a class="headerlink" href="#conservacion-de-energia-y-perdida-de-carga-en-ductos" title="Permalink to this headline">#</a></h1>
+<section id="ecuacion-de-conservacion-de-energia">
+<h2><span class="section-number">4.1. </span>Ecuación de conservación de energía<a class="headerlink" href="#ecuacion-de-conservacion-de-energia" title="Permalink to this headline">#</a></h2>
+<p>A partir del teorema de transporte de Reynolds, y considerando la propiedad intensiva de la energía, <span class="math notranslate nohighlight">\(\tilde{e}\)</span>, definida como la <strong>energía por unidad de masa</strong> (<span class="math notranslate nohighlight">\(\mathrm{kJ/kg}\)</span>, por ejemplo), tenemos que la <strong>ecuación de conservación de energía aplicada a un volúmen de control</strong> es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2b3e545a-722c-4b75-949a-03fb3235978e">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-2b3e545a-722c-4b75-949a-03fb3235978e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{Q} - \dot{W} = \frac{d}{dt}\int_\mathrm{VC} \rho\tilde{e}d\forall + \int_\mathrm{VC} \rho\tilde{e}\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
+\end{equation}\]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\dot{Q}\)</span>, tasa de transferecia calor recibida por el sistema (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{W}\)</span>, tasa de trabajo (potencia) entregada por el sistema (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+</ul>
+<section id="energia-del-fluido-tilde-e">
+<h3><span class="section-number">4.1.1. </span>Energía del fluido (<span class="math notranslate nohighlight">\(\tilde{e}\)</span>)<a class="headerlink" href="#energia-del-fluido-tilde-e" title="Permalink to this headline">#</a></h3>
+<p>Considera todas las formas de energía presentes en el fluido:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\tilde{e} = \tilde{e}_\mathrm{interna} + \tilde{e}_\mathrm{cinética} + \tilde{e}_\mathrm{potencial} + \cdots, \quad\left(\mathrm{\frac{kJ}{kg}}\right)
+\end{equation*}\]</div>
+<p>donde</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tilde{e}_\mathrm{interna} = \tilde{u}\)</span> (energía interna)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tilde{e}_\mathrm{cinética} = \frac{V^2}{2}\)</span> (energía cinética)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tilde{e}_\mathrm{potencial} = gz\)</span> (energía potencial)</p></li>
+</ul>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(V\)</span> es la velocidad promedio del fluido, <span class="math notranslate nohighlight">\(z\)</span> es la altura medida desde un punto de referencia común, y <span class="math notranslate nohighlight">\(g\)</span> es la aceleración de gravedad.</p>
+</div></blockquote>
+</section>
+<section id="transferencia-de-calor-dot-q">
+<h3><span class="section-number">4.1.2. </span>Transferencia de calor (<span class="math notranslate nohighlight">\(\dot{Q}\)</span>)<a class="headerlink" href="#transferencia-de-calor-dot-q" title="Permalink to this headline">#</a></h3>
+<p>Energía asociada al calor transferido por diferencia de temperaturas.</p>
+<blockquote>
+<div><p>Notar que <span class="math notranslate nohighlight">\(\dot{Q} &lt; 0\)</span> si el volúmen de control pierde calor</p>
+</div></blockquote>
+</section>
+<section id="transferencia-de-trabajo-dot-w">
+<h3><span class="section-number">4.1.3. </span>Transferencia de trabajo (<span class="math notranslate nohighlight">\(\dot{W}\)</span>)<a class="headerlink" href="#transferencia-de-trabajo-dot-w" title="Permalink to this headline">#</a></h3>
+<p>Considera el trabajo entregado o recibido por el sistema.</p>
+<blockquote>
+<div><p>Notar que <span class="math notranslate nohighlight">\(\dot{W} &lt; 0\)</span> si el sistema recibe trabajo.</p>
+</div></blockquote>
+<p>Distinguimos tres formas principales de trabajo:</p>
+<ul class="simple">
+<li><p><strong>Trabajo de eje (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{eje}\)</span>),</strong> asociado al trabajo intercambiado con maquinarias, por ejemplo, trabajo de bombas (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{eje} &lt; 0\)</span>), turbinas (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{eje} &gt; 0\)</span>), ventiladores (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{eje} &lt; 0\)</span>), etc.</p></li>
+</ul>
+<ul>
+<li><p><strong>Trabajo por presiones (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{presion}\)</span>),</strong> asociado al trabajo entregado por el fluido debido a los cambios de presión. Actúa solo en las fronteras del volúmen de control:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+    \dot{W}_\mathrm{presion} = \int_{VC} P(\vec{V}\cdot\hat{n})dA
+    \end{equation*}\]</div>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Trabajo por fuerzas viscosas (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{viscosas}\)</span>),</strong> asociado a la disipación de energía por fricción como resultado de viscosidad del fluido (<span class="math notranslate nohighlight">\(\dot{W}_\mathrm{viscosas}\)</span> &gt; 0).</p></li>
+</ul>
+</section>
+</section>
+<section id="formulaciones-practicas">
+<h2><span class="section-number">4.2. </span>Formulaciones prácticas<a class="headerlink" href="#formulaciones-practicas" title="Permalink to this headline">#</a></h2>
+<p>La ecuación de la energía mostrada (4.1) no tiene mucho uso práctico en la ingeniería, debido a que los trabajos asociados a la presión y viscosidad están implícitos en la ecuación.</p>
+<p>El primer paso es, entonces, determinar una expresión general que separe el trabajo de eje de otros. Una vez obtenida esta expresión, derivaremos otras expresiones prácticas para el análisis de problemas de ingeniería.</p>
+<section id="forma-general-de-la-ecuacion-de-conservacion-de-energia">
+<h3><span class="section-number">4.2.1. </span>Forma general de la ecuación de conservación de energía<a class="headerlink" href="#forma-general-de-la-ecuacion-de-conservacion-de-energia" title="Permalink to this headline">#</a></h3>
+<p>Aplicando las ecuaciones comentadas anteriormente, la ecuación de conservación de energía es:</p>
+<div class="full-width">
+<p style="line-height:2.0em;"></p>
+<div class="amsmath math notranslate nohighlight" id="equation-7fbda683-3c5b-4274-aa83-f0f6eaa17a3c">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-7fbda683-3c5b-4274-aa83-f0f6eaa17a3c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{Q} - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\tilde{u}+\frac{V^2}{2}+gz\right)d\forall + \int_\mathrm{VC} \rho\left(\tilde{h}+\frac{V^2}{2}+gz\right)\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
+\end{equation}\]</div>
+ </div>
+<p>donde <span class="math notranslate nohighlight">\(\tilde{h} = \tilde{u} + P/\rho\)</span> es la <strong>entalpía o <em>energía de flujo</em> del fluido.</strong></p>
+</section>
+<section id="otras-formulaciones-practicas">
+<h3><span class="section-number">4.2.2. </span>Otras formulaciones prácticas<a class="headerlink" href="#otras-formulaciones-practicas" title="Permalink to this headline">#</a></h3>
+<p>A partir de la ecuación (4.2) podemos derivar otras relaciones prácticas</p>
+<p><strong>Caso 1: Conservación de energía mecácica (isotérmico y adiabático)</strong></p>
+<p>En este caso, <span class="math notranslate nohighlight">\(\dot{Q} = 0\)</span> y la energía interna es constante. La ecuación de conservación de energía se simplifica a:</p>
+<div class="full-width">
+<p style="line-height:2.0em;"></p>
+<div class="amsmath math notranslate nohighlight" id="equation-69684be4-339c-4508-8f00-5ee3e69693d3">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-69684be4-339c-4508-8f00-5ee3e69693d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+- \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\frac{V^2}{2}+gz\right)d\forall + \int_\mathrm{VC} \rho\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
+\end{equation}\]</div>
+</div><p><strong>Caso 2: Valores promedio a la entrada y salida + caso 1</strong></p>
+<div class="full-width">
+<p style="line-height:2.0em;"></p>
+<div class="amsmath math notranslate nohighlight" id="equation-00525fe1-1230-4c3b-b34a-89809f5cb9b1">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-00525fe1-1230-4c3b-b34a-89809f5cb9b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+- \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\frac{V^2}{2}+gz\right)d\forall +\sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
+\end{equation}\]</div>
+</div>
+<p><strong>Caso 3: Propiedades constantes dentro del V.C + caso 1  + caso 2</strong></p>
+<div class="full-width">
+<p style="line-height:2.0em;"></p>
+<div class="amsmath math notranslate nohighlight" id="equation-5ae1aaa8-9b0a-4d49-baff-1fac4354a7f9">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-5ae1aaa8-9b0a-4d49-baff-1fac4354a7f9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+- \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\left[\rho\left(\frac{V^2}{2}+gz\right)\forall\right] +\sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
+\end{equation}\]</div>
+</div>
+<p><strong>Caso 4: Problema estacionario + caso 1  + caso 2 + caso 3</strong></p>
+<div class="full-width">
+<p style="line-height:2.0em;"></p>
+<div class="amsmath math notranslate nohighlight" id="equation-565f9b4c-4502-4ab3-aebd-c26a2f01642b">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-565f9b4c-4502-4ab3-aebd-c26a2f01642b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+- \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
+\end{equation}\]</div>
+</div><blockquote>
+<div><p>Notar que estas fórmulas consideran algunos casos particulares. Otros casos basados en combinaciones de los casos expuestos, pueden ser facilmente derivadas a partir de esta discusión.</p>
+</div></blockquote>
+</section>
+<section id="ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">
+<h3><span class="section-number">4.2.3. </span>Ecuación de conservación de energía para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo" title="Permalink to this headline">#</a></h3>
+<p>En base a los casos anteriores, y considerando <strong>(1) flujo incompresible y (2) volúmen de control con una única entrada y salida</strong>, tenemos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ee3a08a9-2722-4ddd-8ee9-99bfd84ec1af">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-ee3a08a9-2722-4ddd-8ee9-99bfd84ec1af" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} + h_\mathrm{bomba} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho VA}\)</span>, (<span class="math notranslate nohighlight">\(i=\)</span> <span class="math notranslate nohighlight">\(\mathrm{bomba}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{turbina}\)</span> y <span class="math notranslate nohighlight">\(L\)</span>) es la <strong>altura de presión equivalente</strong> asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.</p>
+<p>El término <span class="math notranslate nohighlight">\(h_\mathrm{L}\)</span> se conoce como la <strong>pérdida de carga,</strong> asociada al pérdida irreversible de energía mecánica por fricción y viscosidad.</p>
+<p>La ecuación (4.7) representa forma más utilizada de la ecuación de conservación energía mecánica. Se expresa en forma de <strong>alturas hidrostáticas,</strong> ya que permite facilmente identificar los cambios de presión en el ducto.</p>
+<a class="reference internal image-reference" href="../_images/mechanical_energy_conservation.png"><img alt="../_images/mechanical_energy_conservation.png" class="align-center" src="../_images/mechanical_energy_conservation.png" style="width: 750px;" /></a>
+</section>
+<section id="ecuacion-de-bernoulli">
+<h3><span class="section-number">4.2.4. </span>Ecuación de Bernoulli<a class="headerlink" href="#ecuacion-de-bernoulli" title="Permalink to this headline">#</a></h3>
+<p>Si aplicamos la ecuación anterior en un tramo de un ducto, donde <span class="math notranslate nohighlight">\(h_\mathrm{bomba} = h_\mathrm{turbina} = 0\)</span>, y asumimos <strong>fluido ideal, es decir, sin fricciones por viscosidad (<span class="math notranslate nohighlight">\(h_L = 0\)</span>)</strong>, tenemos la <strong>ecuación de Bernoulli.</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-5c5dd258-a087-4f2b-8ea1-a7625d689962">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-5c5dd258-a087-4f2b-8ea1-a7625d689962" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra}
+\end{equation}\]</div>
+<p>Esta ecuación, aunque tiene poco uso práctico, permite comprender en términos simples la conservación de energía en un fluido producto de los cambios de presión, velocidad y elevación.</p>
+<a class="reference internal image-reference" href="../_images/bernoulli.png"><img alt="../_images/bernoulli.png" class="align-center" src="../_images/bernoulli.png" style="width: 850px;" /></a>
+</section>
+</section>
+<section id="flujo-laminar-y-turbulento">
+<h2><span class="section-number">4.3. </span>Flujo laminar y turbulento<a class="headerlink" href="#flujo-laminar-y-turbulento" title="Permalink to this headline">#</a></h2>
+<p>En la unidad introductoria mencionamos brevemente las caracteristicas que diferencian un flujo laminar de uno turbulento
+<a class="reference internal" href="../_images/laminar_vs_turbulent_illustration.png"><img alt="../_images/laminar_vs_turbulent_illustration.png" class="align-center" src="../_images/laminar_vs_turbulent_illustration.png" style="width: 800px;" /></a></p>
+<p>La principal diferencia entre ambos está dada por las fluctuaciones en las propiedades del flujo.</p>
+<ul class="simple">
+<li><p><strong>Flujo laminar</strong>: flujo ordenado caracterizado por líneas suaves</p></li>
+<li><p><strong>Flujo turbulento</strong>: flujo desordenado, caracterizado por fluctuaciones en torno a valores promedio</p></li>
+</ul>
+<p>La mejor forma de visualizar esto es mediante el experimento diseñado por Osborne Reynolds. En este experimento, un tubo con colorante es introducido en el centro de un ducto transparente por donde fluye agua.</p>
+<a class="reference internal image-reference" href="../_images/reynolds_experiment.png"><img alt="../_images/reynolds_experiment.png" class="align-center" src="../_images/reynolds_experiment.png" style="width: 700px;" /></a>
+<p>Las fluctuaciones inducidas por la turbulencia se manifiestan mediante la mezcla del colorante con el agua.</p>
+<p>En el siguiente podemos ver el famoso experimento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;nl75BGg9qdA&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/nl75BGg9qdA"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<section id="numero-de-reynolds">
+<h3><span class="section-number">4.3.1. </span>Número de Reynolds<a class="headerlink" href="#numero-de-reynolds" title="Permalink to this headline">#</a></h3>
+<p>Físicamente, las características de un flujo que definen si es laminar o turbulento son:</p>
+<ul class="simple">
+<li><p>Viscosidad dinámica</p></li>
+<li><p>Densidad</p></li>
+<li><p>Velocidad del flujo</p></li>
+</ul>
+<p>La relación entre estos tres parámetros está dado por el <strong>número de Reynolds</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-ee43b6a4-b5c7-46e5-9115-9d4384474653">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-ee43b6a4-b5c7-46e5-9115-9d4384474653" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\mathrm{Re} = \frac{VL_c}{\nu}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\nu = \mu/\rho,~(\mathrm{m^2/s})\)</span> es la viscosidad cinemática y <strong><span class="math notranslate nohighlight">\(L_c\)</span> es una longitud caractéristica</strong> relativa al problema estudiado.</p>
+<p>En el caso de flujo en ductos circulares de diámetro <span class="math notranslate nohighlight">\(D\)</span>, la longitud característica <span class="math notranslate nohighlight">\(L_c = D\)</span>.</p>
+<p>La clasificación está dada por el siguiente criterio</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+&amp;~\mathrm{Re}_D &amp;\lesssim 2300,\quad&amp;&amp;\mathrm{Flujo~laminar}\\
+2300\lesssim &amp;~\mathrm{Re}_D &amp;\lesssim 4000,\quad&amp;&amp;\mathrm{Flujo~en~transición}\\
+4000\lesssim &amp;~\mathrm{Re}_D&amp;\quad&amp;&amp;\mathrm{Flujo~turbulento}\\
+\end{eqnarray*}\]</div>
+<p>En el caso de ductos no circulares, utilizamos el <strong>diámetro hidráulico</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f3d51957-2017-41a8-9d7b-d536cd69d54a">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-f3d51957-2017-41a8-9d7b-d536cd69d54a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D_h = \frac{4A}{P_h}
+\end{equation}\]</div>
+<p>donde <strong><span class="math notranslate nohighlight">\(A\)</span> es el área de la sección transversal del ducto</strong> y <strong><span class="math notranslate nohighlight">\(P_h\)</span> es el perímetro mojado</strong> (perímetro del ducto en contacto con el fluido).</p>
+<a class="reference internal image-reference" href="../_images/diametro_hidraulico.png"><img alt="../_images/diametro_hidraulico.png" class="align-center" src="../_images/diametro_hidraulico.png" style="width: 700px;" /></a>
+</section>
+</section>
+<section id="perdida-de-carga">
+<h2><span class="section-number">4.4. </span>Pérdida de carga<a class="headerlink" href="#perdida-de-carga" title="Permalink to this headline">#</a></h2>
+<p>Podemos diferenciar dos grandes grupos para la pérdida de carga en sistemas de tuberías:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ca35a05e-1546-4fc2-8761-ef11d31d4e3f">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-ca35a05e-1546-4fc2-8761-ef11d31d4e3f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_L = h_{L,\mathrm{mayor}} + h_{L,\mathrm{menor}}
+\end{equation}\]</div>
+<p>Donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h_{L,\mathrm{mayor}}\)</span>: <strong>pérdidas mayores</strong>, asociadas a pérdidas por fricción en la longitud del ducto</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_{L,\mathrm{menor}}\)</span>: <strong>pérdidas menores</strong>, asociadas a pérdidas por fricción en singularidades, como: válvulas, codos, cambios de sección, etc.</p></li>
+</ul>
+<blockquote>
+<div><p>El término “mayor” y “menor” no está directamente relacionado con la magnitud de cada pérdida. Es decir, es posible encontrar casos donde las pérdidas menores sean superiores a las mayores, y viceversa.</p>
+</div></blockquote>
+<section id="perdida-de-carga-en-la-longitud-mayores">
+<h3><span class="section-number">4.4.1. </span>Pérdida de carga en la longitud (mayores)<a class="headerlink" href="#perdida-de-carga-en-la-longitud-mayores" title="Permalink to this headline">#</a></h3>
+<p>Es posible demostrar que, para ductos circulares de diámetro <span class="math notranslate nohighlight">\(D\)</span>, la pérdida de carga entre dos puntos separados por una longitud <span class="math notranslate nohighlight">\(L\)</span> está dada por la <strong>ecuación de Darcy-Weisbach:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-b9875464-b27a-4c0b-b75f-c09c8cf6d434">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-b9875464-b27a-4c0b-b75f-c09c8cf6d434" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_L = f\frac{L}{D}\frac{V^2}{2g},\quad(\mathrm{m})
+\end{equation}\]</div>
+<p>donde <strong><span class="math notranslate nohighlight">\(f\)</span> es el factor de fricción de Darcy,</strong> y <span class="math notranslate nohighlight">\(V\)</span> es la velocidad promedio del flujo en el ducto</p>
+<p>La fórmula para el factor de fricción depende de si el flujo es laminar o turbulento.</p>
+<section id="factor-de-friccion-para-flujo-laminar">
+<h4><span class="section-number">4.4.1.1. </span>Factor de fricción para flujo laminar<a class="headerlink" href="#factor-de-friccion-para-flujo-laminar" title="Permalink to this headline">#</a></h4>
+<p>En el caso de flujo laminar, el factor de fricción está dado por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dc170e62-2ac7-4367-9419-0d586516960d">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-dc170e62-2ac7-4367-9419-0d586516960d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f = \frac{64}{\mathrm{Re}_D}
+\end{equation}\]</div>
+<p>Para ductos no circulares, usamos las siguientes relaciones en función del diámetro hidráulico (<span class="math notranslate nohighlight">\(D_h\)</span>)</p>
+<a class="reference internal image-reference" href="../_images/head_loss_laminar_non-circular.png"><img alt="../_images/head_loss_laminar_non-circular.png" class="align-center" src="../_images/head_loss_laminar_non-circular.png" style="width: 800px;" /></a>
+</section>
+<section id="factor-de-friccion-para-flujo-turbulento">
+<h4><span class="section-number">4.4.1.2. </span>Factor de fricción para flujo turbulento<a class="headerlink" href="#factor-de-friccion-para-flujo-turbulento" title="Permalink to this headline">#</a></h4>
+<p>Para flujo en transición y turbulento, el factor de fricción depende de la rugosidad del ducto, <span class="math notranslate nohighlight">\(\epsilon\)</span>. Esto porque <em>la inestabilidad del flujo será mayor cuando la rugosidad aumenta.</em></p>
+<p>El factor de fricción, así, depende de <span class="math notranslate nohighlight">\(\mathrm{Re}_D\)</span> y la rugosidad relativa <span class="math notranslate nohighlight">\(\epsilon_R =\epsilon/D\)</span>, y se define por
+<strong>ecuación de Colebrook:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{\sqrt{f}} = - 2 \log\left(\frac{\epsilon_R}{3.7} + \frac{2.51}{\mathrm{Re}_D\sqrt{f}}\right)
+\end{equation*}\]</div>
+<p>Esta ecuación es no lineal y su solución, por lo tanto, requiere de métodos númericos.</p>
+<p>Una alternativa a la ecuación de Colebrook es el diagrama de Moody.</p>
+<div class="full-width">
+<img src="./figures/Moody_diagram.png" width="1000px" align= center>
+</div><p>Otra alternativa es utilizar relaciones empíricas que expresan <span class="math notranslate nohighlight">\(f\)</span> de forma explicita, pero aproximada. Por ejemplo:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c79bc5b4-3bed-4e33-8a5c-73f60fb5fe13">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-c79bc5b4-3bed-4e33-8a5c-73f60fb5fe13" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+f &amp;=&amp; 0.25\left[\log\left(\frac{\epsilon_R}{3.7}+\frac{5.74}{\mathrm{Re}_D^{0.9}}\right)\right]^{-2}\quad\quad&amp;&amp;\mathrm{Miller}
+\\[10pt]
+\frac{1}{\sqrt{f}} &amp;=&amp; -1.8\log\left[\left(\frac{\epsilon_R}{3.7}\right)^{1.11}+\frac{6.9}{\mathrm{Re}_D}\right]\quad\quad&amp;&amp;\mathrm{Haaland}
+\end{eqnarray}\]</div>
+</section>
+</section>
+<section id="perdidas-de-carga-por-singularidades-menores">
+<h3><span class="section-number">4.4.2. </span>Pérdidas de carga por singularidades (menores)<a class="headerlink" href="#perdidas-de-carga-por-singularidades-menores" title="Permalink to this headline">#</a></h3>
+<p>Estas pérdidas están dadas por singularidades, tales como: cambios de sección en el flujo, cambios de dirección en codos, válvulas, etc.</p>
+<p>La relación universal es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-77e78df4-6c8e-4f9a-b1f5-d15aafe54595">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-77e78df4-6c8e-4f9a-b1f5-d15aafe54595" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_{L,\mathrm{menores}} = \sum_i K_i\frac{V_i^2}{2g}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(K_i\)</span> y <span class="math notranslate nohighlight">\(V_i\)</span> son el coeficiente de pérdida y la velocidad en la singularidad <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<blockquote>
+<div><p>Notar que el valor de <span class="math notranslate nohighlight">\(V_i\)</span> depende del tipo de singularidad.</p>
+</div></blockquote>
+<p>A continuación mostramos algunos ejemplos</p>
+<a class="reference internal image-reference" href="../_images/singularidad1.png"><img alt="../_images/singularidad1.png" class="align-center" src="../_images/singularidad1.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/singularidad2.png"><img alt="../_images/singularidad2.png" class="align-center" src="../_images/singularidad2.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/singularidad3.png"><img alt="../_images/singularidad3.png" class="align-center" src="../_images/singularidad3.png" style="width: 800px;" /></a>
+</section>
+</section>
+<section id="referencias">
+<h2><span class="section-number">4.5. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
+<ul class="simple">
+<li><p>Capitulo 5: Ecuaciones de Bernoulli y de la energía</p></li>
+<li><p>Capítulo 8: Flujo en tuberías</p></li>
+</ul>
+<p><strong>White F. M. <em>Mecánica de Fluidos</em>, 5ta Ed., McGraw Hill, 2004</strong></p>
+<ul class="simple">
+<li><p>Capítulo 3.6: Ecuación de la energía</p></li>
+<li><p>Capítulo 3.7: Flujo sin fricción: La ecuación de Bernoulli</p></li>
+<li><p>Capítulo 6: Flujo viscoso en conductos</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./04_Perdida_de_carga"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Introducción a la dinámica de fluidos</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Francisco V. Ramirez-Cuevas<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

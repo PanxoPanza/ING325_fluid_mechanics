@@ -132,6 +132,23 @@ const thebe_selector_output = ".output, .cell_output"
    3. Introducción a la dinámica de fluidos
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_Perdida_de_carga/04_Perdida_de_carga.html">
+   4. Conservación de energía y pérdida de carga en ductos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Apéndice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html">
+   Laboratorio 1. Pérdidas de carga
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -493,8 +510,8 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../_images/atmospheric_presure.png"><img alt="../_images/atmospheric_presure.png" class="align-center" src="../_images/atmospheric_presure.png" style="width: 400px;" /></a>
 <p><strong>La presión atmosférica</strong>, así, es el resultado de la columna de gases atmosférico sobre una superficie.</p>
 <p><strong>La presión absoluta (<span class="math notranslate nohighlight">\(P_\mathrm{abs}\)</span>)</strong> en un elemento diferencial de fluido en un estanque es, así:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d26b3c6-1d18-4f4e-8e50-97bbc8a49622">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-5d26b3c6-1d18-4f4e-8e50-97bbc8a49622" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-762729e1-0f2f-4beb-a73b-89869630397a">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-762729e1-0f2f-4beb-a73b-89869630397a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{abs} = P_\mathrm{atm} + \rho gh
 \end{equation}\]</div>
 <p>La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en logitudes de escala de <span class="math notranslate nohighlight">\(1000~\mathrm{m}\)</span>, debido a que la densidad de los gases atmosféricos es mucho menor que los líquidos.</p>
@@ -527,15 +544,15 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 <section id="instrumentos-para-medir-la-presion">
 <h3><span class="section-number">2.1.5. </span>Instrumentos para medir la presión<a class="headerlink" href="#instrumentos-para-medir-la-presion" title="Permalink to this headline">#</a></h3>
 <p>Llamamos <em><strong>presión manométrica (<span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span>), a la diferencia entre la presión absoluta y la presión atmosférica</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13790026-7bd6-40c6-91e3-24411fa77d4e">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-13790026-7bd6-40c6-91e3-24411fa77d4e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-feaf37ac-5495-4700-9d0d-85e3c3d39fda">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-feaf37ac-5495-4700-9d0d-85e3c3d39fda" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{man} = P_\mathrm{abs} - P_\mathrm{atm}
 \end{equation}\]</div>
 <p>El instrumento para medir <span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span> es el <strong>manómetro</strong>
 <a class="reference internal" href="../_images/manometer.png"><img alt="../_images/manometer.png" class="align-center" src="../_images/manometer.png" style="width: 850px;" /></a></p>
 <p>Llamamos <em><strong>presión vacuométrica o de vacío (<span class="math notranslate nohighlight">\(P_\mathrm{vac}\)</span>), a la diferencia entre la presión atmosférica y la absoluta</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-636f5fa0-89bb-4c52-89d6-5f45b085d665">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-636f5fa0-89bb-4c52-89d6-5f45b085d665" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a7702c05-ebfc-4fff-bd2e-ebce1b42a0e9">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-a7702c05-ebfc-4fff-bd2e-ebce1b42a0e9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 \end{equation}\]</div>
 <p>El instrumento de medida se llama <strong>vacuómetro</strong>.
@@ -554,15 +571,15 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 <section id="formulacion-general-para-superficies-planas">
 <h3><span class="section-number">2.2.1. </span>Formulación general para superficies planas<a class="headerlink" href="#formulacion-general-para-superficies-planas" title="Permalink to this headline">#</a></h3>
 <p>El principio de Pascal nos permite determinar la <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>) sobre la cara de una superficie plana de área <span class="math notranslate nohighlight">\(A\)</span>:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1bf20fe9-5a90-447e-a412-c96252984eae">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-1bf20fe9-5a90-447e-a412-c96252984eae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-662dfa92-3cd5-4bfa-9a26-8bcd35eb6cd5">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-662dfa92-3cd5-4bfa-9a26-8bcd35eb6cd5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_R = (P_0 + \rho g h_C)A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_C = y_C\sin\theta\)</span> es la <strong>distancia vertical del centroide de la superfice (<span class="math notranslate nohighlight">\(y_C\)</span>) al nivel libre del líquido,</strong> y <strong><span class="math notranslate nohighlight">\(P_0\)</span> es la presión absoluta sobre el líquido</strong> (comúnmente, presión atmosférica).</p>
 <a class="reference internal image-reference" href="../_images/force_irregular_plate.png"><img alt="../_images/force_irregular_plate.png" class="align-center" src="../_images/force_irregular_plate.png" style="width: 800px;" /></a>
 <p>La <strong>línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong>, está dada por la relación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a2d8f626-69d7-49bc-869b-dab797609ee0">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-a2d8f626-69d7-49bc-869b-dab797609ee0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-296e583c-d99d-4afa-a91b-e9a2dc967e86">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-296e583c-d99d-4afa-a91b-e9a2dc967e86" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_p = y_C + \frac{I_{xx,C}}{[y_C + P_0/(\rho g\sin\theta)]A}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(I_{xx,C}\)</span> es el <em>segundo momento de área respecto al eje <span class="math notranslate nohighlight">\(x\)</span> que para por el centroide de la superficie</em>.</p>
@@ -575,8 +592,8 @@ y_p = y_C + \frac{I_{xx,C}}{[y_C + P_0/(\rho g\sin\theta)]A}
 <p>En el caso de <strong>superficies rectangulares</strong>, <em>la distribución de presiones forma un trapecio rectángulo de sección cuadrada</em>.</p>
 <a class="reference internal image-reference" href="../_images/presiones_placa_cuadrada.png"><img alt="../_images/presiones_placa_cuadrada.png" class="align-center" src="../_images/presiones_placa_cuadrada.png" style="width: 800px;" /></a>
 <p>Las fórmulas de <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>), así, corresponde al área del trapecio</strong>. Por el contrario, <strong>la línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong> <em>no necesariamente coincide con el centroide del trapecio.</em> Está dada por la fórmula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ccb86ab-80c7-4b03-bad8-1fefc24f67de">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-1ccb86ab-80c7-4b03-bad8-1fefc24f67de" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6d34b5e1-fa2e-4a23-88ca-8e7a1c2a7595">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-6d34b5e1-fa2e-4a23-88ca-8e7a1c2a7595" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_P = s+\frac{b}{2} + \frac{b^2}{12[s+b/2+P_0/(\rho g\sin\theta)]}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/force_rectangular_plate.png"><img alt="../_images/force_rectangular_plate.png" class="align-center" src="../_images/force_rectangular_plate.png" style="width: 850px;" /></a>

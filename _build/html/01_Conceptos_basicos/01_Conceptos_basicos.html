@@ -132,6 +132,23 @@ const thebe_selector_output = ".output, .cell_output"
    3. Introducción a la dinámica de fluidos
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_Perdida_de_carga/04_Perdida_de_carga.html">
+   4. Conservación de energía y pérdida de carga en ductos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Apéndice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html">
+   Laboratorio 1. Pérdidas de carga
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -481,14 +498,14 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 </ul>
 <p><strong>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).</strong> Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54c4c416-1c68-4b1f-9e46-d3fab8923796">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-54c4c416-1c68-4b1f-9e46-d3fab8923796" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d485f79c-930a-4edb-8f7c-33c7210f1390">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-d485f79c-930a-4edb-8f7c-33c7210f1390" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 300px;" /></a>
 <p><strong>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>).</strong> Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b304ad11-9e17-4359-b02b-8bf6b1e769c5">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-b304ad11-9e17-4359-b02b-8bf6b1e769c5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3c18576f-5cf9-4e85-99ec-8105b66bb289">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-3c18576f-5cf9-4e85-99ec-8105b66bb289" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g\quad\quad\frac{\mathrm{N}}{m^3}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
@@ -503,8 +520,8 @@ Se define dependiendo si el fluido fluye por un canal confinado (interno), o sob
 <p>Matemáticamente, <strong>la taza de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" /></a>
 <p>En algunos fluidos (como el agua, aire y aceites), la taza de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e364dd2c-0e68-459c-a268-42eaa5371602">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-e364dd2c-0e68-459c-a268-42eaa5371602" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-770498c0-efba-4dd6-a3a0-7490cd5900dc">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-770498c0-efba-4dd6-a3a0-7490cd5900dc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\frac{\mathrm{N}}{\mathrm{m}^2}
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>

@@ -25,7 +25,7 @@
 
 #  - **Descripción lagrangiana** consiste en hacer un seguimiento de las partículas materiales. Este enfoque es comúnmente utilizado en dinámica de sólidos.
 # 
-# - **Descripción euleriana** consiste en medir lo que pasa en puntos fijos del espacio. Este enfoque es comúnmente utilizado en dinámica de sólidos.
+# - **Descripción euleriana** consiste en medir lo que pasa en puntos fijos del espacio. Este enfoque es comúnmente utilizado en dinámica de fluidos.
 
 # <img src="./figures/lagrangian_eulerian.png" width="800px" align= center>
 
@@ -252,7 +252,7 @@
 
 # ### Ejemplo
 
-# Un chorro de agua de velocidad $V_j$ incide perpendicularmente a una placa plana que se mueve hacia la derecha a velocidad $V_c$. **Calcule la fuerza necesaria para mantener la placa en movimiento a velocidad constante si la densidad del chorro es $1000~\mathrm{kg/m^3}$, la sección del chorro es $3~\mathrm{cm^2}$ y $V_j$ y $V_c$ son 20 y $15~\mathrm{m/s}$, respectivamente.** *Desprecie el peso del chorro y de la placa y suponga que el chorro se divide en dos chorros iguales,
+# Un chorro de agua de velocidad $V_j$ incide perpendicularmente a una placa plana que se mueve hacia la derecha a velocidad $V_c$. **Calcule la fuerza necesaria para mantener la placa en movimiento a velocidad constante si la densidad del chorro es $1000~\mathrm{kg/m^3}$, la sección del chorro es $3~\mathrm{cm^2}$ y $V_j$ y $V_c$ son $20$ y $15~\mathrm{m/s}$, respectivamente.** *Desprecie el peso del chorro y de la placa y suponga que el chorro se divide en dos chorros iguales,
 # uno hacia arriba y otro hacia abajo.*
 
 # <img src="./figures/momento_lineal_ejercicio.png" width="350px" align= center>

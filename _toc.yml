@@ -10,6 +10,13 @@ parts:
     - file: 01_Conceptos_basicos/01_Conceptos_basicos
     - file: 02_Estatica_de_fluidos/02_Estatica_de_fluidos
     - file: 03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos
+    - file: 04_Perdida_de_carga/04_Perdida_de_carga
+  - caption: Apéndice
+    numbered: False
+    chapters:
+      - file: Apendice/Laboratorio1/Lab1_perdida_de_carga
+#      - file: Apendice/Repaso/Repaso_Parte2/Repaso_Parte2
+#      - file: Apendice/Repaso/Repaso_Parte3/Repaso_Parte3
 #  - caption: Parte 2. Turbomáquinas y diseño de sistemas hidráulicos
 #    numbered: true
 #    chapters:
@@ -22,9 +29,3 @@ parts:
 #    - file: 07_Flujo_externo/07_Flujo_externo
 #    - file: 08_Analisis_diferencial_intro/08_Analisis_diferencial_intro
 #    - file: 09_Flujos_caracteristicos/09_Flujos_caracteristicos
-#  - caption: Apéndice
-#    numbered: false
-#    chapters:
-#      - file: Apendice/Repaso/Repaso_Parte1/Repaso_Parte1
-#      - file: Apendice/Repaso/Repaso_Parte2/Repaso_Parte2
-#      - file: Apendice/Repaso/Repaso_Parte3/Repaso_Parte3
