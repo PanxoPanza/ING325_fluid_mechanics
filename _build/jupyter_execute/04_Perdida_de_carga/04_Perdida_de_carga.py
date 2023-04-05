@@ -268,6 +268,7 @@ YouTubeVideo('nl75BGg9qdA', width=700, height=400)
 # 
 # 
 # <div class="full-width">
+#     
 # <img src="./figures/Moody_diagram.png" width="1000px" align= center>
 # 
 # </div>
