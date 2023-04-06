@@ -132,7 +132,7 @@
 # En base a los casos anteriores, y considerando **(1) flujo incompresible y (2) volúmen de control con una única entrada y salida**, tenemos:
 # 
 # \begin{equation}
-# \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} + h_\mathrm{bomba} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
+# \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{entra} + h_\mathrm{bomba} = \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{sale} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
 # \end{equation}
 # 
 # donde $h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho VA}$, ($i=$ $\mathrm{bomba}$, $\mathrm{turbina}$ y $L$) es la **altura de presión equivalente** asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.
@@ -250,7 +250,7 @@ YouTubeVideo('nl75BGg9qdA', width=700, height=400)
 
 # Para ductos no circulares, usamos las siguientes relaciones en función del diámetro hidráulico ($D_h$)
 # 
-# <img src="./figures/head_loss_laminar_non-circular.png" width="800px" align= center>
+# <img src="./figures/head_loss_laminar_non-circular.png" width="850px" align= center>
 
 # #### Factor de fricción para flujo turbulento
 # Para flujo en transición y turbulento, el factor de fricción depende de la rugosidad del ducto, $\epsilon$. Esto porque *la inestabilidad del flujo será mayor cuando la rugosidad aumenta.*
