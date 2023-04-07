@@ -23,7 +23,7 @@
 # \tilde{e} = \tilde{e}_\mathrm{interna} + \tilde{e}_\mathrm{cinética} + \tilde{e}_\mathrm{potencial} + \cdots, \quad\left(\mathrm{\frac{kJ}{kg}}\right)
 # \end{equation*}
 # 
-# donde
+# donde:
 # - $\tilde{e}_\mathrm{interna} = \tilde{u}$ (energía interna)
 # - $\tilde{e}_\mathrm{cinética} = \frac{V^2}{2}$ (energía cinética)
 # - $\tilde{e}_\mathrm{potencial} = gz$ (energía potencial)
@@ -45,7 +45,7 @@
 # - **Trabajo de eje ($\dot{W}_\mathrm{eje}$),** asociado al trabajo intercambiado con maquinarias, por ejemplo, trabajo de bombas ($\dot{W}_\mathrm{eje} < 0$), turbinas ($\dot{W}_\mathrm{eje} > 0$), ventiladores ($\dot{W}_\mathrm{eje} < 0$), etc.
 # 
 
-# - **Trabajo por presiones ($\dot{W}_\mathrm{presion}$),** asociado al trabajo entregado por el fluido debido a los cambios de presión. Actúa solo en las fronteras del volúmen de control:
+# - **Trabajo por presiones ($\dot{W}_\mathrm{presion}$),** asociado al trabajo de presiones del fluido. Actúa solo en las fronteras del volúmen de control:
 # 
 #     \begin{equation*}
 #     \dot{W}_\mathrm{presion} = \int_{VC} P(\vec{V}\cdot\hat{n})dA
@@ -125,7 +125,7 @@
 #     
 # </div>
 
-# > Notar que estas fórmulas consideran algunos casos particulares. Otros casos basados en combinaciones de los casos expuestos, pueden ser facilmente derivadas a partir de esta discusión. 
+# > Notar que estas fórmulas consideran algunos casos particulares. Sin embargo, otros casos basados en combinaciones de los casos expuestos pueden ser facilmente derivadas a partir de esta discusión. 
 
 # ### Ecuación de conservación de energía para una línea de flujo
 # 
@@ -139,7 +139,7 @@
 
 # El término $h_\mathrm{L}$ se conoce como la **pérdida de carga,** asociada al pérdida irreversible de energía mecánica por fricción y viscosidad.
 
-# La ecuación (4.7) representa forma más utilizada de la ecuación de conservación energía mecánica. Se expresa en forma de **alturas hidrostáticas,** ya que permite facilmente identificar los cambios de presión en el ducto.
+# La ecuación (4.7) representa la forma más utilizada de la ecuación de conservación energía mecánica. Se expresa en forma de **alturas hidrostáticas,** ya que permite facilmente identificar los cambios de presión en el ducto.
 # 
 # <img src="./figures/mechanical_energy_conservation.png" width="750px" align= center>
 
@@ -157,7 +157,7 @@
 
 # ## Flujo laminar y turbulento
 
-# En la unidad introductoria mencionamos brevemente las caracteristicas que diferencian un flujo laminar de uno turbulento
+# En la unidad introductoria mencionamos, brevemente, las caracteristicas que diferencian un flujo laminar de uno turbulento
 # <img src="./figures/laminar_vs_turbulent_illustration.png" width="800px" align= center>
 
 # La principal diferencia entre ambos está dada por las fluctuaciones en las propiedades del flujo.
