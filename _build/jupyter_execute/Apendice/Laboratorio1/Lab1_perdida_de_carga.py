@@ -25,7 +25,7 @@
 
 
 from IPython.display import YouTubeVideo
-YouTubeVideo('Z2PoQ1yr9Vg', width=600,  playsinline=0)
+YouTubeVideo('1uBQakG5eu8', width=600,  playsinline=0)
 
 
 # ### Resumen de los pasos
@@ -43,24 +43,22 @@ YouTubeVideo('Z2PoQ1yr9Vg', width=600,  playsinline=0)
 # 4. Graficar los canales utilizados durante la experiencia y posterior a eso seleccionar la opción de muestreo de estadisticas 
 # de datos.
 
-# **Paso 2: Determinar la caída de presión en función del caudal**
+# **Paso 2: Registrar la caída de presión en función del caudal**
 # 1. Ajustar la frecuencia eléctrica del motor de la bomba centrifuga.
 # 2. Medir el tiempo en el que pasan 10 litros (0.01 m$^3$) por el medidor de volumen.
-# 3. Reiniciar la medición en el software.
-# 4. Luego de 6 a 7 segundos detener la toma de datos y registrar los valores de presión en los puntos incial y final.
+# 3. Luego de 6 a 7 segundos detener la toma de datos y registrar los valores de presión en los puntos incial y final.
+# 4. Reiniciar la medición en el software y volver al punto 1
 
 # **Paso 3. Detener el sistema y proceder con la toma de muestras en otra cañería**
 # 1. Apagar el equipo desde el panel central, presionando el boton rojo al costado de la perilla donde se modificaba la frecuencia.
-# 2. Cierrar válvulas de bola de la tubería recién utilizada.
+# 2. Cerrar válvulas de bola de la tubería recién utilizada.
 # 3. Abrir las válvulas de la tubería a ensayar
 # 4. Volver a encender el equipo.
-# 5. Realizar las mediciones, comenzando del paso 1
+# 5. Realizar las mediciones, comenzando del paso 0
 
 # ## Actividades a realizar
 # 
 # Posterior a la experiencia, se deben realizar las siguientes actividades. Los resultados de estas actividades deben ser detalladas en el informe
-
-# > **Nota.** La actividad 3 no será realizada en esta experiencia
 
 # ### Actividad 1. Variación de la pérdida de carga en función del caudal
 # 
@@ -102,8 +100,5 @@ YouTubeVideo('Z2PoQ1yr9Vg', width=600,  playsinline=0)
 # 
 # El valor final de $\epsilon$ corresponderá al promedio de todos los valores estimados para cada caudal.
 
-# In[ ]:
-
-
-
-
+# ### Actividad 3. Ejercicio propuesto
+# Resolver el ejercicion propuesto al final la experiencia
