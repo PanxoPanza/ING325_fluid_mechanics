@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Laboratorio 1. Pérdidas de carga &#8212; ING325 - Mecánica de Fluidos</title>
+    <title>Laboratorio 2: Bombas Centrifugas &#8212; ING325 - Mecánica de Fluidos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Laboratorio 2: Bombas Centrifugas" href="../Laboratorio2/Lab2_BombasCentrifugas.html" />
-    <link rel="prev" title="4. Conservación de energía y pérdida de carga en ductos" href="../../04_Perdida_de_carga/04_Perdida_de_carga.html" />
+    <link rel="prev" title="Laboratorio 1. Pérdidas de carga" href="../Laboratorio1/Lab1_perdida_de_carga.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,13 +150,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Laboratorio1/Lab1_perdida_de_carga.html">
    Laboratorio 1. Pérdidas de carga
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Laboratorio2/Lab2_BombasCentrifugas.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Laboratorio 2: Bombas Centrifugas
   </a>
  </li>
@@ -220,7 +219,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Apendice/Laboratorio1/Lab1_perdida_de_carga.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Apendice/Laboratorio2/Lab2_BombasCentrifugas.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -263,7 +262,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/Apendice/Laboratorio1/Lab1_perdida_de_carga.ipynb"
+        <a href="../../_sources/Apendice/Laboratorio2/Lab2_BombasCentrifugas.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -324,7 +323,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#descripcion-de-la-practica">
-   Descripción de la práctica.
+   Descripción de la práctica
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -333,8 +332,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resumen-de-los-pasos">
-     Resumen de los pasos
+    <a class="reference internal nav-link" href="#ensayo-con-una-bomba-resumen-de-los-pasos">
+     Ensayo con una bomba. Resumen de los pasos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensayo-con-dos-bombas-en-paralelo-resumen-de-los-pasos">
+     Ensayo con dos bombas en paralelo. Resumen de los pasos
     </a>
    </li>
   </ul>
@@ -345,13 +349,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#actividad-1-variacion-de-la-perdida-de-carga-en-funcion-del-caudal">
-     Actividad 1. Variación de la pérdida de carga en función del caudal
+    <a class="reference internal nav-link" href="#actividad-1-obtencion-de-curvas-caracteristicas-de-una-bomba-centrifuga">
+     Actividad 1. Obtención de curvas características de una bomba centrífuga
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#actividad-2-perdidas-lineales-y-rugosidad">
-     Actividad 2. Pérdidas Lineales y Rugosidad
+    <a class="reference internal nav-link" href="#actividad-2-obtencion-de-curvas-caracteristicas-de-dos-bomba-centrifugas-en-paralelo">
+     Actividad 2. Obtención de curvas características de dos bomba centrífugas en paralelo
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -370,7 +374,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Laboratorio 1. Pérdidas de carga</h1>
+                <h1>Laboratorio 2: Bombas Centrifugas</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -382,7 +386,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#descripcion-de-la-practica">
-   Descripción de la práctica.
+   Descripción de la práctica
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -391,8 +395,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resumen-de-los-pasos">
-     Resumen de los pasos
+    <a class="reference internal nav-link" href="#ensayo-con-una-bomba-resumen-de-los-pasos">
+     Ensayo con una bomba. Resumen de los pasos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ensayo-con-dos-bombas-en-paralelo-resumen-de-los-pasos">
+     Ensayo con dos bombas en paralelo. Resumen de los pasos
     </a>
    </li>
   </ul>
@@ -403,13 +412,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#actividad-1-variacion-de-la-perdida-de-carga-en-funcion-del-caudal">
-     Actividad 1. Variación de la pérdida de carga en función del caudal
+    <a class="reference internal nav-link" href="#actividad-1-obtencion-de-curvas-caracteristicas-de-una-bomba-centrifuga">
+     Actividad 1. Obtención de curvas características de una bomba centrífuga
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#actividad-2-perdidas-lineales-y-rugosidad">
-     Actividad 2. Pérdidas Lineales y Rugosidad
+    <a class="reference internal nav-link" href="#actividad-2-obtencion-de-curvas-caracteristicas-de-dos-bomba-centrifugas-en-paralelo">
+     Actividad 2. Obtención de curvas características de dos bomba centrífugas en paralelo
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -429,14 +438,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="laboratorio-1-perdidas-de-carga">
-<h1>Laboratorio 1. Pérdidas de carga<a class="headerlink" href="#laboratorio-1-perdidas-de-carga" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="laboratorio-2-bombas-centrifugas">
+<h1>Laboratorio 2: Bombas Centrifugas<a class="headerlink" href="#laboratorio-2-bombas-centrifugas" title="Permalink to this headline">#</a></h1>
 <section id="descripcion-de-la-practica">
-<h2>Descripción de la práctica.<a class="headerlink" href="#descripcion-de-la-practica" title="Permalink to this headline">#</a></h2>
-<p>El objetivo de esta experiencia de laboratorio es estudiar y comprender los fenomenos de flujo interno y pérdida de carga que sufre el fluido al atravesar los diferentes elementos de una instalación hidráulica, como pueden ser tuberías, válvulas, curvas, entre otros.</p>
-<a class="reference internal image-reference" href="../../_images/banco_de_ensayo.jpg"><img alt="../../_images/banco_de_ensayo.jpg" class="align-center" src="../../_images/banco_de_ensayo.jpg" style="width: 600px;" /></a>
-<center> Banco de ensayo de pérdida de carga</center><p>La experiencia consiste en medir el caudal que circula por una cañeria y la caída de presión que sufre el fluido que lo atraviesa, utilizando el banco de ensayo en la figura. A partir de estas mediciones, y mediante la ecuación de conservación de energía, podrán obtener la pérdida de carga existente que se verá afectado el fluido. La posibilidad de modificar el caudal de fluido que circula por el sistema permitirá el estudio de la influencia del número de Reynolds en el valor obtenido de las pérdidas de carga.</p>
-<p>Debido a que las diferencias de presiones en la cañería son comúnmente pequeñas, el banco de ensayo utiliza mediciones piezométricas conectadas a un conjunto de sensores/indicadores de presión. Los datos recolectados por estos sensores son contínuamente monitoreados por sistema de adquisición de datos.</p>
+<h2>Descripción de la práctica<a class="headerlink" href="#descripcion-de-la-practica" title="Permalink to this headline">#</a></h2>
+<p>El objetivo de esta experiencia es estudiar y comprender las curvas caracterisiticas de una bomba centrifuga y la utilización de esta en un sistema de conducción de flujo de fluido.</p>
+<a class="reference internal image-reference" href="../../_images/banco_de_ensayo1.jpg"><img alt="../../_images/banco_de_ensayo1.jpg" class="align-center" src="../../_images/banco_de_ensayo1.jpg" style="width: 600px;" /></a>
+<center> Banco de ensayo de bombas centrífugas</center><p>La experiencia consiste en medir el caudal y la diferencia de presiones que sufre el agua al circular a través de una bomba centrífuga. Estos valores serán contrastados con la potencia de la bomba, la cual se determinará a través del potencial eléctrico (voltaje) y corriente suministrados. Por último, la temperatura del agua también será monitoriada para posterior estimación de la densidad y viscosidad.</p>
+<p>La experiencia considera el ensayo con una bomba, y luego con dos bombas en paralelo.</p>
 </section>
 <section id="metodologia-experimental">
 <h2>Metodología experimental<a class="headerlink" href="#metodologia-experimental" title="Permalink to this headline">#</a></h2>
@@ -446,95 +455,78 @@ title="Print to PDF"
 <div class="output text_html">
 <iframe
     width="600"
-    height="300"
-    src="https://www.youtube.com/embed/1uBQakG5eu8?playsinline=0"
+    height="400"
+    src="https://www.youtube.com/embed/SqieHq9g4Ig?playsinline=0"
     frameborder="0"
     allowfullscreen
 
 ></iframe>
 </div></div>
 </div>
-<section id="resumen-de-los-pasos">
-<h3>Resumen de los pasos<a class="headerlink" href="#resumen-de-los-pasos" title="Permalink to this headline">#</a></h3>
-<p><strong>Paso 0. Medir dimensiones de la cañería</strong></p>
+<section id="ensayo-con-una-bomba-resumen-de-los-pasos">
+<h3>Ensayo con una bomba. Resumen de los pasos<a class="headerlink" href="#ensayo-con-una-bomba-resumen-de-los-pasos" title="Permalink to this headline">#</a></h3>
+<p><strong>Paso 1. Configuración del sistema</strong></p>
 <ol class="simple">
-<li><p>Utilizando un pie de metro, medir el díametro externo <span class="math notranslate nohighlight">\(D_e\)</span></p></li>
-<li><p>Utilizando una huincha, medir el largo <span class="math notranslate nohighlight">\(L\)</span> que separa los puntos de medición de presión.</p></li>
-<li><p>Determinar el diámetro interno <span class="math notranslate nohighlight">\(D\)</span>, a través de catálogos comerciales (se entregará esta información).</p></li>
+<li><p>Encender equipo desde el panel principal</p></li>
+<li><p>Girar reostato en el panel izquierdo hasta obtener una velocidad de 2600 rpm.</p></li>
+<li><p>Verificar que la válvula de compuerta este 100% abierta</p></li>
 </ol>
-<p><strong>Paso 1. Configuración del Software</strong></p>
+<p><strong>Paso 2. Registrar diferencia de presiones, voltaje y corriente en función del caudal</strong></p>
 <ol class="simple">
-<li><p>Hacer click en Setup.</p></li>
-<li><p>Deshabilitar los canales que no se vayan a utilizar para la medición.</p></li>
-<li><p>Cambiar las unidades de medida a Pascales <span class="math notranslate nohighlight">\((\mathrm{N/m^2})\)</span></p></li>
-<li><p>Graficar los canales utilizados durante la experiencia y posterior a eso seleccionar la opción de muestreo de estadisticas
-de datos.</p></li>
+<li><p>Cronometrar el tiempo en el que pasan 10 litros (0.01m<span class="math notranslate nohighlight">\(^3\)</span>) en el medidor de volúmen</p></li>
+<li><p>Registrar las presiones a la entrada y salida de la bomba</p></li>
+<li><p>Registrar la diferencia de potencial indicada en el voltímetro (panel a la izquierda)</p></li>
+<li><p>Registrar la corriente indicada en el amperímetro (panel a la izquierda)</p></li>
+<li><p>Registrar temperatura del agua</p></li>
+<li><p>Girar la válvula en 180° en dirección del reloj</p></li>
+<li><p>Repetir desde el punto 1</p></li>
 </ol>
-<p><strong>Paso 2: Registrar la caída de presión en función del caudal</strong></p>
+<p><strong>Paso 3. Detener el sistema</strong></p>
 <ol class="simple">
-<li><p>Ajustar la frecuencia eléctrica del motor de la bomba centrifuga.</p></li>
-<li><p>Medir el tiempo en el que pasan 10 litros (0.01 m<span class="math notranslate nohighlight">\(^3\)</span>) por el medidor de volumen.</p></li>
-<li><p>Luego de 6 a 7 segundos detener la toma de datos y registrar los valores de presión en los puntos incial y final.</p></li>
-<li><p>Reiniciar la medición en el software y volver al punto 1</p></li>
+<li><p>Reducir la velocidad de giro a 0 rpm</p></li>
+<li><p>Apagar el equipo girando el switch principal</p></li>
 </ol>
-<p><strong>Paso 3. Detener el sistema y proceder con la toma de muestras en otra cañería</strong></p>
+</section>
+<section id="ensayo-con-dos-bombas-en-paralelo-resumen-de-los-pasos">
+<h3>Ensayo con dos bombas en paralelo. Resumen de los pasos<a class="headerlink" href="#ensayo-con-dos-bombas-en-paralelo-resumen-de-los-pasos" title="Permalink to this headline">#</a></h3>
+<p><strong>Paso 1. Configuración del sistema</strong></p>
 <ol class="simple">
-<li><p>Apagar el equipo desde el panel central, presionando el boton rojo al costado de la perilla donde se modificaba la frecuencia.</p></li>
-<li><p>Cerrar válvulas de bola de la tubería recién utilizada.</p></li>
-<li><p>Abrir las válvulas de la tubería a ensayar</p></li>
-<li><p>Volver a encender el equipo.</p></li>
-<li><p>Realizar las mediciones, comenzando del paso 0</p></li>
+<li><p>Encender equipo desde el panel principal</p></li>
+<li><p>Girar ambos reostatos en el panel izquierdo hasta obtener una velocidad de 2600 rpm en cada bomba</p></li>
+<li><p>Verificar que la válvula de compuerta superior este 100% abierta</p></li>
+<li><p>Verificar que la válvula de compuerta inferior este cerrada</p></li>
+</ol>
+<p><strong>Paso 2. Registrar diferencia de presiones, voltaje y corriente en función del caudal</strong></p>
+<p><em>Repetir los pasos indicados en el paso 2 del ensayo anterior</em></p>
+<p><strong>Paso 3. Detener el sistema</strong></p>
+<ol class="simple">
+<li><p>Reducir la velocidad de giro a 0 rpm en ambas bombas</p></li>
+<li><p>Apagar el equipo girando el switch principal</p></li>
 </ol>
 </section>
 </section>
 <section id="actividades-a-realizar">
 <h2>Actividades a realizar<a class="headerlink" href="#actividades-a-realizar" title="Permalink to this headline">#</a></h2>
 <p>Posterior a la experiencia, se deben realizar las siguientes actividades. Los resultados de estas actividades deben ser detalladas en el informe</p>
-<section id="actividad-1-variacion-de-la-perdida-de-carga-en-funcion-del-caudal">
-<h3>Actividad 1. Variación de la pérdida de carga en función del caudal<a class="headerlink" href="#actividad-1-variacion-de-la-perdida-de-carga-en-funcion-del-caudal" title="Permalink to this headline">#</a></h3>
-<p><strong>Graficar la variación de la pérdida de carga lineal (<span class="math notranslate nohighlight">\(h_{pl}\)</span>) en función del caudal, para dos tuberías de diferente material.</strong></p>
-<p><strong>Procedimiento.</strong> Para cada valor de caudal (<span class="math notranslate nohighlight">\(Q\)</span>):</p>
-<ul>
-<li><p>Medir las presiones al inicio (<span class="math notranslate nohighlight">\(P_i\)</span>) y al final (<span class="math notranslate nohighlight">\(P_f\)</span>) de un tramo de cañería.</p></li>
-<li><p>A través de la diferencia de presiones (<span class="math notranslate nohighlight">\(\Delta P = P_f - P_i\)</span>), calcular la pérdida de carga lineal mediante:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    h_{pl} = \frac{\Delta P}{\rho g},\quad(\mathrm{m}) 
-    \end{equation*}\]</div>
-<p>donde <span class="math notranslate nohighlight">\(\rho\)</span> es la densidad del fluido de trabajo, y <span class="math notranslate nohighlight">\(g\)</span> la aceleración de gravedad.</p>
-</li>
-<li><p>Graficar el resulado en un gráfico <span class="math notranslate nohighlight">\(h_{pl}\)</span> vs <span class="math notranslate nohighlight">\(Q\)</span>.</p></li>
-</ul>
-<p>Una vez finalizado, repetir el mismo procedimiento con otra tubería de diferente material.</p>
+<section id="actividad-1-obtencion-de-curvas-caracteristicas-de-una-bomba-centrifuga">
+<h3>Actividad 1. Obtención de curvas características de una bomba centrífuga<a class="headerlink" href="#actividad-1-obtencion-de-curvas-caracteristicas-de-una-bomba-centrifuga" title="Permalink to this headline">#</a></h3>
+<p>Representar gráficamente las curvas caracterísitcas de una bomba centrífuga girando a aproximadamente <span class="math notranslate nohighlight">\(2600~\mathrm{rpm}\)</span>.</p>
+<ol class="simple">
+<li><p>Altura hidrostática, <span class="math notranslate nohighlight">\(H_m\)</span> (<span class="math notranslate nohighlight">\(\mathrm{m.c.a}\)</span>)</p></li>
+<li><p>Potencia de accionamiento, <span class="math notranslate nohighlight">\(P_a\)</span> (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+<li><p>Potencia util, <span class="math notranslate nohighlight">\(P_u\)</span> (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+<li><p>Eficiencia de la bomba, <span class="math notranslate nohighlight">\(\eta_t\)</span> (<span class="math notranslate nohighlight">\(\%\)</span>)</p></li>
+</ol>
 </section>
-<section id="actividad-2-perdidas-lineales-y-rugosidad">
-<h3>Actividad 2. Pérdidas Lineales y Rugosidad<a class="headerlink" href="#actividad-2-perdidas-lineales-y-rugosidad" title="Permalink to this headline">#</a></h3>
-<p><strong>Determinar la rugosidad absoluta de las tuberías analizadas, a partir de los valores obtenidos experimentalmente.</strong></p>
-<p><strong>Procedimiento</strong> Para cada valor de caudal (<span class="math notranslate nohighlight">\(Q\)</span>) y pérdida de carga lineal (<span class="math notranslate nohighlight">\(h_{pl}\)</span>):</p>
-<ul>
-<li><p>Determinar el número de Reynolds</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    \mathrm{Re} = \frac{VD}{\nu},
-    \end{equation*}\]</div>
-<p>donde <span class="math notranslate nohighlight">\(V\)</span> es la velocidad promediom en el ducto, <span class="math notranslate nohighlight">\(D\)</span> es el diámetro de la cañería y <span class="math notranslate nohighlight">\(\nu\)</span> es la viscosidad cinemática.</p>
-</li>
-<li><p>Calcular el valor del coeficiente de fricción (<span class="math notranslate nohighlight">\(f\)</span>) mediante la ecuación de Darcy-Weisbach:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-        h_{pl} = f \frac{L}{D} \frac{V^2}{2 g},\quad(\mathrm{m})
-    \end{equation*}\]</div>
-<p>donde <span class="math notranslate nohighlight">\(L\)</span> es el largo de la cañería.</p>
-</li>
-<li><p>Determinar la rugosidad relativa (<span class="math notranslate nohighlight">\(\epsilon_r\)</span>) mediante la ecuación de Miller:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-    f = 0.25\left[\log\left(\frac{\epsilon_r}{3.7} + \frac{5.74}{\mathrm{Re}^{0.9}}\right)\right]
-    \end{equation*}\]</div>
-</li>
-<li><p>Determinar la rugosidad absoluta mediante <span class="math notranslate nohighlight">\(\epsilon = D\epsilon_R\)</span></p></li>
-</ul>
-<p>El valor final de <span class="math notranslate nohighlight">\(\epsilon\)</span> corresponderá al promedio de todos los valores estimados para cada caudal.</p>
+<section id="actividad-2-obtencion-de-curvas-caracteristicas-de-dos-bomba-centrifugas-en-paralelo">
+<h3>Actividad 2. Obtención de curvas características de dos bomba centrífugas en paralelo<a class="headerlink" href="#actividad-2-obtencion-de-curvas-caracteristicas-de-dos-bomba-centrifugas-en-paralelo" title="Permalink to this headline">#</a></h3>
+<p>Representar gráficamente las curvas características de bombas centrífugas conectadas en paralelo girando a aproximadamente <span class="math notranslate nohighlight">\(2600~\mathrm{rpm}\)</span>.</p>
+<ol class="simple">
+<li><p>Altura hidrostática, <span class="math notranslate nohighlight">\(H_m\)</span> (<span class="math notranslate nohighlight">\(\mathrm{m.c.a}\)</span>)</p></li>
+<li><p>Potencia de accionamiento, <span class="math notranslate nohighlight">\(P_a\)</span> (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+<li><p>Potencia util, <span class="math notranslate nohighlight">\(P_u\)</span> (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
+<li><p>Eficiencia de la bomba, <span class="math notranslate nohighlight">\(\eta_t\)</span> (<span class="math notranslate nohighlight">\(\%\)</span>)</p></li>
+</ol>
 </section>
 <section id="actividad-3-ejercicio-propuesto">
 <h3>Actividad 3. Ejercicio propuesto<a class="headerlink" href="#actividad-3-ejercicio-propuesto" title="Permalink to this headline">#</a></h3>
@@ -556,7 +548,7 @@ de datos.</p></li>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Apendice/Laboratorio1"
+            path: "./Apendice/Laboratorio2"
         },
         predefinedOutput: true
     }
@@ -570,19 +562,12 @@ de datos.</p></li>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../04_Perdida_de_carga/04_Perdida_de_carga.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Laboratorio1/Lab1_perdida_de_carga.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Conservación de energía y pérdida de carga en ductos</p>
+            <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="../Laboratorio2/Lab2_BombasCentrifugas.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Laboratorio 2: Bombas Centrifugas</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
