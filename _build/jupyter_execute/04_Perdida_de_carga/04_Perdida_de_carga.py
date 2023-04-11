@@ -295,11 +295,27 @@ YouTubeVideo('nl75BGg9qdA', width=700, height=400)
 
 # A continuación mostramos algunos ejemplos
 
+# **Singularidad a la entrada y salida**
+# 
 # <img src="./figures/singularidad1.png" width="800px" align= center>
 
+# **Expansión y contracción brusca**
+# 
 # <img src="./figures/singularidad2.png" width="800px" align= center>
 
+# **Codos y "tes"**
+# 
 # <img src="./figures/singularidad3.png" width="800px" align= center>
+
+# **Válvulas**
+# 
+# <img src="./figures/valves.png" width="600px" align= center>
+
+# ### Tuberías en serie y paralelo
+# 
+# Los sistemas de cañerías a menudo consideran sistemas conectados en série y paralelo. En este caso, las relaciones para caudal y diferencia de presiones se ajustan como indica la figura:
+# 
+# <img src="./figures/series_and_parallel_pipe.png" width="700px" align= center>
 
 # ## Referencias
 # **Çengel Y. A. y Cimbala M. J. *Mecánica de Fluidos: Fundamentos y Aplicaciones*, 4ta Ed., McGraw Hill, 2018**

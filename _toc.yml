@@ -14,13 +14,12 @@ parts:
     numbered: true
     chapters:
     - file: 04_Perdida_de_carga/04_Perdida_de_carga
+    - file: 05_Turbomaquinas/05_Turbomaquinas
   - caption: Apéndice
     numbered: False
     chapters:
       - file: Apendice/Laboratorio1/Lab1_perdida_de_carga
-      - file: Apendice/Laboratorio2/Lab2_BombasCentrifugas
-#      - file: Apendice/Repaso/Repaso_Parte3/Repaso_Parte3
-#    - file: 05_Turbomaquinas/05_Turbomaquinas
+      - file: Apendice/Laboratorio2/Lab2_bombas_centrifugas
 #    - file: 06_Analisis_adimensional/06_Analisis_adimensional
 #  - caption: Parte 3. Flujo externo y análisis diferencial de flujos
 #    numbered: true
@@ -28,3 +27,5 @@ parts:
 #    - file: 07_Flujo_externo/07_Flujo_externo
 #    - file: 08_Analisis_diferencial_intro/08_Analisis_diferencial_intro
 #    - file: 09_Flujos_caracteristicos/09_Flujos_caracteristicos
+#      - file: Apendice/Repaso/Repaso_Parte2/Repaso_Parte2
+#      - file: Apendice/Repaso/Repaso_Parte3/Repaso_Parte3
