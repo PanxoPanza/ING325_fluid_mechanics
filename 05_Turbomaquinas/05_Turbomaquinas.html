@@ -501,14 +501,15 @@ title="Print to PDF"
 <li><p><strong>Compresor</strong> diseñado para aumentar la presión (<span class="math notranslate nohighlight">\(\Delta P\)</span>, alto), con bajo aumento en la velocidad (<span class="math notranslate nohighlight">\(V_\mathrm{sale}\sim V_\mathrm{entra}\)</span>).</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/gas_pump.png"><img alt="../_images/gas_pump.png" class="align-center" src="../_images/gas_pump.png" style="width: 800px;" /></a>
-<p>En el caso de turbinas para gases, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad.</p>
+<p>En el caso de turbinas, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad o presión dependiendo del tipo. Por ejemplo, en el caso de turbinas abiertas, la velocidad cambia y la presión se mantiene apróximadamente constante.</p>
 <a class="reference internal image-reference" href="../_images/wind_turbine.png"><img alt="../_images/wind_turbine.png" class="align-center" src="../_images/wind_turbine.png" style="width: 800px;" /></a>
+<p>En turbinas cerradas, los gases experimentan cambios en ambos, presión y velocidad.</p>
 </section>
 <section id="clasificacion-de-maquinas-hidraulicas">
 <h3><span class="section-number">5.1.3. </span>Clasificación de máquinas hidráulicas<a class="headerlink" href="#clasificacion-de-maquinas-hidraulicas" title="Permalink to this headline">#</a></h3>
 <p>Existen dos grandes tipos de máquinas hidráulicas</p>
 <p><strong>Máquinas de desplazamiento positivo</strong>
-El fluido se dirige hacia adentro de un <em>volúmen cerrado</em> deformable o con fronteras móviles, que permite la succión o impulsión del fluído.</p>
+El fluido se dirige hacia adentro de un <em>volúmen cerrado deformable o con fronteras móviles</em>, que permite la succión o impulsión del fluído.</p>
 <a class="reference internal image-reference" href="../_images/desplazamiento_positivo.png"><img alt="../_images/desplazamiento_positivo.png" class="align-center" src="../_images/desplazamiento_positivo.png" style="width: 800px;" /></a>
 <p><strong>Máquinas dinámicas</strong> En este caso, el volúmen no es cerrrado. Los álabes rotatorios suministran energía al fluido o la extraen de él.</p>
 <p>Ejemplos de máquinas dinámicas son las bombas centrífugas y las turbinas hidráulicas.</p>
@@ -528,12 +529,12 @@ El fluido se dirige hacia adentro de un <em>volúmen cerrado</em> deformable o c
 <p><strong>Ventajas</strong></p>
 <ul class="simple">
 <li><p>Menor esfuerzo cortante inducido (mejor para líquidos sensibles al esfuerzo cortante, como sangre)</p></li>
-<li><p>Es capaz de elevar un líquido varios metros debajo de la bomba (bombas de autocebado)</p></li>
+<li><p>Es capaz de elevar un líquido varios metros debajo de la bomba</p></li>
 <li><p>Menor velocidad de funcionamiento lo que prolonga la vida útil de los sellos</p></li>
 </ul>
 <p><strong>Desventajas</strong></p>
 <ul class="simple">
-<li><p>Se requiere cambiar la velocidad de rotación para cambiar  V ̇ (difícil)</p></li>
+<li><p>Se requiere cambiar la velocidad de rotación para cambiar  el caudal (difícil)</p></li>
 <li><p>Muy sensible a fallas por bloqueo en el flujo. Se necesitan válvulas de seguridad</p></li>
 </ul>
 </section>
@@ -551,7 +552,7 @@ El fluido se dirige hacia adentro de un <em>volúmen cerrado</em> deformable o c
 <p><strong>Desventajas</strong></p>
 <ul class="simple">
 <li><p>Poco efectivas para bombar líquidos muy viscosos</p></li>
-<li><p>No pueden succionar líquido si están llenas de gas.</p></li>
+<li><p>No pueden succionar líquido si están vacías (llenas de gas) y, por lo tanto, se debe remover el gas interior antes de arrancar el sistema (cebado de la bomba).</p></li>
 </ul>
 </section>
 </section>
@@ -567,6 +568,7 @@ El fluido se dirige hacia adentro de un <em>volúmen cerrado</em> deformable o c
 <li><p>Potencia al freno o de accionamiento <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp} = \omega M_\mathrm{flecha},\quad(\mathrm{W})\)</span></p></li>
 <li><p>Eficiencia de la bomba <span class="math notranslate nohighlight">\(\eta_\mathrm{bomba} = \dot{W}_\mathrm{util}/\dot{W}_\mathrm{bhp}\)</span></p></li>
 </ul>
+<p>donde <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad de rotación (<span class="math notranslate nohighlight">\(\mathrm{rpm}\)</span>) y <span class="math notranslate nohighlight">\(M_\mathrm{flecha}\)</span> es el torque aplicado</p>
 <p>Estos parámetros están interrelacionados, y cambian según el caudal a suministrar. La gráfica está representada por las <strong>curvas de rendimiento</strong></p>
 <a class="reference internal image-reference" href="../_images/curva_característica_bomba.png"><img alt="../_images/curva_característica_bomba.png" class="align-center" src="../_images/curva_característica_bomba.png" style="width: 350px;" /></a>
 <p>De está gráfica distinguimos tres puntos importantes:</p>
@@ -602,13 +604,15 @@ H_\mathrm{req}(Q) = \Delta z+\left(1 + f\frac{L}{D}+\sum_i K_i\right)\frac{Q^2}{
 <div class="full-width">
 <a class="reference internal image-reference" href="../_images/curva_caracteristica.png"><img alt="../_images/curva_caracteristica.png" class="align-center" src="../_images/curva_caracteristica.png" style="width: 900px;" /></a>
 </div><p>En la gráfica se aprecia una curva de <strong>carga de aspiración neta positiva (<em>net positive suction head</em>, NPSH</strong> por sus siglas en ingles). Esta curva indica <strong>el NPSH mínimo para evitar la cavitación de la bomba.</strong></p>
-<p>La cavitación corresponde al desgaste en los álabes de la bomba producto del colapso de burbujas de vapor. Esto se produce cuando la presión del líquido a la entrada de la bomba es menor que la presión de vapor a la temperatura de operación.</p>
+<blockquote>
+<div><p>La <strong>cavitación</strong> corresponde al desgaste en los álabes de la bomba producto del colapso de burbujas de vapor. Esto <strong>se produce cuando la presión del líquido a la entrada de la bomba es menor que la presión de vapor a la temperatura de operación</strong>.</p>
+</div></blockquote>
 <p>Para diseñar el sistema, el <strong>NPSH real debe ser mayor o igual que el NPSH mínimo requerido</strong>.</p>
 <a class="reference internal image-reference" href="../_images/NPSH.png"><img alt="../_images/NPSH.png" class="align-center" src="../_images/NPSH.png" style="width: 300px;" /></a>
 <p>El <strong>NPSH real</strong> se calcula a partir de un <strong>balance de energía entre el punto de succión y la entrada de la bomba</strong>, considerando el <strong>caso crítico en que el fluido ingresa a la bomba a velocidad 0 y a la presión de vapor a la temperatura de operación (<span class="math notranslate nohighlight">\(P_v\)</span>)</strong>.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-\mathrm{NPSH}_\mathrm{real} = \left(\frac{P}{\rho g} + \frac{V^2}{2g} + z\right)_\mathrm{succión} - h_L - z_\mathrm{entrada~bba} - \frac{P_v}{\rho g}
+\mathrm{NPSH}_\mathrm{real} = \left(\frac{P}{\rho g} + \frac{V^2}{2g} + z\right)_\mathrm{succión} - h_L - z_\mathrm{entrada} - \frac{P_v}{\rho g}
 \end{equation*}\]</div>
 </section>
 <section id="bombas-en-serie-y-paralelo">
