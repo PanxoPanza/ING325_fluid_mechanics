@@ -26,16 +26,18 @@
 
 # <img src="./figures/gas_pump.png" width="800px" align= center>
 
-# En el caso de turbinas para gases, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad.
+# En el caso de turbinas, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad o presión dependiendo del tipo. Por ejemplo, en el caso de turbinas abiertas, la velocidad cambia y la presión se mantiene apróximadamente constante.
 # 
 # <img src="./figures/wind_turbine.png" width="800px" align= center>
+# 
+# En turbinas cerradas, los gases experimentan cambios en ambos, presión y velocidad.
 
 # ### Clasificación de máquinas hidráulicas
 # 
 # Existen dos grandes tipos de máquinas hidráulicas
 
 # **Máquinas de desplazamiento positivo**
-# El fluido se dirige hacia adentro de un *volúmen cerrado* deformable o con fronteras móviles, que permite la succión o impulsión del fluído.
+# El fluido se dirige hacia adentro de un *volúmen cerrado deformable o con fronteras móviles*, que permite la succión o impulsión del fluído.
 
 # <img src="./figures/desplazamiento_positivo.png" width="800px" align= center>
 
@@ -56,11 +58,11 @@
 
 # **Ventajas**
 # - Menor esfuerzo cortante inducido (mejor para líquidos sensibles al esfuerzo cortante, como sangre)
-# - Es capaz de elevar un líquido varios metros debajo de la bomba (bombas de autocebado)
+# - Es capaz de elevar un líquido varios metros debajo de la bomba
 # - Menor velocidad de funcionamiento lo que prolonga la vida útil de los sellos
 
 # **Desventajas**
-# - Se requiere cambiar la velocidad de rotación para cambiar  V ̇ (difícil)
+# - Se requiere cambiar la velocidad de rotación para cambiar  el caudal (difícil)
 # - Muy sensible a fallas por bloqueo en el flujo. Se necesitan válvulas de seguridad
 
 # #### Bombas dinámicas
@@ -79,7 +81,7 @@
 
 # **Desventajas**
 # - Poco efectivas para bombar líquidos muy viscosos
-# - No pueden succionar líquido si están llenas de gas.
+# - No pueden succionar líquido si están vacías (llenas de gas) y, por lo tanto, se debe remover el gas interior antes de arrancar el sistema (cebado de la bomba).
 
 # ### Análisis teórico
 # 
@@ -97,6 +99,8 @@
 # - Potencia al freno o de accionamiento $\dot{W}_\mathrm{bhp} = \omega M_\mathrm{flecha},\quad(\mathrm{W})$
 # 
 # - Eficiencia de la bomba $\eta_\mathrm{bomba} = \dot{W}_\mathrm{util}/\dot{W}_\mathrm{bhp}$
+# 
+# donde $\omega$ es la velocidad de rotación ($\mathrm{rpm}$) y $M_\mathrm{flecha}$ es el torque aplicado
 
 # Estos parámetros están interrelacionados, y cambian según el caudal a suministrar. La gráfica está representada por las **curvas de rendimiento**
 
@@ -146,7 +150,7 @@
 
 # En la gráfica se aprecia una curva de **carga de aspiración neta positiva (*net positive suction head*, NPSH** por sus siglas en ingles). Esta curva indica **el NPSH mínimo para evitar la cavitación de la bomba.**
 
-# La cavitación corresponde al desgaste en los álabes de la bomba producto del colapso de burbujas de vapor. Esto se produce cuando la presión del líquido a la entrada de la bomba es menor que la presión de vapor a la temperatura de operación.
+# > La **cavitación** corresponde al desgaste en los álabes de la bomba producto del colapso de burbujas de vapor. Esto **se produce cuando la presión del líquido a la entrada de la bomba es menor que la presión de vapor a la temperatura de operación**.
 
 # Para diseñar el sistema, el **NPSH real debe ser mayor o igual que el NPSH mínimo requerido**. 
 # 
@@ -158,7 +162,7 @@
 # 
 # 
 # \begin{equation*}
-# \mathrm{NPSH}_\mathrm{real} = \left(\frac{P}{\rho g} + \frac{V^2}{2g} + z\right)_\mathrm{succión} - h_L - z_\mathrm{entrada~bba} - \frac{P_v}{\rho g}
+# \mathrm{NPSH}_\mathrm{real} = \left(\frac{P}{\rho g} + \frac{V^2}{2g} + z\right)_\mathrm{succión} - h_L - z_\mathrm{entrada} - \frac{P_v}{\rho g}
 # \end{equation*}
 
 # ### Bombas en serie y paralelo
