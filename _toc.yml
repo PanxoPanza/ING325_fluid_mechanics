@@ -14,7 +14,10 @@ parts:
     numbered: true
     chapters:
     - file: 04_Perdida_de_carga/04_Perdida_de_carga
-    - file: 05_Turbomaquinas/05_Turbomaquinas
+    - file: 05_Turbomaquinas/05_Turbomaquinas0
+      sections:
+      - file: 05_Turbomaquinas/05_Turbomaquinas1
+      - file: 05_Turbomaquinas/05_Turbomaquinas2
   - caption: Apéndice
     numbered: False
     chapters:
