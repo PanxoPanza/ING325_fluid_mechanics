@@ -23,7 +23,6 @@ parts:
     chapters:
     - file: Apendice/Laboratorio1/Lab1_perdida_de_carga
     - file: Apendice/Laboratorio2/Lab2_BombasCentrifugas
-
 #    - file: 06_Analisis_adimensional/06_Analisis_adimensional
 #  - caption: Parte 3. Flujo externo y análisis diferencial de flujos
 #    numbered: true
