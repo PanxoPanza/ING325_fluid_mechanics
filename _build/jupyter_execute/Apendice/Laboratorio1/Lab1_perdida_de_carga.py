@@ -94,7 +94,7 @@ YouTubeVideo('1uBQakG5eu8', width=600,  playsinline=0)
 #     donde $L$ es el largo de la cañería.
 # - Determinar la rugosidad relativa ($\epsilon_r$) mediante la ecuación de Miller:
 #     \begin{equation*}
-#     f = 0.25\left[\log\left(\frac{\epsilon_r}{3.7} + \frac{5.74}{\mathrm{Re}^{0.9}}\right)\right]
+#     f = 0.25\left[\log\left(\frac{\epsilon_r}{3.7} + \frac{5.74}{\mathrm{Re}^{0.9}}\right)\right]^{-2}
 #     \end{equation*}
 # - Determinar la rugosidad absoluta mediante $\epsilon = D\epsilon_R$
 # 

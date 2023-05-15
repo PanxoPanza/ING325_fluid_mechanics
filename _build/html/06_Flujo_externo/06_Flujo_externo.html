@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Turbomáquinas &#8212; ING325 - Mecánica de Fluidos</title>
+    <title>6. Flujo externo &#8212; ING325 - Mecánica de Fluidos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,8 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.2. Bombas" href="05_Turbomaquinas1.html" />
-    <link rel="prev" title="4. Conservación de energía y pérdida de carga en ductos" href="../04_Perdida_de_carga/04_Perdida_de_carga.html" />
+    <link rel="next" title="Laboratorio 1. Pérdidas de carga" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" />
+    <link rel="prev" title="5.3. Turbinas" href="../05_Turbomaquinas/05_Turbomaquinas2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -138,29 +138,29 @@ const thebe_selector_output = ".output, .cell_output"
   Parte 2. Diseño de sistemas hidráulicos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../04_Perdida_de_carga/04_Perdida_de_carga.html">
    4. Conservación de energía y pérdida de carga en ductos
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas0.html">
    5. Turbomáquinas
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="05_Turbomaquinas1.html">
+    <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas1.html">
      5.2. Bombas
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="05_Turbomaquinas2.html">
+    <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas2.html">
      5.3. Turbinas
     </a>
    </li>
@@ -172,9 +172,9 @@ const thebe_selector_output = ".output, .cell_output"
   Parte 3. Flujo externo y análisis diferencial de flujos
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_Flujo_externo/06_Flujo_externo.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    6. Flujo externo
   </a>
  </li>
@@ -254,7 +254,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/05_Turbomaquinas/05_Turbomaquinas0.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/06_Flujo_externo/06_Flujo_externo.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -297,7 +297,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/05_Turbomaquinas/05_Turbomaquinas0.ipynb"
+        <a href="../_sources/06_Flujo_externo/06_Flujo_externo.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -357,21 +357,9 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduccion">
-   5.1. Introducción
+  <a class="reference internal nav-link" href="#referencias">
+   6.1. Referencias
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maquinas-hidraulicas-para-gases">
-     5.1.1. Máquinas hidráulicas para gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clasificacion-de-maquinas-hidraulicas">
-     5.1.2. Clasificación de máquinas hidráulicas
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -382,7 +370,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Turbomáquinas</h1>
+                <h1>Flujo externo</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -393,21 +381,9 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduccion">
-   5.1. Introducción
+  <a class="reference internal nav-link" href="#referencias">
+   6.1. Referencias
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maquinas-hidraulicas-para-gases">
-     5.1.1. Máquinas hidráulicas para gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#clasificacion-de-maquinas-hidraulicas">
-     5.1.2. Clasificación de máquinas hidráulicas
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -419,45 +395,56 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="turbomaquinas">
-<h1><span class="section-number">5. </span>Turbomáquinas<a class="headerlink" href="#turbomaquinas" title="Permalink to this headline">#</a></h1>
-<section id="introduccion">
-<h2><span class="section-number">5.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
-<p>Definimos como <strong>bomba</strong> a cualquier máquina hidráulica que <em>entrega</em> energía a un fluido. Por otro lado, definimos como <strong>turbina</strong> a las máquinas que <em>extraen</em> energía de un fluido.</p>
-<a class="reference internal image-reference" href="../_images/bombas_vs_turbinas.png"><img alt="../_images/bombas_vs_turbinas.png" class="align-center" src="../_images/bombas_vs_turbinas.png" style="width: 800px;" /></a>
-<p>En el caso de interacción con líquidos:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="flujo-externo">
+<h1><span class="section-number">6. </span>Flujo externo<a class="headerlink" href="#flujo-externo" title="Permalink to this headline">#</a></h1>
+<p>En este capítulo revisaremos el flujo alrededor de cuerpos que están inmersos en un fluido. Categorizamos este tipo de casos como <em>Flujo externo</em>.</p>
+<a class="reference internal image-reference" href="../_images/intro.jpg"><img alt="../_images/intro.jpg" class="align-center" src="../_images/intro.jpg" style="width: 600px;" /></a>
+<p>En el flujo externo estudiamos las <strong>fuerzas resultantes</strong> que ocurren en cuerpos producto de la presión y esfuerzo cortante en un cuerpo.</p>
+<a class="reference internal image-reference" href="../_images/drag_and_lift_force.png"><img alt="../_images/drag_and_lift_force.png" class="align-center" src="../_images/drag_and_lift_force.png" style="width: 800px;" /></a>
+<p>La fuerza resultante se descompone en:</p>
 <ul class="simple">
-<li><p><strong>La energía suministrada por bombas se manifiesta como un aumento de presión del fluido</strong>. La velocidad del fluido no aumenta, necesariamente.</p></li>
-<li><p><strong>La energía extraida por turbinas se manifiesta como una disminución de presión del fluido</strong>. La velocidad del fluido no aumenta, necesariamente.</p></li>
+<li><p><strong>Fuerza de arrastre</strong> (<span class="math notranslate nohighlight">\(F_D\)</span>) que corresponde a la componente en la dirección del flujo</p></li>
+<li><p><strong>Fuerza de sustentación</strong> (<span class="math notranslate nohighlight">\(F_L\)</span>) que  corresponde a la componente perpendicular al flujo</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/hydraulic_pump_turbine.png"><img alt="../_images/hydraulic_pump_turbine.png" class="align-center" src="../_images/hydraulic_pump_turbine.png" style="width: 800px;" /></a>
-<section id="maquinas-hidraulicas-para-gases">
-<h3><span class="section-number">5.1.1. </span>Máquinas hidráulicas para gases<a class="headerlink" href="#maquinas-hidraulicas-para-gases" title="Permalink to this headline">#</a></h3>
-<p>En el caso de gases, la clasificación del tipo de bomba depende de la función:</p>
-<ul class="simple">
-<li><p><strong>Ventilador</strong> diseñado para aumentar la velocidad (<span class="math notranslate nohighlight">\(V_\mathrm{sale}\gg V_\mathrm{entra}\)</span>), con un aumento mínimo en la presión (<span class="math notranslate nohighlight">\(\Delta P\)</span>, bajo).</p></li>
-<li><p><strong>Compresor</strong> diseñado para aumentar la presión (<span class="math notranslate nohighlight">\(\Delta P\)</span>, alto), con bajo aumento en la velocidad (<span class="math notranslate nohighlight">\(V_\mathrm{sale}\sim V_\mathrm{entra}\)</span>).</p></li>
-</ul>
-<a class="reference internal image-reference" href="../_images/gas_pump.png"><img alt="../_images/gas_pump.png" class="align-center" src="../_images/gas_pump.png" style="width: 800px;" /></a>
-<p>En el caso de turbinas, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad o presión dependiendo del tipo. Por ejemplo, en el caso de turbinas abiertas, la velocidad cambia y la presión se mantiene apróximadamente constante.</p>
-<a class="reference internal image-reference" href="../_images/wind_turbine.png"><img alt="../_images/wind_turbine.png" class="align-center" src="../_images/wind_turbine.png" style="width: 800px;" /></a>
-<p>En turbinas cerradas, los gases experimentan cambios en ambos, presión y velocidad.</p>
-</section>
-<section id="clasificacion-de-maquinas-hidraulicas">
-<h3><span class="section-number">5.1.2. </span>Clasificación de máquinas hidráulicas<a class="headerlink" href="#clasificacion-de-maquinas-hidraulicas" title="Permalink to this headline">#</a></h3>
-<p>Existen dos grandes tipos de máquinas hidráulicas</p>
-<p><strong>Máquinas de desplazamiento positivo</strong>
-El fluido se dirige hacia adentro de un <em>volúmen cerrado deformable o con fronteras móviles</em>, que permite la succión o impulsión del fluído.</p>
-<a class="reference internal image-reference" href="../_images/desplazamiento_positivo.png"><img alt="../_images/desplazamiento_positivo.png" class="align-center" src="../_images/desplazamiento_positivo.png" style="width: 800px;" /></a>
-<p><strong>Máquinas dinámicas</strong> En este caso, el volúmen no es cerrrado. Los álabes rotatorios suministran energía al fluido o la extraen de él.</p>
-<p>Ejemplos de máquinas dinámicas son las bombas centrífugas y las turbinas hidráulicas.</p>
 <blockquote>
-<div><p>En este curso nos enfocaremos en máquinas dinámicas. <strong>Específicamente, bombas centrífugas y turbinas eólicas</strong></p>
+<div><p>La fuerza resultante se asocia al movimiento relativo entre el flujo y el cuerpo. Es decir, un cuerpo en reposo sometido a un flujo externo, o un cuerpo moviendose dentro de un fluido en reposo</p>
 </div></blockquote>
-</section>
-</section>
-<div class="toctree-wrapper compound">
+<p>En base a la figura anterior, ambas componentes se pueden expresar matemáticamente como:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+F_D &amp;= \int_A (-P\cos\theta + \tau_w\sin\theta)dA
+\\
+F_L &amp;= \int_A (-P\sin\theta - \tau_w\cos\theta)dA
+\end{align*}\]</div>
+<p>Las ecuaciones permiten entender conceptualmente el efecto de la presión (<span class="math notranslate nohighlight">\(P\)</span>) y esfuerzo cortante (<span class="math notranslate nohighlight">\(\tau_w\)</span>) en el arrastre y sustentación.</p>
+<p>Estas ecuaciones, sin embargo, tienen poca aplicación práctica debido a la dificultad de predecir la distribución de <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(\tau_w\)</span>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="700"
+    height="400"
+    src="https://www.youtube.com/embed/nl75BGg9qdA"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
 </div>
+<section id="referencias">
+<h2><span class="section-number">6.1. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
+<ul class="simple">
+<li><p>Capitulo 5: Ecuaciones de Bernoulli y de la energía</p></li>
+<li><p>Capítulo 8: Flujo en tuberías</p></li>
+</ul>
+<p><strong>White F. M. <em>Mecánica de Fluidos</em>, 5ta Ed., McGraw Hill, 2004</strong></p>
+<ul class="simple">
+<li><p>Capítulo 3.6: Ecuación de la energía</p></li>
+<li><p>Capítulo 3.7: Flujo sin fricción: La ecuación de Bernoulli</p></li>
+<li><p>Capítulo 6: Flujo viscoso en conductos</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -473,7 +460,7 @@ El fluido se dirige hacia adentro de un <em>volúmen cerrado deformable o con fr
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./05_Turbomaquinas"
+            path: "./06_Flujo_externo"
         },
         predefinedOutput: true
     }
@@ -487,17 +474,17 @@ El fluido se dirige hacia adentro de un <em>volúmen cerrado deformable o con fr
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../04_Perdida_de_carga/04_Perdida_de_carga.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../05_Turbomaquinas/05_Turbomaquinas2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Conservación de energía y pérdida de carga en ductos</p>
+            <p class="prev-next-title"><span class="section-number">5.3. </span>Turbinas</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="05_Turbomaquinas1.html" title="next page">
+    <a class='right-next' id="next-link" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.2. </span>Bombas</p>
+        <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
