@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratorio 1. Pérdidas de carga" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" />
+    <link rel="next" title="6. Flujo externo" href="../06_Flujo_externo/06_Flujo_externo.html" />
     <link rel="prev" title="5.2. Bombas" href="05_Turbomaquinas1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -165,6 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Parte 3. Flujo externo y análisis diferencial de flujos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06_Flujo_externo/06_Flujo_externo.html">
+   6. Flujo externo
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -552,8 +564,8 @@ title="Print to PDF"
 <section id="eficiencia-en-turbinas">
 <h2><span class="section-number">5.3.2. </span>Eficiencia en turbinas<a class="headerlink" href="#eficiencia-en-turbinas" title="Permalink to this headline">#</a></h2>
 <p>La eficiencia de una turbina está definida por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71e4f06c-69d9-4f61-8ea7-ab024e1cddb6">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-71e4f06c-69d9-4f61-8ea7-ab024e1cddb6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6dfb1256-628d-4b2e-9af3-af544b6af0ea">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-6dfb1256-628d-4b2e-9af3-af544b6af0ea" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \eta_\mathrm{turbina} = \frac{\dot{W}_\mathrm{bhp}}{\dot{W}_\mathrm{util}}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> es la potencia entregada por el rodete, y <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{util} = \rho g HQ\)</span> es la potencia util disponible por el sistema.</p>
@@ -569,8 +581,8 @@ title="Print to PDF"
 <p>En una turbina Pelton, el chorro a alta velocidad transfiere la energía a los álabes o <em>cangilones</em>. Los cangilones están diseñados para dividir el flujo y cambiar la dirección del flujo lo más cercano a 180°</p>
 <a class="reference internal image-reference" href="../_images/Pelton_turbine_theory.png"><img alt="../_images/Pelton_turbine_theory.png" class="align-center" src="../_images/Pelton_turbine_theory.png" style="width: 700px;" /></a>
 <p>Mediante un análisis teorico simple podemos deducir la siguiente fórmula para la potencia del rotor en turbinas Pelton:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f9cd7654-f1cb-4551-a94a-3b3447b87145">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-f9cd7654-f1cb-4551-a94a-3b3447b87145" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7ae274f7-7fa9-442b-a105-9974b3b6f2b0">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-7ae274f7-7fa9-442b-a105-9974b3b6f2b0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{bhp} = \rho r\omega Q\left(V_j - r\omega\right)\left(1 - \cos \beta\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(V_j\)</span> es la velocidad del flujo incidente en el rotor, <span class="math notranslate nohighlight">\(\beta\)</span> es el ángulo del borde divisor, <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad de rotación y  <span class="math notranslate nohighlight">\(Q\)</span> es el caudal.</p>
@@ -638,15 +650,15 @@ r\omega = \frac{V_j}{2}
 <p>El volúmen de control es el que se indica en la figura. El cambio de sección es el resultado de la reducción en la velocidad del viento producida por la transferencia de energía hacia la turbina.</p>
 <a class="reference internal image-reference" href="../_images/wind_turbine_analysis.png"><img alt="../_images/wind_turbine_analysis.png" class="align-center" src="../_images/wind_turbine_analysis.png" style="width: 800px;" /></a>
 <p>A partir de este esquema podemos determinar una expresión para la potencia de eje que entrega la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5468a38e-91df-4a02-8eca-a16e21470e9f">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-5468a38e-91df-4a02-8eca-a16e21470e9f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-04043fe3-8241-4699-a238-08fec04a4ee4">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-04043fe3-8241-4699-a238-08fec04a4ee4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{bhp} = \frac{1}{4}\rho A(V_1^2 - V_2 ^2)(V_1 + V_2)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(A\)</span> es el <strong>área de disco</strong>, definida como el área normal a la dirección del viento barrida por los álabes</p>
 <a class="reference internal image-reference" href="../_images/wind_turbine_disk_area.png"><img alt="../_images/wind_turbine_disk_area.png" class="align-center" src="../_images/wind_turbine_disk_area.png" style="width: 400px;" /></a>
 <p>Definimos como <strong>coeficiente de potencia (<span class="math notranslate nohighlight">\(C_p\)</span>),</strong> a la fracción de la potencia disponible del viento (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho V^3 A\)</span>) extraida por la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7b9a7bc-7469-4696-87b4-994e22e9d442">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-b7b9a7bc-7469-4696-87b4-994e22e9d442" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-84a32faa-a136-44fb-ae11-699f45fc7b80">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-84a32faa-a136-44fb-ae11-699f45fc7b80" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_P = \frac{\dot{W}_\mathrm{bhp}}{\frac{1}{2}\rho V^3A}
 \end{equation}\]</div>
 <p>El coeficiente de potencia es un parámetro característico de cada turbina.</p>
@@ -701,10 +713,10 @@ C_P = \frac{\dot{W}_\mathrm{bhp}}{\frac{1}{2}\rho V^3A}
             <p class="prev-next-title"><span class="section-number">5.2. </span>Bombas</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" title="next page">
+    <a class='right-next' id="next-link" href="../06_Flujo_externo/06_Flujo_externo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Flujo externo</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
