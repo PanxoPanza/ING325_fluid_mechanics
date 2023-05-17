@@ -114,7 +114,7 @@
 
 # <img src="./figures/deformation_rate.png" width="300px" align= center>
 
-# En algunos fluidos (como el agua, aire y aceites), la taza de deformación es proporcional al esfuerzo cortante
+# En algunos fluidos (como el agua, aire y aceites), la tasa de deformación es proporcional al esfuerzo cortante
 # 
 # \begin{equation}
 # \tau = \mu\frac{du}{dy},\quad\quad\frac{\mathrm{N}}{\mathrm{m}^2}
