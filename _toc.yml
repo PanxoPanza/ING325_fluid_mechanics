@@ -22,10 +22,8 @@ parts:
     numbered: true
     chapters:
     - file: 06_Flujo_externo/06_Flujo_externo
-#    - file: 08_Analisis_diferencial_intro/08_Analisis_diferencial_intro
-#    - file: 09_Flujos_caracteristicos/09_Flujos_caracteristicos
-#      - file: Apendice/Repaso/Repaso_Parte2/Repaso_Parte2
-#      - file: Apendice/Repaso/Repaso_Parte3/Repaso_Parte3
+#    - file: 07_Analisis_diferencial_intro/08_Analisis_diferencial_intro
+#    - file: 08_Flujos_caracteristicos/09_Flujos_caracteristicos
   - caption: Apéndice
     numbered: False
     chapters:

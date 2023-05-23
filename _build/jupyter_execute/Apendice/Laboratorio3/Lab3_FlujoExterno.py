@@ -136,7 +136,7 @@
 # 
 # <center> Coeficiente de arrastre para una esfera y un cilindro (Fuente: Çengel Y. A. y Cimbala M. J. Mecánica de Fluidos: Fundamentos y Aplicaciones, 4ta Ed., McGraw Hill, 2018)</center>
 # 
-# - En un mismo gráfico, muestre la curva con el $C_D$ tabulado y los datos de $C_D$ obtenidos experimentalmente. *Utilice línea contínua de color negra para los datos tabulados, y círculos para los datos tabulados, de color rojo (esfera grande) y azul (esfera pequeña).*
+# - En un mismo gráfico, muestre la curva con el $C_D$ tabulado y los datos de $C_D$ obtenidos experimentalmente. *Utilice **línea contínua de color** <b><u>negra</u></b> para los **datos tabulados**, y **círculos** para los **datos obtenidos experimentalmente**, de color <b><span style="color:red">rojo</span></b>  (esfera grande) y  <b><span style="color:blue">azul</span></b> (esfera pequeña).*
 # 
 # - Determine el error absoluto y relativo para cada $C_D$ obtenido experimentalmente.
 # 
@@ -149,7 +149,7 @@
 
 # ### Actividad 2. Coeficiente de arrastre para disco y cuerpo aerodinámico
 # 
-# **Determinar el coeficie de arrastre ($C_D$) del disco circular y el cuerpo aerodinámico.**
+# **Determinar el coeficiente de arrastre ($C_D$) del disco circular y el cuerpo aerodinámico.**
 # 
 # **Procedimiento**
 # - Para cada velocidad, determinar $C_D$ y $\mathrm{Re}_D$ asociado utilizando las expresiones vistas en clase.
