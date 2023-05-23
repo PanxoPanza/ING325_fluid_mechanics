@@ -26,19 +26,22 @@
 
 # **Paso 0. Abrir panel de control** 
 # 
-# Una vez que el equipo esté encendido, haga doble click izquierdo en el panel de control de AEROLAB **(Figura 2)** , donde se abrirá el panel de control del túnel de viento **(Figura 3)**
+# Una vez que el equipo esté encendido, abrir la aplicación *AeroWare* para el control del túnel de viento (Figura 2)
 # 
-# <img src="./figuras/Paneldecontrol.jpg" width="600px" align= center>
+# <img src="./figuras/Paneldecontrol.png" width="600px" align= center>
 # 
 # <center> Figura 2: Ventana Windows computador</center>
 
 # **Paso 1. Montaje del objeto a ensayar**
+# 
+# > **Nota.** El detalle para el procedimento de montaje se verá en la sesión de inducción.
 # 
 # - Abrir la compuerta del compartimiento de montaje.
 # - Instalar el objeto en el dinamómetro.
 # - Fijar el objeto al dinamómetro usando el tornillo pasador (*evitar apretar el tornillo excesivamente*).
 # - Cerrar la compuerta del compartimiento de montaje.
 # - Aplicar los seguros en la compuerta.
+# 
 
 # **Paso 2. Habilitar el sistema de adquisición de datos (DAQ)**
 # 
@@ -58,7 +61,7 @@
 
 # **Paso 4. Tarar presión dinámica y modular**
 # 
-# En la pestaña "Signals", tarar los valores de presión dinámica y modular en cero para poder comenzar a variar las velocidades en el túnel de viento (**Figura 5**)
+# En la pestaña "Signals", tarar los valores de presión modular (*Module Pressure*) y dinámica (*Dynamic Pressure*) en cero para poder comenzar a variar las velocidades en el túnel de viento (**Figura 5**)
 # 
 # <img src="./figuras/Tarar.jpg" width="600px" align= center>
 # 
@@ -74,7 +77,9 @@
 
 # **Paso 6. Ajustar velocidades del túnel**
 # 
-# Ajustar la velocidad del túnel de viento a velocidades moderadas inicialmente (menores a $10~\mathrm{m/s}$) (**Figura 7**).
+# Antes de encender el motor del ventilador, en el recuadro *Velocity Setpoint*, ajustar la velocidad del túnel a un valor inicial moderado ($V \lesssim 10~\mathrm{m/s}$) (**Figura 7**).
+# 
+# > **Nota** Verificar que el boton de control de velocidad este en modo *Velocity Control*.
 # 
 # <img src="./figuras/Velocidad.jpg" width="600px" align= center>
 # 
@@ -82,7 +87,8 @@
 
 # **Paso 7. Encendido Túnel**
 # 
-# Una vez configurada la velocidad inicial en el túnel de viento, haga click en *Start Tunnel* para encender el equipo (**Figura 8**). Luego, en la pestaña "PGB Sting" desmarcar todas las casillas del gráfico, excepto *PGB axial*.
+# - Hacer click en *Start Tunnel* para encender el equipo (**Figura 8**).
+# - Luego, en la pestaña "*PGB Sting*" desmarcar todas las casillas del gráfico, excepto *PGB axial*.
 # 
 # <img src="./figuras/StarTunnel.jpg" width="600px" align= center>
 # 
@@ -98,20 +104,23 @@
 # 
 # Una vez realizadas las mediciones, se debe hacer detención y término de uso del panel de control. Para poder llevar a cabo esta tarea, se debe seguir las siguientes indicaciones:
 # - Ajustar la velocidad del túnel de viento, de manera paulatina, a una velocidad de $10~\mathrm{m/s}$.
-# - Hacer click en *Stop Tunnel*.
+# - Hacer click en el botón *Stop Tunnel*.
 # - Desmontar el objeto
 # 
+# <img src="./figuras/StopTunnel.jpg" width="600px" align= center>
 # 
-# En caso que corresponda, repetir procedimiento desde el paso 1.
+# <center> Figura 10: Detener tunel de viento </center>
+# 
+# >*Nota.* En caso que corresponda, repetir procedimiento desde el paso 1.
 
 # **Finalizar experiencia**
 # 
-# - Hacer click en *Disable DAQ*. Para ello, vuelva a hacer click en *Enable DAQ*.
-# - Cerrar el panel de control de AEROLAB. Este punto solamente puede ser llevado a cabo una vez se haya deshabilitado el DAQ del panel de control (**Figura 9**).
+# - Hacer click en *Disable DAQ* (Para ello, vuelva a hacer click en *Enable DAQ*).
+# - Cerrar el panel de control de AEROLAB. Este punto solamente puede ser llevado a cabo una vez se haya deshabilitado el DAQ del panel de control (**Figura 10**).
 # 
 # <img src="./figuras/Cerrar.jpg" width="600px" align= center>
 # 
-# <center> Figura 9: Mensaje que aparece cuando se cierra el panel de control</center>
+# <center> Figura 10: Mensaje que aparece cuando se cierra el panel de control</center>
 
 # ## Actividades a realizar
 
