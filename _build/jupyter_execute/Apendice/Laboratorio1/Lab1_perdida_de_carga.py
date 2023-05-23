@@ -92,10 +92,10 @@ YouTubeVideo('1uBQakG5eu8', width=600,  playsinline=0)
 #         h_{pl} = f \frac{L}{D} \frac{V^2}{2 g},\quad(\mathrm{m})
 #     \end{equation*}
 #     donde $L$ es el largo de la cañería.
-# - Determinar la rugosidad relativa ($\epsilon_r$) mediante la ecuación de Miller:
+# - Determinar la rugosidad relativa ($\epsilon_r$) mediante la ecuación de Colebrook:
 #     \begin{equation*}
-#     f = 0.25\left[\log\left(\frac{\epsilon_r}{3.7} + \frac{5.74}{\mathrm{Re}^{0.9}}\right)\right]^{-2}
-#     \end{equation*}
+# \frac{1}{\sqrt{f}} = - 2 \log\left(\frac{\epsilon_R}{3.7} + \frac{2.51}{\mathrm{Re}_D\sqrt{f}}\right)
+# \end{equation*}
 # - Determinar la rugosidad absoluta mediante $\epsilon = D\epsilon_R$
 # 
 # El valor final de $\epsilon$ corresponderá al promedio de todos los valores estimados para cada caudal.

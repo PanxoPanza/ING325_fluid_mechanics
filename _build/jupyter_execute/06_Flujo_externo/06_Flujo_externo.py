@@ -115,10 +115,11 @@
 # 
 # <img src="./figures/flat_plate_laminar_turbulent.png" width="900px" align= center>
 
-# Para determinar la fuerza de arrastre utilizamos el coeficiente de fricción:
+# El arrastre en este caso se debe, únicamente, a los efectos de fricción. Así, $C_D = C_{D,~\mathrm{fricción}} = C_f $, donde $C_f$ es el coeficiente de fricción dado por:
+# 
 # 
 # \begin{equation}
-# C_{D,f} = \frac{1}{L}\int_0^L C_{f,x} dx
+# C_f = \frac{1}{L}\int_0^L C_{f,x} dx
 # \end{equation}
 
 # donde $C_{f,x}$ es el coeficiente de fricción local:
@@ -138,7 +139,7 @@
 # Reemplazando las ecuaciones (6.6) en (6.5) y aplicando la ecuación (6.3), tenemos una relación para el **coeficiente de fricción promedio**:
 # 
 # \begin{equation}
-# C_{D,f} = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
+# C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 # \end{equation}
 
 # Notar que el hecho de que el coeficiente de arrastre en la placa disminuye cuando la velocidad del fluido aumenta **no significa que la fuerza de arrastre disminuye con la velocidad.**

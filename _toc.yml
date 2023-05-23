@@ -31,3 +31,4 @@ parts:
     chapters:
     - file: Apendice/Laboratorio1/Lab1_perdida_de_carga
     - file: Apendice/Laboratorio2/Lab2_BombasCentrifugas
+    - file: Apendice/Laboratorio3/Lab3_FlujoExterno
