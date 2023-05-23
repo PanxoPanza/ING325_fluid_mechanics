@@ -9,7 +9,7 @@
 
 # <img src="./figuras/Tunel_de_viento.png" width="600px" align= center>
 # 
-# <center> Figura 1: Túnel de viento AEROLAB</center>
+# <center> <small><b>Figura 1.</b> Túnel de viento AEROLAB</small></center>
 
 # La experiencia consiste en obtener experimentalmente los coeficientes de arrastre para diferentes geometrías utilizando un túnel de viento **(Figura 1)**. El tunel de viento, del fabricante AEROLAB, permite la creación de corrientes de flujo de aire de manera controlada a través de una sección de pruebas. La velocidad del flujo es controlada a través del panel de control. Los objetos de prueba son montados sobre un dinamometro, el cual mide la fuerza axial (*Axial force*), transversal (*Normal force*) y torque flector (*Pitching moment*).
 
@@ -30,7 +30,7 @@
 # 
 # <img src="./figuras/Paneldecontrol.png" width="600px" align= center>
 # 
-# <center> Figura 2: Ventana Windows computador</center>
+# <center> <small><b>Figura 2.</b> Ventana Windows computador  </small></center>
 
 # **Paso 1. Montaje del objeto a ensayar**
 # 
@@ -49,7 +49,7 @@
 # 
 # <img src="./figuras/EnableDAQ.jpg" width="600px" align= center>
 # 
-# <center> Figura 3: Enable DAQ</center>
+# <center> <small><b>Figura 3.</b> Enable DAQ  </small></center>
 
 # **Paso 3. Ajustar parámetros ambientales**
 # 
@@ -57,7 +57,7 @@
 # 
 # <img src="./figuras/Parámetros.jpg" width="600px" align= center>
 # 
-# <center> Figura 4: Configuración parámetros ambientales </center>
+# <center> <small><b>Figura 4.</b> Configuración parámetros ambientales  </small></center>
 
 # **Paso 4. Tarar presión dinámica y modular**
 # 
@@ -65,7 +65,7 @@
 # 
 # <img src="./figuras/Tarar.jpg" width="600px" align= center>
 # 
-# <center> Figura 5: Tarar en cero presiónes </center>
+# <center> <small><b>Figura 5.</b> Tarar en cero presiónes </small></center>
 
 # **Paso 5. Tarar fuerzas y torques en el dinamómetro**
 # 
@@ -73,7 +73,7 @@
 # 
 # <img src="./figuras/PGB_string.png" width="600px" align= center>
 # 
-# <center> Figura 6: Tarar en cero presiónes </center>
+# <center> <small><b>Figura 6.</b> Tarar en cero presiónes</small></center>
 
 # **Paso 6. Ajustar velocidades del túnel**
 # 
@@ -83,7 +83,7 @@
 # 
 # <img src="./figuras/Velocidad.jpg" width="600px" align= center>
 # 
-# <center> Figura 7: Configuración velocidad en el túnel de viento</center>
+# <center> <small><b>Figura 7.</b> Configuración velocidad en el túnel de viento</small></center>
 
 # **Paso 7. Encendido Túnel**
 # 
@@ -92,7 +92,7 @@
 # 
 # <img src="./figuras/StarTunnel.jpg" width="600px" align= center>
 # 
-# <center> Figura 8: Encendido turbina Túnel de viento</center>
+# <center> <small><b>Figura 8.</b> Encendido turbina Túnel de viento</small></center>
 
 # **Paso 8. Registro de datos**
 # - Ajuste la velocidad del tunel a los valores indicados en la tabla adjunta
@@ -109,7 +109,7 @@
 # 
 # <img src="./figuras/StopTunnel.jpg" width="600px" align= center>
 # 
-# <center> Figura 10: Detener tunel de viento </center>
+# <center> <small><b>Figura 9.</b> Detener tunel de viento</small></center>
 # 
 # >*Nota.* En caso que corresponda, repetir procedimiento desde el paso 1.
 
@@ -120,7 +120,7 @@
 # 
 # <img src="./figuras/Cerrar.jpg" width="600px" align= center>
 # 
-# <center> Figura 10: Mensaje que aparece cuando se cierra el panel de control</center>
+# <center> <small><b>Figura 10.</b> Mensaje que aparece cuando se cierra el panel de control</small></center>
 
 # ## Actividades a realizar
 
@@ -134,9 +134,9 @@
 # 
 # <img src="./figuras/arrastre_esfera_cilindro(libro).png" width="600px" align= center>
 # 
-# <center> Coeficiente de arrastre para una esfera y un cilindro (Fuente: Çengel Y. A. y Cimbala M. J. Mecánica de Fluidos: Fundamentos y Aplicaciones, 4ta Ed., McGraw Hill, 2018)</center>
+# <center> <small><b>Figura 11.</b> Coeficiente de arrastre para una esfera y un cilindro (Çengel y Cimbala, Mecánica de Fluidos: Fundamentos y Aplicaciones, 4ta Ed., McGraw Hill, 2018)</small></center>
 # 
-# - En un mismo gráfico, muestre la curva con el $C_D$ tabulado y los datos de $C_D$ obtenidos experimentalmente. *Utilice **línea contínua de color** <b><u>negra</u></b> para los **datos tabulados**, y **círculos** para los **datos obtenidos experimentalmente**, de color <b><span style="color:red">rojo</span></b>  (esfera grande) y  <b><span style="color:blue">azul</span></b> (esfera pequeña).*
+# - En una mismo gráfico $C_D$ vs $\mathrm{Re}_D$, muestre la curva con los valores extraidos de la imagen (tabulados) y los datos obtenidos experimentalmente. *Mantener los límites de los ejes vertical y horizontal de la figura original*. *Utilice **línea contínua de color** <b><u>negra</u></b> para los **datos tabulados**, y **círculos** de color <b><span style="color:red">rojo</span></b>  (esfera grande) y  <b><span style="color:blue">azul</span></b> (esfera pequeña) para los **datos obtenidos experimentalmente**.*
 # 
 # - Determine el error absoluto y relativo para cada $C_D$ obtenido experimentalmente.
 # 
