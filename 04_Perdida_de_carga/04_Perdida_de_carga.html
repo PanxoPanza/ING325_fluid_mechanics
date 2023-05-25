@@ -178,6 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
    6. Flujo externo
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html">
+   7. Análisis diferencial de flujos
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -619,8 +624,8 @@ title="Print to PDF"
 <section id="ecuacion-de-conservacion-de-energia">
 <h2><span class="section-number">4.1. </span>Ecuación de conservación de energía<a class="headerlink" href="#ecuacion-de-conservacion-de-energia" title="Permalink to this headline">#</a></h2>
 <p>A partir del teorema de transporte de Reynolds, y considerando la propiedad intensiva de la energía, <span class="math notranslate nohighlight">\(\tilde{e}\)</span>, definida como la <strong>energía por unidad de masa</strong> (<span class="math notranslate nohighlight">\(\mathrm{kJ/kg}\)</span>, por ejemplo), tenemos que la <strong>ecuación de conservación de energía aplicada a un volúmen de control</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f8cbd5a4-c6d4-4f96-83cd-f46684b9dd6e">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-f8cbd5a4-c6d4-4f96-83cd-f46684b9dd6e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-72564d6e-0b43-46d9-ae86-d52ae2484ad2">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-72564d6e-0b43-46d9-ae86-d52ae2484ad2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{Q} - \dot{W} = \frac{d}{dt}\int_\mathrm{VC} \rho\tilde{e}d\forall + \int_\mathrm{VC} \rho\tilde{e}\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
 \end{equation}\]</div>
 <p>donde:</p>
@@ -684,8 +689,8 @@ title="Print to PDF"
 <p>Aplicando las ecuaciones comentadas anteriormente, la ecuación de conservación de energía es:</p>
 <div class="full-width">
 <p style="line-height:2.0em;"></p>
-<div class="amsmath math notranslate nohighlight" id="equation-bb6c42df-e66a-45b3-bca0-fc4e3888319a">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-bb6c42df-e66a-45b3-bca0-fc4e3888319a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-efbd02dd-3d8e-470c-9717-a3e6716581b6">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-efbd02dd-3d8e-470c-9717-a3e6716581b6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{Q} - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\tilde{u}+\frac{V^2}{2}+gz\right)d\forall + \int_\mathrm{VC} \rho\left(\tilde{h}+\frac{V^2}{2}+gz\right)\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
 \end{equation}\]</div>
  </div>
@@ -698,31 +703,31 @@ title="Print to PDF"
 <p>En este caso, <span class="math notranslate nohighlight">\(\dot{Q} = 0\)</span> y la energía interna es constante. La ecuación de conservación de energía se simplifica a:</p>
 <div class="full-width">
 <p style="line-height:2.0em;"></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d9e7d3b3-9a51-48f1-bc52-8fad6fa704d0">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-d9e7d3b3-9a51-48f1-bc52-8fad6fa704d0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6c38cfc2-ebf5-4a32-a50c-07cd86e2debe">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-6c38cfc2-ebf5-4a32-a50c-07cd86e2debe" title="Permalink to this equation">#</a></span>\[\begin{equation}
 - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\frac{V^2}{2}+gz\right)d\forall + \int_\mathrm{VC} \rho\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
 \end{equation}\]</div>
 </div><p><strong>Caso 2: Valores promedio a la entrada y salida + caso 1</strong></p>
 <div class="full-width">
 <p style="line-height:2.0em;"></p>
-<div class="amsmath math notranslate nohighlight" id="equation-029a2395-2979-4a86-af23-be893d71bc0e">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-029a2395-2979-4a86-af23-be893d71bc0e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-09234215-4304-46dc-8c26-755419874f0b">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-09234215-4304-46dc-8c26-755419874f0b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\int_\mathrm{VC} \rho\left(\frac{V^2}{2}+gz\right)d\forall +\sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
 \end{equation}\]</div>
 </div>
 <p><strong>Caso 3: Propiedades constantes dentro del V.C + caso 1  + caso 2</strong></p>
 <div class="full-width">
 <p style="line-height:2.0em;"></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1dee1be-b7c4-4ae3-8e1f-d15a858690fc">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-f1dee1be-b7c4-4ae3-8e1f-d15a858690fc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cbdf33d5-2532-458d-9eb7-d422c7b6a1e3">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-cbdf33d5-2532-458d-9eb7-d422c7b6a1e3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \frac{d}{dt}\left[\rho\left(\frac{V^2}{2}+gz\right)\forall\right] +\sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
 \end{equation}\]</div>
 </div>
 <p><strong>Caso 4: Problema estacionario + caso 1  + caso 2 + caso 3</strong></p>
 <div class="full-width">
 <p style="line-height:2.0em;"></p>
-<div class="amsmath math notranslate nohighlight" id="equation-40020ba6-762d-4a4f-9df3-6b82650dbc93">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-40020ba6-762d-4a4f-9df3-6b82650dbc93" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2b0705fb-4cae-4136-adae-8919c82ef120">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-2b0705fb-4cae-4136-adae-8919c82ef120" title="Permalink to this equation">#</a></span>\[\begin{equation}
 - \dot{W}_\mathrm{eje} - \dot{W}_\mathrm{viscoso}  = \sum_\mathrm{sale}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m} - \sum_\mathrm{entra}\left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)\dot{m},\quad(\mathrm{kW})
 \end{equation}\]</div>
 </div><blockquote>
@@ -732,8 +737,8 @@ title="Print to PDF"
 <section id="ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">
 <h3><span class="section-number">4.2.3. </span>Ecuación de conservación de energía para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo" title="Permalink to this headline">#</a></h3>
 <p>En base a los casos anteriores, y considerando <strong>(1) flujo incompresible y (2) volúmen de control con una única entrada y salida</strong>, tenemos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a712d95c-bb1b-4bdb-8f8d-b7f37e08e582">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-a712d95c-bb1b-4bdb-8f8d-b7f37e08e582" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-70c0bd96-2518-48f7-9b74-fb5bbef992df">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-70c0bd96-2518-48f7-9b74-fb5bbef992df" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{entra} + h_\mathrm{bomba} = \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{sale} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho VA}\)</span>, (<span class="math notranslate nohighlight">\(i=\)</span> <span class="math notranslate nohighlight">\(\mathrm{bomba}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{turbina}\)</span> y <span class="math notranslate nohighlight">\(L\)</span>) es la <strong>altura de presión equivalente</strong> asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.</p>
@@ -744,8 +749,8 @@ title="Print to PDF"
 <section id="ecuacion-de-bernoulli">
 <h3><span class="section-number">4.2.4. </span>Ecuación de Bernoulli<a class="headerlink" href="#ecuacion-de-bernoulli" title="Permalink to this headline">#</a></h3>
 <p>Si aplicamos la ecuación anterior en un tramo de un ducto, donde <span class="math notranslate nohighlight">\(h_\mathrm{bomba} = h_\mathrm{turbina} = 0\)</span>, y asumimos <strong>fluido ideal, es decir, sin fricciones por viscosidad (<span class="math notranslate nohighlight">\(h_L = 0\)</span>)</strong>, tenemos la <strong>ecuación de Bernoulli.</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-a152c8f5-b981-4c16-889f-52017267a662">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-a152c8f5-b981-4c16-889f-52017267a662" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9637c7ed-d737-439c-9292-5b04bbd6f8d3">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-9637c7ed-d737-439c-9292-5b04bbd6f8d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra}
 \end{equation}\]</div>
 <p>Esta ecuación, aunque tiene poco uso práctico, permite comprender en términos simples la conservación de energía en un fluido producto de los cambios de presión, velocidad y elevación.</p>
@@ -787,8 +792,8 @@ title="Print to PDF"
 <li><p>Velocidad del flujo</p></li>
 </ul>
 <p>La relación entre estos tres parámetros está dado por el <strong>número de Reynolds</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb66b2a5-3b95-4fe3-a739-0ab2ff14ecc1">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-fb66b2a5-3b95-4fe3-a739-0ab2ff14ecc1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-41329c20-6117-4d4d-919f-d87723861574">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-41329c20-6117-4d4d-919f-d87723861574" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re} = \frac{VL_c}{\nu}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\nu = \mu/\rho,~(\mathrm{m^2/s})\)</span> es la viscosidad cinemática y <strong><span class="math notranslate nohighlight">\(L_c\)</span> es una longitud caractéristica</strong> relativa al problema estudiado.</p>
@@ -801,8 +806,8 @@ title="Print to PDF"
 4000\lesssim &amp;~\mathrm{Re}_D&amp;\quad&amp;&amp;\mathrm{Flujo~turbulento}\\
 \end{eqnarray*}\]</div>
 <p>En el caso de ductos no circulares, utilizamos el <strong>diámetro hidráulico</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43ce9602-f6ac-4de7-a8a6-7ac09ebeb50a">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-43ce9602-f6ac-4de7-a8a6-7ac09ebeb50a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dbad8c31-7916-4753-98f6-9fa13347b788">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-dbad8c31-7916-4753-98f6-9fa13347b788" title="Permalink to this equation">#</a></span>\[\begin{equation}
 D_h = \frac{4A}{P_h}
 \end{equation}\]</div>
 <p>donde <strong><span class="math notranslate nohighlight">\(A\)</span> es el área de la sección transversal del ducto</strong> y <strong><span class="math notranslate nohighlight">\(P_h\)</span> es el perímetro mojado</strong> (perímetro del ducto en contacto con el fluido).</p>
@@ -812,8 +817,8 @@ D_h = \frac{4A}{P_h}
 <section id="perdida-de-carga">
 <h2><span class="section-number">4.4. </span>Pérdida de carga<a class="headerlink" href="#perdida-de-carga" title="Permalink to this headline">#</a></h2>
 <p>Podemos diferenciar dos grandes grupos para la pérdida de carga en sistemas de tuberías:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa9a8703-1f9c-41c9-8781-8db8d3f476a6">
-<span class="eqno">(4.11)<a class="headerlink" href="#equation-fa9a8703-1f9c-41c9-8781-8db8d3f476a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-92071ac7-7fe0-4d3e-99d0-653553278f5d">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-92071ac7-7fe0-4d3e-99d0-653553278f5d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 h_L = h_{L,\mathrm{mayor}} + h_{L,\mathrm{menor}}
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -827,8 +832,8 @@ h_L = h_{L,\mathrm{mayor}} + h_{L,\mathrm{menor}}
 <section id="perdida-de-carga-en-la-longitud-mayores">
 <h3><span class="section-number">4.4.1. </span>Pérdida de carga en la longitud (mayores)<a class="headerlink" href="#perdida-de-carga-en-la-longitud-mayores" title="Permalink to this headline">#</a></h3>
 <p>Es posible demostrar que, para ductos circulares de diámetro <span class="math notranslate nohighlight">\(D\)</span>, la pérdida de carga entre dos puntos separados por una longitud <span class="math notranslate nohighlight">\(L\)</span> está dada por la <strong>ecuación de Darcy-Weisbach:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc665371-9860-4465-a006-7370e0a43236">
-<span class="eqno">(4.12)<a class="headerlink" href="#equation-fc665371-9860-4465-a006-7370e0a43236" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e41aa48b-9479-466c-b8f9-4bbbcdf0b19f">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-e41aa48b-9479-466c-b8f9-4bbbcdf0b19f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 h_L = f\frac{L}{D}\frac{V^2}{2g},\quad(\mathrm{m})
 \end{equation}\]</div>
 <p>donde <strong><span class="math notranslate nohighlight">\(f\)</span> es el factor de fricción de Darcy,</strong> y <span class="math notranslate nohighlight">\(V\)</span> es la velocidad promedio del flujo en el ducto</p>
@@ -836,8 +841,8 @@ h_L = f\frac{L}{D}\frac{V^2}{2g},\quad(\mathrm{m})
 <section id="factor-de-friccion-para-flujo-laminar">
 <h4><span class="section-number">4.4.1.1. </span>Factor de fricción para flujo laminar<a class="headerlink" href="#factor-de-friccion-para-flujo-laminar" title="Permalink to this headline">#</a></h4>
 <p>En el caso de flujo laminar, el factor de fricción está dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-893b4be9-413f-4ead-a150-8c8e522f586a">
-<span class="eqno">(4.13)<a class="headerlink" href="#equation-893b4be9-413f-4ead-a150-8c8e522f586a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cdcfc5db-b6b0-4426-a264-fdac8201110c">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-cdcfc5db-b6b0-4426-a264-fdac8201110c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f = \frac{64}{\mathrm{Re}_D}
 \end{equation}\]</div>
 <p>Para ductos no circulares, usamos las siguientes relaciones en función del diámetro hidráulico (<span class="math notranslate nohighlight">\(D_h\)</span>)</p>
@@ -857,8 +862,8 @@ f = \frac{64}{\mathrm{Re}_D}
 <div class="full-width">
 <a class="reference internal image-reference" href="../_images/Moody_diagram.png"><img alt="../_images/Moody_diagram.png" class="align-center" src="../_images/Moody_diagram.png" style="width: 1000px;" /></a>
 </div><p>Otra alternativa es utilizar relaciones empíricas que expresan <span class="math notranslate nohighlight">\(f\)</span> de forma explicita, pero aproximada. Por ejemplo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ea2b5ed1-4810-4be4-ba7f-bd9751b8bf1e">
-<span class="eqno">(4.14)<a class="headerlink" href="#equation-ea2b5ed1-4810-4be4-ba7f-bd9751b8bf1e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-86aa0aec-b484-47aa-a7ec-47356edd05bd">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-86aa0aec-b484-47aa-a7ec-47356edd05bd" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 f &amp;=&amp; 0.25\left[\log\left(\frac{\epsilon_R}{3.7}+\frac{5.74}{\mathrm{Re}_D^{0.9}}\right)\right]^{-2}\quad\quad&amp;&amp;\mathrm{Miller}
 \\[10pt]
 \frac{1}{\sqrt{f}} &amp;=&amp; -1.8\log\left[\left(\frac{\epsilon_R}{3.7}\right)^{1.11}+\frac{6.9}{\mathrm{Re}_D}\right]\quad\quad&amp;&amp;\mathrm{Haaland}
@@ -869,8 +874,8 @@ f &amp;=&amp; 0.25\left[\log\left(\frac{\epsilon_R}{3.7}+\frac{5.74}{\mathrm{Re}
 <h3><span class="section-number">4.4.2. </span>Pérdidas de carga por singularidades (menores)<a class="headerlink" href="#perdidas-de-carga-por-singularidades-menores" title="Permalink to this headline">#</a></h3>
 <p>Estas pérdidas están dadas por singularidades, tales como: cambios de sección en el flujo, cambios de dirección en codos, válvulas, etc.</p>
 <p>La relación universal es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25f90863-b07c-469a-99e2-3b01243fe1a8">
-<span class="eqno">(4.15)<a class="headerlink" href="#equation-25f90863-b07c-469a-99e2-3b01243fe1a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-638dfbf4-0666-4e62-8cc5-410a3f31b87c">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-638dfbf4-0666-4e62-8cc5-410a3f31b87c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 h_{L,\mathrm{menores}} = \sum_i K_i\frac{V_i^2}{2g}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(K_i\)</span> y <span class="math notranslate nohighlight">\(V_i\)</span> son el coeficiente de pérdida y la velocidad en la singularidad <span class="math notranslate nohighlight">\(i\)</span>.</p>
