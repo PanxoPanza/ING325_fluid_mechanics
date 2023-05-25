@@ -217,7 +217,7 @@
 # 
 #     Matemáticamente:
 #     \begin{equation}
-#     \oint_A \vec{f}\hat dA = \int_V \nabla\cdot \vec{f} d\forall
+#     \oint_A \vec{f}\cdot\hat{n} dA = \int_V \nabla\cdot \vec{f} d\forall
 #     \end{equation}
 
 # ### Ecuación de conservación de masa (continuidad)
@@ -269,7 +269,7 @@
 # Usando el teorema de la divergencia, podemos reordenar la expresión (7.13) como:
 # 
 # \begin{equation}
-# \sum\vec{F}_\mathrm{ext} = \int_\mathrm{VC} \nabla\cdot\left[ - p\bar{I} + \bar{\tau} + \rho\vec{g}\right]d\forall 
+# \sum\vec{F}_\mathrm{ext} = \int_\mathrm{VC} \left[\nabla\cdot\left( - p\bar{I} + \bar{\tau}\right)  + \rho\vec{g}\right]d\forall 
 # \end{equation}
 # 
 # donde $\bar{I}$ es el tensor identidad.
