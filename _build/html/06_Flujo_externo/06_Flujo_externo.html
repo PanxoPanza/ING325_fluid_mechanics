@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratorio 1. Pérdidas de carga" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" />
+    <link rel="next" title="7. Análisis diferencial de flujos" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html" />
     <link rel="prev" title="5.3. Turbinas" href="../05_Turbomaquinas/05_Turbomaquinas2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -176,6 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    6. Flujo externo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html">
+   7. Análisis diferencial de flujos
   </a>
  </li>
 </ul>
@@ -490,8 +495,8 @@ F_L &amp;= \int_A (-P\sin\theta - \tau_w\cos\theta)dA
 <p>Las ecuaciones permiten entender conceptualmente el efecto de la presión (<span class="math notranslate nohighlight">\(P\)</span>) y esfuerzo cortante (<span class="math notranslate nohighlight">\(\tau_w\)</span>) en el arrastre y sustentación.</p>
 <p>Estas ecuaciones, sin embargo, tienen poca aplicación práctica debido a la dificultad de predecir la distribución de <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(\tau_w\)</span>.</p>
 <p>En la práctica se utilizan coeficientes adimencionales, los cuales representan los efectos de arrastre y sustentación de forma generalizada considerando una combinación de parámetros.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93432ad1-5446-46ba-ae32-9cd9b90c67ca">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-93432ad1-5446-46ba-ae32-9cd9b90c67ca" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5f5ac111-2c2c-4e9b-a612-83659436333e">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-5f5ac111-2c2c-4e9b-a612-83659436333e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_D &amp;= \frac{F_D}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~de~arrastre}
 \\
@@ -512,8 +517,8 @@ C_L &amp;= \frac{F_L}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~
 <h2><span class="section-number">6.2. </span>Fuerzas de arrastre<a class="headerlink" href="#fuerzas-de-arrastre" title="Permalink to this headline">#</a></h2>
 <p>Como mencionamos anteriormente, el arrastre en cuerpos se debe a los efectos de presiones y tensiones de corte en la superficie de un cuerpo.</p>
 <p>Así, podemos separar el coeficiente de arrastre en dos componentes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-29ae12ff-a4b2-40e8-9d70-b075ef0069d1">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-29ae12ff-a4b2-40e8-9d70-b075ef0069d1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d73f5ad0-e52f-4d13-8fc6-add736f465d1">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-d73f5ad0-e52f-4d13-8fc6-add736f465d1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 \end{equation}\]</div>
 <p>donde:</p>
@@ -545,13 +550,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>El <strong>espesor de la capa límite <span class="math notranslate nohighlight">\(\delta(x)\)</span></strong> define el límite que separa la región viscosa de la zona no viscosa. Como criterio <span class="math notranslate nohighlight">\(\delta(x)\)</span> se define como la distancia entre la superficie hasta el punto donde <span class="math notranslate nohighlight">\(u = 0.99V\)</span></p>
 <p>Notar, también, el desarrollo del flujo a medida que recorre la placa. Por un lado tenemos que el flujo pierde velocidad debido a la fricción (conservación de momento lineal). Esta pérdida de velocidad implica un crecimiento de la capa límite (conservación de masa). La pérdida de momento lineal, a su vez, induce inestabilidades en el flujo que se traducen en una transición de un régimen laminar a uno turbulento</p>
 <p>Para establecer la región de transición utilizamos el siguiente criterio:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5080bd17-de43-41b6-a05f-2450d036e52c">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-5080bd17-de43-41b6-a05f-2450d036e52c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9aaba7ea-8193-4d29-b6b6-be081074bf79">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-9aaba7ea-8193-4d29-b6b6-be081074bf79" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re}_\mathrm{cr} = \frac{x_\mathrm{cr}V}{\nu} = 5\times 10^5 
 \end{equation}\]</div>
 <p>Matemáticamente, el espesor de capa límite está dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd63eeeb-d237-4267-854e-a0bde68c5880">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-bd63eeeb-d237-4267-854e-a0bde68c5880" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ba47545-997f-4499-9ded-c74b4f84209f">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-4ba47545-997f-4499-9ded-c74b4f84209f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \frac{\delta}{x} &amp;= \frac{4.91}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -561,13 +566,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>Notar, sin embargo que la extención de las regiones laminar y turbulentas dependen de la velocidad del flujo</p>
 <a class="reference internal image-reference" href="../_images/flat_plate_laminar_turbulent.png"><img alt="../_images/flat_plate_laminar_turbulent.png" class="align-center" src="../_images/flat_plate_laminar_turbulent.png" style="width: 900px;" /></a>
 <p>El arrastre en este caso se debe, únicamente, a los efectos de fricción. Así, <span class="math notranslate nohighlight">\(C_D = C_{D,~\mathrm{fricción}} = C_f \)</span>, donde <span class="math notranslate nohighlight">\(C_f\)</span> es el coeficiente de fricción dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-527f674b-3641-444a-ae91-71318686e582">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-527f674b-3641-444a-ae91-71318686e582" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-90f2a1d7-2229-4ead-8dc7-a0a89dac10ab">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-90f2a1d7-2229-4ead-8dc7-a0a89dac10ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{1}{L}\int_0^L C_{f,x} dx
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(C_{f,x}\)</span> es el coeficiente de fricción local:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f68acd5-9137-48de-8f2a-b29e5f6ada6e">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-8f68acd5-9137-48de-8f2a-b29e5f6ada6e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7ce96d3b-1ce8-42e8-9760-9e9ad3a84ae0">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-7ce96d3b-1ce8-42e8-9760-9e9ad3a84ae0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_{f,x} &amp;= \frac{0.664}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -577,8 +582,8 @@ C_{f,x} &amp;= \frac{0.059}{\mathrm{Re}_x^{1/5}}\quad\quad\mathrm{Turbulento}
 <p>Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor.</p>
 <a class="reference internal image-reference" href="../_images/boundary_layer_slope.png"><img alt="../_images/boundary_layer_slope.png" class="align-center" src="../_images/boundary_layer_slope.png" style="width: 700px;" /></a>
 <p>Reemplazando las ecuaciones (6.6) en (6.5) y aplicando la ecuación (6.3), tenemos una relación para el <strong>coeficiente de fricción promedio</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-252b0670-f09e-44e5-8a5a-50a103a0aa96">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-252b0670-f09e-44e5-8a5a-50a103a0aa96" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b129627d-65ec-4265-ba8c-acc682d7a88b">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-b129627d-65ec-4265-ba8c-acc682d7a88b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 \end{equation}\]</div>
 <p>Notar que el hecho de que el coeficiente de arrastre en la placa disminuye cuando la velocidad del fluido aumenta <strong>no significa que la fuerza de arrastre disminuye con la velocidad.</strong></p>
@@ -613,11 +618,11 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
 <p>Este efecto influye la contribución entre las fuerzas de fricción y diferencia de presiones.</p>
 <a class="reference internal image-reference" href="../_images/drag_sphere.png"><img alt="../_images/drag_sphere.png" class="align-center" src="../_images/drag_sphere.png" style="width: 800px;" /></a>
 <ul class="simple">
-<li><p>Para <span class="math notranslate nohighlight">\(\mathrm{Re}\lesssim 1\)</span> el coeficiente de arrastre disminuye con <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>. En el caso de una esfera, <span class="math notranslate nohighlight">\(C_\mathrm{D} = 24/\mathrm{Re}_D\)</span> (flujo de Stokes). No hay separación de la capa límite</p></li>
-<li><p>En el rango <span class="math notranslate nohighlight">\(10 \lesssim \mathrm{Re} \lesssim 10^3\)</span> la separación comienza a ocurrir. La región de separación aumenta con <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> y con esto el arrastre debido a las presiones.</p></li>
-<li><p>En el rango <span class="math notranslate nohighlight">\(10^3 \lesssim \mathrm{Re} \lesssim 10^5\)</span> la región de separación no aumenta y, como resultado, el valor de <span class="math notranslate nohighlight">\(C_D\)</span> permanece relativamente constante. El flujo sigue siendo laminar, pero el flujo en la región separada  es sumamente turbulento.</p></li>
-<li><p>En el rango  <span class="math notranslate nohighlight">\(10^5 \lesssim \mathrm{Re} \lesssim 10^6\)</span> se produce  la transición a flujo turbulento. En este rango, la región de separación vuelve a disminuir, lo que se traduce en  una caída en <span class="math notranslate nohighlight">\(C_D\)</span>.</p></li>
-<li><p>Para <span class="math notranslate nohighlight">\(10^6 \lesssim \mathrm{Re}\)</span> el valor de <span class="math notranslate nohighlight">\(C_\mathrm{D}\)</span> aumenta hasta alcanzar su valor final de flujo turbulento.</p></li>
+<li><p><b><span style="color:rgb(0,112,192)">Región 1.</span></b> Para <span class="math notranslate nohighlight">\(\mathrm{Re}\lesssim 1\)</span> el coeficiente de arrastre disminuye con <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>. No hay separación de la capa límite, y por lo tanto el arrastre se debe, únicamente, a efectos de fricción. Este régimen se conoce como <strong>Flujo de Stokes</strong>. En el caso de una esfera, <span class="math notranslate nohighlight">\(C_\mathrm{D} = 24/\mathrm{Re}_D\)</span>.</p></li>
+<li><p><b><span style="color:rgb(0,176,80)">Región 2.</span></b>  En el rango <span class="math notranslate nohighlight">\(10 \lesssim \mathrm{Re} \lesssim 10^3\)</span> la separación comienza a ocurrir. La región de separación aumenta con <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> y con esto el arrastre debido a las presiones.</p></li>
+<li><p><b><span style="color:rgb(255,0,0)">Región 3.</span></b>  En el rango <span class="math notranslate nohighlight">\(10^3 \lesssim \mathrm{Re} \lesssim 10^5\)</span> la región de separación no aumenta y, como resultado, el valor de <span class="math notranslate nohighlight">\(C_D\)</span> permanece relativamente constante. El flujo sigue siendo laminar, pero el flujo en la región separada  es sumamente turbulento.</p></li>
+<li><p><b><span style="color:rgb(255,192,0)">Región 4.</span></b>  En el rango  <span class="math notranslate nohighlight">\(10^5 \lesssim \mathrm{Re} \lesssim 10^6\)</span> se produce  la transición a flujo turbulento. En este rango, la región de separación vuelve a disminuir, lo que se traduce en  una caída en <span class="math notranslate nohighlight">\(C_D\)</span>.</p></li>
+<li><p><b><span style="color:rgb(112,48,160)">Región 5.</span></b> Para <span class="math notranslate nohighlight">\(10^6 \lesssim \mathrm{Re}\)</span> el valor de <span class="math notranslate nohighlight">\(C_\mathrm{D}\)</span> aumenta hasta alcanzar su valor final de flujo turbulento.</p></li>
 </ul>
 <p>El fenómeno de separación se presenta en todos los cuerpos, y define el comportamiento del coeficiente de arrastre.</p>
 <a class="reference internal image-reference" href="../_images/drag_other_bodies.png"><img alt="../_images/drag_other_bodies.png" class="align-center" src="../_images/drag_other_bodies.png" style="width: 800px;" /></a>
@@ -747,10 +752,10 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
             <p class="prev-next-title"><span class="section-number">5.3. </span>Turbinas</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html" title="next page">
+    <a class='right-next' id="next-link" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Análisis diferencial de flujos</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

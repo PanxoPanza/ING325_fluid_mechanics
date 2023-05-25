@@ -192,15 +192,15 @@
 
 # <img src="./figures/drag_sphere.png" width="800px" align= center>
 
-# - Para $\mathrm{Re}\lesssim 1$ el coeficiente de arrastre disminuye con $\mathrm{Re}$. En el caso de una esfera, $C_\mathrm{D} = 24/\mathrm{Re}_D$ (flujo de Stokes). No hay separación de la capa límite
+# - <b><span style="color:rgb(0,112,192)">Región 1.</span></b> Para $\mathrm{Re}\lesssim 1$ el coeficiente de arrastre disminuye con $\mathrm{Re}$. No hay separación de la capa límite, y por lo tanto el arrastre se debe, únicamente, a efectos de fricción. Este régimen se conoce como **Flujo de Stokes**. En el caso de una esfera, $C_\mathrm{D} = 24/\mathrm{Re}_D$.
 # 
-# - En el rango $10 \lesssim \mathrm{Re} \lesssim 10^3$ la separación comienza a ocurrir. La región de separación aumenta con $\mathrm{Re}$ y con esto el arrastre debido a las presiones.
+# -  <b><span style="color:rgb(0,176,80)">Región 2.</span></b>  En el rango $10 \lesssim \mathrm{Re} \lesssim 10^3$ la separación comienza a ocurrir. La región de separación aumenta con $\mathrm{Re}$ y con esto el arrastre debido a las presiones.
 # 
-# - En el rango $10^3 \lesssim \mathrm{Re} \lesssim 10^5$ la región de separación no aumenta y, como resultado, el valor de $C_D$ permanece relativamente constante. El flujo sigue siendo laminar, pero el flujo en la región separada  es sumamente turbulento.
+# -  <b><span style="color:rgb(255,0,0)">Región 3.</span></b>  En el rango $10^3 \lesssim \mathrm{Re} \lesssim 10^5$ la región de separación no aumenta y, como resultado, el valor de $C_D$ permanece relativamente constante. El flujo sigue siendo laminar, pero el flujo en la región separada  es sumamente turbulento.
 # 
-# - En el rango  $10^5 \lesssim \mathrm{Re} \lesssim 10^6$ se produce  la transición a flujo turbulento. En este rango, la región de separación vuelve a disminuir, lo que se traduce en  una caída en $C_D$.
+# -  <b><span style="color:rgb(255,192,0)">Región 4.</span></b>  En el rango  $10^5 \lesssim \mathrm{Re} \lesssim 10^6$ se produce  la transición a flujo turbulento. En este rango, la región de separación vuelve a disminuir, lo que se traduce en  una caída en $C_D$.
 # 
-# - Para $10^6 \lesssim \mathrm{Re}$ el valor de $C_\mathrm{D}$ aumenta hasta alcanzar su valor final de flujo turbulento.
+# -  <b><span style="color:rgb(112,48,160)">Región 5.</span></b> Para $10^6 \lesssim \mathrm{Re}$ el valor de $C_\mathrm{D}$ aumenta hasta alcanzar su valor final de flujo turbulento.
 
 # El fenómeno de separación se presenta en todos los cuerpos, y define el comportamiento del coeficiente de arrastre.
 # 

@@ -129,7 +129,7 @@
 # 
 # **Procedimiento**
 # - Para cada velocidad, determinar $C_D$ y $\mathrm{Re}_D$ asociado utilizando las expresiones vistas en clase (repetir el procedimiento para la esfera pequeña y grande)
-# - Extraer los datos de $C_D$ vs $\mathrm{Re}_D$ para una esfera indicados en la figura. 
+# - Extraer los datos de $C_D$ vs $\mathrm{Re}_D$ para una esfera indicados en la **Figura 11**. 
 # >**Sugerencia.** Utilizar la aplicación libre [WebPlotDigitizer](https://automeris.io/WebPlotDigitizer/) para extraer los datos tabulados. El siguiente [tutorial](https://www.youtube.com/watch?v=P7GbGdMvopU) explica como usar la aplicación.
 # 
 # <img src="./figuras/arrastre_esfera_cilindro(libro).png" width="600px" align= center>

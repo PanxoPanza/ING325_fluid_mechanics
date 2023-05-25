@@ -22,7 +22,7 @@ parts:
     numbered: true
     chapters:
     - file: 06_Flujo_externo/06_Flujo_externo
-#    - file: 07_Analisis_diferencial_intro/08_Analisis_diferencial_intro
+    - file: 07_Analisis_diferencial_intro/07_Analisis_diferencial_intro
 #    - file: 08_Flujos_caracteristicos/09_Flujos_caracteristicos
   - caption: Apéndice
     numbered: False
