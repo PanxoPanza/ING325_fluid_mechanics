@@ -249,7 +249,7 @@
 #  &= \int_\mathrm{VC} \left[\frac{\partial}{\partial t}\left(\rho\vec{V}\right)  + \nabla\cdot\left(\rho\vec{V}\vec{V}\right)\right]d\forall
 # \end{align}
 
-# Como vimos en la [unidad 6](../06_Flujo_externo/06_Flujo_externo.ipynb), la fuerza externa sobre un volumen de control es el resultado de la distribución de presiones y tensiones de corte. Matemáticamente: 
+# Como vimos en la [unidad 6](../06_Flujo_externo/06_Flujo_externo.ipynb), la fuerza externa sobre un volumen de control es el resultado de la distribución de presiones y tensiones de corte. En una perspectiva general, también debemos considerar el efecto de la gravedad. La expresión para  las fuerzas externas es, entonces: 
 # 
 # \begin{equation}
 # \sum\vec{F}_\mathrm{ext} = - \int_A p~\hat{n}dA + \int_A \bar{\tau}\cdot\hat{n}dA  + \int_\mathrm{VC} \rho\vec{g}d\forall
@@ -307,7 +307,7 @@
 # \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 # \end{align*}
 
-# A partir de esta relación, en combinación con la ecuación (7.17), la ecuación de convervación de momento lineal es:
+# El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:
 # 
 # \begin{equation}
 # \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
@@ -326,7 +326,7 @@
 # \begin{equation*}
 # \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0
 # \end{equation*}
-
+# 
 # **Navier-Stokes**
 # 
 # \begin{align*}
@@ -338,27 +338,55 @@
 # \end{align*}
 # 
 
-# ### Navier-Stokes en coordenadas cilindricas
+# ### Navier-Stokes en coordenadas cilíndricas
+# 
+# En el caso de coordenadas cilíndricas ($r$, $\theta$, $z$), los operadores toman las siguientes formas:
+
+# **Operador Gradiente**
+# \begin{equation*}
+# \nabla f
+# = \frac{\partial f}{\partial r} \hat{r}
+# + \frac{1}{r}\frac{\partial f}{\partial \theta} \hat{\theta}
+# + \frac{\partial f}{\partial z} \hat{z}
+# \end{equation*}
+# 
+# **Operador divergente**
+# \begin{equation*}
+# \nabla\cdot \vec{f}
+# = \frac{1}{r}\frac{\partial}{\partial r}(rf_r) 
+# + \frac{1}{r}\frac{\partial f_\theta}{\partial \theta} 
+# + \frac{\partial f_z}{\partial z} \hat{z}
+# \end{equation*}
+# 
+# **Derivada convectiva**
+# \begin{equation*}
+# \vec{V}\cdot\nabla = u_r\frac{\partial }{\partial r} + \frac{u_\theta}{r}\frac{\partial }{\partial \theta} - \frac{u_\theta}{r} + u_z\frac{\partial}{\partial z}
+# \end{equation*}
+# 
+# **Operador laplaciano**
+# \begin{equation*}
+# \nabla^2 = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial }{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 }{\partial \theta^2} + \frac{\partial^2 }{\partial z^2}
+# \end{equation*}
+
+# A partir de esto, las ecuaciones de continuidad y Navier-Stokes quedan de la siguiente forma:
 
 # **Encuación de continuidad flujo incompresible**
 # 
 # \begin{equation*}
-# \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 u\right) + \frac{1}{r\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta} v\right) + \frac{1}{r\sin{\theta}}\frac{\partial w}{\partial \phi} = 0
+# \frac{1}{r}\frac{\partial}{\partial r}(ru_r) + \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z} = 0
 # \end{equation*}
-
+# 
 # **Navier-Stokes**
-# <div class="full-width">
-# <p style="line-height:2.0em;"></p>
 #     
 # \begin{align*}
-# \rho \left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial r} + \frac{v}{r}\frac{\partial u}{\partial \theta} + \frac{v}{r\sin{\theta}}\frac{\partial u}{\partial \phi} - \frac{v^2}{r}\right) &= -\frac{1}{r^2}\frac{\partial p}{\partial r} + \mu\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial u}{\partial r}\right) + \frac{1}{r^2\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta}\frac{\partial u}{\partial \theta}\right) + \frac{1}{r^2\sin^2{\theta}}\frac{\partial^2 u}{\partial \phi^2}\right) + \frac{g_r}{\rho} 
-# \\
-# \rho \left(\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial r} + \frac{v}{r}\frac{\partial v}{\partial \theta} + \frac{v}{r\sin{\theta}}\frac{\partial v}{\partial \phi} + \frac{u v}{r}\right) &= -\frac{1}{r^2\sin{\theta}}\frac{\partial p}{\partial \theta} + \mu\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial v}{\partial r}\right) + \frac{1}{r^2\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta}\frac{\partial v}{\partial \theta}\right) + \frac{1}{r^2\sin^2{\theta}}\frac{\partial^2 v}{\partial \phi^2}\right) + \frac{g_\theta}{\rho} 
-# \\
-# \rho \left(\frac{\partial w}{\partial t} + u\frac{\partial w}{\partial r} + \frac{v}{r}\frac{\partial w}{\partial \theta} + \frac{v}{r\sin{\theta}}\frac{\partial w}{\partial \phi}\right) &= -\frac{1}{r^2\sin{\theta}}\frac{\partial p}{\partial \phi} + \mu\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial w}{\partial r}\right) + \frac{1}{r^2\sin{\theta}}\frac{\partial}{\partial \theta}\left(\sin{\theta}\frac{\partial w}{\partial \theta}\right) + \frac{1}{r^2\sin^2{\theta}}\frac{\partial^2 w}{\partial \phi^2}\right) + \frac{g_\phi}{\rho}
+# \rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \frac{g_r}{\rho} 
+#     \\
+# \rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \frac{g_\theta}{\rho} 
+#     \\
+# \rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \frac{g_z}{\rho}
 # \end{align*}
 # 
-# </div>
+# donde $u_r$, $u_\theta$ y $u_z$ son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.
 
 # ## Referencias
 # **Çengel Y. A. y Cimbala M. J. *Mecánica de Fluidos: Fundamentos y Aplicaciones*, 4ta Ed., McGraw Hill, 2018**
