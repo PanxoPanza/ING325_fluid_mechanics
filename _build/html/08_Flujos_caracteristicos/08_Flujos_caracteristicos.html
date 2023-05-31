@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8. Análisis de las ecuaciones de Navier-Stokes &#8212; ING325 - Mecánica de Fluidos</title>
+    <title>8. Ecuación de Navier-Stokes &#8212; ING325 - Mecánica de Fluidos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -185,7 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. Análisis de las ecuaciones de Navier-Stokes
+   8. Ecuación de Navier-Stokes
   </a>
  </li>
 </ul>
@@ -377,47 +377,64 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   8.2. Ecuación de Navier-Stokes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navier-stokes-en-coordenadas-cartesianas">
+     8.2.1. Navier-Stokes en coordenadas cartesianas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navier-stokes-en-coordenadas-cilindricas">
+     8.2.2. Navier-Stokes en coordenadas cilíndricas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#soluciones-de-n-s-y-continuidad">
-   8.2. Soluciones de N-S y continuidad
+   8.3. Soluciones de N-S y continuidad
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#supuestos-tipicos">
-     8.2.1. Supuestos típicos
+     8.3.1. Supuestos típicos
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-estacionario">
-       8.2.1.1. Flujo estacionario
+       8.3.1.1. Flujo estacionario
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-bidimensional">
-       8.2.1.2. Flujo bidimensional
+       8.3.1.2. Flujo bidimensional
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-desarrollado">
-       8.2.1.3. Flujo desarrollado
+       8.3.1.3. Flujo desarrollado
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#condiciones-de-borde-tipicas">
-     8.2.2. Condiciones de borde típicas
+     8.3.2. Condiciones de borde típicas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#flujos-caracteristicos">
-     8.2.3. Flujos característicos
+     8.3.3. Flujos característicos
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#referencias">
-   8.3. Referencias
+   8.4. Referencias
   </a>
  </li>
 </ul>
@@ -429,7 +446,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Análisis de las ecuaciones de Navier-Stokes</h1>
+                <h1>Ecuación de Navier-Stokes</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -445,47 +462,64 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   8.2. Ecuación de Navier-Stokes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navier-stokes-en-coordenadas-cartesianas">
+     8.2.1. Navier-Stokes en coordenadas cartesianas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navier-stokes-en-coordenadas-cilindricas">
+     8.2.2. Navier-Stokes en coordenadas cilíndricas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#soluciones-de-n-s-y-continuidad">
-   8.2. Soluciones de N-S y continuidad
+   8.3. Soluciones de N-S y continuidad
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#supuestos-tipicos">
-     8.2.1. Supuestos típicos
+     8.3.1. Supuestos típicos
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-estacionario">
-       8.2.1.1. Flujo estacionario
+       8.3.1.1. Flujo estacionario
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-bidimensional">
-       8.2.1.2. Flujo bidimensional
+       8.3.1.2. Flujo bidimensional
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flujo-desarrollado">
-       8.2.1.3. Flujo desarrollado
+       8.3.1.3. Flujo desarrollado
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#condiciones-de-borde-tipicas">
-     8.2.2. Condiciones de borde típicas
+     8.3.2. Condiciones de borde típicas
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#flujos-caracteristicos">
-     8.2.3. Flujos característicos
+     8.3.3. Flujos característicos
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#referencias">
-   8.3. Referencias
+   8.4. Referencias
   </a>
  </li>
 </ul>
@@ -498,20 +532,106 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="analisis-de-las-ecuaciones-de-navier-stokes">
-<h1><span class="section-number">8. </span>Análisis de las ecuaciones de Navier-Stokes<a class="headerlink" href="#analisis-de-las-ecuaciones-de-navier-stokes" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ecuacion-de-navier-stokes">
+<h1><span class="section-number">8. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#ecuacion-de-navier-stokes" title="Permalink to this headline">#</a></h1>
 <section id="introduccion">
 <h2><span class="section-number">8.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
-<p>En la unidad anterior dedujimos las ecuaciones de conservación de masa y momento lineal en su forma diferencial. Respecto a esta última, derivamos las ecuaciones de Navier-Stokes, las cuales corresponden a un caso particular para:</p>
-<ul class="simple">
-<li><p>Fluido incompresible</p></li>
-<li><p>Fluido Newtoniano</p></li>
-</ul>
-<p>Estas ecuaciones son la base de la mecánica de fluidos. Técnicamente, cualquier problema de la mecánica de fluidos asociado a las condiciones <em>incompresible-newtoniano</em> puede ser caracterizado a partir de la solución de estas ecuaciones. Sin embargo, la complejidad asociada al número de incógnitas, variables independientes, y sobre todo a su condición no-lineal, hacen imposible su solución, salvo en casos particulares.</p>
-<p>En esta unidad analizaremos estas ecuaciones y mostraremos su comportamiento para estos casos.</p>
+<p>En la unidad anterior dedujimos las ecuaciones de conservación de masa y momento lineal en su forma diferencial.</p>
+<p>En esta unidad derivaremos la ecuación de Navier-Stokes, la cual constituye la base de la mecánica de fluidos. Técnicamente, cualquier problema de la mecánica de fluidos asociado a las condiciones <em>incompresible-newtoniano</em> puede ser caracterizado a partir de la solución de estas ecuaciones.</p>
+<p>Sin embargo, la complejidad asociada al número de incógnitas, variables independientes, y sobre todo a su condición no-lineal, hacen imposible su solución, salvo en casos particulares que revisaremos al final de la unidad.</p>
+</section>
+<section id="id1">
+<h2><span class="section-number">8.2. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8c36b116-3b70-45a4-b4ca-9fceb34721a8">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-8c36b116-3b70-45a4-b4ca-9fceb34721a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\nabla\cdot\vec{V} = 0
+\end{equation}\]</div>
+<p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-26619200-8481-49ad-9d17-550694a108a1">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-26619200-8481-49ad-9d17-550694a108a1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
+\end{equation}\]</div>
+<p>Es posible demostrar que:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
+\end{align*}\]</div>
+<p>El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fa5dd3ec-137f-463d-b789-64f32108ef56">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-fa5dd3ec-137f-463d-b789-64f32108ef56" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
+\end{equation}\]</div>
+<p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
+<p>Notar que la ecuación de Navier Stokes es una ecuación vectorial y por lo tanto, está conformada por 3 ecuaciones. Sin embargo, el problema de fluidos tiene 4 incognitas <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(w\)</span> y la presión <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p>Para poder resolver este problema, necesitamos una cuarta ecuación la cual corresponde a la continuidad para flujo incompresible, <span class="math notranslate nohighlight">\(\nabla\cdot \vec{V} = 0\)</span>.</p>
+<section id="navier-stokes-en-coordenadas-cartesianas">
+<h3><span class="section-number">8.2.1. </span>Navier-Stokes en coordenadas cartesianas<a class="headerlink" href="#navier-stokes-en-coordenadas-cartesianas" title="Permalink to this headline">#</a></h3>
+<p>En coordenadas cartesianas, tenemos que el vector <span class="math notranslate nohighlight">\(\vec{V}\)</span> se descompone en las componentes <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> y <span class="math notranslate nohighlight">\(w\)</span>. Las ecuaciónes de continuidad y Navier-Stokes toman la siguiente forma:</p>
+<p><strong>Encuación de continuidad flujo incompresible</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0
+\end{equation*}\]</div>
+<p><strong>Navier-Stokes</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\rho \left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z}\right) &amp;= -\frac{\partial p}{\partial x} + \mu \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right) + g_x
+\\
+\rho \left(\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z}\right) &amp;= -\frac{\partial p}{\partial y} + \mu \left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2}\right) + g_y
+\\
+\rho \left(\frac{\partial w}{\partial t} + u\frac{\partial w}{\partial x} + v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z}\right) &amp;= -\frac{\partial p}{\partial z} + \mu \left(\frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2}\right) + g_z
+\end{align*}\]</div>
+</section>
+<section id="navier-stokes-en-coordenadas-cilindricas">
+<h3><span class="section-number">8.2.2. </span>Navier-Stokes en coordenadas cilíndricas<a class="headerlink" href="#navier-stokes-en-coordenadas-cilindricas" title="Permalink to this headline">#</a></h3>
+<p>En el caso de coordenadas cilíndricas (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(z\)</span>), los operadores toman las siguientes formas:</p>
+<p><strong>Operador Gradiente</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\nabla f
+= \frac{\partial f}{\partial r} \hat{r}
++ \frac{1}{r}\frac{\partial f}{\partial \theta} \hat{\theta}
++ \frac{\partial f}{\partial z} \hat{z}
+\end{equation*}\]</div>
+<p><strong>Operador divergente</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\nabla\cdot \vec{f}
+= \frac{1}{r}\frac{\partial}{\partial r}(rf_r) 
++ \frac{1}{r}\frac{\partial f_\theta}{\partial \theta} 
++ \frac{\partial f_z}{\partial z} \hat{z}
+\end{equation*}\]</div>
+<p><strong>Derivada convectiva</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\vec{V}\cdot\nabla = u_r\frac{\partial }{\partial r} + \frac{u_\theta}{r}\frac{\partial }{\partial \theta} - \frac{u_\theta}{r} + u_z\frac{\partial}{\partial z}
+\end{equation*}\]</div>
+<p><strong>Operador laplaciano</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\nabla^2 = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial }{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 }{\partial \theta^2} + \frac{\partial^2 }{\partial z^2}
+\end{equation*}\]</div>
+<p>A partir de esto, las ecuaciones de continuidad y Navier-Stokes quedan de la siguiente forma:</p>
+<p><strong>Encuación de continuidad flujo incompresible</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{r}\frac{\partial}{\partial r}(ru_r) + \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z} = 0
+\end{equation*}\]</div>
+<p><strong>Navier-Stokes</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \frac{g_r}{\rho} 
+    \\
+\rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &amp;= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \frac{g_\theta}{\rho} 
+    \\
+\rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &amp;= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \frac{g_z}{\rho}
+\end{align*}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
+</section>
 </section>
 <section id="soluciones-de-n-s-y-continuidad">
-<h2><span class="section-number">8.2. </span>Soluciones de N-S y continuidad<a class="headerlink" href="#soluciones-de-n-s-y-continuidad" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.3. </span>Soluciones de N-S y continuidad<a class="headerlink" href="#soluciones-de-n-s-y-continuidad" title="Permalink to this headline">#</a></h2>
 <p>A pesar de su complejidad, existen problemas sencillos donde las ecuaciones de Navier-Stokes en conjunto con la ecuación de continuidad tienen solución analítica.</p>
 <p>Para poder resolver estas ecuaciones es fundamental aplicar las <em>condiciones iniciales y de borde adecuadas</em>. Si analizamos estas ecuaciones involucradas, notamos que tenemos que tenemos <strong>derivadas de primer orden en el tiempo (<span class="math notranslate nohighlight">\(t\)</span>)</strong> y <strong>derivadas de segundo orden en el espacio (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>)</strong>. En general, necesitaremos:</p>
 <ul class="simple">
@@ -521,12 +641,12 @@ title="Print to PDF"
 <p>Considerando las incognitas <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(w\)</span> y <span class="math notranslate nohighlight">\(p\)</span>, esto nos da como resultado <strong>4 condiciones iniciales  y 12 condiciones de borde.</strong></p>
 <p>En la práctica, sin embargo, es común aplicar supuestos que permiten reducir el tamaño de la ecuación diferencial.</p>
 <section id="supuestos-tipicos">
-<h3><span class="section-number">8.2.1. </span>Supuestos típicos<a class="headerlink" href="#supuestos-tipicos" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">8.3.1. </span>Supuestos típicos<a class="headerlink" href="#supuestos-tipicos" title="Permalink to this headline">#</a></h3>
 <section id="flujo-estacionario">
-<h4><span class="section-number">8.2.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">8.3.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Permalink to this headline">#</a></h4>
 <p>Este supuesto asume que la variación temporal es despreciable. Las ecuaciónes se simplifican a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68ed69e0-d675-4ca9-9ef2-26f0eb75924d">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-68ed69e0-d675-4ca9-9ef2-26f0eb75924d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a7e7ec69-f5ab-43fc-a329-6aab80acbce0">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-a7e7ec69-f5ab-43fc-a329-6aab80acbce0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \nabla\cdot\vec{V} &amp;= 0 \\
 \rho\vec{V}\cdot\nabla\vec{V} &amp;= -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
@@ -534,7 +654,7 @@ title="Print to PDF"
 \end{align}\]</div>
 </section>
 <section id="flujo-bidimensional">
-<h4><span class="section-number">8.2.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">8.3.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Permalink to this headline">#</a></h4>
 <p>Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente <span class="math notranslate nohighlight">\(z\)</span>, es decir <span class="math notranslate nohighlight">\(w = 0\)</span>. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:</p>
 <p><strong>Encuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
@@ -569,7 +689,7 @@ title="Print to PDF"
 \end{align*}\]</div>
 </section>
 <section id="flujo-desarrollado">
-<h4><span class="section-number">8.2.1.3. </span>Flujo desarrollado<a class="headerlink" href="#flujo-desarrollado" title="Permalink to this headline">#</a></h4>
+<h4><span class="section-number">8.3.1.3. </span>Flujo desarrollado<a class="headerlink" href="#flujo-desarrollado" title="Permalink to this headline">#</a></h4>
 <p>Este supuesto se aplica para <strong>despreciar la tasa de cambio en la dirección paralela a alguna de las componentes de velocidad</strong>.</p>
 <p>El concepto nace del flujo en tuberías, donde la tasa de cambio de la componente longitudinal, <span class="math notranslate nohighlight">\(\frac{\partial u_z}{\partial z} \approx 0\)</span> despues de la región de desarrollo del flujo.</p>
 <a class="reference internal image-reference" href="../_images/condicion_flujo_desarrollado.png"><img alt="../_images/condicion_flujo_desarrollado.png" class="align-center" src="../_images/condicion_flujo_desarrollado.png" style="width: 800px;" /></a>
@@ -577,20 +697,20 @@ title="Print to PDF"
 </section>
 </section>
 <section id="condiciones-de-borde-tipicas">
-<h3><span class="section-number">8.2.2. </span>Condiciones de borde típicas<a class="headerlink" href="#condiciones-de-borde-tipicas" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">8.3.2. </span>Condiciones de borde típicas<a class="headerlink" href="#condiciones-de-borde-tipicas" title="Permalink to this headline">#</a></h3>
 <p>Una vez establecidos los supuestos, es necesario implementar las condiciones de borde necesarias para resolver el problema.</p>
 <p>Las más comunes son.</p>
 <a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" /></a>
 </section>
 <section id="flujos-caracteristicos">
-<h3><span class="section-number">8.2.3. </span>Flujos característicos<a class="headerlink" href="#flujos-caracteristicos" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">8.3.3. </span>Flujos característicos<a class="headerlink" href="#flujos-caracteristicos" title="Permalink to this headline">#</a></h3>
 <p>Existen 3 problemas característicos que pueden ser resueltos analiticamente a partir de las ecuaciones de continuidad y Navier-Stokes.</p>
 <a class="reference internal image-reference" href="../_images/tipos_de_flujo.png"><img alt="../_images/tipos_de_flujo.png" class="align-center" src="../_images/tipos_de_flujo.png" style="width: 800px;" /></a>
 <p>La solución a estos problemas se verá en la sesión de cátedra.</p>
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">8.3. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 9. Análisis diferencial de flujo de fluidos</p></li>

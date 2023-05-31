@@ -1,19 +1,116 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Análisis de las ecuaciones de Navier-Stokes
+# # Ecuación de Navier-Stokes
 
 # ## Introducción
 # 
-# En la unidad anterior dedujimos las ecuaciones de conservación de masa y momento lineal en su forma diferencial. Respecto a esta última, derivamos las ecuaciones de Navier-Stokes, las cuales corresponden a un caso particular para:
-# 
-# - Fluido incompresible
-# - Fluido Newtoniano
+# En la unidad anterior dedujimos las ecuaciones de conservación de masa y momento lineal en su forma diferencial. 
 
-# 
-# Estas ecuaciones son la base de la mecánica de fluidos. Técnicamente, cualquier problema de la mecánica de fluidos asociado a las condiciones *incompresible-newtoniano* puede ser caracterizado a partir de la solución de estas ecuaciones. Sin embargo, la complejidad asociada al número de incógnitas, variables independientes, y sobre todo a su condición no-lineal, hacen imposible su solución, salvo en casos particulares.
+# En esta unidad derivaremos la ecuación de Navier-Stokes, la cual constituye la base de la mecánica de fluidos. Técnicamente, cualquier problema de la mecánica de fluidos asociado a las condiciones *incompresible-newtoniano* puede ser caracterizado a partir de la solución de estas ecuaciones.
 
-# En esta unidad analizaremos estas ecuaciones y mostraremos su comportamiento para estos casos.
+# Sin embargo, la complejidad asociada al número de incógnitas, variables independientes, y sobre todo a su condición no-lineal, hacen imposible su solución, salvo en casos particulares que revisaremos al final de la unidad.
+
+# ## Ecuación de Navier-Stokes
+
+# En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:
+# 
+# \begin{equation}
+# \nabla\cdot\vec{V} = 0
+# \end{equation}
+
+# Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:
+# 
+# \begin{equation}
+# \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
+# \end{equation}
+
+# Es posible demostrar que:
+# \begin{align*}
+# \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
+# \end{align*}
+
+# El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:
+# 
+# \begin{equation}
+# \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
+# \end{equation}
+
+# Esta es la **ecuacion de Navier-Stokes.** Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.
+
+# Notar que la ecuación de Navier Stokes es una ecuación vectorial y por lo tanto, está conformada por 3 ecuaciones. Sin embargo, el problema de fluidos tiene 4 incognitas $u$, $v$, $w$ y la presión $p$.
+
+# Para poder resolver este problema, necesitamos una cuarta ecuación la cual corresponde a la continuidad para flujo incompresible, $\nabla\cdot \vec{V} = 0$.
+
+# ### Navier-Stokes en coordenadas cartesianas
+# En coordenadas cartesianas, tenemos que el vector $\vec{V}$ se descompone en las componentes $u$, $v$ y $w$. Las ecuaciónes de continuidad y Navier-Stokes toman la siguiente forma:
+
+# **Encuación de continuidad flujo incompresible**
+# 
+# \begin{equation*}
+# \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0
+# \end{equation*}
+# 
+# **Navier-Stokes**
+# 
+# \begin{align*}
+# \rho \left(\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z}\right) &= -\frac{\partial p}{\partial x} + \mu \left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right) + g_x
+# \\
+# \rho \left(\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z}\right) &= -\frac{\partial p}{\partial y} + \mu \left(\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2}\right) + g_y
+# \\
+# \rho \left(\frac{\partial w}{\partial t} + u\frac{\partial w}{\partial x} + v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z}\right) &= -\frac{\partial p}{\partial z} + \mu \left(\frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2}\right) + g_z
+# \end{align*}
+# 
+
+# ### Navier-Stokes en coordenadas cilíndricas
+# 
+# En el caso de coordenadas cilíndricas ($r$, $\theta$, $z$), los operadores toman las siguientes formas:
+
+# **Operador Gradiente**
+# \begin{equation*}
+# \nabla f
+# = \frac{\partial f}{\partial r} \hat{r}
+# + \frac{1}{r}\frac{\partial f}{\partial \theta} \hat{\theta}
+# + \frac{\partial f}{\partial z} \hat{z}
+# \end{equation*}
+# 
+# **Operador divergente**
+# \begin{equation*}
+# \nabla\cdot \vec{f}
+# = \frac{1}{r}\frac{\partial}{\partial r}(rf_r) 
+# + \frac{1}{r}\frac{\partial f_\theta}{\partial \theta} 
+# + \frac{\partial f_z}{\partial z} \hat{z}
+# \end{equation*}
+# 
+# **Derivada convectiva**
+# \begin{equation*}
+# \vec{V}\cdot\nabla = u_r\frac{\partial }{\partial r} + \frac{u_\theta}{r}\frac{\partial }{\partial \theta} - \frac{u_\theta}{r} + u_z\frac{\partial}{\partial z}
+# \end{equation*}
+# 
+# **Operador laplaciano**
+# \begin{equation*}
+# \nabla^2 = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial }{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 }{\partial \theta^2} + \frac{\partial^2 }{\partial z^2}
+# \end{equation*}
+
+# A partir de esto, las ecuaciones de continuidad y Navier-Stokes quedan de la siguiente forma:
+
+# **Encuación de continuidad flujo incompresible**
+# 
+# \begin{equation*}
+# \frac{1}{r}\frac{\partial}{\partial r}(ru_r) + \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z} = 0
+# \end{equation*}
+# 
+# **Navier-Stokes**
+#     
+# \begin{align*}
+# \rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \frac{g_r}{\rho} 
+#     \\
+# \rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \frac{g_\theta}{\rho} 
+#     \\
+# \rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \frac{g_z}{\rho}
+# \end{align*}
+# 
+# donde $u_r$, $u_\theta$ y $u_z$ son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.
 
 # ## Soluciones de N-S y continuidad
 # 
