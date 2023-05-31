@@ -543,13 +543,13 @@ title="Print to PDF"
 <section id="id1">
 <h2><span class="section-number">8.2. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d235b83-2ce3-465f-ad95-93b94ee823d5">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-7d235b83-2ce3-465f-ad95-93b94ee823d5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2321a348-b5c7-4724-af09-22ebd4c9985c">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-2321a348-b5c7-4724-af09-22ebd4c9985c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-117ffcbd-0e4e-4dc2-903e-37bba8e06fc7">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-117ffcbd-0e4e-4dc2-903e-37bba8e06fc7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b0859b56-2161-446c-8a12-7e590a427824">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-b0859b56-2161-446c-8a12-7e590a427824" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>Es posible demostrar que:</p>
@@ -558,8 +558,8 @@ title="Print to PDF"
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba1f99cd-a13a-4b9b-b4e7-4344cdd29430">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-ba1f99cd-a13a-4b9b-b4e7-4344cdd29430" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9557e647-7e6c-48d4-9fd0-21c04a743525">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-9557e647-7e6c-48d4-9fd0-21c04a743525" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -645,8 +645,8 @@ title="Print to PDF"
 <section id="flujo-estacionario">
 <h4><span class="section-number">8.3.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Permalink to this headline">#</a></h4>
 <p>Este supuesto asume que la variación temporal es despreciable. Las ecuaciónes se simplifican a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54dd841a-e1cf-4373-9e50-2d780ad05008">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-54dd841a-e1cf-4373-9e50-2d780ad05008" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-937683f6-8b41-44ec-9650-fb722da90522">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-937683f6-8b41-44ec-9650-fb722da90522" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \nabla\cdot\vec{V} &amp;= 0 \\
 \rho\vec{V}\cdot\nabla\vec{V} &amp;= -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
@@ -655,7 +655,7 @@ title="Print to PDF"
 </section>
 <section id="flujo-bidimensional">
 <h4><span class="section-number">8.3.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Permalink to this headline">#</a></h4>
-<p>Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente <span class="math notranslate nohighlight">\(z\)</span>, es decir <span class="math notranslate nohighlight">\(w = 0\)</span>. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:</p>
+<p>Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente <span class="math notranslate nohighlight">\(z\)</span>, es decir <span class="math notranslate nohighlight">\(w = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial z} = 0\)</span>. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:</p>
 <p><strong>Encuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -674,7 +674,7 @@ title="Print to PDF"
 0 = \frac{\partial p}{\partial z} + \rho g_z
 \end{equation*}\]</div>
 <p>Que corresponde a la ecuación para presión hidrostática.</p>
-<p>El razonamiento análogo en coordenadas cilindricas se denomina, <strong>flujo con simetría axial o axial-simétrico</strong>. En este caso <span class="math notranslate nohighlight">\(\frac{\partial}{\partial \theta} = 0\)</span>, y las ecuaciones se simplifican a:</p>
+<p>El razonamiento análogo en coordenadas cilindricas se denomina, <strong>flujo con simetría axial o axial-simétrico</strong>. En este caso, <span class="math notranslate nohighlight">\(u_\theta = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial \theta} = 0\)</span>. Las ecuaciones se simplifican a:</p>
 <p><strong>Encuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
