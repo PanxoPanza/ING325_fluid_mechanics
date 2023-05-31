@@ -114,6 +114,66 @@
 
 # ## Fundamentos de la cinemática de fluidos
 
+# ### Líneas de corriente
+# 
+# Una **línea de corriente es una curva que, en todas partes, es *tangente a la velocidad local instantánea***. Son útiles para identificar el movimiento del fluido en todo el campo de flujo. 
+
+# <img src="./figures/linea_de_corriente.png" width="750px" align= center>
+
+# ### Tipos de movimiento o deformación de un elemento fluido
+# 
+# Un elemento fluido puede pasar por cuatro tipos fundamentales de movimiento.
+
+# <img src="./figures/movimiento_fluido.png" width="750px" align= center>
+
+# La **traslación** está simplemente dada por $\vec{V}$.
+
+# La **razón de rotación** está caracterizada como el promedio del operador rotacional, on $\omega = \frac{1}{2}\nabla\times \vec{V}$
+
+# En el caso de los esfuerzos, utilizamos un **tensor de deformación**:
+# 
+# \begin{equation}
+# \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
+# \end{equation}
+
+# En coordenadas cartesianas:
+# 
+# \begin{equation*}
+# \bar{\varepsilon} =
+# \begin{bmatrix}
+# \varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\
+# \varepsilon_{yx} & \varepsilon_{yy} & \varepsilon_{yz} \\
+# \varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz}
+# \end{bmatrix} = 
+# \begin{bmatrix}
+# \frac{\partial u}{\partial x} & 
+# \frac{1}{2}\left(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}\right) & 
+# \frac{1}{2}\left(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x}\right) 
+# \\
+# \frac{1}{2}\left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) & 
+# \frac{\partial v}{\partial y} & 
+# \frac{1}{2}\left(\frac{\partial v}{\partial z}  + \frac{\partial w}{\partial y}\right)
+# \\
+# \frac{1}{2}\left(\frac{\partial w}{\partial x} + \frac{\partial u}{\partial z}\right) & 
+# \frac{1}{2}\left(\frac{\partial w}{\partial y} + \frac{\partial v}{\partial z}\right) & 
+# \frac{\partial w}{\partial z}
+# \end{bmatrix}
+# \end{equation*}
+
+# Los **elementos de la diagonal** ($\varepsilon_{xx}$, $\varepsilon_{yy}$ y $\varepsilon_{zz}$) representan la **deformación por esfuerzos normales**. El **resto de los elementos**, corresponde a la **deformación por esfuerzos cortantes**.
+
+# ### Rotacionalidad y viscosidad
+# 
+# Un flujo es rotacional si $\nabla\times\vec{V} \neq 0$. En este caso, los elementos de fluido giran.
+
+# Generalmente, los efectos de rotación implican la presencia de efectos viscosos (aunque no siempre). Así, es común que un flujo sea rotacional ($\nabla\times\vec{V} \neq 0$) en las regiones no viscosas.
+# 
+# <img src="./figures/flujo_viscoso_no-viscoso.png" width="650px" align= center>
+
+# Notar que no todos los flujos circulares son rotacionales:
+# 
+# <img src="./figures/flujo_rotacional.png" width="650px" align= center>
+
 # ### Derivada material
 # 
 # En el enfoque euleriano las variables dependen del tiempo y del espacio. Así, debemos definir un nuevo operador para evaluar la tasa de cambio de una variable. Este operador será equivalente a la derivada temporal $d/dt$ utilizado en el enfoque lagranfiano.
@@ -159,48 +219,6 @@
 # \frac{d\rho}{dt} = \frac{\partial\rho}{\partial t} + \vec{V}\cdot\nabla\rho
 # \end{equation*}
 
-# ### Tipos de movimiento o deformación de un elemento fluido
-# 
-# Un elemento fluido puede pasar por cuatro tipos fundamentales de movimiento.
-
-# <img src="./figures/movimiento_fluido.png" width="750px" align= center>
-
-# La **traslación** está simplemente dada por $\vec{V}$.
-
-# La **razón de rotación** está caracterizada como el promedio del operador rotacional, on $\omega = \frac{1}{2}\nabla\times \vec{V}$
-
-# En el caso de los esfuerzos, utilizamos un **tensor de deformación**:
-# 
-# \begin{equation}
-# \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
-# \end{equation}
-
-# En coordenadas cartesianas:
-# 
-# \begin{equation*}
-# \bar{\varepsilon} =
-# \begin{bmatrix}
-# \varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\
-# \varepsilon_{yx} & \varepsilon_{yy} & \varepsilon_{yz} \\
-# \varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz}
-# \end{bmatrix} = 
-# \begin{bmatrix}
-# \frac{\partial u}{\partial x} & 
-# \frac{1}{2}\left(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}\right) & 
-# \frac{1}{2}\left(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x}\right) 
-# \\
-# \frac{1}{2}\left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\right) & 
-# \frac{\partial v}{\partial y} & 
-# \frac{1}{2}\left(\frac{\partial v}{\partial z}  + \frac{\partial w}{\partial y}\right)
-# \\
-# \frac{1}{2}\left(\frac{\partial w}{\partial x} + \frac{\partial u}{\partial z}\right) & 
-# \frac{1}{2}\left(\frac{\partial w}{\partial y} + \frac{\partial v}{\partial z}\right) & 
-# \frac{\partial w}{\partial z}
-# \end{bmatrix}
-# \end{equation*}
-
-# Los **elementos de la diagonal** ($\varepsilon_{xx}$, $\varepsilon_{yy}$ y $\varepsilon_{zz}$) representan la **deformación por esfuerzos normales**. El **resto de los elementos**, corresponde a la **deformación por esfuerzos cortantes**.
-
 # ## Ecuaciones de conservación en forma diferencial
 # 
 # A partir de los conceptos revisados anteriormente podemos intepretar los patrones de flujo y perfiles de velocidad que caracterizan la interacción de un fluido con una estructura
@@ -232,7 +250,14 @@
 # 0 &= \int_\mathrm{VC} \left[\frac{\partial\rho}{\partial t} + \nabla\cdot\left(\rho\vec{V} \right) \right]d\forall 
 # \end{align*}
 
-# Para satisfacer esta ecuación el integrando debe ser cero. Después de unas operaciones matemáticas, derivamos la **ecuación de conservación de masa en su forma diferencial**:
+# Para satisfacer esta ecuación el integrando debe ser cero, y tenemos:
+# 
+# \begin{equation*}
+# \frac{\partial\rho}{\partial t} + \nabla\cdot\left(\rho\vec{V} \right) = 0
+# \end{equation*}
+
+# A partir de la identidad, $ \nabla\cdot(\rho\vec{V}) = \vec{V}\cdot\nabla\rho + \rho(\nabla\cdot\vec{V})$, derivamos la **ecuación de conservación de masa en su forma diferencial**:
+# 
 # \begin{equation}
 # \frac{d\rho}{dt} + \rho\left(\nabla\cdot\vec{V}\right) = 0
 # \end{equation}
@@ -274,13 +299,19 @@
 # 
 # donde $\bar{I}$ es el tensor identidad.
 
-# Combinando las ecuaciones (7.12) y (7.16), tenemos:
+# Combinando las ecuaciones (7.12) y (7.15), tenemos:
 # 
 # \begin{equation*}
 # \frac{\partial}{\partial t}\left(\rho\vec{V}\right)  + \nabla\cdot\left(\rho\vec{V}\vec{V}\right) = - \nabla p + \nabla\cdot\bar{\tau} +  \rho\vec{g}
 # \end{equation*}
 
-# El termino de la izquierda se puede simplificar a partir de la ecuación de continuidad (7.11) para, finalmente, derivar la **ecuación de conservación de momento lineal en su forma diferencial**:
+# Aplicamos la identidad  $ \nabla\cdot\left(\rho\vec{V}\vec{V}\right) = \vec{V}\nabla\cdot\left(\rho\vec{V}\right) + \rho\vec{V}\cdot\nabla\vec{V} $ para obtener:
+# 
+# \begin{equation*}
+# \vec{V}\left[\frac{\partial\rho}{\partial t} + \nabla\cdot\left(\rho\vec{V}\right)\right] + \rho\left[\frac{\partial\vec{V}}{\partial t}+ \vec{V}\cdot\nabla\vec{V}\right] = - \nabla p + \nabla\cdot\bar{\tau} +  \rho\vec{g}
+# \end{equation*}
+
+# El primer término de la izquierda corresponde a la ecuación de continuidad (7.11). Así, la **ecuación de conservación de momento lineal en su forma diferencial** es:
 # 
 # \begin{equation}
 # \rho\frac{d\vec{V}}{dt} = - \nabla p + \nabla\cdot\bar{\tau} + \rho\vec{g}
