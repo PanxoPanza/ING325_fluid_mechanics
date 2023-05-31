@@ -138,7 +138,7 @@
 # \end{align}
 
 # #### Flujo bidimensional
-# Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente $z$, es decir $w = 0$. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:
+# Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente $z$, es decir $w = 0$ y $\frac{\partial}{\partial z} = 0$. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:
 
 # **Encuación de continuidad flujo incompresible**
 # 
@@ -163,7 +163,7 @@
 # 
 # Que corresponde a la ecuación para presión hidrostática.
 
-# El razonamiento análogo en coordenadas cilindricas se denomina, **flujo con simetría axial o axial-simétrico**. En este caso $\frac{\partial}{\partial \theta} = 0$, y las ecuaciones se simplifican a:
+# El razonamiento análogo en coordenadas cilindricas se denomina, **flujo con simetría axial o axial-simétrico**. En este caso, $u_\theta = 0$ y $\frac{\partial}{\partial \theta} = 0$. Las ecuaciones se simplifican a:
 
 # **Encuación de continuidad flujo incompresible**
 # 
