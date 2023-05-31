@@ -15,67 +15,6 @@
 
 # En esta unidad analizaremos estas ecuaciones y mostraremos su comportamiento para estos casos.
 
-# ## Aproximación para regiones no viscosas
-# 
-# Es interesante analizar las ecuaciones de Navier-Stokes en regiones no viscosas. Como veremos, a partir de este análisis podemos evaluar la conservación de energía a lo largo de una línea de corriente. 
-# 
-# Primero, revisaremos algunos conceptos.
-
-# ### Líneas de corriente
-# 
-# Una **línea de corriente es una curva que, en todas partes, es *tangente a la velocidad local instantánea***. Son útiles para identificar el movimiento del fluido en todo el campo de flujo. 
-
-# <img src="./figures/linea_de_corriente.png" width="750px" align= center>
-
-# ### Vorticidad y rotacionalidad
-# 
-# Es importante aclarar el concepto de rotación de una partícula fluida. Un flujo es rotacional si $\nabla\times\vec{V} \neq 0$. En este caso, los elementos de fluido giran.
-
-# <img src="./figures/flujo_viscoso_no-viscoso.png" width="650px" align= center>
-
-# Notar que no todos los flujos circulares son rotacionales:
-# 
-# <img src="./figures/flujo_rotacional.png" width="650px" align= center>
-
-# ### Conservación de energía en regiones no viscosas
-
-# Como revisamos en la unidad de [flujo externo](../06_Flujo_externo/06_Flujo_externo.ipynb) el desarrollo de la capa límite alrededor del cuerpo permite separar el flujo en una región viscosa y otra no viscosa
-
-# <img src="./figures/viscous_non-viscous.png" width="650px" align= center>
-
-# En la región fuera de la capa límite, las fuerzas viscosas son despresiables, es decir $\mu\nabla^2\vec{V} \approx 0$, y la ecuación de Navier-Stokes se convierte en la **ecuación de Euler:**
-# 
-# \begin{equation}
-# \rho\left[\frac{\partial\vec{V}}{\partial t} + \vec{V}\cdot\nabla\vec{V}\right] = - \nabla p + \rho\vec{g}
-# \end{equation}
-
-# A partir de las siguientes identidades:
-# 
-# - $\vec{g} = - g\hat{z} = - g\nabla(z) = \nabla(-gz)$
-# - $\vec{V}\cdot\nabla\vec{V} = \nabla\left(\frac{1}{2} V^2\right) - \vec{V}\times\nabla\times\vec{V}$ (*donde $V = |\vec{V}|$*)
-
-# Tenemos:
-# \begin{equation*}
-# \nabla\left(\frac{1}{2}V^2 + \frac{p}{\rho} + gz\right) = \vec{V}\times\nabla\times\vec{V}
-# \end{equation*}
-
-# Luego, si integramos esta ecuación a lo largo de una línea de corriente:
-# 
-# \begin{align}
-# \int \nabla\left(\frac{1}{2}V^2 + \frac{p}{\rho} + gz\right) \cdot d\vec{r} &= \int\vec{V}\times\nabla\times\vec{V}\cdot d\vec{r} \notag
-# \\
-# \int d\left(\frac{1}{2}V^2 + \frac{p}{\rho} + gz\right) &= 0 \notag \Rightarrow
-# \\
-# \frac{1}{2}V^2 + \frac{p}{\rho} + gz &= C
-# \end{align}
-
-# donde:
-#  - $\vec{r}$ corresponde al vector de posición a lo largo de la línea de corriente
-#  - El lado derecho de la ecuación $\int\vec{V}\times\nabla\times\vec{V}\cdot d\vec{r} = 0$, por definición de línea de corriente.
-#  - Para un escalar $f$, tenemos que $\nabla f\cdot d\vec{r} = df$.
-
-# La ecuación (8.2) es la **ecuación de Bernoulli a lo largo de una línea de corriente en la región no viscosa.** La ecuación indica que, a lo largo de una línea de corriente en la región no viscosa, la energía se conserva. Esta relación es de utilizadad, por ejemplo, para analizar los efectos de sustentación en perfiles aerodinámicos.
-
 # ## Soluciones de N-S y continuidad
 # 
 # A pesar de su complejidad, existen problemas sencillos donde las ecuaciones de Navier-Stokes en conjunto con la ecuación de continuidad tienen solución analítica.
