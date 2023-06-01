@@ -500,8 +500,8 @@ F_L &amp;= \int_A (-P\sin\theta - \tau_w\cos\theta)dA
 <p>Las ecuaciones permiten entender conceptualmente el efecto de la presión (<span class="math notranslate nohighlight">\(P\)</span>) y esfuerzo cortante (<span class="math notranslate nohighlight">\(\tau_w\)</span>) en el arrastre y sustentación.</p>
 <p>Estas ecuaciones, sin embargo, tienen poca aplicación práctica debido a la dificultad de predecir la distribución de <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(\tau_w\)</span>.</p>
 <p>En la práctica se utilizan coeficientes adimencionales, los cuales representan los efectos de arrastre y sustentación de forma generalizada considerando una combinación de parámetros.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af5fb0a1-183f-4117-ba2d-7b5f74f30451">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-af5fb0a1-183f-4117-ba2d-7b5f74f30451" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a27c1cb1-9406-4c4c-9ef2-ba8a777e05f0">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-a27c1cb1-9406-4c4c-9ef2-ba8a777e05f0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_D &amp;= \frac{F_D}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~de~arrastre}
 \\
@@ -522,8 +522,8 @@ C_L &amp;= \frac{F_L}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~
 <h2><span class="section-number">6.2. </span>Fuerzas de arrastre<a class="headerlink" href="#fuerzas-de-arrastre" title="Permalink to this headline">#</a></h2>
 <p>Como mencionamos anteriormente, el arrastre en cuerpos se debe a los efectos de presiones y tensiones de corte en la superficie de un cuerpo.</p>
 <p>Así, podemos separar el coeficiente de arrastre en dos componentes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f42e77ab-b1a1-4eff-9c0e-4a84928732aa">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-f42e77ab-b1a1-4eff-9c0e-4a84928732aa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cf374d67-3b08-4a34-a34c-a45b51285973">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-cf374d67-3b08-4a34-a34c-a45b51285973" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 \end{equation}\]</div>
 <p>donde:</p>
@@ -555,13 +555,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>El <strong>espesor de la capa límite <span class="math notranslate nohighlight">\(\delta(x)\)</span></strong> define el límite que separa la región viscosa de la zona no viscosa. Como criterio <span class="math notranslate nohighlight">\(\delta(x)\)</span> se define como la distancia entre la superficie hasta el punto donde <span class="math notranslate nohighlight">\(u = 0.99V\)</span></p>
 <p>Notar, también, el desarrollo del flujo a medida que recorre la placa. Por un lado tenemos que el flujo pierde velocidad debido a la fricción (conservación de momento lineal). Esta pérdida de velocidad implica un crecimiento de la capa límite (conservación de masa). La pérdida de momento lineal, a su vez, induce inestabilidades en el flujo que se traducen en una transición de un régimen laminar a uno turbulento</p>
 <p>Para establecer la región de transición utilizamos el siguiente criterio:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3e7ff9cb-8d0b-4806-a3a5-bd66f97b812a">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-3e7ff9cb-8d0b-4806-a3a5-bd66f97b812a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1d6c722b-63b5-4006-a775-1b364e1e7219">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-1d6c722b-63b5-4006-a775-1b364e1e7219" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re}_\mathrm{cr} = \frac{x_\mathrm{cr}V}{\nu} = 5\times 10^5 
 \end{equation}\]</div>
 <p>Matemáticamente, el espesor de capa límite está dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb828aa2-f035-41e1-b0e8-117a9d8f280d">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-fb828aa2-f035-41e1-b0e8-117a9d8f280d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5016c711-23a8-400b-b99c-9666e23af3b1">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-5016c711-23a8-400b-b99c-9666e23af3b1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \frac{\delta}{x} &amp;= \frac{4.91}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -571,13 +571,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>Notar, sin embargo que la extención de las regiones laminar y turbulentas dependen de la velocidad del flujo</p>
 <a class="reference internal image-reference" href="../_images/flat_plate_laminar_turbulent.png"><img alt="../_images/flat_plate_laminar_turbulent.png" class="align-center" src="../_images/flat_plate_laminar_turbulent.png" style="width: 900px;" /></a>
 <p>El arrastre en este caso se debe, únicamente, a los efectos de fricción. Así, <span class="math notranslate nohighlight">\(C_D = C_{D,~\mathrm{fricción}} = C_f \)</span>, donde <span class="math notranslate nohighlight">\(C_f\)</span> es el coeficiente de fricción dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ddff30e-d800-4341-86af-0219d121e89f">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-8ddff30e-d800-4341-86af-0219d121e89f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-573fc94a-05a9-4e81-ae35-6cf4e5f70b6c">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-573fc94a-05a9-4e81-ae35-6cf4e5f70b6c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{1}{L}\int_0^L C_{f,x} dx
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(C_{f,x}\)</span> es el coeficiente de fricción local:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01af7731-3ed4-4278-a13b-550ab557d2d2">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-01af7731-3ed4-4278-a13b-550ab557d2d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5516cbec-7a00-4bdc-8c8f-5b062e34eec2">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-5516cbec-7a00-4bdc-8c8f-5b062e34eec2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_{f,x} &amp;= \frac{0.664}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -587,8 +587,8 @@ C_{f,x} &amp;= \frac{0.059}{\mathrm{Re}_x^{1/5}}\quad\quad\mathrm{Turbulento}
 <p>Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor.</p>
 <a class="reference internal image-reference" href="../_images/boundary_layer_slope.png"><img alt="../_images/boundary_layer_slope.png" class="align-center" src="../_images/boundary_layer_slope.png" style="width: 700px;" /></a>
 <p>Reemplazando las ecuaciones (6.6) en (6.5) y aplicando la ecuación (6.3), tenemos una relación para el <strong>coeficiente de fricción promedio</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e182230b-69db-4ab4-93e1-52fb69203666">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-e182230b-69db-4ab4-93e1-52fb69203666" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-020cfb15-e5ee-4168-9a94-e1981be4d26d">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-020cfb15-e5ee-4168-9a94-e1981be4d26d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 \end{equation}\]</div>
 <p>Notar que el hecho de que el coeficiente de arrastre en la placa disminuye cuando la velocidad del fluido aumenta <strong>no significa que la fuerza de arrastre disminuye con la velocidad.</strong></p>
