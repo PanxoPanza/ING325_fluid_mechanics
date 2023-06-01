@@ -112,6 +112,25 @@
 # 
 # donde $u_r$, $u_\theta$ y $u_z$ son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.
 
+# El tensor de esfuerzos es:
+# 
+# \begin{equation}
+# \bar{\tau} = \mu
+# \begin{bmatrix}
+# 2 \dfrac{\partial u_r}{\partial r} & 
+# \dfrac{1}{r}\left(\dfrac{\partial u_r}{\partial \theta} -u_\theta\right) + \dfrac{\partial u_\theta}{\partial r} & 
+# \dfrac{\partial u_r}{\partial z} + \dfrac{\partial u_z}{\partial r} 
+# \\
+# \dfrac{1}{r}\left(\dfrac{\partial u_r}{\partial \theta} -u_\theta\right) + \dfrac{\partial u_\theta}{\partial r} & 
+# \dfrac{2}{r}\left(\dfrac{\partial u_\theta}{\partial \theta} + u_r\right) & 
+# \dfrac{1}{r}\dfrac{\partial u_z}{\partial \theta} + \dfrac{\partial u_\theta}{\partial z}
+# \\
+# \dfrac{\partial u_r}{\partial z} + \dfrac{\partial u_z}{\partial r} & 
+# \dfrac{1}{r}\dfrac{\partial u_z}{\partial \theta} + \dfrac{\partial u_\theta}{\partial z} & 
+# 2\dfrac{\partial u_z}{\partial z}
+# \end{bmatrix}
+# \end{equation}
+
 # ## Soluciones de N-S y continuidad
 # 
 # A pesar de su complejidad, existen problemas sencillos donde las ecuaciones de Navier-Stokes en conjunto con la ecuación de continuidad tienen solución analítica.
@@ -197,6 +216,22 @@
 # Las más comunes son.
 # 
 # <img src="./figures/condicion_de_frontera.png" width="800px" align= center>
+
+# La condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil.
+
+# Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad $V_\mathrm{pared}$, la condición de borde es:
+# 
+# \begin{equation}
+# u(y=y_0) = V_\mathrm{pared}
+# \end{equation}
+# 
+# donde $y_0$ es la posición de la interface entre el fluido y la pared.
+
+# El caso de una pared fija ($V_\mathrm{pared} = 0$), se conoce como **condición de no-deslizamiento:**
+# 
+# \begin{equation}
+# u(y=y_0) = 0
+# \end{equation}
 
 # ### Flujos característicos
 
