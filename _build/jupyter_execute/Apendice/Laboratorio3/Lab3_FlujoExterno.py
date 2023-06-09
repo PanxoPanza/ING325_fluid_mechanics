@@ -17,8 +17,7 @@
 # 
 # La actividad consiste en medir el coeficiente de arrastre ($C_D$) en función del número de Reynodls $\mathrm{Re}_D$ en 4 cuerpos romos:
 # 
-# - Disco circular en posición vertical
-# - Cuerpo aerodinámico
+# - Disco circular en posición vertical ($D = 3~\mathrm{in}$)
 # - Esfera pequeña ($D = 3~\mathrm{in}$)
 # - Esfera grande ($D = 4~\mathrm{in}$)
 
