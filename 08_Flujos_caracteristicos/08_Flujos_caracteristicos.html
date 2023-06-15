@@ -543,13 +543,13 @@ title="Print to PDF"
 <section id="id1">
 <h2><span class="section-number">8.2. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ee16afc-933f-451d-8247-4c601ed6d3a0">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-8ee16afc-933f-451d-8247-4c601ed6d3a0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9edc7498-dcd3-4680-a2d9-8875ce0e7797">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-9edc7498-dcd3-4680-a2d9-8875ce0e7797" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9aa2fa55-d1fa-46ae-abf3-01beba7f812b">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-9aa2fa55-d1fa-46ae-abf3-01beba7f812b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6f9455bc-78f7-41c2-a7b6-dc00845dda97">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-6f9455bc-78f7-41c2-a7b6-dc00845dda97" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>Es posible demostrar que:</p>
@@ -558,8 +558,8 @@ title="Print to PDF"
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e58a932a-5f93-409e-9969-97283c5e87b3">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-e58a932a-5f93-409e-9969-97283c5e87b3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-67462dd2-8882-4238-9646-003705276642">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-67462dd2-8882-4238-9646-003705276642" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -621,16 +621,16 @@ title="Print to PDF"
 <p><strong>Navier-Stokes</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \frac{g_r}{\rho} 
+\rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \rho g_r
     \\
-\rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &amp;= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \frac{g_\theta}{\rho} 
+\rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &amp;= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \rho g_\theta 
     \\
-\rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &amp;= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \frac{g_z}{\rho}
+\rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &amp;= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \rho g_z
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c416580e-205e-4460-8114-a3116cb74ecd">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-c416580e-205e-4460-8114-a3116cb74ecd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a6bac49d-e654-4566-812f-5158950f9ad7">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-a6bac49d-e654-4566-812f-5158950f9ad7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -663,8 +663,8 @@ title="Print to PDF"
 <section id="flujo-estacionario">
 <h4><span class="section-number">8.3.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Permalink to this headline">#</a></h4>
 <p>Este supuesto asume que la variación temporal es despreciable. Las ecuaciónes se simplifican a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d4e49aa2-0b25-4a74-839c-abe9d901343b">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-d4e49aa2-0b25-4a74-839c-abe9d901343b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4fc49c75-89f2-4ed2-bb3c-4eb6ec80245d">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-4fc49c75-89f2-4ed2-bb3c-4eb6ec80245d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \nabla\cdot\vec{V} &amp;= 0 \\
 \rho\vec{V}\cdot\nabla\vec{V} &amp;= -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
@@ -701,9 +701,9 @@ title="Print to PDF"
 <p><strong>Navier-Stokes</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\rho \left(\frac{\partial u_r}{\partial t} + u_r\frac{\partial  u_r}{\partial r} + u_z\frac{\partial u_r}{\partial z}\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_r}{\partial r}\right)  - \frac{u_r}{r^2}  + \frac{\partial^2 u_r}{\partial z^2}\right] + \frac{g_r}{\rho} 
+\rho \left(\frac{\partial u_r}{\partial t} + u_r\frac{\partial  u_r}{\partial r} + u_z\frac{\partial u_r}{\partial z}\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_r}{\partial r}\right)  - \frac{u_r}{r^2}  + \frac{\partial^2 u_r}{\partial z^2}\right] + \rho g_r 
     \\
-\rho \left(\frac{\partial u_z}{\partial t} + u_r\frac{\partial  u_z}{\partial r} + u_z\frac{\partial u_z}{\partial z}\right) &amp;= -\frac{\partial p}{\partial z} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{\partial^2 u_z}{\partial z^2} \right] + \frac{g_z}{\rho}
+\rho \left(\frac{\partial u_z}{\partial t} + u_r\frac{\partial  u_z}{\partial r} + u_z\frac{\partial u_z}{\partial z}\right) &amp;= -\frac{\partial p}{\partial z} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{\partial^2 u_z}{\partial z^2} \right] + \rho g_z
 \end{align*}\]</div>
 </section>
 <section id="flujo-desarrollado">
@@ -721,14 +721,14 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" /></a>
 <p>La condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-475005b5-9895-492e-a863-d716ce7a02c4">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-475005b5-9895-492e-a863-d716ce7a02c4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e26241f3-2438-46a2-aca8-9a906009e06c">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-e26241f3-2438-46a2-aca8-9a906009e06c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), se conoce como <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-c00d9b69-f0e6-4865-8629-a898d95b752f">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-c00d9b69-f0e6-4865-8629-a898d95b752f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9c30b8f6-f94f-4d2d-a15c-187cd3ecf5fe">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-9c30b8f6-f94f-4d2d-a15c-187cd3ecf5fe" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
