@@ -103,11 +103,11 @@
 # **Navier-Stokes**
 #     
 # \begin{align*}
-# \rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \frac{g_r}{\rho} 
+# \rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \rho g_r
 #     \\
-# \rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \frac{g_\theta}{\rho} 
+# \rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \rho g_\theta 
 #     \\
-# \rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \frac{g_z}{\rho}
+# \rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \rho g_z
 # \end{align*}
 # 
 # donde $u_r$, $u_\theta$ y $u_z$ son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.
@@ -193,9 +193,9 @@
 # **Navier-Stokes**
 #     
 # \begin{align*}
-# \rho \left(\frac{\partial u_r}{\partial t} + u_r\frac{\partial  u_r}{\partial r} + u_z\frac{\partial u_r}{\partial z}\right) &= -\frac{\partial p}{\partial r} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_r}{\partial r}\right)  - \frac{u_r}{r^2}  + \frac{\partial^2 u_r}{\partial z^2}\right] + \frac{g_r}{\rho} 
+# \rho \left(\frac{\partial u_r}{\partial t} + u_r\frac{\partial  u_r}{\partial r} + u_z\frac{\partial u_r}{\partial z}\right) &= -\frac{\partial p}{\partial r} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_r}{\partial r}\right)  - \frac{u_r}{r^2}  + \frac{\partial^2 u_r}{\partial z^2}\right] + \rho g_r 
 #     \\
-# \rho \left(\frac{\partial u_z}{\partial t} + u_r\frac{\partial  u_z}{\partial r} + u_z\frac{\partial u_z}{\partial z}\right) &= -\frac{\partial p}{\partial z} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{\partial^2 u_z}{\partial z^2} \right] + \frac{g_z}{\rho}
+# \rho \left(\frac{\partial u_z}{\partial t} + u_r\frac{\partial  u_z}{\partial r} + u_z\frac{\partial u_z}{\partial z}\right) &= -\frac{\partial p}{\partial z} + \mu\left[\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{\partial^2 u_z}{\partial z^2} \right] + \rho g_z
 # \end{align*}
 # 
 

@@ -132,17 +132,26 @@
 # \end{aligned}
 # \end{align}
 
-# Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor. 
-# 
-# <img src="./figures/boundary_layer_slope.png" width="700px" align= center>
-
 # Reemplazando las ecuaciones (6.6) en (6.5) y aplicando la ecuación (6.3), tenemos una relación para el **coeficiente de fricción promedio**:
 # 
 # \begin{equation}
 # C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 # \end{equation}
 
-# Notar que el hecho de que el coeficiente de arrastre en la placa disminuye cuando la velocidad del fluido aumenta **no significa que la fuerza de arrastre disminuye con la velocidad.**
+# A partir de las ecuaciones para $C_{f,x}$, podemos calcular el esfuerzo de corte local en la pared del fluido como:
+# 
+# \begin{equation}
+# \tau_w(x) = \mu \frac{\partial u}{\partial y}\Big|_{y = 0} = \frac{1}{2}\rho U_0^2 C_{f,x}
+# \end{equation}
+# 
+
+# Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor. 
+# 
+# <img src="./figures/boundary_layer_slope.png" width="700px" align= center>
+
+# Así, el esfuerzo de corte en la pared es mayor para un flujo turbulento.
+
+# Por último, notar que el hecho de que el coeficiente de arrastre en la placa disminuye cuando la velocidad del fluido aumenta **no significa que la fuerza de arrastre disminuye con la velocidad.**
 
 # Reemplazando la ecuación (6.7) en la expresión para $C_D$ (6.1), tenemos que la fuerza de arrastre para el caso de una placa plana está dada, explícitamente por:
 # 
