@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>2. Estática de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,56 +65,97 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_Estatica_de_fluidos/02_Estatica_de_fluidos';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Introducción a la dinámica de fluidos" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html" />
     <link rel="prev" title="1. Introducción a la mecánica de fluidos" href="../01_Conceptos_basicos/01_Conceptos_basicos.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">ING325 - Mecánica de Fluidos</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -111,429 +164,211 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Parte 1. Fundamentos de estática y dinámica de fluidos
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de estática y dinámica de fluidos</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01_Conceptos_basicos/01_Conceptos_basicos.html">
-   1. Introducción a la mecánica de fluidos
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   2. Estática de fluidos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html">
-   3. Introducción a la dinámica de fluidos
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../01_Conceptos_basicos/01_Conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Estática de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Parte 2. Diseño de sistemas hidráulicos
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Analisis diferencial de flujos</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../04_Perdida_de_carga/04_Perdida_de_carga.html">
-   4. Conservación de energía y pérdida de carga en ductos
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas0.html">
-   5. Turbomáquinas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas1.html">
-     5.2. Bombas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas2.html">
-     5.3. Turbinas
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08_Flujos_caracteristicos/08_Flujos_caracteristicos.html">5. Ecuación de Navier-Stokes</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Parte 3. Flujo externo y análisis diferencial de flujos
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../06_Flujo_externo/06_Flujo_externo.html">
-   6. Flujo externo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../07_Analisis_diferencial_intro/07_Analisis_diferencial_intro.html">
-   7. Análisis diferencial de flujos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../08_Flujos_caracteristicos/08_Flujos_caracteristicos.html">
-   8. Ecuación de Navier-Stokes
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../06_Flujo_externo/06_Flujo_externo.html">6. Flujo externo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../04_Perdida_de_carga/04_Perdida_de_carga.html">7. Conservación de energía y pérdida de carga en ductos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas1.html">8.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_Turbomaquinas/05_Turbomaquinas2.html">8.3. Turbinas</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Apéndice
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html">
-   Laboratorio 1. Pérdidas de carga
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Apendice/Laboratorio2/Lab2_BombasCentrifugas.html">
-   Laboratorio 2: Bombas Centrifugas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Apendice/Laboratorio3/Lab3_FlujoExterno.html">
-   Laboratorio 3. Flujo externo
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Apendice/Laboratorio1/Lab1_perdida_de_carga.html">Laboratorio 1. Pérdidas de carga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Laboratorio 2: Bombas Centrifugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Apendice/Laboratorio3/Lab3_FlujoExterno.html">Laboratorio 3. Flujo externo</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/02_Estatica_de_fluidos/02_Estatica_de_fluidos.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/02_Estatica_de_fluidos/02_Estatica_de_fluidos.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/02_Estatica_de_fluidos/02_Estatica_de_fluidos.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#presion-hidroestatica">
-   2.1. Presión hidroestática
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-en-un-liquido">
-     2.1.1. Presión en un líquido
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unidades-de-medida-de-la-presion">
-     2.1.2. Unidades de medida de la presión
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-atmosferica">
-     2.1.3. Presión atmosférica
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-en-gases">
-     2.1.4. Presión en gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instrumentos-para-medir-la-presion">
-     2.1.5. Instrumentos para medir la presión
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fuerza-hidrostatica-sobre-superficies">
-   2.2. Fuerza hidrostática sobre superficies
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulacion-general-para-superficies-planas">
-     2.2.1. Formulación general para superficies planas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superficicies-planas-rectangulares">
-     2.2.2. Superficicies planas rectangulares
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superficies-curvas">
-     2.2.3. Superficies curvas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flotacion">
-   2.3. Flotación
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   2.4. Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Estática de fluidos</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#presion-hidroestatica">
-   2.1. Presión hidroestática
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-en-un-liquido">
-     2.1.1. Presión en un líquido
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unidades-de-medida-de-la-presion">
-     2.1.2. Unidades de medida de la presión
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-atmosferica">
-     2.1.3. Presión atmosférica
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#presion-en-gases">
-     2.1.4. Presión en gases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instrumentos-para-medir-la-presion">
-     2.1.5. Instrumentos para medir la presión
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fuerza-hidrostatica-sobre-superficies">
-   2.2. Fuerza hidrostática sobre superficies
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#formulacion-general-para-superficies-planas">
-     2.2.1. Formulación general para superficies planas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superficicies-planas-rectangulares">
-     2.2.2. Superficicies planas rectangulares
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superficies-curvas">
-     2.2.3. Superficies curvas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flotacion">
-   2.3. Flotación
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   2.4. Referencias
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Estática de fluidos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-hidroestatica">2.1. Presión hidroestática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-en-un-liquido">2.1.1. Presión en un líquido</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unidades-de-medida-de-la-presion">2.1.2. Unidades de medida de la presión</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-atmosferica">2.1.3. Presión atmosférica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-en-gases">2.1.4. Presión en gases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentos-para-medir-la-presion">2.1.5. Instrumentos para medir la presión</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuerza-hidrostatica-sobre-superficies">2.2. Fuerza hidrostática sobre superficies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-general-para-superficies-planas">2.2.1. Formulación general para superficies planas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superficicies-planas-rectangulares">2.2.2. Superficicies planas rectangulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superficies-curvas">2.2.3. Superficies curvas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flotacion">2.3. Flotación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">2.4. Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="estatica-de-fluidos">
-<h1><span class="section-number">2. </span>Estática de fluidos<a class="headerlink" href="#estatica-de-fluidos" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2. </span>Estática de fluidos<a class="headerlink" href="#estatica-de-fluidos" title="Permalink to this heading">#</a></h1>
 <section id="presion-hidroestatica">
-<h2><span class="section-number">2.1. </span>Presión hidroestática<a class="headerlink" href="#presion-hidroestatica" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1. </span>Presión hidroestática<a class="headerlink" href="#presion-hidroestatica" title="Permalink to this heading">#</a></h2>
 <section id="presion-en-un-liquido">
-<h3><span class="section-number">2.1.1. </span>Presión en un líquido<a class="headerlink" href="#presion-en-un-liquido" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1. </span>Presión en un líquido<a class="headerlink" href="#presion-en-un-liquido" title="Permalink to this heading">#</a></h3>
 <p>Analicemos el problema de uno y dos cuerpos sólidos en reposo, ambos con densidad <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/stationary_solids.png"><img alt="../_images/stationary_solids.png" class="align-center" src="../_images/stationary_solids.png" style="width: 350px;" /></a>
 <p>Como ilustra el diagrama de cuerpo libre, el cuerpo sólido de volumen <span class="math notranslate nohighlight">\(V\)</span> está sugeto a fuerzas iguales y contrarias, equivalentes al peso del mismo, <span class="math notranslate nohighlight">\(\rho V g\)</span>.</p>
@@ -547,7 +382,7 @@ title="Print to PDF"
 <p>En general, la presión en un punto es igual en todas las direcciones. Esto se conoce como el <em><strong>principio de Pascal</strong></em></p>
 </section>
 <section id="unidades-de-medida-de-la-presion">
-<h3><span class="section-number">2.1.2. </span>Unidades de medida de la presión<a class="headerlink" href="#unidades-de-medida-de-la-presion" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.2. </span>Unidades de medida de la presión<a class="headerlink" href="#unidades-de-medida-de-la-presion" title="Permalink to this heading">#</a></h3>
 <p>La unidad de medida fundamental de la presión es el <strong>pascal</strong> (<span class="math notranslate nohighlight">\(\mathrm{Pa}\)</span>):</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -566,13 +401,13 @@ title="Print to PDF"
 <p>Como recomendación para el curso, <strong>convertir siempre las unidades a <em>kilopascal</em></strong></p>
 </section>
 <section id="presion-atmosferica">
-<h3><span class="section-number">2.1.3. </span>Presión atmosférica<a class="headerlink" href="#presion-atmosferica" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.3. </span>Presión atmosférica<a class="headerlink" href="#presion-atmosferica" title="Permalink to this heading">#</a></h3>
 <p>De igual forma, los gases atmosféricos, atraídos por la fuerza de gravedad, generan una presión sobre todos los cuerpos en la tierra.</p>
 <a class="reference internal image-reference" href="../_images/atmospheric_presure.png"><img alt="../_images/atmospheric_presure.png" class="align-center" src="../_images/atmospheric_presure.png" style="width: 400px;" /></a>
 <p><strong>La presión atmosférica</strong>, así, es el resultado de la columna de gases atmosférico sobre una superficie.</p>
 <p><strong>La presión absoluta (<span class="math notranslate nohighlight">\(P_\mathrm{abs}\)</span>)</strong> en un elemento diferencial de fluido en un estanque es, así:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-178549d8-f82b-4917-a798-c9cccd5b9592">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-178549d8-f82b-4917-a798-c9cccd5b9592" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-eea2ac2e-8e99-4fd0-98e9-259890c8928a">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eea2ac2e-8e99-4fd0-98e9-259890c8928a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{abs} = P_\mathrm{atm} + \rho gh
 \end{equation}\]</div>
 <p>La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en logitudes de escala de <span class="math notranslate nohighlight">\(1000~\mathrm{m}\)</span>, debido a que la densidad de los gases atmosféricos es mucho menor que los líquidos.</p>
@@ -595,7 +430,7 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 \end{equation*}\]</div>
 </section>
 <section id="presion-en-gases">
-<h3><span class="section-number">2.1.4. </span>Presión en gases<a class="headerlink" href="#presion-en-gases" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.4. </span>Presión en gases<a class="headerlink" href="#presion-en-gases" title="Permalink to this heading">#</a></h3>
 <p>Los gases se expanden constantemente. Así, la presión en un tanque cerrado es igual en todas las direcciones.</p>
 <a class="reference internal image-reference" href="../_images/presure_gass.jpg"><img alt="../_images/presure_gass.jpg" class="align-center" src="../_images/presure_gass.jpg" style="width: 600px;" /></a>
 <p>En la figura de la <strong>izquierda</strong>, el líquido está en un contenedor vacío. Debido a que el exterior también es vacío, la columna de líquido en el tubo tiene la misma altura.</p>
@@ -603,17 +438,17 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 <p>La presión absoluta ejercida por el gas, está dada por la diferencia de altura en el tubo, <span class="math notranslate nohighlight">\(P_\mathrm{abs} = \rho_\mathrm{tubo} h g\)</span>, donde <span class="math notranslate nohighlight">\(\rho_\mathrm{tubo}\)</span> es la densidad del líquido en el tubo (<span class="math notranslate nohighlight">\(P_\mathrm{atm} = 0\)</span>, en este caso).</p>
 </section>
 <section id="instrumentos-para-medir-la-presion">
-<h3><span class="section-number">2.1.5. </span>Instrumentos para medir la presión<a class="headerlink" href="#instrumentos-para-medir-la-presion" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.5. </span>Instrumentos para medir la presión<a class="headerlink" href="#instrumentos-para-medir-la-presion" title="Permalink to this heading">#</a></h3>
 <p>Llamamos <em><strong>presión manométrica (<span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span>), a la diferencia entre la presión absoluta y la presión atmosférica</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-583e5cb1-2161-41c2-9790-dfe57778aa38">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-583e5cb1-2161-41c2-9790-dfe57778aa38" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c3f5e46c-beec-457c-8d95-40d92394313d">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-c3f5e46c-beec-457c-8d95-40d92394313d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{man} = P_\mathrm{abs} - P_\mathrm{atm}
 \end{equation}\]</div>
 <p>El instrumento para medir <span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span> es el <strong>manómetro</strong>
 <a class="reference internal" href="../_images/manometer.png"><img alt="../_images/manometer.png" class="align-center" src="../_images/manometer.png" style="width: 850px;" /></a></p>
 <p>Llamamos <em><strong>presión vacuométrica o de vacío (<span class="math notranslate nohighlight">\(P_\mathrm{vac}\)</span>), a la diferencia entre la presión atmosférica y la absoluta</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ce6e0bc-384d-4780-8c54-89d2ea2da137">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-1ce6e0bc-384d-4780-8c54-89d2ea2da137" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a3df12d5-19e4-4557-b7fe-e27bd4e624b3">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-a3df12d5-19e4-4557-b7fe-e27bd4e624b3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 \end{equation}\]</div>
 <p>El instrumento de medida se llama <strong>vacuómetro</strong>.
@@ -628,19 +463,19 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 </section>
 </section>
 <section id="fuerza-hidrostatica-sobre-superficies">
-<h2><span class="section-number">2.2. </span>Fuerza hidrostática sobre superficies<a class="headerlink" href="#fuerza-hidrostatica-sobre-superficies" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Fuerza hidrostática sobre superficies<a class="headerlink" href="#fuerza-hidrostatica-sobre-superficies" title="Permalink to this heading">#</a></h2>
 <section id="formulacion-general-para-superficies-planas">
-<h3><span class="section-number">2.2.1. </span>Formulación general para superficies planas<a class="headerlink" href="#formulacion-general-para-superficies-planas" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.1. </span>Formulación general para superficies planas<a class="headerlink" href="#formulacion-general-para-superficies-planas" title="Permalink to this heading">#</a></h3>
 <p>El principio de Pascal nos permite determinar la <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>) sobre la cara de una superficie plana de área <span class="math notranslate nohighlight">\(A\)</span>:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-6763df8d-79bb-495b-b87a-957f4bc47cf5">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-6763df8d-79bb-495b-b87a-957f4bc47cf5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b68c5ca5-e3fd-4601-a60e-32290a00b52b">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-b68c5ca5-e3fd-4601-a60e-32290a00b52b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_R = (P_0 + \rho g h_C)A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_C = y_C\sin\theta\)</span> es la <strong>distancia vertical del centroide de la superfice (<span class="math notranslate nohighlight">\(y_C\)</span>) al nivel libre del líquido,</strong> y <strong><span class="math notranslate nohighlight">\(P_0\)</span> es la presión absoluta sobre el líquido</strong> (comúnmente, presión atmosférica).</p>
 <a class="reference internal image-reference" href="../_images/force_irregular_plate.png"><img alt="../_images/force_irregular_plate.png" class="align-center" src="../_images/force_irregular_plate.png" style="width: 800px;" /></a>
 <p>La <strong>línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong>, está dada por la relación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed056514-99b5-4738-bfd1-cd733b57b9bd">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-ed056514-99b5-4738-bfd1-cd733b57b9bd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-288274e0-4c36-4330-bed2-33b76a598c99">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-288274e0-4c36-4330-bed2-33b76a598c99" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_p = y_C + \frac{I_{xx,C}}{[y_C + P_0/(\rho g\sin\theta)]A}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(I_{xx,C}\)</span> es el <em>segundo momento de área respecto al eje <span class="math notranslate nohighlight">\(x\)</span> que para por el centroide de la superficie</em>.</p>
@@ -649,18 +484,18 @@ y_p = y_C + \frac{I_{xx,C}}{[y_C + P_0/(\rho g\sin\theta)]A}
 <a class="reference internal image-reference" href="../_images/momento_intercia_xx.png"><img alt="../_images/momento_intercia_xx.png" class="align-center" src="../_images/momento_intercia_xx.png" style="width: 700px;" /></a>
 </section>
 <section id="superficicies-planas-rectangulares">
-<h3><span class="section-number">2.2.2. </span>Superficicies planas rectangulares<a class="headerlink" href="#superficicies-planas-rectangulares" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.2. </span>Superficicies planas rectangulares<a class="headerlink" href="#superficicies-planas-rectangulares" title="Permalink to this heading">#</a></h3>
 <p>En el caso de <strong>superficies rectangulares</strong>, <em>la distribución de presiones forma un trapecio rectángulo de sección cuadrada</em>.</p>
 <a class="reference internal image-reference" href="../_images/presiones_placa_cuadrada.png"><img alt="../_images/presiones_placa_cuadrada.png" class="align-center" src="../_images/presiones_placa_cuadrada.png" style="width: 800px;" /></a>
 <p>Las fórmulas de <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>), así, corresponde al área del trapecio</strong>. Por el contrario, <strong>la línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong> <em>no necesariamente coincide con el centroide del trapecio.</em> Está dada por la fórmula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-32999a52-66f1-4045-a890-cb2ab1c71b8f">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-32999a52-66f1-4045-a890-cb2ab1c71b8f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8fa0be52-a4aa-4be7-a717-4db188ac6b3b">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-8fa0be52-a4aa-4be7-a717-4db188ac6b3b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_P = s+\frac{b}{2} + \frac{b^2}{12[s+b/2+P_0/(\rho g\sin\theta)]}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/force_rectangular_plate.png"><img alt="../_images/force_rectangular_plate.png" class="align-center" src="../_images/force_rectangular_plate.png" style="width: 850px;" /></a>
 </section>
 <section id="superficies-curvas">
-<h3><span class="section-number">2.2.3. </span>Superficies curvas<a class="headerlink" href="#superficies-curvas" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.2.3. </span>Superficies curvas<a class="headerlink" href="#superficies-curvas" title="Permalink to this heading">#</a></h3>
 <p>En el caso de superficies curvas, la fuerza resultante se puede obtener mediante un diagrama de cuerpo libre sobre un volumen de fluido, convenientemente seleccionado.</p>
 <a class="reference internal image-reference" href="../_images/Force_curved_surface_theory.png"><img alt="../_images/Force_curved_surface_theory.png" class="align-center" src="../_images/Force_curved_surface_theory.png" style="width: 900px;" /></a>
 <p>Según el diagrama, tenemos: <span class="math notranslate nohighlight">\(F_H = F_x\)</span>, y <span class="math notranslate nohighlight">\(F_V = F_y + W\)</span>, donde <span class="math notranslate nohighlight">\(W\)</span> es el peso del bloque de fluido.</p>
@@ -678,7 +513,7 @@ F_V &amp;= F_y - W
 </section>
 </section>
 <section id="flotacion">
-<h2><span class="section-number">2.3. </span>Flotación<a class="headerlink" href="#flotacion" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3. </span>Flotación<a class="headerlink" href="#flotacion" title="Permalink to this heading">#</a></h2>
 <p>Analicemos la fuerza resultante que actúa sobre una placa horizontal sumergida en un fluido de densidad <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/Buoyancy_derivation.png"><img alt="../_images/Buoyancy_derivation.png" class="align-center" src="../_images/Buoyancy_derivation.png" style="width: 400px;" /></a>
 <p>La fuerza resultante en los bordes es 0 debido al equilibro de fuerzas.</p>
@@ -697,7 +532,7 @@ F_B &amp;= F_\mathrm{inf} - F_\mathrm{sup} \\
 <a class="reference internal image-reference" href="../_images/Buoyancy_example.png"><img alt="../_images/Buoyancy_example.png" class="align-center" src="../_images/Buoyancy_example.png" style="width: 350px;" /></a>
 </section>
 <section id="referencias">
-<h2><span class="section-number">2.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 3: Presión y estática de fluidos</p></li>
@@ -721,7 +556,7 @@ F_B &amp;= F_\mathrm{inf} - F_\mathrm{sup} \\
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./02_Estatica_de_fluidos"
         },
         predefinedOutput: true
@@ -729,50 +564,116 @@ F_B &amp;= F_\mathrm{inf} - F_\mathrm{sup} \\
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../01_Conceptos_basicos/01_Conceptos_basicos.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Introducción a la mecánica de fluidos</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../01_Conceptos_basicos/01_Conceptos_basicos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introducción a la mecánica de fluidos</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">3. </span>Introducción a la dinámica de fluidos</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-hidroestatica">2.1. Presión hidroestática</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-en-un-liquido">2.1.1. Presión en un líquido</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unidades-de-medida-de-la-presion">2.1.2. Unidades de medida de la presión</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-atmosferica">2.1.3. Presión atmosférica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-en-gases">2.1.4. Presión en gases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentos-para-medir-la-presion">2.1.5. Instrumentos para medir la presión</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fuerza-hidrostatica-sobre-superficies">2.2. Fuerza hidrostática sobre superficies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formulacion-general-para-superficies-planas">2.2.1. Formulación general para superficies planas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superficicies-planas-rectangulares">2.2.2. Superficicies planas rectangulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superficies-curvas">2.2.3. Superficies curvas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flotacion">2.3. Flotación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">2.4. Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Francisco V. Ramirez-Cuevas<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Francisco V. Ramirez-Cuevas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

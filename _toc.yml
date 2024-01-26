@@ -5,28 +5,28 @@ format: jb-book
 root: intro
 parts:
   - caption: Parte 1. Fundamentos de estática y dinámica de fluidos
-    numbered: True
+    numbered: 3
     chapters:
-    - file: 01_Conceptos_basicos/01_Conceptos_basicos
-    - file: 02_Estatica_de_fluidos/02_Estatica_de_fluidos
-    - file: 03_Intro_dinamica_de_fluidos/03_Intro_dinamica_de_fluidos
-  - caption: Parte 2. Diseño de sistemas hidráulicos
+    - file: conceptos_basicos/conceptos_basicos
+    - file: estatica_de_fluidos/estatica_de_fluidos
+    - file: intro_dinamica_de_fluidos/intro_dinamica_de_fluidos
+  - caption: Parte 2. Descripción de una partícula fluida
     numbered: true
     chapters:
-    - file: 04_Perdida_de_carga/04_Perdida_de_carga
-    - file: 05_Turbomaquinas/05_Turbomaquinas0
+    - file: analisis_diferencial_intro/analisis_diferencial_intro
+    - file: navier-stokes/navier-stokes
+  - caption: Parte 3. Mecánica de Fluidos aplicada
+    numbered: true
+    chapters:
+    - file: perdida_de_carga/perdida_de_carga
+    - file: flujo_externo/flujo_externo
+    - file: turbomaquinas/turbomaquinas0
       sections:
-      - file: 05_Turbomaquinas/05_Turbomaquinas1
-      - file: 05_Turbomaquinas/05_Turbomaquinas2
-  - caption: Parte 3. Flujo externo y análisis diferencial de flujos
-    numbered: true
-    chapters:
-    - file: 06_Flujo_externo/06_Flujo_externo
-    - file: 07_Analisis_diferencial_intro/07_Analisis_diferencial_intro
-    - file: 08_Flujos_caracteristicos/08_Flujos_caracteristicos
+      - file: turbomaquinas/turbomaquinas1
+      - file: turbomaquinas/turbomaquinas2
   - caption: Apéndice
     numbered: False
     chapters:
-    - file: Apendice/Laboratorio1/Lab1_perdida_de_carga
-    - file: Apendice/Laboratorio2/Lab2_BombasCentrifugas
-    - file: Apendice/Laboratorio3/Lab3_FlujoExterno
+    - file: apendice/Laboratorio1/Lab1_perdida_de_carga
+    - file: apendice/Laboratorio2/Lab2_BombasCentrifugas
+    - file: apendice/Laboratorio3/Lab3_FlujoExterno

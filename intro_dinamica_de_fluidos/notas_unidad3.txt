@@ -1,0 +1,4 @@
+Notas
+----------------------
+- reordenar las guías de ejercicios consierando nueva distribución de unidades
+- agregar ejercicios de toberas en lista de ejercicios

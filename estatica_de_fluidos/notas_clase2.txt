@@ -1,0 +1,9 @@
+Notas
+--------------------------------------------------------------------
+- Analizar problemas de flotación (vale la pena agregarlos)
+- remover ejercicios de compuertas curvas
+
+Preguntas
+--------------------------------------------------------------------
+- Demostrar la fórmula de la línea de acción
+- ¿Qué sucede cuando la superficie está inclinada en ambos ejes?
