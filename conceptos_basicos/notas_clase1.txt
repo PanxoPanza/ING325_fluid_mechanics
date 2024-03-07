@@ -5,7 +5,7 @@ Notas
 
 preguntas:
 ------------------------------------------------
-- analizar dos fluidos sometidos a fuerzza cortante (reómetro). Determinar cuál se mueve más en base a su densidad y viscosidad dinámica
+- analizar dos fluidos sometidos a fuerza cortante (reómetro). Determinar cuál se mueve más en base a su densidad y viscosidad dinámica
 - analizar dos fluidos sometidos al experimento de la bola. Determinar en cuál la bola cae más rápido en base a su densidad y viscosidad dinámica
 - Determinar si el fluido es neutoniano o no en base a la tasa de deformación
 - Mostrar un experimento para medir viscosidad cinemática (el de tubos capilares, norma ASTM D445). Preguntar que propiedad mide el instrumento (viscosidad cinemática, densidad, viscosidad dinámica).

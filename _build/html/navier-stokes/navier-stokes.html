@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>5. Ecuación de Navier-Stokes &#8212; ING325 - Mecánica de Fluidos</title>
   
@@ -19,56 +18,52 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'navier-stokes/navier-stokes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Flujo externo" href="../flujo_externo/flujo_externo.html" />
+    <link rel="next" title="6. Flujo viscoso en ductos" href="../perdida_de_carga/perdida_de_carga.html" />
     <link rel="prev" title="4. Análisis diferencial de flujos" href="../analisis_diferencial_intro/analisis_diferencial_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -154,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -177,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../flujo_externo/flujo_externo.html">6. Flujo externo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../perdida_de_carga/perdida_de_carga.html">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
@@ -296,6 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -305,6 +315,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -363,26 +374,26 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ecuacion-de-navier-stokes">
-<h1><span class="section-number">5. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#ecuacion-de-navier-stokes" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#ecuacion-de-navier-stokes" title="Link to this heading">#</a></h1>
 <section id="introduccion">
-<h2><span class="section-number">5.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
 <p>En la unidad anterior dedujimos las ecuaciones de conservación de masa y momento lineal en su forma diferencial.</p>
 <p>En esta unidad derivaremos la ecuación de Navier-Stokes, la cual constituye la base de la mecánica de fluidos. Técnicamente, cualquier problema de la mecánica de fluidos asociado a las condiciones <em>incompresible-newtoniano</em> puede ser caracterizado a partir de la solución de estas ecuaciones.</p>
 <p>Sin embargo, la complejidad asociada al número de incógnitas, variables independientes, y sobre todo a su condición no-lineal, hacen imposible su solución, salvo en casos particulares que revisaremos al final de la unidad.</p>
 </section>
 <section id="id1">
-<h2><span class="section-number">5.2. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>Ecuación de Navier-Stokes<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54c950b9-e5c4-4ef6-bfe8-b37479dcebf5">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-54c950b9-e5c4-4ef6-bfe8-b37479dcebf5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-03d0f81b-f072-4f34-a2bf-10b08791d68d">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-03d0f81b-f072-4f34-a2bf-10b08791d68d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b05184c-c9fd-4db1-99b2-5bfda4d63615">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-2b05184c-c9fd-4db1-99b2-5bfda4d63615" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bb6ee6a0-9631-42c4-91b1-9e4d632890f1">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-bb6ee6a0-9631-42c4-91b1-9e4d632890f1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>Es posible demostrar que:</p>
@@ -391,15 +402,15 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>El último término a la derecha es 0, por condición de flujo incompresible. Luego, combinando esta expresión con la ecuación (7.17), la ecuación de convervación de momento lineal es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9fc87ef6-2dfc-472d-8449-b4a062a36627">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-9fc87ef6-2dfc-472d-8449-b4a062a36627" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b9ccc33a-ed50-4b33-9094-305e61d26b68">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-b9ccc33a-ed50-4b33-9094-305e61d26b68" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
 <p>Notar que la ecuación de Navier Stokes es una ecuación vectorial y por lo tanto, está conformada por 3 ecuaciones. Sin embargo, el problema de fluidos tiene 4 incognitas <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(w\)</span> y la presión <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <p>Para poder resolver este problema, necesitamos una cuarta ecuación la cual corresponde a la continuidad para flujo incompresible, <span class="math notranslate nohighlight">\(\nabla\cdot \vec{V} = 0\)</span>.</p>
 <section id="navier-stokes-en-coordenadas-cartesianas">
-<h3><span class="section-number">5.2.1. </span>Navier-Stokes en coordenadas cartesianas<a class="headerlink" href="#navier-stokes-en-coordenadas-cartesianas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.2.1. </span>Navier-Stokes en coordenadas cartesianas<a class="headerlink" href="#navier-stokes-en-coordenadas-cartesianas" title="Link to this heading">#</a></h3>
 <p>En coordenadas cartesianas, tenemos que el vector <span class="math notranslate nohighlight">\(\vec{V}\)</span> se descompone en las componentes <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> y <span class="math notranslate nohighlight">\(w\)</span>. Las ecuaciónes de continuidad y Navier-Stokes toman la siguiente forma:</p>
 <p><strong>Encuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
@@ -417,7 +428,7 @@ document.write(`
 \end{align*}\]</div>
 </section>
 <section id="navier-stokes-en-coordenadas-cilindricas">
-<h3><span class="section-number">5.2.2. </span>Navier-Stokes en coordenadas cilíndricas<a class="headerlink" href="#navier-stokes-en-coordenadas-cilindricas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.2.2. </span>Navier-Stokes en coordenadas cilíndricas<a class="headerlink" href="#navier-stokes-en-coordenadas-cilindricas" title="Link to this heading">#</a></h3>
 <p>En el caso de coordenadas cilíndricas (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(z\)</span>), los operadores toman las siguientes formas:</p>
 <p><strong>Operador Gradiente</strong></p>
 <div class="amsmath math notranslate nohighlight">
@@ -462,8 +473,8 @@ document.write(`
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8be9aa87-a0e8-4be2-bc99-55e0d97b0bd4">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-8be9aa87-a0e8-4be2-bc99-55e0d97b0bd4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d316d89d-aded-4ea0-9f61-46c167873d4f">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-d316d89d-aded-4ea0-9f61-46c167873d4f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -482,7 +493,7 @@ document.write(`
 </section>
 </section>
 <section id="soluciones-de-n-s-y-continuidad">
-<h2><span class="section-number">5.3. </span>Soluciones de N-S y continuidad<a class="headerlink" href="#soluciones-de-n-s-y-continuidad" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3. </span>Soluciones de N-S y continuidad<a class="headerlink" href="#soluciones-de-n-s-y-continuidad" title="Link to this heading">#</a></h2>
 <p>A pesar de su complejidad, existen problemas sencillos donde las ecuaciones de Navier-Stokes en conjunto con la ecuación de continuidad tienen solución analítica.</p>
 <p>Para poder resolver estas ecuaciones es fundamental aplicar las <em>condiciones iniciales y de borde adecuadas</em>. Si analizamos estas ecuaciones involucradas, notamos que tenemos que tenemos <strong>derivadas de primer orden en el tiempo (<span class="math notranslate nohighlight">\(t\)</span>)</strong> y <strong>derivadas de segundo orden en el espacio (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span>)</strong>. En general, necesitaremos:</p>
 <ul class="simple">
@@ -492,12 +503,12 @@ document.write(`
 <p>Considerando las incognitas <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(w\)</span> y <span class="math notranslate nohighlight">\(p\)</span>, esto nos da como resultado <strong>4 condiciones iniciales  y 12 condiciones de borde.</strong></p>
 <p>En la práctica, sin embargo, es común aplicar supuestos que permiten reducir el tamaño de la ecuación diferencial.</p>
 <section id="supuestos-tipicos">
-<h3><span class="section-number">5.3.1. </span>Supuestos típicos<a class="headerlink" href="#supuestos-tipicos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.3.1. </span>Supuestos típicos<a class="headerlink" href="#supuestos-tipicos" title="Link to this heading">#</a></h3>
 <section id="flujo-estacionario">
-<h4><span class="section-number">5.3.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">5.3.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Link to this heading">#</a></h4>
 <p>Este supuesto asume que la variación temporal es despreciable. Las ecuaciónes se simplifican a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f73c7bb-1ab3-4a62-a0fd-727e4790ae9e">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-4f73c7bb-1ab3-4a62-a0fd-727e4790ae9e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8f9a56c7-3f2a-4dbb-a441-474fbcb0a06e">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-8f9a56c7-3f2a-4dbb-a441-474fbcb0a06e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \nabla\cdot\vec{V} &amp;= 0 \\
 \rho\vec{V}\cdot\nabla\vec{V} &amp;= -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
@@ -505,7 +516,7 @@ document.write(`
 \end{align}\]</div>
 </section>
 <section id="flujo-bidimensional">
-<h4><span class="section-number">5.3.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">5.3.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Link to this heading">#</a></h4>
 <p>Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente <span class="math notranslate nohighlight">\(z\)</span>, es decir <span class="math notranslate nohighlight">\(w = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial z} = 0\)</span>. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:</p>
 <p><strong>Encuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
@@ -540,7 +551,7 @@ document.write(`
 \end{align*}\]</div>
 </section>
 <section id="flujo-desarrollado">
-<h4><span class="section-number">5.3.1.3. </span>Flujo desarrollado<a class="headerlink" href="#flujo-desarrollado" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">5.3.1.3. </span>Flujo desarrollado<a class="headerlink" href="#flujo-desarrollado" title="Link to this heading">#</a></h4>
 <p>Este supuesto se aplica para <strong>despreciar la tasa de cambio en la dirección paralela a alguna de las componentes de velocidad</strong>.</p>
 <p>El concepto nace del flujo en tuberías, donde la tasa de cambio de la componente longitudinal, <span class="math notranslate nohighlight">\(\frac{\partial u_z}{\partial z} \approx 0\)</span> despues de la región de desarrollo del flujo.</p>
 <a class="reference internal image-reference" href="../_images/condicion_flujo_desarrollado.png"><img alt="../_images/condicion_flujo_desarrollado.png" class="align-center" src="../_images/condicion_flujo_desarrollado.png" style="width: 800px;" /></a>
@@ -548,32 +559,32 @@ document.write(`
 </section>
 </section>
 <section id="condiciones-de-borde-tipicas">
-<h3><span class="section-number">5.3.2. </span>Condiciones de borde típicas<a class="headerlink" href="#condiciones-de-borde-tipicas" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.3.2. </span>Condiciones de borde típicas<a class="headerlink" href="#condiciones-de-borde-tipicas" title="Link to this heading">#</a></h3>
 <p>Una vez establecidos los supuestos, es necesario implementar las condiciones de borde necesarias para resolver el problema.</p>
 <p>Las más comunes son.</p>
 <a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" /></a>
 <p>La condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9cec856-6d8a-4808-b767-048a45865cd4">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-e9cec856-6d8a-4808-b767-048a45865cd4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0236edbc-e11b-4cac-a7c2-eb81a6e70024">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-0236edbc-e11b-4cac-a7c2-eb81a6e70024" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), se conoce como <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-64fa56f3-24ed-4e5c-81a3-ccf493f52c6a">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-64fa56f3-24ed-4e5c-81a3-ccf493f52c6a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-34f37dca-bfa4-4108-a268-babc70b4a660">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-34f37dca-bfa4-4108-a268-babc70b4a660" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
 <section id="flujos-caracteristicos">
-<h3><span class="section-number">5.3.3. </span>Flujos característicos<a class="headerlink" href="#flujos-caracteristicos" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.3.3. </span>Flujos característicos<a class="headerlink" href="#flujos-caracteristicos" title="Link to this heading">#</a></h3>
 <p>Existen 3 problemas característicos que pueden ser resueltos analiticamente a partir de las ecuaciones de continuidad y Navier-Stokes.</p>
 <a class="reference internal image-reference" href="../_images/tipos_de_flujo.png"><img alt="../_images/tipos_de_flujo.png" class="align-center" src="../_images/tipos_de_flujo.png" style="width: 800px;" /></a>
 <p>La solución a estos problemas se verá en la sesión de cátedra.</p>
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">5.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.4. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 9. Análisis diferencial de flujo de fluidos</p></li>
@@ -614,7 +625,7 @@ u(y=y_0) = 0
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="../analisis_diferencial_intro/analisis_diferencial_intro.html"
@@ -626,11 +637,11 @@ u(y=y_0) = 0
       </div>
     </a>
     <a class="right-next"
-       href="../flujo_externo/flujo_externo.html"
+       href="../perdida_de_carga/perdida_de_carga.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Flujo externo</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Flujo viscoso en ductos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -642,6 +653,7 @@ u(y=y_0) = 0
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -688,9 +700,10 @@ By Francisco V. Ramirez-Cuevas
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -714,8 +727,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3. Introducción a la dinámica de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
   
@@ -19,50 +18,46 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro_dinamica_de_fluidos/intro_dinamica_de_fluidos';</script>
@@ -79,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +117,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +139,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -154,7 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -177,8 +186,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../flujo_externo/flujo_externo.html">6. Flujo externo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../perdida_de_carga/perdida_de_carga.html">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
@@ -296,6 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -305,6 +315,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -382,20 +393,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduccion-a-la-dinamica-de-fluidos">
-<h1><span class="section-number">3. </span>Introducción a la dinámica de fluidos<a class="headerlink" href="#introduccion-a-la-dinamica-de-fluidos" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Introducción a la dinámica de fluidos<a class="headerlink" href="#introduccion-a-la-dinamica-de-fluidos" title="Link to this heading">#</a></h1>
 <section id="sistema-y-volumen-de-control">
-<h2><span class="section-number">3.1. </span>Sistema y volúmen de control<a class="headerlink" href="#sistema-y-volumen-de-control" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Sistema y volúmen de control<a class="headerlink" href="#sistema-y-volumen-de-control" title="Link to this heading">#</a></h2>
 <section id="sistema">
-<h3><span class="section-number">3.1.1. </span>Sistema<a class="headerlink" href="#sistema" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.1. </span>Sistema<a class="headerlink" href="#sistema" title="Link to this heading">#</a></h3>
 <p>Definimos como <strong>sistema</strong> a una <em>cantidad de materia de masa fija elegida para el estudio</em></p>
 <p>En general, para el estudio de <strong>sólidos</strong>, la definición de sistema es sencilla, ya que este considera la interacción del cuerpo con las fuerzas externas.</p>
 <p>Sin embargo, en el caso de <strong>fluidos</strong>, la definición no es tan sensilla ya que el sistema ocupa un espacio infinito.</p>
 </section>
 <section id="volumen-de-control">
-<h3><span class="section-number">3.1.2. </span>Volumen de control<a class="headerlink" href="#volumen-de-control" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.2. </span>Volumen de control<a class="headerlink" href="#volumen-de-control" title="Link to this heading">#</a></h3>
 <p>Para estudiar dinámica de fluidos utilizamos el <strong>volúmen de control</strong>, <em>una región imagniaria en el espacio para analizar la dinámica de fluidos.</em></p>
 <a class="reference internal image-reference" href="../_images/control_volume.png"><img alt="../_images/control_volume.png" class="align-center" src="../_images/control_volume.png" style="width: 700px;" /></a>
 <blockquote>
@@ -404,9 +415,9 @@ document.write(`
 </section>
 </section>
 <section id="teorema-de-transporte-de-reynolds-ttr">
-<h2><span class="section-number">3.2. </span>Teorema de transporte de Reynolds (TTR)<a class="headerlink" href="#teorema-de-transporte-de-reynolds-ttr" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>Teorema de transporte de Reynolds (TTR)<a class="headerlink" href="#teorema-de-transporte-de-reynolds-ttr" title="Link to this heading">#</a></h2>
 <section id="leyes-de-conservacion-aplicadas-a-un-sistema">
-<h3><span class="section-number">3.2.1. </span>Leyes de conservación aplicadas a un sistema<a class="headerlink" href="#leyes-de-conservacion-aplicadas-a-un-sistema" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.1. </span>Leyes de conservación aplicadas a un sistema<a class="headerlink" href="#leyes-de-conservacion-aplicadas-a-un-sistema" title="Link to this heading">#</a></h3>
 <p>Consideremos algunas <strong>leyes de conservación fundamentales</strong> aplicadas a un sistema:</p>
 <ul class="simple">
 <li><p>Masa (<span class="math notranslate nohighlight">\(m_\mathrm{sys}\)</span>),</p></li>
@@ -432,11 +443,11 @@ document.write(`
 <p>En cada ley de conservación notamos que hay una <em><strong>propiedad extensiva (por ejemplo, <span class="math notranslate nohighlight">\(E_\mathrm{sys}\)</span>)</strong></em>, y una <em><strong>propiedad intensiva (por ejemplo, <span class="math notranslate nohighlight">\(\tilde{e}_\mathrm{sys} = E_\mathrm{sys}/m_\mathrm{sys}\)</span>)</strong></em></p>
 </section>
 <section id="formulacion-general">
-<h3><span class="section-number">3.2.2. </span>Formulación general<a class="headerlink" href="#formulacion-general" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.2. </span>Formulación general<a class="headerlink" href="#formulacion-general" title="Link to this heading">#</a></h3>
 <p>El <strong>teorema de transporte de Reynolds</strong> establece una relación entre la <strong>variación temporal de una propiedad extensiva del sistema (<span class="math notranslate nohighlight">\(B_\mathrm{sys}\)</span>)</strong> y su respectiva <strong>propiedad intensiva dentro del volumen de control (<span class="math notranslate nohighlight">\(\beta\)</span>)</strong></p>
 <p>En su forma más general, para un <strong>volumen de control móvil y deformable</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c1bf7068-c868-4655-8c19-b6f3143fecba">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-c1bf7068-c868-4655-8c19-b6f3143fecba" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-92813063-2644-4020-9333-88ce4a792e75">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-92813063-2644-4020-9333-88ce4a792e75" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall + \int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA
 \end{equation}\]</div>
 <ul class="simple">
@@ -454,52 +465,52 @@ document.write(`
 \end{equation*}\]</div>
 </section>
 <section id="formulacion-simplificada">
-<h3><span class="section-number">3.2.3. </span>Formulación simplificada<a class="headerlink" href="#formulacion-simplificada" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.3. </span>Formulación simplificada<a class="headerlink" href="#formulacion-simplificada" title="Link to this heading">#</a></h3>
 <p>En muchas aplicaciones prácticas de ingeniería solo se conocen valores promedios del flujo, obtenidos a través de mediciones. En estos casos, las siguientes aproximaciones son útiles:</p>
 <ul class="simple">
 <li><p><strong>Propiedades approximadamente uniformes dentro del volúmen de control</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-d9af3568-e940-4f4d-906b-751ae02205e6">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-d9af3568-e940-4f4d-906b-751ae02205e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-228b9d38-3386-4b9b-900c-2147d46376f9">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-228b9d38-3386-4b9b-900c-2147d46376f9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall \approx \frac{d}{dt}(\rho\beta \forall)
 \end{equation}\]</div>
 <ul class="simple">
 <li><p><strong>Valores promedio en la entrada y salida</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-4f4be204-ea51-4090-a9f0-d397788dfa88">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-4f4be204-ea51-4090-a9f0-d397788dfa88" title="Permalink to this equation">#</a></span>\[\begin{equation}\int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA \approx \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
+<div class="amsmath math notranslate nohighlight" id="equation-41d8d0da-faab-43c7-a390-6ba121cf5a38">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-41d8d0da-faab-43c7-a390-6ba121cf5a38" title="Permalink to this equation">#</a></span>\[\begin{equation}\int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA \approx \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\bar{\beta}\)</span> y <span class="math notranslate nohighlight">\(\overline{\rho}\)</span> representan, respectivamente, el <strong>valor promedio por área de la propiedad intensiva <span class="math notranslate nohighlight">\(\beta\)</span> y de la densidad <span class="math notranslate nohighlight">\(\rho\)</span></strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f2750105-dce2-4e90-853a-ba7221fda1b6">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-f2750105-dce2-4e90-853a-ba7221fda1b6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fa331672-ec5a-4560-8805-2053852fc091">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-fa331672-ec5a-4560-8805-2053852fc091" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{aligned}
 \bar{\beta} &amp;= \frac{1}{A}\int_A \beta dA \\
 \bar{\rho} &amp;= \frac{1}{A}\int_A \rho dA,
 \end{aligned}
 \end{equation}\]</div>
 <p>y <span class="math notranslate nohighlight">\(\overline{V}\)</span> es la <strong>velocidad promedio respecto al área <span class="math notranslate nohighlight">\(A\)</span></strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-67e1f715-cba7-4aba-a8d0-6f1b8b04631c">
-<span class="eqno">(3.5)<a class="headerlink" href="#equation-67e1f715-cba7-4aba-a8d0-6f1b8b04631c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ffe476f9-7168-4b51-b389-d368ebcf17d4">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-ffe476f9-7168-4b51-b389-d368ebcf17d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \overline{V} = \frac{1}{A}\int_A \vec{V}\cdot\hat{n}dA.
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/average_velocity.png"><img alt="../_images/average_velocity.png" class="align-center" src="../_images/average_velocity.png" style="width: 250px;" /></a>
 <p>A partir de estas aproximaciones deducimos la formulación simplificada del teorema de transporte de Reynolds:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e81a1a5c-c321-4e06-919e-c245d8c0a35e">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-e81a1a5c-c321-4e06-919e-c245d8c0a35e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c18cecf7-27ed-448a-9ce2-b1011c757f74">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-c18cecf7-27ed-448a-9ce2-b1011c757f74" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(\rho\beta \forall) + \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
 \end{equation}\]</div>
 </section>
 </section>
 <section id="ecuacion-de-conservacion-de-masa">
-<h2><span class="section-number">3.3. </span>Ecuación de conservación de masa<a class="headerlink" href="#ecuacion-de-conservacion-de-masa" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Ecuación de conservación de masa<a class="headerlink" href="#ecuacion-de-conservacion-de-masa" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3><span class="section-number">3.3.1. </span>Formulación general<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.1. </span>Formulación general<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>En el caso de la conservación de masa del sistema</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt}m_\mathrm{sys} = 0\]</div>
 <p>Aplicando el teorema de transporte de Reynold con <span class="math notranslate nohighlight">\(B_\mathrm{sys} = m_\mathrm{sys}\)</span> y <span class="math notranslate nohighlight">\(\beta = 1\)</span>, deducimos la ecuación de <strong>conservación de masa para un volúmen de control</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c04bbe9a-10e3-4fc9-9bd7-43eb51f0edd6">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-c04bbe9a-10e3-4fc9-9bd7-43eb51f0edd6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e18aa987-6e54-4aad-858f-f4ec1f8a8340">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-e18aa987-6e54-4aad-858f-f4ec1f8a8340" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{dt}\int_\mathrm{VC} \rho d\forall + \int_\mathrm{VC} \rho\vec{V}\cdot\hat{n}dA
 \end{equation}\]</div>
 <p>Lidiamos con la ecuación de conservación de masa a menúdo en nuestra vida cotidiana</p>
@@ -517,13 +528,13 @@ V_2 &gt; V_1
 \end{equation*}\]</div>
 </section>
 <section id="variables-relevantes">
-<h3><span class="section-number">3.3.2. </span>Variables relevantes<a class="headerlink" href="#variables-relevantes" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.2. </span>Variables relevantes<a class="headerlink" href="#variables-relevantes" title="Link to this heading">#</a></h3>
 <p>Aprovechamos esta ecuación para definir algunas variables relevantes:</p>
 <section id="caudal-q">
-<h4>Caudal (<span class="math notranslate nohighlight">\(Q\)</span>)<a class="headerlink" href="#caudal-q" title="Permalink to this heading">#</a></h4>
+<h4>Caudal (<span class="math notranslate nohighlight">\(Q\)</span>)<a class="headerlink" href="#caudal-q" title="Link to this heading">#</a></h4>
 <p>Se define como la tasa de cambio del volúmen de fluido que cruza un área, matemáticamente:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-17bc404e-b265-4a07-ae81-7e98ad345ab8">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-17bc404e-b265-4a07-ae81-7e98ad345ab8" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-1ea5dde2-bcbc-4161-9b7e-3de9a54ceef6">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-1ea5dde2-bcbc-4161-9b7e-3de9a54ceef6" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \begin{split}
 Q &amp;= \int_A \vec{V}\cdot\hat{n}dA&amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
 \\
@@ -532,10 +543,10 @@ Q &amp;=  \overline{V}A &amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad
 \end{eqnarray}\]</div>
 </section>
 <section id="flujo-masico-dot-m">
-<h4>Flujo másico (<span class="math notranslate nohighlight">\(\dot{m}\)</span>)<a class="headerlink" href="#flujo-masico-dot-m" title="Permalink to this heading">#</a></h4>
+<h4>Flujo másico (<span class="math notranslate nohighlight">\(\dot{m}\)</span>)<a class="headerlink" href="#flujo-masico-dot-m" title="Link to this heading">#</a></h4>
 <p>Se define como la tasa de cambio de la mása que cruza un área, matemáticamente:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3276c041-e231-46e7-bbc9-fd9875453d52">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-3276c041-e231-46e7-bbc9-fd9875453d52" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6c793d63-f145-4975-bb6c-986037b98407">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-6c793d63-f145-4975-bb6c-986037b98407" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 \begin{split}
 \dot{m} &amp;= \int_A \rho \vec{V}\cdot\hat{n}dA &amp;\quad\left(\mathrm{\frac{kg}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
 \\
@@ -543,28 +554,28 @@ Q &amp;=  \overline{V}A &amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad
 \end{split}
 \end{eqnarray}\]</div>
 <p>Si aplicamos esto considerando valores promedio y que la densidad dentro del volúmen de controle es uniforme, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4cfe968b-5729-4f8e-8b38-01e9e95e6d33">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-4cfe968b-5729-4f8e-8b38-01e9e95e6d33" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26254a91-3e0f-4cbe-a247-c3808d3e6650">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-26254a91-3e0f-4cbe-a247-c3808d3e6650" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{d t} \rho \forall + \sum_\mathrm{sale}\dot{m} - \sum_\mathrm{entra}\dot{m}
 \end{equation}\]</div>
 <p>En el caso de un fluido incompresible:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7deb2c53-6cc4-48a7-b304-5a0bcb5c172d">
-<span class="eqno">(3.11)<a class="headerlink" href="#equation-7deb2c53-6cc4-48a7-b304-5a0bcb5c172d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d0e78e48-46bc-4d43-9139-05c28edebc85">
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-d0e78e48-46bc-4d43-9139-05c28edebc85" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{d t} \forall + \sum_\mathrm{sale}Q - \sum_\mathrm{entra}Q
 \end{equation}\]</div>
 </section>
 </section>
 <section id="ejemplo">
-<h3><span class="section-number">3.3.3. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Link to this heading">#</a></h3>
 <p>Un tanque cilíndrico abierto a la atmósfera está lleno con agua. Al quitar el tapón de descarga, la velocidad promedio a la salida es <span class="math notranslate nohighlight">\(V = \sqrt{2gh}\)</span>, donde <span class="math notranslate nohighlight">\(h\)</span> es el nivel instantáneo de agua en el tanque
 medida desde el centro del agujero, y <span class="math notranslate nohighlight">\(g\)</span> es la aceleración de gravedad. <strong>Determíne el tiempo para que el nivel del agua descienda de <span class="math notranslate nohighlight">\(h_0\)</span> hasta <span class="math notranslate nohighlight">\(h_2\)</span>.</strong></p>
 <a class="reference internal image-reference" href="../_images/estanque.png"><img alt="../_images/estanque.png" class="align-center" src="../_images/estanque.png" style="width: 350px;" /></a>
 </section>
 </section>
 <section id="ecuacion-de-conservacion-de-momentum-lineal">
-<h2><span class="section-number">3.4. </span>Ecuación de conservación de momentum lineal<a class="headerlink" href="#ecuacion-de-conservacion-de-momentum-lineal" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Ecuación de conservación de momentum lineal<a class="headerlink" href="#ecuacion-de-conservacion-de-momentum-lineal" title="Link to this heading">#</a></h2>
 <section id="id2">
-<h3><span class="section-number">3.4.1. </span>Formulación general<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.1. </span>Formulación general<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Según la ley de Newton, la <strong>ecuación de conservación de momento lineal,</strong> es:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -577,29 +588,29 @@ medida desde el centro del agujero, y <span class="math notranslate nohighlight"
 <li><p>Conservación de momento lineal aplicado al sistema <span class="math notranslate nohighlight">\(\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(m\vec{V})_\mathrm{sys} = \sum\vec{F}_\mathrm{ext}\)</span>.</p></li>
 </ul>
 <p>La <strong>ecuación de conservación de momento lineal para un V.C.</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6179f8d8-8500-4f45-be88-64b667750495">
-<span class="eqno">(3.12)<a class="headerlink" href="#equation-6179f8d8-8500-4f45-be88-64b667750495" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-117b4dde-2720-4a00-a7a1-ad51a3ce5e03">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-117b4dde-2720-4a00-a7a1-ad51a3ce5e03" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{F}_\mathrm{ext} = \frac{d}{dt}\int_\mathrm{VC} \rho\vec{V} d\forall + \int_\mathrm{VC} \rho\vec{V}(\vec{V}\cdot\hat{n})dA
 \end{equation}\]</div>
 <p><em>la suma de fuerzas externas aplicadas en un V.C. es igual a la tasa de cambio de momento lineal dentro del V.C. y al balance de momento lineal en la entrada y salida del V.C.</em></p>
 <p>Si aplicamos esto considerando valores promedio y que la densidad dentro del volúmen de control es uniforme, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-040f5358-425e-4987-978d-24234e0baa07">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-040f5358-425e-4987-978d-24234e0baa07" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-de5a3bca-e739-48f6-8977-1aa79e8af1bb">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-de5a3bca-e739-48f6-8977-1aa79e8af1bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum \vec{F}_\mathrm{ext} = \frac{d}{d t} \rho \vec{V}\forall + \sum_\mathrm{sale}\dot{m}\vec{V} - \sum_\mathrm{entra}\dot{m}\vec{V}
 \end{equation}\]</div>
 </section>
 <section id="id3">
-<h3><span class="section-number">3.4.2. </span>Ejemplo<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.2. </span>Ejemplo<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Un chorro de agua de velocidad <span class="math notranslate nohighlight">\(V_j\)</span> incide perpendicularmente a una placa plana que se mueve hacia la derecha a velocidad <span class="math notranslate nohighlight">\(V_c\)</span>. <strong>Calcule la fuerza necesaria para mantener la placa en movimiento a velocidad constante si la densidad del chorro es <span class="math notranslate nohighlight">\(1000~\mathrm{kg/m^3}\)</span>, la sección del chorro es <span class="math notranslate nohighlight">\(3~\mathrm{cm^2}\)</span> y <span class="math notranslate nohighlight">\(V_j\)</span> y <span class="math notranslate nohighlight">\(V_c\)</span> son <span class="math notranslate nohighlight">\(20\)</span> y <span class="math notranslate nohighlight">\(15~\mathrm{m/s}\)</span>, respectivamente.</strong> <em>Desprecie el peso del chorro y de la placa y suponga que el chorro se divide en dos caudales iguales,
 uno hacia arriba y otro hacia abajo.</em></p>
 <a class="reference internal image-reference" href="../_images/momento_lineal_ejercicio.png"><img alt="../_images/momento_lineal_ejercicio.png" class="align-center" src="../_images/momento_lineal_ejercicio.png" style="width: 350px;" /></a>
 </section>
 </section>
 <section id="ecuacion-de-conservacion-de-energia">
-<h2><span class="section-number">3.5. </span>Ecuación de conservación de energía<a class="headerlink" href="#ecuacion-de-conservacion-de-energia" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.5. </span>Ecuación de conservación de energía<a class="headerlink" href="#ecuacion-de-conservacion-de-energia" title="Link to this heading">#</a></h2>
 <p>A partir del teorema de transporte de Reynolds, y considerando la propiedad intensiva de la energía, <span class="math notranslate nohighlight">\(\tilde{e}\)</span>, definida como la <strong>energía por unidad de masa</strong> (<span class="math notranslate nohighlight">\(\mathrm{kJ/kg}\)</span>, por ejemplo), tenemos que la <strong>ecuación de conservación de energía aplicada a un volúmen de control</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6f58e26-1278-401f-a2b6-f5bb8201be70">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-f6f58e26-1278-401f-a2b6-f5bb8201be70" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b2a2636b-a141-4779-81ff-d7627b2a49cb">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-b2a2636b-a141-4779-81ff-d7627b2a49cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{Q} - \dot{W} = \frac{d}{dt}\int_\mathrm{VC} \rho\tilde{e}d\forall + \int_\mathrm{VC} \rho\tilde{e}\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
 \end{equation}\]</div>
 <p>donde:</p>
@@ -608,7 +619,7 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <li><p><span class="math notranslate nohighlight">\(\dot{W}\)</span>, tasa de trabajo (potencia) entregada por el sistema (<span class="math notranslate nohighlight">\(\mathrm{kW}\)</span>)</p></li>
 </ul>
 <section id="energia-del-fluido-tilde-e">
-<h3><span class="section-number">3.5.1. </span>Energía del fluido (<span class="math notranslate nohighlight">\(\tilde{e}\)</span>)<a class="headerlink" href="#energia-del-fluido-tilde-e" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.1. </span>Energía del fluido (<span class="math notranslate nohighlight">\(\tilde{e}\)</span>)<a class="headerlink" href="#energia-del-fluido-tilde-e" title="Link to this heading">#</a></h3>
 <p>Considera todas las formas de energía presentes en el fluido:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -625,14 +636,14 @@ uno hacia arriba y otro hacia abajo.</em></p>
 </div></blockquote>
 </section>
 <section id="transferencia-de-calor-dot-q">
-<h3><span class="section-number">3.5.2. </span>Transferencia de calor (<span class="math notranslate nohighlight">\(\dot{Q}\)</span>)<a class="headerlink" href="#transferencia-de-calor-dot-q" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.2. </span>Transferencia de calor (<span class="math notranslate nohighlight">\(\dot{Q}\)</span>)<a class="headerlink" href="#transferencia-de-calor-dot-q" title="Link to this heading">#</a></h3>
 <p>Energía asociada al calor transferido por diferencia de temperaturas.</p>
 <blockquote>
 <div><p>Notar que <span class="math notranslate nohighlight">\(\dot{Q} &lt; 0\)</span> si el volúmen de control pierde calor</p>
 </div></blockquote>
 </section>
 <section id="transferencia-de-trabajo-dot-w">
-<h3><span class="section-number">3.5.3. </span>Transferencia de trabajo (<span class="math notranslate nohighlight">\(\dot{W}\)</span>)<a class="headerlink" href="#transferencia-de-trabajo-dot-w" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.3. </span>Transferencia de trabajo (<span class="math notranslate nohighlight">\(\dot{W}\)</span>)<a class="headerlink" href="#transferencia-de-trabajo-dot-w" title="Link to this heading">#</a></h3>
 <p>Considera el trabajo entregado o recibido por el sistema.</p>
 <blockquote>
 <div><p>Notar que <span class="math notranslate nohighlight">\(\dot{W} &lt; 0\)</span> si el sistema recibe trabajo.</p>
@@ -654,7 +665,7 @@ uno hacia arriba y otro hacia abajo.</em></p>
 </ul>
 </section>
 <section id="ecuacion-de-conservacion-de-energia-mecanica">
-<h3><span class="section-number">3.5.4. </span>Ecuación de conservación de energía mecánica<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-mecanica" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.4. </span>Ecuación de conservación de energía mecánica<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-mecanica" title="Link to this heading">#</a></h3>
 <p>La ecuación de conservación de energía (3.14) no tiene mucho uso práctico en la ingeniería, debido a que los trabajos asociados a la presión y viscosidad están implícitos en la ecuación.</p>
 <p>Una formulación más común se obtiene separando los trabajos de eje, presión y viscosas:</p>
 <div class="full-width">
@@ -681,10 +692,10 @@ uno hacia arriba y otro hacia abajo.</em></p>
 \end{equation*}\]</div>
 </div></section>
 <section id="ecuacion-de-conservacion-de-energia-mecanica-para-una-linea-de-flujo">
-<h3><span class="section-number">3.5.5. </span>Ecuación de conservación de energía mecánica para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-mecanica-para-una-linea-de-flujo" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.5. </span>Ecuación de conservación de energía mecánica para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-mecanica-para-una-linea-de-flujo" title="Link to this heading">#</a></h3>
 <p>En base a los casos anteriores, y considerando <strong>(1) flujo incompresible y (2) volúmen de control con una única entrada y salida</strong>, tenemos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09d6780f-0e72-4e72-b275-ce23157ea6b1">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-09d6780f-0e72-4e72-b275-ce23157ea6b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-72c311a5-1dc7-42c9-bd7e-06d4d81565f7">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-72c311a5-1dc7-42c9-bd7e-06d4d81565f7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{entra} + h_\mathrm{bomba} = \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{sale} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho VA}\)</span>, (<span class="math notranslate nohighlight">\(i=\)</span> <span class="math notranslate nohighlight">\(\mathrm{bomba}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{turbina}\)</span> y <span class="math notranslate nohighlight">\(L\)</span>) es la <strong>altura de presión equivalente</strong> asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.</p>
@@ -693,23 +704,23 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <a class="reference internal image-reference" href="../_images/mechanical_energy_conservation.png"><img alt="../_images/mechanical_energy_conservation.png" class="align-center" src="../_images/mechanical_energy_conservation.png" style="width: 750px;" /></a>
 </section>
 <section id="ecuacion-de-bernoulli">
-<h3><span class="section-number">3.5.6. </span>Ecuación de Bernoulli<a class="headerlink" href="#ecuacion-de-bernoulli" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.6. </span>Ecuación de Bernoulli<a class="headerlink" href="#ecuacion-de-bernoulli" title="Link to this heading">#</a></h3>
 <p>Si aplicamos la ecuación anterior en un tramo de un ducto, donde <span class="math notranslate nohighlight">\(h_\mathrm{bomba} = h_\mathrm{turbina} = 0\)</span>, y asumimos <strong>fluido ideal, es decir, sin fricciones por viscosidad (<span class="math notranslate nohighlight">\(h_L = 0\)</span>)</strong>, tenemos la <strong>ecuación de Bernoulli.</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-984f9202-60f6-41cf-8d36-55330d842bfb">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-984f9202-60f6-41cf-8d36-55330d842bfb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bd348e50-883b-41a5-97e7-405eb5265712">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-bd348e50-883b-41a5-97e7-405eb5265712" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra}
 \end{equation}\]</div>
 <p>Esta ecuación, aunque tiene poco uso práctico, permite comprender en términos simples la conservación de energía en un fluido producto de los cambios de presión, velocidad y elevación.</p>
 <a class="reference internal image-reference" href="../_images/bernoulli.png"><img alt="../_images/bernoulli.png" class="align-center" src="../_images/bernoulli.png" style="width: 850px;" /></a>
 </section>
 <section id="id4">
-<h3><span class="section-number">3.5.7. </span>Ejemplo<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.7. </span>Ejemplo<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>Una manguera de <span class="math notranslate nohighlight">\(10~\mathrm{cm}\)</span> de diámetro tiene una tobera de <span class="math notranslate nohighlight">\(3~\mathrm{cm}\)</span> por donde se descargan <span class="math notranslate nohighlight">\(1.5~ \mathrm{m^3/min}\)</span>. Suponiendo flujo sin fricción, determine la fuerza <span class="math notranslate nohighlight">\(F_B\)</span> que se ejerce sobre los pernos que sujetan la tobera a la manguera.</p>
 <a class="reference internal image-reference" href="../_images/energia_ejercicio.png"><img alt="../_images/energia_ejercicio.png" class="align-center" src="../_images/energia_ejercicio.png" style="width: 350px;" /></a>
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">3.6. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.6. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capítulo 4.6: Teorema de transporte de Reynolds</p></li>
@@ -758,7 +769,7 @@ uno hacia arriba y otro hacia abajo.</em></p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="../estatica_de_fluidos/estatica_de_fluidos.html"
@@ -786,6 +797,7 @@ uno hacia arriba y otro hacia abajo.</em></p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -851,9 +863,10 @@ By Francisco V. Ramirez-Cuevas
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -877,8 +890,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
