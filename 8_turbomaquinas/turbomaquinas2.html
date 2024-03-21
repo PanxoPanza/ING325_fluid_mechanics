@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8.3. Turbinas &#8212; ING325 - Mecánica de Fluidos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '8_turbomaquinas/turbomaquinas2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Laboratorio 1. Pérdidas de carga" href="../apendice/Laboratorio1/Lab1_perdida_de_carga.html" />
+    <link rel="prev" title="8.2. Bombas" href="turbomaquinas1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenidos al curso
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de estática y dinámica de fluidos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_conceptos_basicos/conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_estatica_de_fluidos/estatica_de_fluidos.html">2. Estática de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción de una partícula fluida</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_navier-stokes/navier-stokes.html">5. Ecuación de Navier-Stokes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="turbomaquinas0.html">8. Turbomáquinas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="turbomaquinas1.html">8.2. Bombas</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.3. Turbinas</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio1/Lab1_perdida_de_carga.html">Laboratorio 1. Pérdidas de carga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Laboratorio 2: Bombas Centrifugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Laboratorio 3. Flujo externo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/8_turbomaquinas/turbomaquinas2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Turbinas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-turbinas">8.3.1. Tipos de turbinas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-de-desplazamiento-positivo">8.3.1.1. Turbinas de desplazamiento positivo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-dinamicas">8.3.1.2. Turbinas dinámicas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eficiencia-en-turbinas">8.3.2. Eficiencia en turbinas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidroturbinas">8.3.3. Hidroturbinas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-pelton-impulso">8.3.3.1. Turbina Pelton (impulso)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-francis-reaccion">8.3.3.2. Turbina Francis (reacción)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-kaplan-reaccion">8.3.3.3. Turbina Kaplan (reacción)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-comparativo">8.3.3.4. Análisis comparativo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-para-gases">8.3.4. Turbinas para gases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-de-vapor-y-gases-de-combustion">8.3.4.1. Turbinas de vapor y gases de combustión</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-eolicas">8.3.4.2. Turbinas eólicas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analsis-teorico-de-eficiencia">8.3.4.3. Análsis teórico de eficiencia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">8.3.5. Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="turbinas">
+<h1><span class="section-number">8.3. </span>Turbinas<a class="headerlink" href="#turbinas" title="Link to this heading">#</a></h1>
+<section id="tipos-de-turbinas">
+<h2><span class="section-number">8.3.1. </span>Tipos de turbinas<a class="headerlink" href="#tipos-de-turbinas" title="Link to this heading">#</a></h2>
+<section id="turbinas-de-desplazamiento-positivo">
+<h3><span class="section-number">8.3.1.1. </span>Turbinas de desplazamiento positivo<a class="headerlink" href="#turbinas-de-desplazamiento-positivo" title="Link to this heading">#</a></h3>
+<p>Se utilizan como dispositivos para medir flujo. El ejemplo más conocido es el medidor de agua doméstico, el cual utiliza un <em>disco nutante</em></p>
+<a class="reference internal image-reference" href="../_images/turbina_desplazamiento_positivo.png"><img alt="../_images/turbina_desplazamiento_positivo.png" class="align-center" src="../_images/turbina_desplazamiento_positivo.png" style="width: 700px;" /></a>
+</section>
+<section id="turbinas-dinamicas">
+<h3><span class="section-number">8.3.1.2. </span>Turbinas dinámicas<a class="headerlink" href="#turbinas-dinamicas" title="Link to this heading">#</a></h3>
+<p>Se utilizan como dispositivos para medir flujo y también como generadores de potencia.</p>
+<p>Respecto a las turbinas dinámicas para producir potencia, tenemos:</p>
+<ul class="simple">
+<li><p><strong>Turbinas de impulso o acción</strong>: Generan energía a partir del cambio de momentum lineal del fluido</p></li>
+<li><p><strong>Turbinas de reacción:</strong> Generan energía a partir de cambios de presión y velocidad</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/impulse_vs_reaction_turbine.png"><img alt="../_images/impulse_vs_reaction_turbine.png" class="align-center" src="../_images/impulse_vs_reaction_turbine.png" style="width: 700px;" /></a>
+<blockquote>
+<div><p>Una turbina de reacción, la dirección del flujo no cambia tan significativamente como en una turbina de impulso</p>
+</div></blockquote>
+<p>La diferencia principal entre ambas turbinas está en la demanda de carga hidrostática y caudal. En este aspecto, <strong>las turbinas de impulso demandan cargas hidrostáticas mayores que las de reacción, aunque requieren caudales menores.</strong></p>
+</section>
+</section>
+<section id="eficiencia-en-turbinas">
+<h2><span class="section-number">8.3.2. </span>Eficiencia en turbinas<a class="headerlink" href="#eficiencia-en-turbinas" title="Link to this heading">#</a></h2>
+<p>La eficiencia de una turbina está definida por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-34509fac-44d1-48b5-a19e-8cbcc2004adc">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-34509fac-44d1-48b5-a19e-8cbcc2004adc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\eta_\mathrm{turbina} = \frac{\dot{W}_\mathrm{bhp}}{\dot{W}_\mathrm{util}}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> es la potencia entregada por el rodete, y <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{util} = \rho g HQ\)</span> es la potencia util disponible por el sistema.</p>
+<a class="reference internal image-reference" href="../_images/turbine_efficiency.png"><img alt="../_images/turbine_efficiency.png" class="align-center" src="../_images/turbine_efficiency.png" style="width: 550px;" /></a>
+</section>
+<section id="hidroturbinas">
+<h2><span class="section-number">8.3.3. </span>Hidroturbinas<a class="headerlink" href="#hidroturbinas" title="Link to this heading">#</a></h2>
+<p>Definimos como <em>hidroturbina</em> a una turbina que opera con líquidos como fluidos de trabajo.</p>
+<p>A continuación mencionamos las turbinas más comúnes.</p>
+<section id="turbina-pelton-impulso">
+<h3><span class="section-number">8.3.3.1. </span>Turbina Pelton (impulso)<a class="headerlink" href="#turbina-pelton-impulso" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/Pelton_turbine.png"><img alt="../_images/Pelton_turbine.png" class="align-center" src="../_images/Pelton_turbine.png" style="width: 700px;" /></a>
+<p>En una turbina Pelton, el chorro a alta velocidad transfiere la energía a los álabes o <em>cangilones</em>. Los cangilones están diseñados para dividir el flujo y cambiar la dirección del flujo lo más cercano a 180°</p>
+<a class="reference internal image-reference" href="../_images/Pelton_turbine_theory.png"><img alt="../_images/Pelton_turbine_theory.png" class="align-center" src="../_images/Pelton_turbine_theory.png" style="width: 700px;" /></a>
+<p>Mediante un análisis teorico simple podemos deducir la siguiente fórmula para la potencia del rotor en turbinas Pelton:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9534947b-6030-492a-9142-9443a97eb592">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-9534947b-6030-492a-9142-9443a97eb592" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{W}_\mathrm{bhp} = \rho r\omega Q\left(V_j - r\omega\right)\left(1 - \cos \beta\right)
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(V_j\)</span> es la velocidad del flujo incidente en el rotor, <span class="math notranslate nohighlight">\(\beta\)</span> es el ángulo del borde divisor, <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad de rotación y  <span class="math notranslate nohighlight">\(Q\)</span> es el caudal.</p>
+<p>En la práctica, el ángulo divisor <span class="math notranslate nohighlight">\(\beta \approx 160°  - 165°\)</span> para maximizar la potencia.</p>
+<p>Respecto a la velocidad de rotación <span class="math notranslate nohighlight">\(\omega\)</span>, se puede demostrar que la máxima potencia se alcanza cuando</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+r\omega = \frac{V_j}{2}
+\end{equation*}\]</div>
+</section>
+<section id="turbina-francis-reaccion">
+<h3><span class="section-number">8.3.3.2. </span>Turbina Francis (reacción)<a class="headerlink" href="#turbina-francis-reaccion" title="Link to this heading">#</a></h3>
+<p>Es una turbina de reacción de flujo interno. Su configuración geométrica es similar a una bomba centrífuga, pero con el flujo en dirección contraria.</p>
+<a class="reference internal image-reference" href="../_images/Francis_turbine.png"><img alt="../_images/Francis_turbine.png" class="align-center" src="../_images/Francis_turbine.png" style="width: 800px;" /></a>
+</section>
+<section id="turbina-kaplan-reaccion">
+<h3><span class="section-number">8.3.3.3. </span>Turbina Kaplan (reacción)<a class="headerlink" href="#turbina-kaplan-reaccion" title="Link to this heading">#</a></h3>
+<p>Es una turbina de reacción de tipo hélice. Su configuración geométrica es similar a un ventilador de flujo axial, pero en sentido opuesto.</p>
+<a class="reference internal image-reference" href="../_images/Kaplan_turbine.png"><img alt="../_images/Kaplan_turbine.png" class="align-center" src="../_images/Kaplan_turbine.png" style="width: 800px;" /></a>
+</section>
+<section id="analisis-comparativo">
+<h3><span class="section-number">8.3.3.4. </span>Análisis comparativo<a class="headerlink" href="#analisis-comparativo" title="Link to this heading">#</a></h3>
+<p>La selección del tipo de turbina depende de la altura hidrostática y caudal disponible, en este sentido:</p>
+<ul class="simple">
+<li><p>Turbina Pelton: Altura hidrostática alta, caudal bajo</p></li>
+<li><p>Turbina Francis: Altura hidrostática media, caudal medio</p></li>
+<li><p>Turbina Kaplan: Altura hidrostática baja, caudal alto</p></li>
+</ul>
+</section>
+</section>
+<section id="turbinas-para-gases">
+<h2><span class="section-number">8.3.4. </span>Turbinas para gases<a class="headerlink" href="#turbinas-para-gases" title="Link to this heading">#</a></h2>
+<p>En el caso de gases, las turbinas más comunes son de reacción.</p>
+<section id="turbinas-de-vapor-y-gases-de-combustion">
+<h3><span class="section-number">8.3.4.1. </span>Turbinas de vapor y gases de combustión<a class="headerlink" href="#turbinas-de-vapor-y-gases-de-combustion" title="Link to this heading">#</a></h3>
+<p>Se utilizan para la generación de energía en centrales térmicas basadas en combustión de gases, concentración solar o energía nuclear.</p>
+<p>La mayoría de las turbinas en esta categoría operan en etapas múltiples de flujo axial.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="700"
+            height="400"
+            src="https://www.youtube.com/embed/SPg7hOxFItI"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+</section>
+<section id="turbinas-eolicas">
+<h3><span class="section-number">8.3.4.2. </span>Turbinas eólicas<a class="headerlink" href="#turbinas-eolicas" title="Link to this heading">#</a></h3>
+<p>Se utilizan para la generación de energía a partir de las corrientes de viento</p>
+<p>Existen diversos tipos. Sin embargo, la clasificación más general es respecto a la dirección de su eje de rotación. A partir de esto tenemos:</p>
+<ul class="simple">
+<li><p>Turbinas de viento de eje horizontal (HAWT, por sus siglas en ingles)</p></li>
+<li><p>Turbinas de viento de eje vertical (VAWT, por sus siglas en ingles)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/wind_turbines.png"><img alt="../_images/wind_turbines.png" class="align-center" src="../_images/wind_turbines.png" style="width: 750px;" /></a>
+</section>
+<section id="analsis-teorico-de-eficiencia">
+<h3><span class="section-number">8.3.4.3. </span>Análsis teórico de eficiencia<a class="headerlink" href="#analsis-teorico-de-eficiencia" title="Link to this heading">#</a></h3>
+<p>Es posible realizar un análisis teórico simplificado para determinar la potencia entregada y la eficienca de una turbina eólica.</p>
+<p>El volúmen de control es el que se indica en la figura. El cambio de sección es el resultado de la reducción en la velocidad del viento producida por la transferencia de energía hacia la turbina.</p>
+<a class="reference internal image-reference" href="../_images/wind_turbine_analysis.png"><img alt="../_images/wind_turbine_analysis.png" class="align-center" src="../_images/wind_turbine_analysis.png" style="width: 800px;" /></a>
+<p>A partir de este esquema podemos determinar una expresión para la potencia de eje que entrega la turbina:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-617d3b53-6830-4990-8e98-dd8851d52641">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-617d3b53-6830-4990-8e98-dd8851d52641" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{W}_\mathrm{bhp} = \frac{1}{4}\rho A(V_1^2 - V_2 ^2)(V_1 + V_2)
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(A\)</span> es el <strong>área de disco</strong>, definida como el área normal a la dirección del viento barrida por los álabes</p>
+<a class="reference internal image-reference" href="../_images/wind_turbine_disk_area.png"><img alt="../_images/wind_turbine_disk_area.png" class="align-center" src="../_images/wind_turbine_disk_area.png" style="width: 400px;" /></a>
+<p>Definimos como <strong>coeficiente de potencia (<span class="math notranslate nohighlight">\(C_p\)</span>),</strong> a la fracción de la potencia disponible del viento (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho V^3 A\)</span>) extraida por la turbina:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7a8e11ba-bd45-4a59-a893-a7090b583887">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-7a8e11ba-bd45-4a59-a893-a7090b583887" title="Permalink to this equation">#</a></span>\[\begin{equation}
+C_P = \frac{\dot{W}_\mathrm{bhp}}{\frac{1}{2}\rho V^3A}
+\end{equation}\]</div>
+<p>El coeficiente de potencia es un parámetro característico de cada turbina.</p>
+<a class="reference internal image-reference" href="../_images/coeficiente_de_potencia_wind.png"><img alt="../_images/coeficiente_de_potencia_wind.png" class="align-center" src="../_images/coeficiente_de_potencia_wind.png" style="width: 700px;" /></a>
+<p>El <strong>límite de Betz</strong> define el límite superior para la eficiencia de una turbina.</p>
+</section>
+</section>
+<section id="referencias">
+<h2><span class="section-number">8.3.5. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
+<p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
+<ul class="simple">
+<li><p>Capitulo 14: Turbomáquinas</p></li>
+</ul>
+<p><strong>White F. M. <em>Mecánica de Fluidos</em>, 5ta Ed., McGraw Hill, 2004</strong></p>
+<ul class="simple">
+<li><p>Capítulo 11: Turbomáquinas</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./8_turbomaquinas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="turbomaquinas1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">8.2. </span>Bombas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../apendice/Laboratorio1/Lab1_perdida_de_carga.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Laboratorio 1. Pérdidas de carga</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-turbinas">8.3.1. Tipos de turbinas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-de-desplazamiento-positivo">8.3.1.1. Turbinas de desplazamiento positivo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-dinamicas">8.3.1.2. Turbinas dinámicas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eficiencia-en-turbinas">8.3.2. Eficiencia en turbinas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidroturbinas">8.3.3. Hidroturbinas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-pelton-impulso">8.3.3.1. Turbina Pelton (impulso)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-francis-reaccion">8.3.3.2. Turbina Francis (reacción)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbina-kaplan-reaccion">8.3.3.3. Turbina Kaplan (reacción)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-comparativo">8.3.3.4. Análisis comparativo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-para-gases">8.3.4. Turbinas para gases</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-de-vapor-y-gases-de-combustion">8.3.4.1. Turbinas de vapor y gases de combustión</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turbinas-eolicas">8.3.4.2. Turbinas eólicas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analsis-teorico-de-eficiencia">8.3.4.3. Análsis teórico de eficiencia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">8.3.5. Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco V. Ramirez-Cuevas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
