@@ -1,0 +1,4 @@
+Notas
+------------------------------------------------
+- Explicar que la viscosidad cinemática aparece cada vez que la gravedad está involucrada.
+- Explicar la forma de medir la viscosidad cinemática y dinámica.

@@ -7,23 +7,23 @@ parts:
   - caption: Parte 1. Fundamentos de estática y dinámica de fluidos
     numbered: 3
     chapters:
-    - file: conceptos_basicos/conceptos_basicos
-    - file: estatica_de_fluidos/estatica_de_fluidos
-    - file: intro_dinamica_de_fluidos/intro_dinamica_de_fluidos
+    - file: 1_conceptos_basicos/conceptos_basicos
+    - file: 2_estatica_de_fluidos/estatica_de_fluidos
+    - file: 3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos
   - caption: Parte 2. Descripción de una partícula fluida
     numbered: true
     chapters:
-    - file: analisis_diferencial_intro/analisis_diferencial_intro
-    - file: navier-stokes/navier-stokes
+    - file: 4_analisis_diferencial_intro/analisis_diferencial_intro
+    - file: 5_navier-stokes/navier-stokes
   - caption: Parte 3. Mecánica de Fluidos aplicada
     numbered: true
     chapters:
-    - file: perdida_de_carga/perdida_de_carga
-    - file: flujo_externo/flujo_externo
-    - file: turbomaquinas/turbomaquinas0
+    - file: 6_perdida_de_carga/perdida_de_carga
+    - file: 7_flujo_externo/flujo_externo
+    - file: 8_turbomaquinas/turbomaquinas0
       sections:
-      - file: turbomaquinas/turbomaquinas1
-      - file: turbomaquinas/turbomaquinas2
+      - file: 8_turbomaquinas/turbomaquinas1
+      - file: 8_turbomaquinas/turbomaquinas2
   - caption: Apéndice
     numbered: False
     chapters:
