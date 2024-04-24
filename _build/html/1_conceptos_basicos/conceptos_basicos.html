@@ -184,22 +184,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_navier-stokes/navier-stokes.html">5. Ecuación de Navier-Stokes</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio1/Lab1_perdida_de_carga.html">Laboratorio 1. Pérdidas de carga</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Laboratorio 2: Bombas Centrifugas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Laboratorio 3. Flujo externo</a></li>
-</ul>
 
     </div>
 </nav></div>
@@ -428,8 +412,8 @@ document.write(`
 <h4>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).<a class="headerlink" href="#gravedad-especifica-mathrm-ge" title="Link to this heading">#</a></h4>
 <p>Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7365a6d2-5e36-4706-b467-7341ffa35fc9">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-7365a6d2-5e36-4706-b467-7341ffa35fc9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-38f88f1f-efbc-45f7-b508-4a6bbf5aae35">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-38f88f1f-efbc-45f7-b508-4a6bbf5aae35" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 350px;" /></a>
@@ -437,8 +421,8 @@ document.write(`
 <section id="peso-especifico-gamma">
 <h4>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>)<a class="headerlink" href="#peso-especifico-gamma" title="Link to this heading">#</a></h4>
 <p>Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-00bb4cde-e6a5-43b2-a9b1-3650ecad3767">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-00bb4cde-e6a5-43b2-a9b1-3650ecad3767" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-82eb4689-0013-4e65-a1f9-8f7a5981625c">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-82eb4689-0013-4e65-a1f9-8f7a5981625c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g,\quad\quad\left(\frac{\mathrm{N}}{m^3}\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
@@ -454,8 +438,8 @@ document.write(`
 <p>Matemáticamente, <strong>la taza de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" /></a>
 <p>En algunos fluidos (como el agua, aire y aceites), la tasa de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a231603c-6a2e-46ea-8d82-70c80d4f00f3">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-a231603c-6a2e-46ea-8d82-70c80d4f00f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9fc63533-e352-482d-b50f-3b47c981655b">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-9fc63533-e352-482d-b50f-3b47c981655b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\left(\frac{\mathrm{N}}{\mathrm{m}^2}\right)
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>

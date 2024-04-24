@@ -15,18 +15,19 @@ parts:
     chapters:
     - file: 4_analisis_diferencial_intro/analisis_diferencial_intro
     - file: 5_navier-stokes/navier-stokes
-  - caption: Parte 3. Mecánica de Fluidos aplicada
-    numbered: true
-    chapters:
-    - file: 6_perdida_de_carga/perdida_de_carga
-    - file: 7_flujo_externo/flujo_externo
-    - file: 8_turbomaquinas/turbomaquinas0
-      sections:
-      - file: 8_turbomaquinas/turbomaquinas1
-      - file: 8_turbomaquinas/turbomaquinas2
-  - caption: Apéndice
-    numbered: False
-    chapters:
-    - file: apendice/Laboratorio1/Lab1_perdida_de_carga
-    - file: apendice/Laboratorio2/Lab2_BombasCentrifugas
-    - file: apendice/Laboratorio3/Lab3_FlujoExterno
+    
+  #- caption: Parte 3. Mecánica de Fluidos aplicada
+  #  numbered: true
+  #  chapters:
+  #  - file: 6_perdida_de_carga/perdida_de_carga
+  #  - file: 7_flujo_externo/flujo_externo
+  #  - file: 8_turbomaquinas/turbomaquinas0
+      #sections:
+      #- file: 8_turbomaquinas/turbomaquinas1
+      #- file: 8_turbomaquinas/turbomaquinas2
+  #- caption: Apéndice
+  #  numbered: False
+  #  chapters:
+  #  - file: apendice/Laboratorio1/Lab1_perdida_de_carga
+  #  - file: apendice/Laboratorio2/Lab2_BombasCentrifugas
+  #  - file: apendice/Laboratorio3/Lab3_FlujoExterno
