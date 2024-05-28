@@ -63,6 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '5_navier-stokes/navier-stokes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Flujo viscoso en ductos" href="../6_perdida_de_carga/perdida_de_carga.html" />
     <link rel="prev" title="4. Análisis diferencial de flujos" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,6 +183,21 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Ecuación de Navier-Stokes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Ensayo de Bombas Centrifugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Ensayo en Tunel de Viento</a></li>
 </ul>
 
     </div>
@@ -406,19 +422,19 @@ document.write(`
 \end{equation*}\]</div>
 <p>Los <strong>elementos de la diagonal</strong> (<span class="math notranslate nohighlight">\(\varepsilon_{xx}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{yy}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_{zz}\)</span>) representan la <strong>deformación por esfuerzos normales</strong>. El <strong>resto de los elementos</strong>, corresponde a la <strong>deformación por esfuerzos cortantes</strong>.</p>
 <p>Usando el operador <span class="math notranslate nohighlight">\(\nabla\)</span>, el tensor de deformación se puede representar como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-46b44d3c-9873-43f3-8981-7089aa18ed46">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-46b44d3c-9873-43f3-8981-7089aa18ed46" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d52284dc-678e-4d99-8f67-7c3c1cb5354e">
+<span class="eqno">()<a class="headerlink" href="#equation-d52284dc-678e-4d99-8f67-7c3c1cb5354e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
 \end{equation}\]</div>
 </section>
 <section id="tensor-de-esfuerzos">
 <h3><span class="section-number">5.2.2. </span>Tensor de esfuerzos<a class="headerlink" href="#tensor-de-esfuerzos" title="Link to this heading">#</a></h3>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba6e1913-61f5-4e7a-bad7-991aed26712e">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-ba6e1913-61f5-4e7a-bad7-991aed26712e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1a6b7480-63d1-41a0-bd4c-218878795c9d">
+<span class="eqno">()<a class="headerlink" href="#equation-1a6b7480-63d1-41a0-bd4c-218878795c9d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
-<p>done <span class="math notranslate nohighlight">\(\mu\)</span> es la viscosidad cinemática del fluido</p>
+<p>done <span class="math notranslate nohighlight">\(\mu\)</span> es la viscosidad dinámica del fluido</p>
 </section>
 </section>
 <section id="id1">
@@ -436,8 +452,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3bc9aeb1-b425-4bbe-880b-eb71d30abda3">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-3bc9aeb1-b425-4bbe-880b-eb71d30abda3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-758c5cee-7ec0-4261-a62a-f74dc89283e2">
+<span class="eqno">()<a class="headerlink" href="#equation-758c5cee-7ec0-4261-a62a-f74dc89283e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Para este caso particular, tenemos entonces:</p>
@@ -446,8 +462,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\nabla^2\vec{V}
 \end{align*}\]</div>
 <p>Reemplazando este resultado en la ecuación de Cauchy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-baa50d81-1b5d-4431-afa2-6462a0f9c56e">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-baa50d81-1b5d-4431-afa2-6462a0f9c56e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-16b0cf60-c510-4c52-a5a1-ee694bd3b446">
+<span class="eqno">()<a class="headerlink" href="#equation-16b0cf60-c510-4c52-a5a1-ee694bd3b446" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -510,16 +526,16 @@ document.write(`
 <p><strong>Navier-Stokes</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-\rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \rho g_r
+\rho \left(\frac{\partial u_r}{\partial t} + \vec{V}\cdot\nabla u_r-\frac{1}{r}u_\theta^2\right) &amp;= -\frac{\partial p}{\partial r} + \mu\left(\nabla^2 u_r  - \frac{u_r}{r^2} - \frac{2}{r^2}\frac{\partial u_\theta}{\partial \theta}\right) + \rho g_r
     \\
-\rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta\right) &amp;= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \rho g_\theta 
+\rho \left(\frac{\partial u_\theta}{\partial t} + \vec{V}\cdot\nabla u_\theta+\frac{1}{r}u_\theta u_r\right) &amp;= -\frac{1}{r}\frac{\partial p}{\partial \theta} + \mu \left(\nabla^2 u_\theta - \frac{u_\theta}{r^2} + \frac{2}{r^2}\frac{\partial u_r}{\partial \theta}\right) + \rho g_\theta 
     \\
 \rho \left(\frac{\partial u_z}{\partial t} + \vec{V}\cdot\nabla u_z\right) &amp;= -\frac{\partial p}{\partial z} + \mu\nabla^2 u_z + \rho g_z
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-729fbb3a-f05c-4e96-bf81-b08710a0947f">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-729fbb3a-f05c-4e96-bf81-b08710a0947f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-aa59ef15-0cc0-4074-bb4a-b63dd42ecaa3">
+<span class="eqno">()<a class="headerlink" href="#equation-aa59ef15-0cc0-4074-bb4a-b63dd42ecaa3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -551,19 +567,22 @@ document.write(`
 <h3><span class="section-number">5.4.1. </span>Supuestos típicos<a class="headerlink" href="#supuestos-tipicos" title="Link to this heading">#</a></h3>
 <section id="flujo-estacionario">
 <h4><span class="section-number">5.4.1.1. </span>Flujo estacionario<a class="headerlink" href="#flujo-estacionario" title="Link to this heading">#</a></h4>
-<p>Este supuesto asume que la variación temporal es despreciable. Las ecuaciónes se simplifican a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fd8665fd-975a-4e7d-a25c-7825cd0006eb">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-fd8665fd-975a-4e7d-a25c-7825cd0006eb" title="Permalink to this equation">#</a></span>\[\begin{align}
-\begin{aligned}
-\nabla\cdot\vec{V} &amp;= 0 \\
-\rho\vec{V}\cdot\nabla\vec{V} &amp;= -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
-\end{aligned}
-\end{align}\]</div>
+<p>Este supuesto asume que la variación temporal es despreciable (<span class="math notranslate nohighlight">\(\frac{\partial}{\partial t} = 0\)</span>). Las ecuaciónes se simplifican a:</p>
+<p><strong>Ecuación de continuidad flujo incompresible</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\nabla\cdot\vec{V} = 0
+\end{equation*}\]</div>
+<p><strong>Navier Stokes</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\rho\vec{V}\cdot\nabla\vec{V} = -\nabla p + \rho\vec{g} + \mu\nabla^2\vec{V}
+\end{equation*}\]</div>
 </section>
 <section id="flujo-bidimensional">
 <h4><span class="section-number">5.4.1.2. </span>Flujo bidimensional<a class="headerlink" href="#flujo-bidimensional" title="Link to this heading">#</a></h4>
 <p>Este supuesto es útil para reducir una de las tres componentes de la velocidad. En coordenadas cartesianas, la bidimensionalidad permitiría, por ejemplo, ignorar la componente <span class="math notranslate nohighlight">\(z\)</span>, es decir <span class="math notranslate nohighlight">\(w = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial z} = 0\)</span>. Las ecuaciones de continuidad y Navier-Stokes se simplifican a:</p>
-<p><strong>Encuación de continuidad flujo incompresible</strong></p>
+<p><strong>Ecuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0
@@ -582,8 +601,8 @@ document.write(`
 \end{equation*}\]</div>
 <p>Que corresponde a la ecuación para presión hidrostática.</p>
 <p>El razonamiento análogo en coordenadas cilindricas se denomina, <strong>flujo con simetría axial o axial-simétrico</strong>.</p>
-<p>En este caso, <span class="math notranslate nohighlight">\(u_\theta = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial \theta} = 0\)</span>, y las ecuaciones de NS se simplifican a:</p>
-<p><strong>Encuación de continuidad flujo incompresible</strong></p>
+<p>En este caso, <span class="math notranslate nohighlight">\(u_\theta = 0\)</span> y <span class="math notranslate nohighlight">\(\frac{\partial}{\partial \theta} = 0\)</span>, y las ecuaciones se simplifican a:</p>
+<p><strong>Ecuación de continuidad flujo incompresible</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 \frac{1}{r}\frac{\partial}{\partial r}(ru_r) + \frac{\partial u_z}{\partial z} = 0
@@ -611,14 +630,14 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" /></a>
 <p>La <strong>condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil</strong>.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04c1d81b-d1ed-4b61-8443-440c499cd470">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-04c1d81b-d1ed-4b61-8443-440c499cd470" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-236052d2-d2b9-461c-9efd-d487956fba9b">
+<span class="eqno">()<a class="headerlink" href="#equation-236052d2-d2b9-461c-9efd-d487956fba9b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), obtenemos la <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f45419f7-83d5-4a50-9bcf-86d2c315b1ef">
-<span class="eqno">(5.8)<a class="headerlink" href="#equation-f45419f7-83d5-4a50-9bcf-86d2c315b1ef" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-65550a3b-92c1-4ee5-8878-d83481f636ca">
+<span class="eqno">()<a class="headerlink" href="#equation-65550a3b-92c1-4ee5-8878-d83481f636ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
@@ -681,6 +700,15 @@ u(y=y_0) = 0
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">4. </span>Análisis diferencial de flujos</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../6_perdida_de_carga/perdida_de_carga.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Flujo viscoso en ductos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
