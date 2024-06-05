@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>7. Flujo externo &#8212; ING325 - Mecánica de Fluidos</title>
   
@@ -14,50 +15,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '7_flujo_externo/flujo_externo';</script>
@@ -74,27 +79,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -116,8 +117,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -152,18 +158,7 @@
     <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -188,16 +183,16 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Flujo externo</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Laboratorio 2: Bombas Centrifugas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Laboratorio 3. Flujo externo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Ensayo de Bombas Centrifugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Ensayo en Tunel de Viento</a></li>
 </ul>
 
     </div>
@@ -213,7 +208,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -222,7 +217,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -367,9 +362,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="flujo-externo">
-<h1><span class="section-number">7. </span>Flujo externo<a class="headerlink" href="#flujo-externo" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">7. </span>Flujo externo<a class="headerlink" href="#flujo-externo" title="Permalink to this heading">#</a></h1>
 <section id="introduccion">
-<h2><span class="section-number">7.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this heading">#</a></h2>
 <p>En este capítulo revisaremos el flujo alrededor de cuerpos que están inmersos en un fluido. Categorizamos este tipo de casos como <em>Flujo externo</em>.</p>
 <a class="reference internal image-reference" href="../_images/intro.jpg"><img alt="../_images/intro.jpg" class="align-center" src="../_images/intro.jpg" style="width: 600px;" /></a>
 <p>En el flujo externo estudiamos las <strong>fuerzas resultantes</strong> que ocurren en cuerpos producto de la presión y esfuerzo cortante en un cuerpo.</p>
@@ -392,8 +387,8 @@ F_L &amp;= \int_A (-P\sin\theta - \tau_w\cos\theta)dA
 <p>Las ecuaciones permiten entender conceptualmente el efecto de la presión (<span class="math notranslate nohighlight">\(P\)</span>) y esfuerzo cortante (<span class="math notranslate nohighlight">\(\tau_w\)</span>) en el arrastre y sustentación.</p>
 <p>Estas ecuaciones, sin embargo, tienen poca aplicación práctica debido a la dificultad de predecir la distribución de <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(\tau_w\)</span>.</p>
 <p>En la práctica se utilizan coeficientes adimencionales, los cuales representan los efectos de arrastre y sustentación de forma generalizada considerando una combinación de parámetros.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c645122-5914-474f-9cc9-8d59d327f36e">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-2c645122-5914-474f-9cc9-8d59d327f36e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ed4a654c-5031-4010-a973-9b3f58ec4008">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-ed4a654c-5031-4010-a973-9b3f58ec4008" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_D &amp;= \frac{F_D}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~de~arrastre}
 \\
@@ -411,11 +406,11 @@ C_L &amp;= \frac{F_L}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~
 </div></blockquote>
 </section>
 <section id="fuerzas-de-arrastre">
-<h2><span class="section-number">7.2. </span>Fuerzas de arrastre<a class="headerlink" href="#fuerzas-de-arrastre" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.2. </span>Fuerzas de arrastre<a class="headerlink" href="#fuerzas-de-arrastre" title="Permalink to this heading">#</a></h2>
 <p>Como mencionamos anteriormente, el arrastre en cuerpos se debe a los efectos de presiones y tensiones de corte en la superficie de un cuerpo.</p>
 <p>Así, podemos separar el coeficiente de arrastre en dos componentes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0cf3b3a1-75c2-4a61-bc35-4a20dce1ef33">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-0cf3b3a1-75c2-4a61-bc35-4a20dce1ef33" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4267b98e-aa41-4568-a1fd-4e0d0d053f58">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-4267b98e-aa41-4568-a1fd-4e0d0d053f58" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 \end{equation}\]</div>
 <p>donde:</p>
@@ -434,7 +429,7 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 </div></blockquote>
 <p>Para otros cuerpos de forma arbitraria, como el flujo alrededor del cilindro mostrado en la figura, el efecto de fricción y presiones actúa de forma conjunta. Estos cuerpos se denominan <strong>cuerpos romos</strong></p>
 <section id="flujo-paralelo-sobre-una-placa-plana">
-<h3><span class="section-number">7.2.1. </span>Flujo paralelo sobre una placa plana<a class="headerlink" href="#flujo-paralelo-sobre-una-placa-plana" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.2.1. </span>Flujo paralelo sobre una placa plana<a class="headerlink" href="#flujo-paralelo-sobre-una-placa-plana" title="Permalink to this heading">#</a></h3>
 <p>Como mencionabamos anteriormente, el arrastre en flujo paralelo sobre una placa plana se debe principalmente al efecto de la fricción resultante por los esfuerzos de corte.</p>
 <p>Recordando las discusiones del capítulo 1, tenemos que las tensiones de corte se deben a la tasa de deformación del fluido:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -447,13 +442,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>El <strong>espesor de la capa límite <span class="math notranslate nohighlight">\(\delta(x)\)</span></strong> define el límite que separa la región viscosa de la zona no viscosa. Como criterio <span class="math notranslate nohighlight">\(\delta(x)\)</span> se define como la distancia entre la superficie hasta el punto donde <span class="math notranslate nohighlight">\(u = 0.99V\)</span></p>
 <p>Notar, también, el desarrollo del flujo a medida que recorre la placa. Por un lado tenemos que el flujo pierde velocidad debido a la fricción (conservación de momento lineal). Esta pérdida de velocidad implica un crecimiento de la capa límite (conservación de masa). La pérdida de momento lineal, a su vez, induce inestabilidades en el flujo que se traducen en una transición de un régimen laminar a uno turbulento</p>
 <p>Para establecer la región de transición utilizamos el siguiente criterio:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6ab07c27-e58d-4064-8ae7-4e1dbe6627bb">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-6ab07c27-e58d-4064-8ae7-4e1dbe6627bb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cc30b7b3-f150-41ed-b156-c8f2de874a8b">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-cc30b7b3-f150-41ed-b156-c8f2de874a8b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re}_\mathrm{cr} = \frac{x_\mathrm{cr}V}{\nu} = 5\times 10^5 
 \end{equation}\]</div>
 <p>Matemáticamente, el espesor de capa límite está dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21c143a9-c12a-4b99-955f-9a32239dabc7">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-21c143a9-c12a-4b99-955f-9a32239dabc7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e62397ae-82c6-428f-86f2-c5386c19f554">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-e62397ae-82c6-428f-86f2-c5386c19f554" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \frac{\delta}{x} &amp;= \frac{4.91}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -463,13 +458,13 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <p>Notar, sin embargo que la extención de las regiones laminar y turbulentas dependen de la velocidad del flujo</p>
 <a class="reference internal image-reference" href="../_images/flat_plate_laminar_turbulent.png"><img alt="../_images/flat_plate_laminar_turbulent.png" class="align-center" src="../_images/flat_plate_laminar_turbulent.png" style="width: 900px;" /></a>
 <p>El arrastre en este caso se debe, únicamente, a los efectos de fricción. Así, <span class="math notranslate nohighlight">\(C_D = C_{D,~\mathrm{fricción}} = C_f \)</span>, donde <span class="math notranslate nohighlight">\(C_f\)</span> es el coeficiente de fricción dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b400dcd1-9c84-4fc3-b095-14111a2b77c3">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-b400dcd1-9c84-4fc3-b095-14111a2b77c3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6b1b4758-11ce-4244-b60d-705033b3ec8f">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-6b1b4758-11ce-4244-b60d-705033b3ec8f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{1}{L}\int_0^L C_{f,x} dx
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(C_{f,x}\)</span> es el coeficiente de fricción local:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bfff59de-58df-4e98-b006-3ce7c68d0553">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-bfff59de-58df-4e98-b006-3ce7c68d0553" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-493f3ec8-958d-480a-b1cc-0de24b547639">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-493f3ec8-958d-480a-b1cc-0de24b547639" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_{f,x} &amp;= \frac{0.664}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -477,13 +472,13 @@ C_{f,x} &amp;= \frac{0.059}{\mathrm{Re}_x^{1/5}}\quad\quad\mathrm{Turbulento}
 \end{aligned}
 \end{align}\]</div>
 <p>Reemplazando las ecuaciones (6.6) en (6.5) y aplicando la ecuación (6.3), tenemos una relación para el <strong>coeficiente de fricción promedio</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bbe8b7d7-69fd-4625-9201-ea998dcb3214">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-bbe8b7d7-69fd-4625-9201-ea998dcb3214" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6104c547-1a27-45bd-9c66-672e4d5db55b">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-6104c547-1a27-45bd-9c66-672e4d5db55b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 \end{equation}\]</div>
 <p>A partir de las ecuaciones para <span class="math notranslate nohighlight">\(C_{f,x}\)</span>, podemos calcular el esfuerzo de corte local en la pared del fluido como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-94c4f8c5-73be-4866-b0ef-a2f266c54d76">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-94c4f8c5-73be-4866-b0ef-a2f266c54d76" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9b042b33-19f7-4dad-8c5b-a443f49d0376">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-9b042b33-19f7-4dad-8c5b-a443f49d0376" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau_w(x) = \mu \frac{\partial u}{\partial y}\Big|_{y = 0} = \frac{1}{2}\rho U_0^2 C_{f,x}
 \end{equation}\]</div>
 <p>Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor.</p>
@@ -508,7 +503,7 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
 </ul>
 </section>
 <section id="flujo-sobre-cuerpos-romos">
-<h3><span class="section-number">7.2.2. </span>Flujo sobre cuerpos romos<a class="headerlink" href="#flujo-sobre-cuerpos-romos" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.2.2. </span>Flujo sobre cuerpos romos<a class="headerlink" href="#flujo-sobre-cuerpos-romos" title="Permalink to this heading">#</a></h3>
 <p>En el caso de cuerpos romos, como cilindros o esferas, el efecto de gradiente de presión está presente en el desarrollo de la capa límite.</p>
 <p>El efecto del gradiente de presión se puede entender analizando el flujo en una tobera convergente-divergente.</p>
 <a class="reference internal image-reference" href="../_images/boundary_layer_pressure_gradient.png"><img alt="../_images/boundary_layer_pressure_gradient.png" class="align-center" src="../_images/boundary_layer_pressure_gradient.png" style="width: 800px;" /></a>
@@ -544,7 +539,7 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
 </ol>
 </section>
 <section id="efecto-de-la-rugosidad-en-el-arrastre">
-<h3><span class="section-number">7.2.3. </span>Efecto de la rugosidad en el arrastre<a class="headerlink" href="#efecto-de-la-rugosidad-en-el-arrastre" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">7.2.3. </span>Efecto de la rugosidad en el arrastre<a class="headerlink" href="#efecto-de-la-rugosidad-en-el-arrastre" title="Permalink to this heading">#</a></h3>
 <p>La presencia de rugosidad en un cuerpo induce perturbaciones en el flujo, generando flujos turbulentos a menores números de Reynolds. Así, para un mismo valor de <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>, la región de separación se reduce para el cuerpo rugoso, y como consecuencia el coeficiente de arrastre es menor.</p>
 <a class="reference internal image-reference" href="../_images/drag_sphere_roughness.png"><img alt="../_images/drag_sphere_roughness.png" class="align-center" src="../_images/drag_sphere_roughness.png" style="width: 900px;" /></a>
 <p>Para números de Reynolds altos (<span class="math notranslate nohighlight">\(\mathrm{Re} \gtrsim  5\times 10^5\)</span>) el coeficiente de arrastre de una esfera lisa es menor.</p>
@@ -579,7 +574,7 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
 </section>
 </section>
 <section id="fuerza-de-sustentacion">
-<h2><span class="section-number">7.3. </span>Fuerza de sustentación<a class="headerlink" href="#fuerza-de-sustentacion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.3. </span>Fuerza de sustentación<a class="headerlink" href="#fuerza-de-sustentacion" title="Permalink to this heading">#</a></h2>
 <p>El fenómeno de sustentación es un tópico complejo de explicar en términos simples debido a los múltiples efectos presentes.</p>
 <p>Comenzamos definiendo la términología principal de un perfil alar.
 <a class="reference internal" href="../_images/pressure_distribution_airfoil.png"><img alt="../_images/pressure_distribution_airfoil.png" class="align-center" src="../_images/pressure_distribution_airfoil.png" style="width: 800px;" /></a></p>
@@ -608,7 +603,7 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
 </div>
 </section>
 <section id="referencias">
-<h2><span class="section-number">7.4. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 11. Flujo externo: Arrastre y sustentación</p></li>
@@ -648,7 +643,7 @@ F_D = C_D \frac{1}{2}\rho A V^2 = \left(0.074L^{4/5} V^{9/5} - 1742 V\right)\fra
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -718,7 +713,7 @@ By Francisco V. Ramirez-Cuevas
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -742,8 +737,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
