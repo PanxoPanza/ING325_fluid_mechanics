@@ -399,8 +399,8 @@ document.write(`
 <section id="eficiencia-en-turbinas">
 <h2><span class="section-number">8.3.2. </span>Eficiencia en turbinas<a class="headerlink" href="#eficiencia-en-turbinas" title="Permalink to this heading">#</a></h2>
 <p>La eficiencia de una turbina está definida por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e52c0761-cd0f-4f01-a872-38e226b097f8">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-e52c0761-cd0f-4f01-a872-38e226b097f8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7a112001-a586-418d-81e6-abbf0509edee">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-7a112001-a586-418d-81e6-abbf0509edee" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \eta_\mathrm{turbina} = \frac{\dot{W}_\mathrm{bhp}}{\dot{W}_\mathrm{util}}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> es la potencia entregada por el rodete, y <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{util} = \rho g HQ\)</span> es la potencia util disponible por el sistema.</p>
@@ -416,8 +416,8 @@ document.write(`
 <p>En una turbina Pelton, el chorro a alta velocidad transfiere la energía a los álabes o <em>cangilones</em>. Los cangilones están diseñados para dividir el flujo y cambiar la dirección del flujo lo más cercano a 180°</p>
 <a class="reference internal image-reference" href="../_images/Pelton_turbine_theory.png"><img alt="../_images/Pelton_turbine_theory.png" class="align-center" src="../_images/Pelton_turbine_theory.png" style="width: 700px;" /></a>
 <p>Mediante un análisis teorico simple podemos deducir la siguiente fórmula para la potencia del rotor en turbinas Pelton:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-79a07044-1a39-4f11-8d5e-fc0085a3bf24">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-79a07044-1a39-4f11-8d5e-fc0085a3bf24" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2df2fdfe-dad9-44e5-ae6a-2cf52a00df7c">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-2df2fdfe-dad9-44e5-ae6a-2cf52a00df7c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{bhp} = \rho r\omega Q\left(V_j - r\omega\right)\left(1 - \cos \beta\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(V_j\)</span> es la velocidad del flujo incidente en el rotor, <span class="math notranslate nohighlight">\(\beta\)</span> es el ángulo del borde divisor, <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad de rotación y  <span class="math notranslate nohighlight">\(Q\)</span> es el caudal.</p>
@@ -482,38 +482,57 @@ r\omega = \frac{V_j}{2}
 <section id="analsis-teorico-de-eficiencia">
 <h3><span class="section-number">8.3.4.3. </span>Análsis teórico de eficiencia<a class="headerlink" href="#analsis-teorico-de-eficiencia" title="Permalink to this heading">#</a></h3>
 <p>Es posible realizar un análisis teórico simplificado para determinar la potencia entregada y la eficienca de una turbina eólica.</p>
-<p>El volúmen de control es el que se indica en la figura. El cambio de sección es el resultado de la reducción en la velocidad del viento producida por la transferencia de energía hacia la turbina.</p>
+<p>El modelo está basado en el estudio de propulsores de hélice, y considera los siguientes supuestos:</p>
+<ul class="simple">
+<li><p>Flujo estacionario, incompresible</p></li>
+<li><p>Sin arrastre por fricción</p></li>
+<li><p>Número infinito de palas</p></li>
+<li><p>Empuje uniforme sobre el área del rotor</p></li>
+<li><p>Sin vórtices traseros (causan fricción)</p></li>
+</ul>
+<p>Bajo estos supuestos, podemos definir un volúmen de control como el de la figura. El cambio de sección es el resultado de la reducción en la velocidad del viento producida por la transferencia de energía hacia la turbina.</p>
 <a class="reference internal image-reference" href="../_images/wind_turbine_analysis.png"><img alt="../_images/wind_turbine_analysis.png" class="align-center" src="../_images/wind_turbine_analysis.png" style="width: 800px;" /></a>
-<p>A partir de este esquema podemos determinar una expresión para la potencia de eje que entrega la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a296d60-18b4-4c48-ab00-c76e7c46842b">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-2a296d60-18b4-4c48-ab00-c76e7c46842b" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\dot{W}_\mathrm{bhp} = \frac{1}{4}\rho A(V_1^2 - V_2 ^2)(V_1 + V_2)
+<p>A partir de un balance de energía en este volúmen de control podemos determinar una expresión para la potencia ideal que entrega la turbina:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9a628b88-ce5a-42e4-99b3-71c02b07ab42">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-9a628b88-ce5a-42e4-99b3-71c02b07ab42" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{W}_\mathrm{ideal} = \frac{1}{4}\rho A(V_1^2 - V_2 ^2)(V_1 + V_2)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(A\)</span> es el <strong>área de disco</strong>, definida como el área normal a la dirección del viento barrida por los álabes</p>
 <a class="reference internal image-reference" href="../_images/wind_turbine_disk_area.png"><img alt="../_images/wind_turbine_disk_area.png" class="align-center" src="../_images/wind_turbine_disk_area.png" style="width: 400px;" /></a>
-<p>Si definimos el factor de pérdida friccional de velocidad en el viento como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c5afcb3a-6361-44c0-966f-06596bf58684">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-c5afcb3a-6361-44c0-966f-06596bf58684" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>Es común expresar la potencia ideal en función del factor de pérdida friccional de velocidad en el viento:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f2b2c5a7-f76f-49b7-aba2-9a546d2a2d17">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-f2b2c5a7-f76f-49b7-aba2-9a546d2a2d17" title="Permalink to this equation">#</a></span>\[\begin{equation}
 a = \frac{V_1 - V}{V_1}
 \end{equation}\]</div>
-<p>Podemos obtener la siguiente expresión para la potencia en el eje:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9fdcd368-caf6-49e8-96f1-646b01417e6e">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-9fdcd368-caf6-49e8-96f1-646b01417e6e" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\dot{W}_\mathrm{bhp} = \frac{1}{2}\rho AV~4a(1- a)^2
+<p>En ese caso la potencia ideal es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7236bc79-5a92-49b7-bb7d-00b324ef9df4">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-7236bc79-5a92-49b7-bb7d-00b324ef9df4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{W}_\mathrm{ideal} = 2\rho AV_1^3~a(1- a)^2
 \end{equation}\]</div>
-<p>Definimos como <strong>coeficiente de potencia (<span class="math notranslate nohighlight">\(C_p\)</span>),</strong> a la fracción de la potencia disponible del viento (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho V^3 A\)</span>) extraida por la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0fad5832-82c2-4caf-b4c4-348acc00ebcb">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-0fad5832-82c2-4caf-b4c4-348acc00ebcb" title="Permalink to this equation">#</a></span>\[\begin{equation}
-C_P = \frac{\dot{W}_\mathrm{bhp}}{\frac{1}{2}\rho V^3A}
+<p>Definimos como <strong>coeficiente de potencia (<span class="math notranslate nohighlight">\(C_p\)</span>),</strong> a la fracción de la potencia disponible del viento (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho V_1^3 A\)</span>) extraida por la turbina:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a675c2de-7b2e-478c-947e-e7751f3735c8">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-a675c2de-7b2e-478c-947e-e7751f3735c8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+C_P = \frac{\dot{W}_\mathrm{ideal}}{\frac{1}{2}\rho V_1^3A}
 \end{equation}\]</div>
 <p>en función del factor de pérdida friccional:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f5aa094-8355-41e1-8ffd-f9e7fca9a17c">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-7f5aa094-8355-41e1-8ffd-f9e7fca9a17c" title="Permalink to this equation">#</a></span>\[\begin{equation}
-C_P = 4a (1-a)
+<div class="amsmath math notranslate nohighlight" id="equation-4e27f771-5439-40bd-a5f0-dc14df5320bd">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-4e27f771-5439-40bd-a5f0-dc14df5320bd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+C_P = 4a (1-a)^2
 \end{equation}\]</div>
-<p>El coeficiente de potencia es un parámetro característico de cada turbina.</p>
+<p>A partir de esta expresión podemos determinar el máximo valor de <span class="math notranslate nohighlight">\(C_P\)</span> como <span class="math notranslate nohighlight">\(dC_P/da = 0\)</span>, donde obtenemos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-327bf9c2-ec1d-4275-87b4-867255923195">
+<span class="eqno">(8.8)<a class="headerlink" href="#equation-327bf9c2-ec1d-4275-87b4-867255923195" title="Permalink to this equation">#</a></span>\[\begin{equation}
+C_P = \frac{16}{27} = 0.5926
+\end{equation}\]</div>
+<p>El valor se conoce como el <strong>límite de Betz</strong> y define la <em>máxima potencia que puede generar una turnbina</em>.</p>
+<p>En general, el coeficiente de potencia varía en función de la velocidad de rotación <span class="math notranslate nohighlight">\(\omega\)</span>. Así, para cada tipo de turbina, observamos una curva caractarísticas <span class="math notranslate nohighlight">\(C_p\)</span> vs <span class="math notranslate nohighlight">\(\omega r/V_1\)</span>, donde <span class="math notranslate nohighlight">\(r\)</span> es el rádio de la hélice.</p>
 <a class="reference internal image-reference" href="../_images/coeficiente_de_potencia_wind.png"><img alt="../_images/coeficiente_de_potencia_wind.png" class="align-center" src="../_images/coeficiente_de_potencia_wind.png" style="width: 700px;" /></a>
-<p>El <strong>límite de Betz</strong> define el límite superior para la eficiencia de una turbina.</p>
+<p>Utilizando las curvas podemos aproximar la potencia en el eje <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> como:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8bcb72dd-79e6-4b64-98cc-63d2c5fe1fd7">
+<span class="eqno">(8.9)<a class="headerlink" href="#equation-8bcb72dd-79e6-4b64-98cc-63d2c5fe1fd7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\dot{W}_\mathrm{bhp} = C_P\frac{1}{2}\rho AV_1^3
+\end{equation}\]</div>
+<p>En este caso, podemos utilizar todas las fórmulas anteriores de <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{ideal}\)</span> para <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span>.</p>
 </section>
 </section>
 <section id="referencias">
