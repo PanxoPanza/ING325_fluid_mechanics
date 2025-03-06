@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. Introducción a la mecánica de fluidos &#8212; ING325 - Mecánica de Fluidos</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1_conceptos_basicos/conceptos_basicos';</script>
@@ -158,7 +153,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -222,9 +228,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -318,9 +324,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -377,16 +383,16 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduccion-a-la-mecanica-de-fluidos">
-<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Introducción a la mecánica de fluidos<a class="headerlink" href="#introduccion-a-la-mecanica-de-fluidos" title="Link to this heading">#</a></h1>
 <section id="aspectos-generales">
-<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Link to this heading">#</a></h2>
 <section id="mecanica-de-fluidos-en-la-ingenieria">
-<h3><span class="section-number">1.1.1. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.1. </span>Mécanica de fluidos en la ingeniería<a class="headerlink" href="#mecanica-de-fluidos-en-la-ingenieria" title="Link to this heading">#</a></h3>
 <p>Existen innumerables aplicaciones donde la mecánica de fluidos juega un rol central, tales como conversión de energía, procesos industriales (como minería), medio ambiente, aerodinámica, etc.</p>
 <a class="reference internal image-reference" href="../_images/aplicaciones.png"><img alt="../_images/aplicaciones.png" class="align-center" src="../_images/aplicaciones.png" style="width: 800px;" /></a>
 </section>
 <section id="definicion-de-un-fluido">
-<h3><span class="section-number">1.1.2. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.2. </span>Definición de un fluido<a class="headerlink" href="#definicion-de-un-fluido" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Sustancia en fase líquida o gaseosa</p></li>
 <li><p>En comparación con un sólido, los enlaces entre moléculas son débiles y no elásticos.</p></li>
@@ -405,9 +411,9 @@ document.write(`
 </section>
 </section>
 <section id="propiedades-de-los-fluidos">
-<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Propiedades de los fluidos<a class="headerlink" href="#propiedades-de-los-fluidos" title="Link to this heading">#</a></h2>
 <section id="densidad-rho">
-<h3><span class="section-number">1.2.1. </span>Densidad (<span class="math notranslate nohighlight">\(\rho\)</span>)<a class="headerlink" href="#densidad-rho" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Densidad (<span class="math notranslate nohighlight">\(\rho\)</span>)<a class="headerlink" href="#densidad-rho" title="Link to this heading">#</a></h3>
 <p>Se define como <em>la masa por unidad de volúmen</em>.</p>
 <p>Comúnmente se mide en <span class="math notranslate nohighlight">\(\mathrm{kg/m^3}\)</span> o <span class="math notranslate nohighlight">\(\mathrm{g/cm^3}\)</span>.</p>
 <p>El recíproco de la densidad es el <strong>volumen específico</strong> <span class="math notranslate nohighlight">\(v = 1/\rho\)</span>.</p>
@@ -419,37 +425,37 @@ document.write(`
 <li><p><strong>Gases.</strong> <em><strong>Generalmente obedecen a la ley de gas ideal <span class="math notranslate nohighlight">\(PMv=RT\)</span></strong></em>, donde <span class="math notranslate nohighlight">\(P\)</span> es la presión absoluta, <span class="math notranslate nohighlight">\(M\)</span> es la masa molar del gas, <span class="math notranslate nohighlight">\(T\)</span> es la temperatura y <span class="math notranslate nohighlight">\(R = 8.3145~\mathrm{kJ/kmol~K}\)</span> es la constante universal del gas ideal.</p></li>
 </ul>
 <section id="gravedad-especifica-mathrm-ge">
-<h4>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).<a class="headerlink" href="#gravedad-especifica-mathrm-ge" title="Permalink to this heading">#</a></h4>
+<h4>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).<a class="headerlink" href="#gravedad-especifica-mathrm-ge" title="Link to this heading">#</a></h4>
 <p>Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b2e0801-659d-46b9-8071-bd2ba8746cf4">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-1b2e0801-659d-46b9-8071-bd2ba8746cf4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e5d68687-62c6-47c3-93f0-af8f0279dc3a">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-e5d68687-62c6-47c3-93f0-af8f0279dc3a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 350px;" /></a>
 </section>
 <section id="peso-especifico-gamma">
-<h4>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>)<a class="headerlink" href="#peso-especifico-gamma" title="Permalink to this heading">#</a></h4>
+<h4>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>)<a class="headerlink" href="#peso-especifico-gamma" title="Link to this heading">#</a></h4>
 <p>Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2799fa0-7cb2-470c-87b6-7e8e0b24520c">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-b2799fa0-7cb2-470c-87b6-7e8e0b24520c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f98f6132-de4b-4a00-88fa-a32b1ebf3c30">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-f98f6132-de4b-4a00-88fa-a32b1ebf3c30" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g,\quad\quad\left(\frac{\mathrm{N}}{m^3}\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
 </section>
 </section>
 <section id="viscosidad-dinamica-mu">
-<h3><span class="section-number">1.2.2. </span>Viscosidad dinámica (<span class="math notranslate nohighlight">\(\mu\)</span>)<a class="headerlink" href="#viscosidad-dinamica-mu" title="Permalink to this heading">#</a></h3>
-<p>Corresponde a la resistencia de un fluido al movimiento o, en otras palabras, a la “fluidez”. <strong>Esta propiedad establece una relación entre los esfuerzos cortantes (<span class="math notranslate nohighlight">\(\tau\)</span>) y la taza de deformación de un fluido.</strong></p>
-<p>Recordemos que, a diferencia de un sólido, un fluido se deforma constantemente frente a un esfuerzo cortante. Así, <strong>en el caso de fluidos es importante considerar <em>la taza de cambio de la deformación en el tiempo</em></strong>, y no la deformación instantanea (como en el caso de sólidos).</p>
+<h3><span class="section-number">1.2.2. </span>Viscosidad dinámica (<span class="math notranslate nohighlight">\(\mu\)</span>)<a class="headerlink" href="#viscosidad-dinamica-mu" title="Link to this heading">#</a></h3>
+<p>Corresponde a la resistencia de un fluido al movimiento o, en otras palabras, a la “fluidez”. <strong>Esta propiedad establece una relación entre los esfuerzos cortantes (<span class="math notranslate nohighlight">\(\tau\)</span>) y la tasa de deformación de un fluido.</strong></p>
+<p>Recordemos que, a diferencia de un sólido, un fluido se deforma constantemente frente a un esfuerzo cortante. Así, <strong>en el caso de fluidos es importante considerar <em>la tasa de cambio de la deformación en el tiempo</em></strong>, y no la deformación instantanea (como en el caso de sólidos).</p>
 <p>Un ejemplo simple es el que se ilustra en la figura. En este caso, el cuerpo (sólido o líquido) entre dos placas planas es sometido a una fuerza cortante debido al movimiento relativo entre ellas.
 <a class="reference internal" href="../_images/fluid_solid.png"><img alt="../_images/fluid_solid.png" class="align-center" src="../_images/fluid_solid.png" style="width: 600px;" /></a></p>
 <p>Al aplicar una fuerza <span class="math notranslate nohighlight">\(F\)</span> constante, el fluido se deforma contínuamente, mientras que el sólido alcanza una deformación máxima (bajo el límite elástico del sólido). En ambos casos, <strong>el esfuerzo cortante se define como <span class="math notranslate nohighlight">\(\tau = F/A\)</span> donde <span class="math notranslate nohighlight">\(A\)</span> es el área de contacto entre el cuerpo y la placa.</strong></p>
-<p>Matemáticamente, <strong>la taza de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Matemáticamente, <strong>la tasa de deformación</strong> corresponde al <em><strong>cambio de la velocidad de un fluido en el espacio</strong></em>. En el ejemplo, el movimiento de las placas induce un perfil de velocidades como se indica en la figura, donde <span class="math notranslate nohighlight">\(u\)</span> es la velocidad en la dirección <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" /></a>
 <p>En algunos fluidos (como el agua, aire y aceites), la tasa de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ebd2e79c-df07-479f-b3d4-61d47a417baa">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-ebd2e79c-df07-479f-b3d4-61d47a417baa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d936e916-d8a7-4c65-adc6-c41fcdddfa38">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-d936e916-d8a7-4c65-adc6-c41fcdddfa38" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\left(\frac{\mathrm{N}}{\mathrm{m}^2}\right)
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>
@@ -487,7 +493,7 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/viscocity_vs_temperature.png"><img alt="../_images/viscocity_vs_temperature.png" class="align-center" src="../_images/viscocity_vs_temperature.png" style="width: 400px;" /></a>
 </section>
 <section id="viscosidad-cinematica-nu">
-<h3><span class="section-number">1.2.3. </span>Viscosidad cinemática (<span class="math notranslate nohighlight">\(\nu\)</span>)<a class="headerlink" href="#viscosidad-cinematica-nu" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3. </span>Viscosidad cinemática (<span class="math notranslate nohighlight">\(\nu\)</span>)<a class="headerlink" href="#viscosidad-cinematica-nu" title="Link to this heading">#</a></h3>
 <p>Representa la capacidad de fluidez frente a la fuerza de gravedad, y se define como la razón entre la viscosidad dinámica y la densidad, <span class="math notranslate nohighlight">\(\nu = \mu/\rho\)</span></p>
 <a class="reference internal image-reference" href="../_images/Viscosities.gif"><img alt="../_images/Viscosities.gif" class="align-center" src="../_images/Viscosities.gif" style="width: 400px;" /></a>
 <p>Generalmente, ambas viscocidades cambian proporcionalmente</p>
@@ -497,21 +503,21 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="medicion-de-la-viscosidad">
-<h3><span class="section-number">1.2.4. </span>Medición de la viscosidad<a class="headerlink" href="#medicion-de-la-viscosidad" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.4. </span>Medición de la viscosidad<a class="headerlink" href="#medicion-de-la-viscosidad" title="Link to this heading">#</a></h3>
 <p>Los instrumentos para medir la viscosidad son diferentes dependiendo si se desea conocer la viscosidad cinemática o dinámica. Como regla general, <strong>cuando el experimento involucre la gravedad como variable, se estará midiendo la viscosidad cinemática.</strong> En caso contrario, se estará midiendo la viscosidad dinámica.</p>
 <a class="reference internal image-reference" href="../_images/viscosimetro.png"><img alt="../_images/viscosimetro.png" class="align-center" src="../_images/viscosimetro.png" style="width: 650px;" /></a>
 <p>En la figura, el <strong>reómetro</strong> mide la viscosidad en base al torque aplicado sobre el cilindro. La gravedad actúa perpendicular a la dirección del torque y, por lo tanto, este instrumento <strong>mide la viscosidad dinámica</strong>. El <strong>viscosímetro de bolas</strong>, determina la viscosidad en base al tiempo que demora en caer la bola. En este caso, la gravedad influye en el experimento y, por lo tanto, el instrumento <strong>mide la viscosidad cinemática</strong>.</p>
 </section>
 </section>
 <section id="clasificacion-de-flujos">
-<h2><span class="section-number">1.3. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.3. </span>Clasificación de flujos<a class="headerlink" href="#clasificacion-de-flujos" title="Link to this heading">#</a></h2>
 <section id="flujo-externo-interno">
-<h3><span class="section-number">1.3.1. </span><strong>Flujo externo/interno.</strong><a class="headerlink" href="#flujo-externo-interno" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.3.1. </span><strong>Flujo externo/interno.</strong><a class="headerlink" href="#flujo-externo-interno" title="Link to this heading">#</a></h3>
 <p>Se define dependiendo si el fluido fluye por un canal confinado (interno), o sobre alrededor de una superficie (externo).</p>
 <a class="reference internal image-reference" href="../_images/external_vs_internal_flow.png"><img alt="../_images/external_vs_internal_flow.png" class="align-center" src="../_images/external_vs_internal_flow.png" style="width: 700px;" /></a>
 </section>
 <section id="flujo-compresible-incompresible">
-<h3><span class="section-number">1.3.2. </span>Flujo compresible/incompresible.<a class="headerlink" href="#flujo-compresible-incompresible" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.3.2. </span>Flujo compresible/incompresible.<a class="headerlink" href="#flujo-compresible-incompresible" title="Link to this heading">#</a></h3>
 <p>Corresponde a la variación de la densidad (masa/volumen) del fluido en un flujo.</p>
 <ul class="simple">
 <li><p>Flujo incompresible: la densidad se mantiene relativamente constante a lo largo del flujo</p></li>
@@ -523,8 +529,8 @@ document.write(`
 <li><p>Flujo en <strong>gases</strong> se aproxima como <strong>incompresible cuando <span class="math notranslate nohighlight">\(\mathrm{Ma} &lt; 0.3\)</span></strong>, donde</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
-    \mathrm{Ma} = \frac{\mathrm{Velocidad~del~flujo}}{\mathrm{Velocidad~del~sonido}},
-    \end{equation*}\]</div>
+\mathrm{Ma} = \frac{\mathrm{Velocidad~del~flujo}}{\mathrm{Velocidad~del~sonido}},
+\end{equation*}\]</div>
 <p>es el <strong>número de Mach.</strong></p>
 </li>
 </ul>
@@ -533,12 +539,12 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="flujo-laminar-turbulento">
-<h3><span class="section-number">1.3.3. </span>Flujo Laminar/Turbulento.<a class="headerlink" href="#flujo-laminar-turbulento" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.3.3. </span>Flujo Laminar/Turbulento.<a class="headerlink" href="#flujo-laminar-turbulento" title="Link to this heading">#</a></h3>
 <p>Corresponde a la clasificación según el <em>grado de orden</em> de un flujo.</p>
 <a class="reference internal image-reference" href="../_images/laminar_vs_turbulent.png"><img alt="../_images/laminar_vs_turbulent.png" class="align-center" src="../_images/laminar_vs_turbulent.png" style="width: 450px;" /></a>
 <ul class="simple">
-<li><p><strong>Flujo laminar</strong> flujo suave y ordenado donde las líneas de flujo adyacentes se mueve en forma de láminas (o capas). Se presenta comúnmente en flujos a bajas velocidades</p></li>
-<li><p><strong>Flujo turbulento</strong> caracterizado por fluctuaciones caóticas. Comúnmente se presenta a velocidades altas.</p></li>
+<li><p><strong>Flujo laminar:</strong> flujo suave y ordenado donde las líneas de flujo adyacentes se mueve en forma de láminas (o capas). Se presenta comúnmente en flujos a bajas velocidades</p></li>
+<li><p><strong>Flujo turbulento:</strong> caracterizado por fluctuaciones caóticas. Comúnmente se presenta a velocidades altas.</p></li>
 </ul>
 <blockquote>
 <div><p>Debido a que el  <strong>flujo laminar</strong> representa un fenómeno ordenado, es posible definir <strong>modelos matemáticos precisos para caracterizar su movimiento</strong>. El <strong>flujo turbulento</strong> en cambio, es comúnmente descrito mediante <strong>modelos empíricos validados por ensayos experimentales</strong>.</p>
@@ -570,7 +576,7 @@ document.write(`
 </div>
 </section>
 <section id="flujo-transiente-estacionario">
-<h3><span class="section-number">1.3.4. </span>Flujo transiente/estacionario<a class="headerlink" href="#flujo-transiente-estacionario" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.3.4. </span>Flujo transiente/estacionario<a class="headerlink" href="#flujo-transiente-estacionario" title="Link to this heading">#</a></h3>
 <p>Un flujo es <strong>estacionario</strong> si <strong>sus propiedades son constantes con el tiempo</strong>. En caso contrario, el flujo es transciente.</p>
 <a class="reference internal image-reference" href="../_images/stationary_flow.png"><img alt="../_images/stationary_flow.png" class="align-center" src="../_images/stationary_flow.png" style="width: 380px;" /></a>
 <blockquote>
@@ -579,7 +585,7 @@ document.write(`
 </section>
 </section>
 <section id="referencias">
-<h2><span class="section-number">1.4. </span>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
 <ul class="simple">
 <li><p>Capitulo 1: Introducción y conceptos básicos</p></li>
@@ -704,7 +710,7 @@ By Francisco V. Ramirez-Cuevas
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
