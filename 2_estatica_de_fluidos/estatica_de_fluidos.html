@@ -18,18 +18,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -142,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -157,7 +159,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -308,10 +310,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -319,7 +321,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -381,15 +383,18 @@ document.write(`
 <section id="presion-en-un-liquido">
 <h3><span class="section-number">2.1.1. </span>Presión en un líquido<a class="headerlink" href="#presion-en-un-liquido" title="Link to this heading">#</a></h3>
 <p>Analicemos el problema de uno y dos cuerpos sólidos en reposo, ambos con densidad <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
-<a class="reference internal image-reference" href="../_images/stationary_solids.png"><img alt="../_images/stationary_solids.png" class="align-center" src="../_images/stationary_solids.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/stationary_solids.png"><img alt="../_images/stationary_solids.png" class="align-center" src="../_images/stationary_solids.png" style="width: 350px;" />
+</a>
 <p>Como ilustra el diagrama de cuerpo libre, el cuerpo sólido de volumen <span class="math notranslate nohighlight">\(V\)</span> está sugeto a fuerzas iguales y contrarias, equivalentes al peso del mismo, <span class="math notranslate nohighlight">\(\rho V g\)</span>.</p>
 <p>En el caso de dos sólidos con volúmenes <span class="math notranslate nohighlight">\(V_1\)</span> y <span class="math notranslate nohighlight">\(V_2\)</span>, el de más abajo está sugeto a la fuerza por su propio peso y el peso del cuerpo sobre el mismo. La fuerza resultante en el cuerpo de abajo es, <span class="math notranslate nohighlight">\(\rho V_1g + \rho V_2g\)</span></p>
 <p>La situación es similar para un líquido contenido en un estanque. Es decir, un elemento diferencial a una distancia <span class="math notranslate nohighlight">\(h\)</span> de la superficie libre está sujeto a una fuerza equivalente a la columna de fluido sobre él.</p>
-<a class="reference internal image-reference" href="../_images/hydrostatic_presure.png"><img alt="../_images/hydrostatic_presure.png" class="align-center" src="../_images/hydrostatic_presure.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/hydrostatic_presure.png"><img alt="../_images/hydrostatic_presure.png" class="align-center" src="../_images/hydrostatic_presure.png" style="width: 350px;" />
+</a>
 <p>Si asumimos que el área diferencial es <span class="math notranslate nohighlight">\(dA\)</span> y la densidad del líquido <span class="math notranslate nohighlight">\(\rho\)</span>, la fuerza resultante es: <span class="math notranslate nohighlight">\(\rho g h dA\)</span>.</p>
 <p>Luego la <strong>presión estática</strong>, <strong>definida como la fuerza por unidad de área</strong>, es <span class="math notranslate nohighlight">\(P = \rho g h\)</span>.</p>
 <p>Debido a que el líquido es un elemento deformable e incompresible, la presión estática actúa sobre todas las caras del elemento diferencial.</p>
-<a class="reference internal image-reference" href="../_images/pressure_point.png"><img alt="../_images/pressure_point.png" class="align-center" src="../_images/pressure_point.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/pressure_point.png"><img alt="../_images/pressure_point.png" class="align-center" src="../_images/pressure_point.png" style="width: 300px;" />
+</a>
 <p>En general, la presión en un punto es igual en todas las direcciones. Esto se conoce como el <em><strong>principio de Pascal</strong></em></p>
 </section>
 <section id="unidades-de-medida-de-la-presion">
@@ -414,25 +419,29 @@ document.write(`
 <section id="presion-atmosferica">
 <h3><span class="section-number">2.1.3. </span>Presión atmosférica<a class="headerlink" href="#presion-atmosferica" title="Link to this heading">#</a></h3>
 <p>De igual forma, los gases atmosféricos, atraídos por la fuerza de gravedad, generan una presión sobre todos los cuerpos en la tierra.</p>
-<a class="reference internal image-reference" href="../_images/atmospheric_presure.png"><img alt="../_images/atmospheric_presure.png" class="align-center" src="../_images/atmospheric_presure.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/atmospheric_presure.png"><img alt="../_images/atmospheric_presure.png" class="align-center" src="../_images/atmospheric_presure.png" style="width: 400px;" />
+</a>
 <p><strong>La presión atmosférica</strong>, así, es el resultado de la columna de gases atmosférico sobre una superficie.</p>
 <p><strong>La presión absoluta (<span class="math notranslate nohighlight">\(P_\mathrm{abs}\)</span>)</strong> en un elemento diferencial de fluido en un estanque es, así:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd28560f-e8fa-49e7-a901-4f67b7db8fe7">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-bd28560f-e8fa-49e7-a901-4f67b7db8fe7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7bbda202-215f-419a-bf37-98d8bdfb2e27">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-7bbda202-215f-419a-bf37-98d8bdfb2e27" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{abs} = P_\mathrm{atm} + \rho gh
 \end{equation}\]</div>
 <p>La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en logitudes de escala de <span class="math notranslate nohighlight">\(1000~\mathrm{m}\)</span>, debido a que la densidad de los gases atmosféricos es mucho menor que los líquidos.</p>
-<a class="reference internal image-reference" href="../_images/atmospheric_pressure_altitude.png"><img alt="../_images/atmospheric_pressure_altitude.png" class="align-center" src="../_images/atmospheric_pressure_altitude.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/atmospheric_pressure_altitude.png"><img alt="../_images/atmospheric_pressure_altitude.png" class="align-center" src="../_images/atmospheric_pressure_altitude.png" style="width: 400px;" />
+</a>
 <p>En la figura, <span class="math notranslate nohighlight">\(P_{\mathrm{O}_2}\)</span>, es la <em>presión parcial de oxígeno</em> (no es relevante para el curso).</p>
 <p>Debido a la caída de la presión con la altura, la densidad del aire disminuye y la cantidad de oxígeno por <span class="math notranslate nohighlight">\(\mathrm{m}^3\)</span> es menor.</p>
 <p><strong>A 25 °C al nivel del mar, la presión atmosférica es <span class="math notranslate nohighlight">\(1~\mathrm{atm} = 101.325~\mathrm{kPa}\)</span>.</strong></p>
 <p>En resumen, <strong>la presión hidroestática en un punto depende de la columna de fluido sobre él y, por lo tanto, cambia sólamente con la profundidad</strong>.</p>
-<a class="reference internal image-reference" href="../_images/equal_hydrostatic_presure.png"><img alt="../_images/equal_hydrostatic_presure.png" class="align-center" src="../_images/equal_hydrostatic_presure.png" style="width: 850px;" /></a>
+<a class="reference internal image-reference" href="../_images/equal_hydrostatic_presure.png"><img alt="../_images/equal_hydrostatic_presure.png" class="align-center" src="../_images/equal_hydrostatic_presure.png" style="width: 850px;" />
+</a>
 <blockquote>
 <div><p>Notar que <strong>la presión en dos fluidos distintos a la misma profundidad no es la misma</strong>, debido a la diferencia de densidades.</p>
 </div></blockquote>
 <p>A partir del principio de Pascal, podemos explicar el funcionamiento de una gata hidráulica</p>
-<a class="reference internal image-reference" href="../_images/gata_hidraulica.png"><img alt="../_images/gata_hidraulica.png" class="align-center" src="../_images/gata_hidraulica.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/gata_hidraulica.png"><img alt="../_images/gata_hidraulica.png" class="align-center" src="../_images/gata_hidraulica.png" style="width: 350px;" />
+</a>
 <p>En el ejemplo, <span class="math notranslate nohighlight">\(A_1 &lt; A_2\)</span>.</p>
 <p>Considerando que <em><strong>el fluído contenido es incompresible</strong></em>, <span class="math notranslate nohighlight">\(P_1 = P_2 = F_1/A_1 = F_2/A_2\)</span>, donde concluimos que:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -443,7 +452,8 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 <section id="presion-en-gases">
 <h3><span class="section-number">2.1.4. </span>Presión en gases<a class="headerlink" href="#presion-en-gases" title="Link to this heading">#</a></h3>
 <p>Los gases se expanden constantemente. Así, la presión en un tanque cerrado es igual en todas las direcciones.</p>
-<a class="reference internal image-reference" href="../_images/presure_gass.jpg"><img alt="../_images/presure_gass.jpg" class="align-center" src="../_images/presure_gass.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/presure_gass.jpg"><img alt="../_images/presure_gass.jpg" class="align-center" src="../_images/presure_gass.jpg" style="width: 600px;" />
+</a>
 <p>En la figura de la <strong>izquierda</strong>, el líquido está en un contenedor vacío. Debido a que el exterior también es vacío, la columna de líquido en el tubo tiene la misma altura.</p>
 <p>En la <strong>derecha</strong>, el gas producto de la evaporación del líquido genera una presión igual en todas las direcciones.</p>
 <p>La presión absoluta ejercida por el gas, está dada por la diferencia de altura en el tubo, <span class="math notranslate nohighlight">\(P_\mathrm{abs} = \rho_\mathrm{tubo} h g\)</span>, donde <span class="math notranslate nohighlight">\(\rho_\mathrm{tubo}\)</span> es la densidad del líquido en el tubo (<span class="math notranslate nohighlight">\(P_\mathrm{atm} = 0\)</span>, en este caso).</p>
@@ -451,15 +461,15 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 <section id="instrumentos-para-medir-la-presion">
 <h3><span class="section-number">2.1.5. </span>Instrumentos para medir la presión<a class="headerlink" href="#instrumentos-para-medir-la-presion" title="Link to this heading">#</a></h3>
 <p>Llamamos <em><strong>presión manométrica (<span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span>), a la diferencia entre la presión absoluta y la presión atmosférica</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48bf33d5-c038-4a06-a524-6340b664d3f8">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-48bf33d5-c038-4a06-a524-6340b664d3f8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c9280f2c-5ced-4fca-9f4e-7646116c0e00">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-c9280f2c-5ced-4fca-9f4e-7646116c0e00" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{man} = P_\mathrm{abs} - P_\mathrm{atm}
 \end{equation}\]</div>
 <p>El instrumento para medir <span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span> es el <strong>manómetro</strong>
 <a class="reference internal" href="../_images/manometer.png"><img alt="../_images/manometer.png" class="align-center" src="../_images/manometer.png" style="width: 850px;" /></a></p>
 <p>Llamamos <em><strong>presión vacuométrica o de vacío (<span class="math notranslate nohighlight">\(P_\mathrm{vac}\)</span>), a la diferencia entre la presión atmosférica y la absoluta</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a16a16a4-6928-4616-bcf6-de1d41b57b34">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-a16a16a4-6928-4616-bcf6-de1d41b57b34" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b7f0bd20-305e-4221-90a1-bf7caf8e9c28">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-b7f0bd20-305e-4221-90a1-bf7caf8e9c28" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 \end{equation}\]</div>
 <p>El instrumento de medida se llama <strong>vacuómetro</strong>.
@@ -467,7 +477,8 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 <p>Por lo general, la presión de vacío se indica con un valor negativo, para mejor interpretación, es decir <span class="math notranslate nohighlight">\(P_\mathrm{vac} = P_\mathrm{abs} - P_\mathrm{atm}\)</span>.</p>
 <p>El término <em><strong>presión barómetrica es equivalente a la presión atmosférica (<span class="math notranslate nohighlight">\(P_\mathrm{atm}\)</span>)</strong></em>.</p>
 <p>Comúnmente, se mide en <em>milimetros de Mercurio</em>, <span class="math notranslate nohighlight">\(\mathrm{mmHg}\)</span>, o <em>hectapascales</em>, <span class="math notranslate nohighlight">\(\mathrm{hPa}\)</span>. El instrumento de medida es el <strong>barómetro</strong>.</p>
-<a class="reference internal image-reference" href="../_images/barometer.png"><img alt="../_images/barometer.png" class="align-center" src="../_images/barometer.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/barometer.png"><img alt="../_images/barometer.png" class="align-center" src="../_images/barometer.png" style="width: 750px;" />
+</a>
 <p>La conversión de unidades es <span class="math notranslate nohighlight">\(760~\mathrm{mmHg} = 1013.2~\mathrm{hPa} = 1~\mathrm{atm}\)</span></p>
 <p>La siguiente figura ilustra todas las presiones
 <a class="reference internal" href="../_images/all_pressures.png"><img alt="../_images/all_pressures.png" class="align-center" src="../_images/all_pressures.png" style="width: 750px;" /></a></p>
@@ -478,12 +489,13 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 <section id="formulas-generales-para-una-superficie">
 <h3><span class="section-number">2.2.1. </span>Fórmulas generales para una superficie<a class="headerlink" href="#formulas-generales-para-una-superficie" title="Link to this heading">#</a></h3>
 <p>El principio de Pascal nos permite determinar la <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>) sobre una cara de una superficie plana de área <span class="math notranslate nohighlight">\(A\)</span>:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc971a0d-144e-45b7-8642-8a2723a09003">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-fc971a0d-144e-45b7-8642-8a2723a09003" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-585ec016-df81-4ba7-9406-0274e767f598">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-585ec016-df81-4ba7-9406-0274e767f598" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_R = (P_0 + \rho g h_C)A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_C = y_C\sin\theta\)</span> es la <strong>distancia vertical del centroide de la superfice (<span class="math notranslate nohighlight">\(y_C\)</span>) al nivel libre del líquido,</strong> y <strong><span class="math notranslate nohighlight">\(P_0\)</span> es la presión absoluta sobre el líquido</strong> (comúnmente, presión atmosférica).</p>
-<a class="reference internal image-reference" href="../_images/force_irregular_plate.png"><img alt="../_images/force_irregular_plate.png" class="align-center" src="../_images/force_irregular_plate.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/force_irregular_plate.png"><img alt="../_images/force_irregular_plate.png" class="align-center" src="../_images/force_irregular_plate.png" style="width: 800px;" />
+</a>
 <p>Esta fuerza resultante no actúa, necesariamente, en el centroide de la superficie. Para determinar el punto de acción, debemos analizar el torque resultante:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -491,25 +503,29 @@ M_R = \int F(y)ydA = F_R y_p,
 \end{equation*}\]</div>
 <p>donde <strong><span class="math notranslate nohighlight">\(y_p\)</span> es la línea de acción</strong> de la fuerza resultante.</p>
 <p>La línea de acción, medida desde la superficie libre, está dada por la relación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01deca8c-1f85-4b5e-a4c6-74cfca044b46">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-01deca8c-1f85-4b5e-a4c6-74cfca044b46" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0e2aeae5-a515-4243-97cb-c3551e2072c2">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-0e2aeae5-a515-4243-97cb-c3551e2072c2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_p = y_C + \frac{\rho g\sin\theta I_{xx,C}}{F_R}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(I_{xx,C}\)</span> es el <em>segundo momento de área respecto al eje <span class="math notranslate nohighlight">\(x\)</span> que para por el centroide de la superficie</em>.</p>
-<a class="reference internal image-reference" href="../_images/yforce_irregular_plate.png"><img alt="../_images/yforce_irregular_plate.png" class="align-center" src="../_images/yforce_irregular_plate.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/yforce_irregular_plate.png"><img alt="../_images/yforce_irregular_plate.png" class="align-center" src="../_images/yforce_irregular_plate.png" style="width: 700px;" />
+</a>
 <p>Las fórmulas de <span class="math notranslate nohighlight">\(I_{xx,C}\)</span> depende de la geometría de la superficie.</p>
-<a class="reference internal image-reference" href="../_images/momento_intercia_xx.png"><img alt="../_images/momento_intercia_xx.png" class="align-center" src="../_images/momento_intercia_xx.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/momento_intercia_xx.png"><img alt="../_images/momento_intercia_xx.png" class="align-center" src="../_images/momento_intercia_xx.png" style="width: 700px;" />
+</a>
 </section>
 <section id="caso-superficicies-rectangulares">
 <h3><span class="section-number">2.2.2. </span>Caso superficicies rectangulares<a class="headerlink" href="#caso-superficicies-rectangulares" title="Link to this heading">#</a></h3>
 <p>En el caso de <strong>superficies rectangulares</strong>, <em>la distribución de presiones forma un trapecio rectángulo de sección cuadrada</em>.</p>
-<a class="reference internal image-reference" href="../_images/presiones_placa_cuadrada.png"><img alt="../_images/presiones_placa_cuadrada.png" class="align-center" src="../_images/presiones_placa_cuadrada.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/presiones_placa_cuadrada.png"><img alt="../_images/presiones_placa_cuadrada.png" class="align-center" src="../_images/presiones_placa_cuadrada.png" style="width: 800px;" />
+</a>
 <p>Las fórmulas de <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>), así, corresponde al área del trapecio</strong>. Por el contrario, <strong>la línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong> <em>no necesariamente coincide con el centroide del trapecio.</em> Está dada por la fórmula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40075c1b-0934-48ff-82b5-886eb46a0fc6">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-40075c1b-0934-48ff-82b5-886eb46a0fc6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b02a35af-5079-4b8d-ae01-559678ceeb1d">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-b02a35af-5079-4b8d-ae01-559678ceeb1d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_P = s+\frac{b}{2} + \frac{\rho g \sin \theta}{F_R}\frac{ab^3}{12}
 \end{equation}\]</div>
-<a class="reference internal image-reference" href="../_images/force_rectangular_plate.png"><img alt="../_images/force_rectangular_plate.png" class="align-center" src="../_images/force_rectangular_plate.png" style="width: 850px;" /></a>
+<a class="reference internal image-reference" href="../_images/force_rectangular_plate.png"><img alt="../_images/force_rectangular_plate.png" class="align-center" src="../_images/force_rectangular_plate.png" style="width: 850px;" />
+</a>
 </section>
 <section id="fuerza-resultante-en-compuertas">
 <h3><span class="section-number">2.2.3. </span>Fuerza resultante en compuertas<a class="headerlink" href="#fuerza-resultante-en-compuertas" title="Link to this heading">#</a></h3>
@@ -523,7 +539,8 @@ F_R = \rho g h_C A
 <section id="flotacion">
 <h2><span class="section-number">2.3. </span>Flotación<a class="headerlink" href="#flotacion" title="Link to this heading">#</a></h2>
 <p>Analicemos la fuerza resultante que actúa sobre una placa horizontal sumergida en un fluido de densidad <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
-<a class="reference internal image-reference" href="../_images/Buoyancy_derivation.png"><img alt="../_images/Buoyancy_derivation.png" class="align-center" src="../_images/Buoyancy_derivation.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/Buoyancy_derivation.png"><img alt="../_images/Buoyancy_derivation.png" class="align-center" src="../_images/Buoyancy_derivation.png" style="width: 400px;" />
+</a>
 <p>La fuerza resultante en los bordes es 0 debido al equilibro de fuerzas.</p>
 <p>Por otro lado, el balance entre la fuerza inferior y superior es:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -535,9 +552,11 @@ F_B &amp;= F_\mathrm{inf} - F_\mathrm{sup} \\
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(V\)</span> es el volúmen de la placa.</p>
 <p>El resultado es similar en cuerpos de forma arbitraria. Concluimos que <em><strong>la fuerza de flotación que actúa sobre un cuerpo sumergido, es igual al peso del volumen de líquido desplazado por el cuerpo</strong></em></p>
-<a class="reference internal image-reference" href="../_images/Buoyancy_principle.png"><img alt="../_images/Buoyancy_principle.png" class="align-center" src="../_images/Buoyancy_principle.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/Buoyancy_principle.png"><img alt="../_images/Buoyancy_principle.png" class="align-center" src="../_images/Buoyancy_principle.png" style="width: 400px;" />
+</a>
 <p>La posición de un cuerpo, así, depende de la relación entre la densidad del cuerpo <span class="math notranslate nohighlight">\(\rho\)</span> y la densidad del fluido <span class="math notranslate nohighlight">\(\rho_f\)</span></p>
-<a class="reference internal image-reference" href="../_images/Buoyancy_example.png"><img alt="../_images/Buoyancy_example.png" class="align-center" src="../_images/Buoyancy_example.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/Buoyancy_example.png"><img alt="../_images/Buoyancy_example.png" class="align-center" src="../_images/Buoyancy_example.png" style="width: 350px;" />
+</a>
 </section>
 <section id="referencias">
 <h2><span class="section-number">2.4. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
@@ -680,8 +699,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

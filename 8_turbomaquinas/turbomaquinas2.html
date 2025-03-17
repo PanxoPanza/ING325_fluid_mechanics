@@ -18,18 +18,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -142,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -157,7 +159,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -308,10 +310,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -319,7 +321,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -385,7 +387,8 @@ document.write(`
 <section id="turbinas-de-desplazamiento-positivo">
 <h3><span class="section-number">8.3.1.1. </span>Turbinas de desplazamiento positivo<a class="headerlink" href="#turbinas-de-desplazamiento-positivo" title="Link to this heading">#</a></h3>
 <p>Se utilizan como dispositivos para medir flujo. El ejemplo más conocido es el medidor de agua doméstico, el cual utiliza un <em>disco nutante</em></p>
-<a class="reference internal image-reference" href="../_images/turbina_desplazamiento_positivo.png"><img alt="../_images/turbina_desplazamiento_positivo.png" class="align-center" src="../_images/turbina_desplazamiento_positivo.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/turbina_desplazamiento_positivo.png"><img alt="../_images/turbina_desplazamiento_positivo.png" class="align-center" src="../_images/turbina_desplazamiento_positivo.png" style="width: 700px;" />
+</a>
 </section>
 <section id="turbinas-dinamicas">
 <h3><span class="section-number">8.3.1.2. </span>Turbinas dinámicas<a class="headerlink" href="#turbinas-dinamicas" title="Link to this heading">#</a></h3>
@@ -395,7 +398,8 @@ document.write(`
 <li><p><strong>Turbinas de impulso o acción</strong>: Generan energía a partir del cambio de momentum lineal del fluido</p></li>
 <li><p><strong>Turbinas de reacción:</strong> Generan energía a partir de cambios de presión y velocidad</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/impulse_vs_reaction_turbine.png"><img alt="../_images/impulse_vs_reaction_turbine.png" class="align-center" src="../_images/impulse_vs_reaction_turbine.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/impulse_vs_reaction_turbine.png"><img alt="../_images/impulse_vs_reaction_turbine.png" class="align-center" src="../_images/impulse_vs_reaction_turbine.png" style="width: 700px;" />
+</a>
 <blockquote>
 <div><p>Una turbina de reacción, la dirección del flujo no cambia tan significativamente como en una turbina de impulso</p>
 </div></blockquote>
@@ -405,12 +409,13 @@ document.write(`
 <section id="eficiencia-en-turbinas">
 <h2><span class="section-number">8.3.2. </span>Eficiencia en turbinas<a class="headerlink" href="#eficiencia-en-turbinas" title="Link to this heading">#</a></h2>
 <p>La eficiencia de una turbina está definida por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cc84cef2-7e4a-49ab-9cd9-33a882ab571a">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-cc84cef2-7e4a-49ab-9cd9-33a882ab571a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3fa945f7-de08-4a90-995b-1032b3811a00">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-3fa945f7-de08-4a90-995b-1032b3811a00" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \eta_\mathrm{turbina} = \frac{\dot{W}_\mathrm{bhp}}{\dot{W}_\mathrm{util}}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> es la potencia entregada por el rodete, y <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{util} = \rho g HQ\)</span> es la potencia util disponible por el sistema.</p>
-<a class="reference internal image-reference" href="../_images/turbine_efficiency.png"><img alt="../_images/turbine_efficiency.png" class="align-center" src="../_images/turbine_efficiency.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../_images/turbine_efficiency.png"><img alt="../_images/turbine_efficiency.png" class="align-center" src="../_images/turbine_efficiency.png" style="width: 550px;" />
+</a>
 </section>
 <section id="hidroturbinas">
 <h2><span class="section-number">8.3.3. </span>Hidroturbinas<a class="headerlink" href="#hidroturbinas" title="Link to this heading">#</a></h2>
@@ -418,12 +423,14 @@ document.write(`
 <p>A continuación mencionamos las turbinas más comúnes.</p>
 <section id="turbina-pelton-impulso">
 <h3><span class="section-number">8.3.3.1. </span>Turbina Pelton (impulso)<a class="headerlink" href="#turbina-pelton-impulso" title="Link to this heading">#</a></h3>
-<a class="reference internal image-reference" href="../_images/Pelton_turbine.png"><img alt="../_images/Pelton_turbine.png" class="align-center" src="../_images/Pelton_turbine.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/Pelton_turbine.png"><img alt="../_images/Pelton_turbine.png" class="align-center" src="../_images/Pelton_turbine.png" style="width: 700px;" />
+</a>
 <p>En una turbina Pelton, el chorro a alta velocidad transfiere la energía a los álabes o <em>cangilones</em>. Los cangilones están diseñados para dividir el flujo y cambiar la dirección del flujo lo más cercano a 180°</p>
-<a class="reference internal image-reference" href="../_images/Pelton_turbine_theory.png"><img alt="../_images/Pelton_turbine_theory.png" class="align-center" src="../_images/Pelton_turbine_theory.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/Pelton_turbine_theory.png"><img alt="../_images/Pelton_turbine_theory.png" class="align-center" src="../_images/Pelton_turbine_theory.png" style="width: 700px;" />
+</a>
 <p>Mediante un análisis teorico simple podemos deducir la siguiente fórmula para la potencia del rotor en turbinas Pelton:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-900a51c8-f807-461a-96a6-887c41677edc">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-900a51c8-f807-461a-96a6-887c41677edc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b23a4b2e-dbb8-4997-a795-4494cb0dcafe">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-b23a4b2e-dbb8-4997-a795-4494cb0dcafe" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{bhp} = \rho r\omega Q\left(V_j - r\omega\right)\left(1 - \cos \beta\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(V_j\)</span> es la velocidad del flujo incidente en el rotor, <span class="math notranslate nohighlight">\(\beta\)</span> es el ángulo del borde divisor, <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad de rotación y  <span class="math notranslate nohighlight">\(Q\)</span> es el caudal.</p>
@@ -437,12 +444,14 @@ r\omega = \frac{V_j}{2}
 <section id="turbina-francis-reaccion">
 <h3><span class="section-number">8.3.3.2. </span>Turbina Francis (reacción)<a class="headerlink" href="#turbina-francis-reaccion" title="Link to this heading">#</a></h3>
 <p>Es una turbina de reacción de flujo interno. Su configuración geométrica es similar a una bomba centrífuga, pero con el flujo en dirección contraria.</p>
-<a class="reference internal image-reference" href="../_images/Francis_turbine.png"><img alt="../_images/Francis_turbine.png" class="align-center" src="../_images/Francis_turbine.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Francis_turbine.png"><img alt="../_images/Francis_turbine.png" class="align-center" src="../_images/Francis_turbine.png" style="width: 800px;" />
+</a>
 </section>
 <section id="turbina-kaplan-reaccion">
 <h3><span class="section-number">8.3.3.3. </span>Turbina Kaplan (reacción)<a class="headerlink" href="#turbina-kaplan-reaccion" title="Link to this heading">#</a></h3>
 <p>Es una turbina de reacción de tipo hélice. Su configuración geométrica es similar a un ventilador de flujo axial, pero en sentido opuesto.</p>
-<a class="reference internal image-reference" href="../_images/Kaplan_turbine.png"><img alt="../_images/Kaplan_turbine.png" class="align-center" src="../_images/Kaplan_turbine.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/Kaplan_turbine.png"><img alt="../_images/Kaplan_turbine.png" class="align-center" src="../_images/Kaplan_turbine.png" style="width: 800px;" />
+</a>
 </section>
 <section id="analisis-comparativo">
 <h3><span class="section-number">8.3.3.4. </span>Análisis comparativo<a class="headerlink" href="#analisis-comparativo" title="Link to this heading">#</a></h3>
@@ -483,7 +492,8 @@ r\omega = \frac{V_j}{2}
 <li><p>Turbinas de viento de eje horizontal (HAWT, por sus siglas en ingles)</p></li>
 <li><p>Turbinas de viento de eje vertical (VAWT, por sus siglas en ingles)</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/wind_turbines.png"><img alt="../_images/wind_turbines.png" class="align-center" src="../_images/wind_turbines.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../_images/wind_turbines.png"><img alt="../_images/wind_turbines.png" class="align-center" src="../_images/wind_turbines.png" style="width: 750px;" />
+</a>
 </section>
 <section id="analsis-teorico-de-eficiencia">
 <h3><span class="section-number">8.3.4.3. </span>Análsis teórico de eficiencia<a class="headerlink" href="#analsis-teorico-de-eficiencia" title="Link to this heading">#</a></h3>
@@ -497,45 +507,48 @@ r\omega = \frac{V_j}{2}
 <li><p>Sin vórtices traseros (causan fricción)</p></li>
 </ul>
 <p>Bajo estos supuestos, podemos definir un volúmen de control como el de la figura. El cambio de sección es el resultado de la reducción en la velocidad del viento producida por la transferencia de energía hacia la turbina.</p>
-<a class="reference internal image-reference" href="../_images/wind_turbine_analysis.png"><img alt="../_images/wind_turbine_analysis.png" class="align-center" src="../_images/wind_turbine_analysis.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/wind_turbine_analysis.png"><img alt="../_images/wind_turbine_analysis.png" class="align-center" src="../_images/wind_turbine_analysis.png" style="width: 800px;" />
+</a>
 <p>A partir de un balance de energía en este volúmen de control podemos determinar una expresión para la potencia ideal que entrega la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0f4d7aac-7212-40d3-9ab9-5dee24969123">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-0f4d7aac-7212-40d3-9ab9-5dee24969123" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-24d38b02-c73d-462d-8baa-961f1a8b1368">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-24d38b02-c73d-462d-8baa-961f1a8b1368" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{ideal} = \frac{1}{4}\rho A(V_1^2 - V_2 ^2)(V_1 + V_2)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(A\)</span> es el <strong>área de disco</strong>, definida como el área normal a la dirección del viento barrida por los álabes</p>
-<a class="reference internal image-reference" href="../_images/wind_turbine_disk_area.png"><img alt="../_images/wind_turbine_disk_area.png" class="align-center" src="../_images/wind_turbine_disk_area.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/wind_turbine_disk_area.png"><img alt="../_images/wind_turbine_disk_area.png" class="align-center" src="../_images/wind_turbine_disk_area.png" style="width: 400px;" />
+</a>
 <p>Es común expresar la potencia ideal en función del factor de pérdida friccional de velocidad en el viento:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc42197b-fcdc-4778-a714-fc02fbc02215">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-bc42197b-fcdc-4778-a714-fc02fbc02215" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-13c63d5e-4349-49e8-b6b4-89968b19f029">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-13c63d5e-4349-49e8-b6b4-89968b19f029" title="Permalink to this equation">#</a></span>\[\begin{equation}
 a = \frac{V_1 - V}{V_1}
 \end{equation}\]</div>
 <p>En ese caso la potencia ideal es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d01d2687-7f6e-45c5-8e3d-16fb91c76e89">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-d01d2687-7f6e-45c5-8e3d-16fb91c76e89" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e9a190ed-c14a-471f-ad71-1acfb4d43ddb">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-e9a190ed-c14a-471f-ad71-1acfb4d43ddb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{ideal} = 2\rho AV_1^3~a(1- a)^2
 \end{equation}\]</div>
 <p>Definimos como <strong>coeficiente de potencia (<span class="math notranslate nohighlight">\(C_p\)</span>),</strong> a la fracción de la potencia disponible del viento (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho V_1^3 A\)</span>) extraida por la turbina:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33ac9f37-9277-44d5-9350-08781a368065">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-33ac9f37-9277-44d5-9350-08781a368065" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2064a01b-152f-4a52-802d-fb17ae2e0c9a">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-2064a01b-152f-4a52-802d-fb17ae2e0c9a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_P = \frac{\dot{W}_\mathrm{ideal}}{\frac{1}{2}\rho V_1^3A}
 \end{equation}\]</div>
 <p>en función del factor de pérdida friccional:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10226420-b784-4639-8bb6-08ea0086f29a">
-<span class="eqno">(8.7)<a class="headerlink" href="#equation-10226420-b784-4639-8bb6-08ea0086f29a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b4b0ccae-1255-4380-8aa5-ca5d5bb39cde">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-b4b0ccae-1255-4380-8aa5-ca5d5bb39cde" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_P = 4a (1-a)^2
 \end{equation}\]</div>
 <p>A partir de esta expresión podemos determinar el máximo valor de <span class="math notranslate nohighlight">\(C_P\)</span> como <span class="math notranslate nohighlight">\(dC_P/da = 0\)</span>, donde obtenemos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e409e2d9-9efc-4181-98a3-fc0c111a2890">
-<span class="eqno">(8.8)<a class="headerlink" href="#equation-e409e2d9-9efc-4181-98a3-fc0c111a2890" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0a95fe47-a1d2-45cf-99c9-3e520ff69000">
+<span class="eqno">(8.8)<a class="headerlink" href="#equation-0a95fe47-a1d2-45cf-99c9-3e520ff69000" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_P = \frac{16}{27} = 0.5926
 \end{equation}\]</div>
 <p>El valor se conoce como el <strong>límite de Betz</strong> y define la <em>máxima potencia que puede generar una turnbina</em>.</p>
 <p>En general, el coeficiente de potencia varía en función de la velocidad de rotación <span class="math notranslate nohighlight">\(\omega\)</span>. Así, para cada tipo de turbina, observamos una curva caractarísticas <span class="math notranslate nohighlight">\(C_p\)</span> vs <span class="math notranslate nohighlight">\(\omega r/V_1\)</span>, donde <span class="math notranslate nohighlight">\(r\)</span> es el rádio de la hélice.</p>
-<a class="reference internal image-reference" href="../_images/coeficiente_de_potencia_wind.png"><img alt="../_images/coeficiente_de_potencia_wind.png" class="align-center" src="../_images/coeficiente_de_potencia_wind.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/coeficiente_de_potencia_wind.png"><img alt="../_images/coeficiente_de_potencia_wind.png" class="align-center" src="../_images/coeficiente_de_potencia_wind.png" style="width: 700px;" />
+</a>
 <p>Utilizando las curvas podemos aproximar la potencia en el eje <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span> como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f7f99c39-0d2f-4f5c-b086-413b137c707f">
-<span class="eqno">(8.9)<a class="headerlink" href="#equation-f7f99c39-0d2f-4f5c-b086-413b137c707f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7bd1fd61-ba20-4d56-a732-2c22efdc4d7a">
+<span class="eqno">(8.9)<a class="headerlink" href="#equation-7bd1fd61-ba20-4d56-a732-2c22efdc4d7a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{W}_\mathrm{bhp} = C_P\frac{1}{2}\rho AV_1^3
 \end{equation}\]</div>
 <p>En este caso, podemos utilizar todas las fórmulas anteriores de <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{ideal}\)</span> para <span class="math notranslate nohighlight">\(\dot{W}_\mathrm{bhp}\)</span>.</p>
@@ -686,8 +699,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

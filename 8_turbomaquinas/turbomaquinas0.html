@@ -18,18 +18,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -142,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -157,7 +159,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -308,10 +310,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -319,7 +321,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -368,13 +370,15 @@ document.write(`
 <section id="introduccion">
 <h2><span class="section-number">8.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
 <p>Definimos como <strong>bomba</strong> a cualquier máquina hidráulica que <em>entrega</em> energía a un fluido. Por otro lado, definimos como <strong>turbina</strong> a las máquinas que <em>extraen</em> energía de un fluido.</p>
-<a class="reference internal image-reference" href="../_images/bombas_vs_turbinas.png"><img alt="../_images/bombas_vs_turbinas.png" class="align-center" src="../_images/bombas_vs_turbinas.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/bombas_vs_turbinas.png"><img alt="../_images/bombas_vs_turbinas.png" class="align-center" src="../_images/bombas_vs_turbinas.png" style="width: 800px;" />
+</a>
 <p>En el caso de interacción con líquidos:</p>
 <ul class="simple">
 <li><p><strong>La energía suministrada por bombas se manifiesta como un aumento de presión del fluido</strong>. La velocidad del fluido no aumenta, necesariamente.</p></li>
 <li><p><strong>La energía extraida por turbinas se manifiesta como una disminución de presión del fluido</strong>. La velocidad del fluido no aumenta, necesariamente.</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/hydraulic_pump_turbine.png"><img alt="../_images/hydraulic_pump_turbine.png" class="align-center" src="../_images/hydraulic_pump_turbine.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/hydraulic_pump_turbine.png"><img alt="../_images/hydraulic_pump_turbine.png" class="align-center" src="../_images/hydraulic_pump_turbine.png" style="width: 800px;" />
+</a>
 <section id="maquinas-hidraulicas-para-gases">
 <h3><span class="section-number">8.1.1. </span>Máquinas hidráulicas para gases<a class="headerlink" href="#maquinas-hidraulicas-para-gases" title="Link to this heading">#</a></h3>
 <p>En el caso de gases, la clasificación del tipo de bomba depende de la función:</p>
@@ -382,9 +386,11 @@ document.write(`
 <li><p><strong>Ventilador</strong> diseñado para aumentar la velocidad (<span class="math notranslate nohighlight">\(V_\mathrm{sale}\gg V_\mathrm{entra}\)</span>), con un aumento mínimo en la presión (<span class="math notranslate nohighlight">\(\Delta P\)</span>, bajo).</p></li>
 <li><p><strong>Compresor</strong> diseñado para aumentar la presión (<span class="math notranslate nohighlight">\(\Delta P\)</span>, alto), con bajo aumento en la velocidad (<span class="math notranslate nohighlight">\(V_\mathrm{sale}\sim V_\mathrm{entra}\)</span>).</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/gas_pump.png"><img alt="../_images/gas_pump.png" class="align-center" src="../_images/gas_pump.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/gas_pump.png"><img alt="../_images/gas_pump.png" class="align-center" src="../_images/gas_pump.png" style="width: 800px;" />
+</a>
 <p>En el caso de turbinas, la transferencia de energía generalmente se manifiesta en una disminución de la velocidad o presión dependiendo del tipo. Por ejemplo, en el caso de turbinas abiertas, la velocidad cambia y la presión se mantiene apróximadamente constante.</p>
-<a class="reference internal image-reference" href="../_images/wind_turbine.png"><img alt="../_images/wind_turbine.png" class="align-center" src="../_images/wind_turbine.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/wind_turbine.png"><img alt="../_images/wind_turbine.png" class="align-center" src="../_images/wind_turbine.png" style="width: 800px;" />
+</a>
 <p>En turbinas cerradas, los gases experimentan cambios en ambos, presión y velocidad.</p>
 </section>
 <section id="clasificacion-de-maquinas-hidraulicas">
@@ -392,7 +398,8 @@ document.write(`
 <p>Existen dos grandes tipos de máquinas hidráulicas</p>
 <p><strong>Máquinas de desplazamiento positivo</strong>
 El fluido se dirige hacia adentro de un <em>volúmen cerrado deformable o con fronteras móviles</em>, que permite la succión o impulsión del fluído.</p>
-<a class="reference internal image-reference" href="../_images/desplazamiento_positivo.png"><img alt="../_images/desplazamiento_positivo.png" class="align-center" src="../_images/desplazamiento_positivo.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/desplazamiento_positivo.png"><img alt="../_images/desplazamiento_positivo.png" class="align-center" src="../_images/desplazamiento_positivo.png" style="width: 800px;" />
+</a>
 <p><strong>Máquinas dinámicas</strong> En este caso, el volúmen no es cerrrado. Los álabes rotatorios suministran energía al fluido o la extraen de él.</p>
 <p>Ejemplos de máquinas dinámicas son las bombas centrífugas y las turbinas hidráulicas.</p>
 <blockquote>
@@ -521,8 +528,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
