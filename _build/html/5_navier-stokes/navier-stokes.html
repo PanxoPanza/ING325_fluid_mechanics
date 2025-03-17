@@ -18,18 +18,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -142,6 +142,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -157,7 +159,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -308,10 +310,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -319,7 +321,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -397,7 +399,8 @@ document.write(`
 <section id="tensor-de-tasa-de-deformacion-bar-varepsilon">
 <h3><span class="section-number">5.2.1. </span>Tensor de tasa de deformación (<span class="math notranslate nohighlight">\(\bar{\varepsilon}\)</span>)<a class="headerlink" href="#tensor-de-tasa-de-deformacion-bar-varepsilon" title="Link to this heading">#</a></h3>
 <p>Un elemento fluido puede ser sometido a dos tipos de razones de deformación:</p>
-<a class="reference internal image-reference" href="../_images/movimiento_fluido.png"><img alt="../_images/movimiento_fluido.png" class="align-center" src="../_images/movimiento_fluido.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/movimiento_fluido.png"><img alt="../_images/movimiento_fluido.png" class="align-center" src="../_images/movimiento_fluido.png" style="width: 350px;" />
+</a>
 <p>En tres dimensiones, podemos representar todos las razones de deformación usando el <strong>tensor de la tasa de deformación</strong>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -423,16 +426,16 @@ document.write(`
 \end{equation*}\]</div>
 <p>Los <strong>elementos de la diagonal</strong> (<span class="math notranslate nohighlight">\(\varepsilon_{xx}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{yy}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_{zz}\)</span>) representan la <strong>deformación por esfuerzos normales</strong>. El <strong>resto de los elementos</strong>, corresponde a la <strong>deformación por esfuerzos cortantes</strong>.</p>
 <p>Usando el operador <span class="math notranslate nohighlight">\(\nabla\)</span>, el tensor de deformación se puede representar como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa5ed249-0bae-4b8a-951e-91383fb39aaa">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-fa5ed249-0bae-4b8a-951e-91383fb39aaa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6b02ec48-d4db-424a-84c2-6d1e97d556ac">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-6b02ec48-d4db-424a-84c2-6d1e97d556ac" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
 \end{equation}\]</div>
 </section>
 <section id="tensor-de-esfuerzos">
 <h3><span class="section-number">5.2.2. </span>Tensor de esfuerzos<a class="headerlink" href="#tensor-de-esfuerzos" title="Link to this heading">#</a></h3>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8229379e-a975-4ab4-a8ae-477d949b90b1">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-8229379e-a975-4ab4-a8ae-477d949b90b1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3599cedd-1d3f-414a-b0ab-e166a7754385">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-3599cedd-1d3f-414a-b0ab-e166a7754385" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>done <span class="math notranslate nohighlight">\(\mu\)</span> es la viscosidad dinámica del fluido</p>
@@ -453,8 +456,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6a792e16-2e70-472e-8d64-6be40a6e906c">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-6a792e16-2e70-472e-8d64-6be40a6e906c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-59a84423-62aa-45ae-8d4e-fb99f532876a">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-59a84423-62aa-45ae-8d4e-fb99f532876a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Para este caso particular, tenemos entonces:</p>
@@ -463,8 +466,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\nabla^2\vec{V}
 \end{align*}\]</div>
 <p>Reemplazando este resultado en la ecuación de Cauchy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8322088f-9890-4a95-9b24-3f07d3b31d30">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-8322088f-9890-4a95-9b24-3f07d3b31d30" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-21453c83-bace-4a33-b791-9ebee99a6526">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-21453c83-bace-4a33-b791-9ebee99a6526" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuacion de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -535,8 +538,8 @@ document.write(`
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f4d22dc-2541-46fc-9fe5-ca0ff0aa0dbb">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-7f4d22dc-2541-46fc-9fe5-ca0ff0aa0dbb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dff9c959-3f9c-4b4f-9c25-96e65939f47e">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-dff9c959-3f9c-4b4f-9c25-96e65939f47e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -620,7 +623,8 @@ document.write(`
 <h4><span class="section-number">5.4.1.3. </span>Flujo desarrollado<a class="headerlink" href="#flujo-desarrollado" title="Link to this heading">#</a></h4>
 <p>Este supuesto se aplica para <strong>despreciar la tasa de cambio en la dirección paralela a alguna de las componentes de velocidad</strong>.</p>
 <p>El concepto nace del flujo en tuberías, donde la tasa de cambio de la componente longitudinal, <span class="math notranslate nohighlight">\(\frac{\partial u_z}{\partial z} \approx 0\)</span> despues de la región de desarrollo del flujo.</p>
-<a class="reference internal image-reference" href="../_images/condicion_flujo_desarrollado.png"><img alt="../_images/condicion_flujo_desarrollado.png" class="align-center" src="../_images/condicion_flujo_desarrollado.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/condicion_flujo_desarrollado.png"><img alt="../_images/condicion_flujo_desarrollado.png" class="align-center" src="../_images/condicion_flujo_desarrollado.png" style="width: 800px;" />
+</a>
 <p>Sin embargo, se puede aplicar a otros problemas como veremos más adelante.</p>
 </section>
 </section>
@@ -628,24 +632,26 @@ document.write(`
 <h3><span class="section-number">5.4.2. </span>Condiciones de borde típicas<a class="headerlink" href="#condiciones-de-borde-tipicas" title="Link to this heading">#</a></h3>
 <p>Una vez establecidos los supuestos, es necesario implementar las condiciones de borde necesarias para resolver el problema.</p>
 <p>Las más comunes son.</p>
-<a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/condicion_de_frontera.png"><img alt="../_images/condicion_de_frontera.png" class="align-center" src="../_images/condicion_de_frontera.png" style="width: 800px;" />
+</a>
 <p>La <strong>condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil</strong>.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-91f8d1bc-cdaf-4667-8158-a38c06f0a769">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-91f8d1bc-cdaf-4667-8158-a38c06f0a769" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0c4dc41c-585d-4435-a739-e478d1183a76">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-0c4dc41c-585d-4435-a739-e478d1183a76" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), obtenemos la <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-56d46676-8277-4ebd-81cf-b805c3be882e">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-56d46676-8277-4ebd-81cf-b805c3be882e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-58bca0fc-f382-4c20-a75a-08eb51009297">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-58bca0fc-f382-4c20-a75a-08eb51009297" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
 <section id="flujos-caracteristicos">
 <h3><span class="section-number">5.4.3. </span>Flujos característicos<a class="headerlink" href="#flujos-caracteristicos" title="Link to this heading">#</a></h3>
 <p>Existen 3 problemas característicos que pueden ser resueltos analiticamente a partir de las ecuaciones de continuidad y Navier-Stokes.</p>
-<a class="reference internal image-reference" href="../_images/tipos_de_flujo.png"><img alt="../_images/tipos_de_flujo.png" class="align-center" src="../_images/tipos_de_flujo.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../_images/tipos_de_flujo.png"><img alt="../_images/tipos_de_flujo.png" class="align-center" src="../_images/tipos_de_flujo.png" style="width: 800px;" />
+</a>
 <p>La solución a estos problemas se verá en la sesión de cátedra.</p>
 </section>
 </section>
@@ -799,8 +805,8 @@ By Francisco V. Ramirez-Cuevas
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
