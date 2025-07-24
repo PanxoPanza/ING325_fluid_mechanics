@@ -431,10 +431,10 @@ document.write(`
 </ul>
 <section id="gravedad-especifica-mathrm-ge">
 <h4>Gravedad específica (<span class="math notranslate nohighlight">\(\mathrm{GE}\)</span>).<a class="headerlink" href="#gravedad-especifica-mathrm-ge" title="Link to this heading">#</a></h4>
-<p>Se define como <em>la razón de la densidad de una sustancia a la densidad de una sustancia estándar, a una temperatura específica</em> (por lo general, agua a <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
+<p>Se define como <em>la razón entre la densidad de una sustancia y la densidad del agua a una temperatura específica</em> (comúnmente, <span class="math notranslate nohighlight">\(4°\mathrm{C}\)</span>, tal que <span class="math notranslate nohighlight">\(\rho_{\mathrm{H}_2\mathrm{O}} = 1000~\mathrm{kg/m}^3\)</span>).</p>
 <p>Es decir:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0d8f8cf-5360-4aca-bed4-1c87ee80ac2d">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-b0d8f8cf-5360-4aca-bed4-1c87ee80ac2d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1aebd065-7d75-4aa1-91c4-67f3c932265f">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-1aebd065-7d75-4aa1-91c4-67f3c932265f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{GE} = \frac{\rho}{\rho_{\mathrm{H}_2\mathrm{O}}}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/specific_gravity.png"><img alt="../_images/specific_gravity.png" class="align-center" src="../_images/specific_gravity.png" style="width: 350px;" />
@@ -443,8 +443,8 @@ document.write(`
 <section id="peso-especifico-gamma">
 <h4>Peso específico (<span class="math notranslate nohighlight">\(\gamma\)</span>)<a class="headerlink" href="#peso-especifico-gamma" title="Link to this heading">#</a></h4>
 <p>Se define como el <em>peso por unidad de volúmen</em>, y se expresa como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f656eacd-8b23-4f69-b365-ead0ef57f394">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-f656eacd-8b23-4f69-b365-ead0ef57f394" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-20356e41-2753-4b16-ac61-206228b49652">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-20356e41-2753-4b16-ac61-206228b49652" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \gamma = \rho g,\quad\quad\left(\frac{\mathrm{N}}{m^3}\right)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(g\)</span> es la aceleración gravitacional.</p>
@@ -461,13 +461,13 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/deformation_rate.png"><img alt="../_images/deformation_rate.png" class="align-center" src="../_images/deformation_rate.png" style="width: 300px;" />
 </a>
 <p>En algunos fluidos (como el agua, aire y aceites), la tasa de deformación es proporcional al esfuerzo cortante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf28684d-b818-435f-9aab-e45af7f434e9">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-cf28684d-b818-435f-9aab-e45af7f434e9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cbf17929-aaf7-43d5-9448-f21194c539a0">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-cbf17929-aaf7-43d5-9448-f21194c539a0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau = \mu\frac{du}{dy},\quad\quad\left(\frac{\mathrm{N}}{\mathrm{m}^2}\right)
 \end{equation}\]</div>
 <p>y se denominan <strong>fluidos newtonianos.</strong></p>
 <p>En esta relación <span class="math notranslate nohighlight">\(\mu\)</span> es la <strong>viscocidad dinámica</strong>. Comúnmente, se mide en <span class="math notranslate nohighlight">\(\mathrm{kg/m}\cdot\mathrm{s}\)</span>,  <span class="math notranslate nohighlight">\(\mathrm{Pa}\cdot\mathrm{s}\)</span>, o <em>centipose</em> <span class="math notranslate nohighlight">\(\mathrm{cP} = 0.001~\mathrm{kg/m}\cdot\mathrm{s}\)</span>.</p>
-<p>En un fluido newtoniano, la gráfica esfuerzo de corte vs taza de deformación sigue una línea recta cuya pendiente está defnida por <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+<p>En un fluido newtoniano, la gráfica esfuerzo de corte vs tasa de deformación sigue una línea recta cuya pendiente está defnida por <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/newtonian_fluids.png"><img alt="../_images/newtonian_fluids.png" class="align-center" src="../_images/newtonian_fluids.png" style="width: 700px;" />
 </a>
 <p>Los fluidos que no siguen esta relación lineal se conocen como <strong>no newtonianos.</strong></p>
