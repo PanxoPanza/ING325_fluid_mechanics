@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
@@ -53,7 +53,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -397,8 +397,8 @@ F_L &amp;= \int_A (-P\sin\theta - \tau_w\cos\theta)dA
 <p>Las ecuaciones permiten entender conceptualmente el efecto de la presión (<span class="math notranslate nohighlight">\(P\)</span>) y esfuerzo cortante (<span class="math notranslate nohighlight">\(\tau_w\)</span>) en el arrastre y sustentación.</p>
 <p>Estas ecuaciones, sin embargo, tienen poca aplicación práctica debido a la dificultad de predecir la distribución de <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(\tau_w\)</span>.</p>
 <p>En la práctica se utilizan coeficientes adimencionales, los cuales representan los efectos de arrastre y sustentación de forma generalizada considerando una combinación de parámetros.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ffc50338-d2b0-43ed-a96e-e3d63d1040bf">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-ffc50338-d2b0-43ed-a96e-e3d63d1040bf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6d283515-76d6-4d49-98ab-cddf94f1f55b">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-6d283515-76d6-4d49-98ab-cddf94f1f55b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_D &amp;= \frac{F_D}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~de~arrastre}
 \\
@@ -419,8 +419,8 @@ C_L &amp;= \frac{F_L}{\frac{1}{2}\rho V^2 A}\quad\quad\quad \mathrm{Coeficiente~
 <h2><span class="section-number">7.2. </span>Fuerzas de arrastre<a class="headerlink" href="#fuerzas-de-arrastre" title="Link to this heading">#</a></h2>
 <p>Como mencionamos anteriormente, el arrastre en cuerpos se debe a los efectos de presiones y tensiones de corte en la superficie de un cuerpo.</p>
 <p>Así, podemos separar el coeficiente de arrastre en dos componentes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ee3ad7f-0ef8-454a-8c0d-fb723525a311">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-8ee3ad7f-0ef8-454a-8c0d-fb723525a311" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e7d0a5d4-cc64-4e07-9904-581593d03193">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-e7d0a5d4-cc64-4e07-9904-581593d03193" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 \end{equation}\]</div>
 <p>donde:</p>
@@ -455,8 +455,8 @@ C_D = C_{D,~\mathrm{fricción}} + C_{D,~\mathrm{presión}}
 <a class="reference internal image-reference" href="../_images/flat_plate_laminar_turbulent.png"><img alt="../_images/flat_plate_laminar_turbulent.png" class="align-center" src="../_images/flat_plate_laminar_turbulent.png" style="width: 900px;" />
 </a>
 <p>Como criterio establecemos el siguiente límite para definir la región de transición:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e01a714-c573-438d-a8dc-86ba16f0a90e">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-8e01a714-c573-438d-a8dc-86ba16f0a90e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-16654560-e8ac-4e0a-b3d0-794edf10ffc1">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-16654560-e8ac-4e0a-b3d0-794edf10ffc1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re}_\mathrm{cr} = \frac{x_\mathrm{cr}V}{\nu} = 5\times 10^5 
 \end{equation}\]</div>
 <p>¿Cuál es el perfil de velocidad en este problema?</p>
@@ -475,8 +475,8 @@ u = U_0,&amp;\quad\mathrm{para~}y=\delta(x)
 <p>donde <span class="math notranslate nohighlight">\(U_0\)</span> es la velocidad del flujo fuera de la capa límite, y <span class="math notranslate nohighlight">\(\delta\)</span> es el espesor de la capa límite.</p>
 <p>La solución a la ecuación de Prandtl fue obtenida por su estudiante Paul Richard Heinrich Blasius.</p>
 <p>La solución de Blasius permitió determinar la forma del perfil de velocidades (no mostraremos la solución aquí), además de la forma exácta para el espesor de la capa límite:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ac2cc34-678a-4bb8-8e6c-88ebda96887a">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-2ac2cc34-678a-4bb8-8e6c-88ebda96887a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-392a98c4-52c2-4a37-9075-b63b99a9f214">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-392a98c4-52c2-4a37-9075-b63b99a9f214" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 \frac{\delta}{x} &amp;= \frac{4.91}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -484,13 +484,13 @@ u = U_0,&amp;\quad\mathrm{para~}y=\delta(x)
 \end{aligned}
 \end{align}\]</div>
 <p>y la expresión para las tensiones de corte:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f03542b-ea82-4904-91dd-f20bd2a752a9">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-4f03542b-ea82-4904-91dd-f20bd2a752a9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c8684dfe-dbf5-4fb5-b47a-7c9a34d5c2a1">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-c8684dfe-dbf5-4fb5-b47a-7c9a34d5c2a1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \tau_w(x) = \mu \frac{\partial u}{\partial y}\Big|_{y = 0} = \frac{1}{2}\rho U_0^2 C_{f,x}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(C_{f,x}\)</span> es el coeficiente de fricción local:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bfccca8e-61fb-4cbf-9dc2-7046a0b9d909">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-bfccca8e-61fb-4cbf-9dc2-7046a0b9d909" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c010850a-2fcf-4c42-814b-0025954f7afe">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-c010850a-2fcf-4c42-814b-0025954f7afe" title="Permalink to this equation">#</a></span>\[\begin{align}
 \begin{aligned}
 C_{f,x} &amp;= \frac{0.664}{\mathrm{Re}_x^{1/2}}\quad\quad\mathrm{Laminar}
 \\[10pt]
@@ -498,13 +498,13 @@ C_{f,x} &amp;= \frac{0.059}{\mathrm{Re}_x^{1/5}}\quad\quad\mathrm{Turbulento}
 \end{aligned}
 \end{align}\]</div>
 <p>Debido a que para una placa plana el arrastre se debe, únicamente, a los efectos de fricción, <span class="math notranslate nohighlight">\(C_D = C_{D,~\mathrm{fricción}} = C_f \)</span>, donde <span class="math notranslate nohighlight">\(C_f\)</span> es el coeficiente de fricción dado por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93260aea-1f8d-402b-942a-458cab403d2c">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-93260aea-1f8d-402b-942a-458cab403d2c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c60a3d63-0880-42a3-a1c2-702754066d0d">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-c60a3d63-0880-42a3-a1c2-702754066d0d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{1}{L}\int_0^L C_{f,x} dx
 \end{equation}\]</div>
 <p>Reemplazando las ecuaciones (7.6) en (7.7) y aplicando la ecuación (7.3), tenemos una relación para el <strong>coeficiente de fricción promedio</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24bf1477-714a-4684-985c-22c3a2119ca0">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-24bf1477-714a-4684-985c-22c3a2119ca0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c7733fb8-2d96-4fed-8bed-7019cc493e83">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-c7733fb8-2d96-4fed-8bed-7019cc493e83" title="Permalink to this equation">#</a></span>\[\begin{equation}
 C_f = \frac{0.074}{\mathrm{Re}_L^{1/5}} - \frac{1742}{\mathrm{Re}_L}
 \end{equation}\]</div>
 <p>Notar que el coeficiente de fricción local es mayor en flujo turbulento. Esto ocurre debido a que la tasa de deformación en la pared es mayor.</p>
