@@ -50,3 +50,13 @@ html:
   use_multitoc_numbering: True
 #  use_issues_button: true
 #  use_repository_button: true
+
+exclude_patterns:
+  - .git
+  - .git/**
+  - _build
+  - _build/**
+  - "**/.ipynb_checkpoints"
+  - "**/.ipynb_checkpoints/**"
+
+only_build_toc_files: true
