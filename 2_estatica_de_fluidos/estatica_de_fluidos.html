@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
@@ -385,14 +385,24 @@ document.write(`
 <p>Analicemos el problema de uno y dos cuerpos sólidos en reposo, ambos con densidad <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/stationary_solids.png"><img alt="../_images/stationary_solids.png" class="align-center" src="../_images/stationary_solids.png" style="width: 350px;" />
 </a>
-<p>Como ilustra el diagrama de cuerpo libre, el cuerpo sólido de volumen <span class="math notranslate nohighlight">\(V\)</span> está sujeto a fuerzas iguales y contrarias, equivalentes al peso del mismo, <span class="math notranslate nohighlight">\(\rho V g\)</span>.</p>
-<p>En el caso de dos sólidos con volúmenes <span class="math notranslate nohighlight">\(V_1\)</span> y <span class="math notranslate nohighlight">\(V_2\)</span>, el de más abajo está sujeto a la fuerza por su propio peso y el peso del cuerpo sobre el mismo. La fuerza resultante en el cuerpo de abajo es, <span class="math notranslate nohighlight">\(\rho V_1g + \rho V_2g\)</span></p>
-<p>La situación es similar para un líquido contenido en un estanque. Es decir, un elemento diferencial a una distancia <span class="math notranslate nohighlight">\(h\)</span> de la superficie libre está sujeto a una fuerza equivalente a la columna de fluido sobre él.</p>
+<p>El diagrama de cuerpo libre muestra un cuerpo sólido de volumen <span class="math notranslate nohighlight">\(V = Ah\)</span>, donde <span class="math notranslate nohighlight">\(h\)</span> y <span class="math notranslate nohighlight">\(A\)</span> son, respectivamente, la altura y la superficie horizontal del sólido.</p>
+<p>El cuerpo está sujeto a fuerzas iguales y contrarias, equivalentes al peso del mismo, <span class="math notranslate nohighlight">\(\rho V g\)</span>. <strong>La presión equivalente es:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+P = \frac{F}{A}=\rho g h
+\end{equation*}\]</div>
+<p>En el caso de dos sólidos con volúmenes <span class="math notranslate nohighlight">\(V_1\)</span> y <span class="math notranslate nohighlight">\(V_2\)</span>, el cuerpo de abajo está sujeto a la fuerza por su propio peso y el peso del cuerpo sobre el mismo.</p>
+<p><strong>La presión equivalente sobre el cuerpo en el la base es:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+P = \rho g (h_1 + h_2)
+\end{equation*}\]</div>
+<p>La situación es similar para un <strong>líquido contenido en un estanque</strong>. En este caso, <strong>evaluamos la presión sobre un elemento diferencial a una distancia <span class="math notranslate nohighlight">\(h\)</span> de la superficie libre</strong>, cuyo valor es equivalente a la columna de fluido sobre él.</p>
 <a class="reference internal image-reference" href="../_images/hydrostatic_presure.png"><img alt="../_images/hydrostatic_presure.png" class="align-center" src="../_images/hydrostatic_presure.png" style="width: 350px;" />
 </a>
 <p>Si asumimos que el área diferencial es <span class="math notranslate nohighlight">\(dA\)</span> y la densidad del líquido <span class="math notranslate nohighlight">\(\rho\)</span>, la fuerza resultante es: <span class="math notranslate nohighlight">\(\rho g h dA\)</span>.</p>
 <p>Luego la <strong>presión estática</strong>, <strong>definida como la fuerza por unidad de área</strong>, es <span class="math notranslate nohighlight">\(P = \rho g h\)</span>.</p>
-<p>Debido a que el líquido es un elemento deformable e incompresible, la presión estática actúa sobre todas las caras del elemento diferencial.</p>
+<p>Debido a que el líquido es un elemento deformable e incompresible, <strong>la presión estática actúa sobre todas las caras del elemento diferencial</strong>.</p>
 <a class="reference internal image-reference" href="../_images/pressure_point.png"><img alt="../_images/pressure_point.png" class="align-center" src="../_images/pressure_point.png" style="width: 300px;" />
 </a>
 <p>En general, la presión en un punto es igual en todas las direcciones. Esto se conoce como el <em><strong>principio de Pascal</strong></em></p>
@@ -423,16 +433,16 @@ document.write(`
 </a>
 <p><strong>La presión atmosférica</strong>, así, es el resultado de la columna de gases atmosférico sobre una superficie.</p>
 <p><strong>La presión absoluta (<span class="math notranslate nohighlight">\(P_\mathrm{abs}\)</span>)</strong> en un elemento diferencial de fluido en un estanque es, así:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-69b6062f-95b0-44c5-8ad2-069ea7686a81">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-69b6062f-95b0-44c5-8ad2-069ea7686a81" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9fd3976f-543b-4154-93ab-a69c23d76124">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-9fd3976f-543b-4154-93ab-a69c23d76124" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{abs} = P_\mathrm{atm} + \rho gh
 \end{equation}\]</div>
-<p>La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en longitudes de escala de <span class="math notranslate nohighlight">\(1000~\mathrm{m}\)</span>, debido a que la densidad de los gases atmosféricos es mucho menor que los líquidos.</p>
+<p>La presión atmosférica también cambia con la altura.  Sin embargo, el cambio de presión se percibe en longitudes de escala de <span class="math notranslate nohighlight">\(1000~\mathrm{m}\)</span>, debido a que la densidad de los gases atmosféricos es mucho menor que la mayoría de los líquidos.</p>
 <a class="reference internal image-reference" href="../_images/atmospheric_pressure_altitude.png"><img alt="../_images/atmospheric_pressure_altitude.png" class="align-center" src="../_images/atmospheric_pressure_altitude.png" style="width: 400px;" />
 </a>
-<p>En la figura, <span class="math notranslate nohighlight">\(P_{\mathrm{O}_2}\)</span>, es la <em>presión parcial de oxígeno</em> (no es relevante para el curso).</p>
-<p>Debido a la caída de la presión con la altura, la densidad del aire disminuye y la cantidad de oxígeno por <span class="math notranslate nohighlight">\(\mathrm{m}^3\)</span> es menor.</p>
-<p><strong>A 25 °C al nivel del mar, la presión atmosférica es <span class="math notranslate nohighlight">\(1~\mathrm{atm} = 101.325~\mathrm{kPa}\)</span>.</strong></p>
+<center><small><b>Figura.</b> Variación de la presión atmosférica en función de la altura. PO₂ es la presión parcial de oxígeno</small></center><p><strong>A 25 °C al nivel del mar, la presión atmosférica es</strong></p>
+<div class="math notranslate nohighlight">
+\[1~\mathrm{atm} = 101.325~\mathrm{kPa}.\]</div>
 <p>En resumen, <strong>la presión hidroestática en un punto depende de la columna de fluido sobre él y, por lo tanto, cambia sólamente con la profundidad</strong>.</p>
 <a class="reference internal image-reference" href="../_images/equal_hydrostatic_presure.png"><img alt="../_images/equal_hydrostatic_presure.png" class="align-center" src="../_images/equal_hydrostatic_presure.png" style="width: 850px;" />
 </a>
@@ -461,15 +471,15 @@ F_1 = F_2 \frac{A_1}{A_2} &lt; F_2
 <section id="instrumentos-para-medir-la-presion">
 <h3><span class="section-number">2.1.5. </span>Instrumentos para medir la presión<a class="headerlink" href="#instrumentos-para-medir-la-presion" title="Link to this heading">#</a></h3>
 <p>Llamamos <em><strong>presión manométrica (<span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span>), a la diferencia entre la presión absoluta y la presión atmosférica</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5e452d4c-8b38-4af4-8a29-36983751fd08">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-5e452d4c-8b38-4af4-8a29-36983751fd08" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ffd44d9b-059a-4080-87fa-dd877eb9e401">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-ffd44d9b-059a-4080-87fa-dd877eb9e401" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{man} = P_\mathrm{abs} - P_\mathrm{atm}
 \end{equation}\]</div>
 <p>El instrumento para medir <span class="math notranslate nohighlight">\(P_\mathrm{man}\)</span> es el <strong>manómetro</strong>
 <a class="reference internal" href="../_images/manometer.png"><img alt="../_images/manometer.png" class="align-center" src="../_images/manometer.png" style="width: 850px;" /></a></p>
 <p>Llamamos <em><strong>presión vacuométrica o de vacío (<span class="math notranslate nohighlight">\(P_\mathrm{vac}\)</span>), a la diferencia entre la presión atmosférica y la absoluta</strong></em>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7e1479c-5c48-4643-a064-a26a83cf7744">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-d7e1479c-5c48-4643-a064-a26a83cf7744" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0f9187b2-a6d3-4e9b-baa7-22ff5c5de66e">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-0f9187b2-a6d3-4e9b-baa7-22ff5c5de66e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 \end{equation}\]</div>
 <p>El instrumento de medida se llama <strong>vacuómetro</strong>.
@@ -480,7 +490,7 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 <a class="reference internal image-reference" href="../_images/barometer.png"><img alt="../_images/barometer.png" class="align-center" src="../_images/barometer.png" style="width: 750px;" />
 </a>
 <p>La conversión de unidades es <span class="math notranslate nohighlight">\(760~\mathrm{mmHg} = 1013.2~\mathrm{hPa} = 1~\mathrm{atm}\)</span></p>
-<p>La siguiente figura ilustra todas las presiones
+<p>La siguiente figura ilustra los valores registrados por los instrumentos, en referencia al vacío abosoluto y la presión atmosférica.
 <a class="reference internal" href="../_images/all_pressures.png"><img alt="../_images/all_pressures.png" class="align-center" src="../_images/all_pressures.png" style="width: 750px;" /></a></p>
 </section>
 </section>
@@ -489,22 +499,22 @@ P_\mathrm{vac} = P_\mathrm{atm} - P_\mathrm{abs}
 <section id="formulas-generales-para-una-superficie">
 <h3><span class="section-number">2.2.1. </span>Fórmulas generales para una superficie<a class="headerlink" href="#formulas-generales-para-una-superficie" title="Link to this heading">#</a></h3>
 <p>El principio de Pascal nos permite determinar la <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>) sobre una cara de una superficie plana de área <span class="math notranslate nohighlight">\(A\)</span>:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-e581c63e-37b1-48e0-9f18-a5731f837f8e">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-e581c63e-37b1-48e0-9f18-a5731f837f8e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1a09301c-b1b2-4ee5-80c6-519aef7f84ee">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-1a09301c-b1b2-4ee5-80c6-519aef7f84ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_R = (P_0 + \rho g h_C)A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_C = y_C\sin\theta\)</span> es la <strong>distancia vertical del centroide de la superfice (<span class="math notranslate nohighlight">\(y_C\)</span>) al nivel libre del líquido,</strong> y <strong><span class="math notranslate nohighlight">\(P_0\)</span> es la presión absoluta sobre el líquido</strong> (comúnmente, presión atmosférica).</p>
 <a class="reference internal image-reference" href="../_images/force_irregular_plate.png"><img alt="../_images/force_irregular_plate.png" class="align-center" src="../_images/force_irregular_plate.png" style="width: 800px;" />
 </a>
-<p>Esta fuerza resultante no actúa, necesariamente, en el centroide de la superficie. Para determinar el punto de acción, debemos analizar el torque resultante:</p>
+<p>La fuerza resultante no actúa, necesariamente, en el centroide de la superficie.</p>
+<p>Esta <strong>línea de acción de la fuerza resultante <span class="math notranslate nohighlight">\(y_p\)</span></strong> se obtiene a partir del torque resultante <span class="math notranslate nohighlight">\(M_R\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 M_R = \int F(y)ydA = F_R y_p,
 \end{equation*}\]</div>
-<p>donde <strong><span class="math notranslate nohighlight">\(y_p\)</span> es la línea de acción</strong> de la fuerza resultante.</p>
-<p>La línea de acción, medida desde la superficie libre, está dada por la relación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-439c8a27-28b6-4cc4-83b1-c76e47da8b2b">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-439c8a27-28b6-4cc4-83b1-c76e47da8b2b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>Medida desde la superficie libre, la línea de acción está dada por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-36d21334-df83-4cef-bd16-ec078085ec2f">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-36d21334-df83-4cef-bd16-ec078085ec2f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 y_p = y_C + \frac{\rho g\sin\theta I_{xx,C}}{F_R}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(I_{xx,C}\)</span> es el <em>segundo momento de área respecto al eje <span class="math notranslate nohighlight">\(x\)</span> que para por el centroide de la superficie</em>.</p>
@@ -520,20 +530,17 @@ y_p = y_C + \frac{\rho g\sin\theta I_{xx,C}}{F_R}
 <a class="reference internal image-reference" href="../_images/presiones_placa_cuadrada.png"><img alt="../_images/presiones_placa_cuadrada.png" class="align-center" src="../_images/presiones_placa_cuadrada.png" style="width: 800px;" />
 </a>
 <p>Las fórmulas de <strong>fuerza resultante (<span class="math notranslate nohighlight">\(F_R\)</span>), así, corresponde al área del trapecio</strong>. Por el contrario, <strong>la línea de acción (<span class="math notranslate nohighlight">\(y_p\)</span>)</strong> <em>no necesariamente coincide con el centroide del trapecio.</em> Está dada por la fórmula:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7168af17-e423-4657-b1fc-eea90b8cdb6f">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-7168af17-e423-4657-b1fc-eea90b8cdb6f" title="Permalink to this equation">#</a></span>\[\begin{equation}
-y_P = s+\frac{b}{2} + \frac{\rho g \sin \theta}{F_R}\frac{ab^3}{12}
+<div class="amsmath math notranslate nohighlight" id="equation-f652fb4b-793e-480e-bcb4-606ed150c17f">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-f652fb4b-793e-480e-bcb4-606ed150c17f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y_p = s+\frac{b}{2} + \frac{\rho g \sin \theta}{F_R}\frac{ab^3}{12}
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/force_rectangular_plate.png"><img alt="../_images/force_rectangular_plate.png" class="align-center" src="../_images/force_rectangular_plate.png" style="width: 850px;" />
 </a>
 </section>
 <section id="fuerza-resultante-en-compuertas">
 <h3><span class="section-number">2.2.3. </span>Fuerza resultante en compuertas<a class="headerlink" href="#fuerza-resultante-en-compuertas" title="Link to this heading">#</a></h3>
-<p>Cuando analizamos la <strong>fuerza resultante en una compuerta</strong>, debemos considerar la acción de la <strong>presión en ambas caras</strong>. <strong>En la mayoría de los casos</strong> (compuerta de una represa, por ejemplo), <strong>la componente asociada a <span class="math notranslate nohighlight">\(P_0\)</span> se ignora</strong>, puesto a que atúa sobre ambas caras de la compuerta, y la fuerza resultante es:</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{equation*}
-F_R = \rho g h_C A
-\end{equation*}\]</div>
+<p><strong>Las fórmulas de <span class="math notranslate nohighlight">\(F_R\)</span> y <span class="math notranslate nohighlight">\(y_p\)</span> consideran la acción de la presión absoluta sobre la cara en contacto con el fluido en cuestión</strong>. Así, si la compuerta separa dos fluidos distintos, los valores de <span class="math notranslate nohighlight">\(F_R\)</span> y <span class="math notranslate nohighlight">\(y_p\)</span> serán diferentes en cada cara, según la densidad y nivel de altura del líquido en contacto.</p>
+<p>En el caso particular de compuertas expuestas al aire u otro gas (compuerta de una represa, por ejemplo), la fuerza resultante en la cara expuesta será <span class="math notranslate nohighlight">\(F_R = abP_0\)</span>. y su línea de acción <span class="math notranslate nohighlight">\(y_p = s + b/2\)</span></p>
 </section>
 </section>
 <section id="flotacion">
