@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Análisis dimensional y semejanza &#8212; ING325 - Mecánica de Fluidos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '6_dimensional_analisis/dimensional_analisis';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Flujo viscoso en ductos" href="../7_perdida_de_carga/perdida_de_carga.html" />
+    <link rel="prev" title="5. Ecuación de Navier-Stokes" href="../5_navier-stokes/navier-stokes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenidos al curso
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de la mecánica de fluidos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_conceptos_basicos/conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_estatica_de_fluidos/estatica_de_fluidos.html">2. Estática de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción y modelación de flujos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_navier-stokes/navier-stokes.html">5. Ecuación de Navier-Stokes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Análisis dimensional y semejanza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Flujos aplicados y sistemas fluidomecánicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../7_perdida_de_carga/perdida_de_carga.html">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_flujo_externo/flujo_externo.html">8. Flujo externo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas0.html">9. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas1.html">9.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas2.html">9.3. Turbinas</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Ensayo de Bombas Centrífugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Ensayo en Tunel de Viento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/6_dimensional_analisis/dimensional_analisis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Análisis dimensional y semejanza</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">6.1. Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensiones-y-unidades">6.2. Dimensiones y unidades</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneidad-dimensional">6.3. Homogeneidad dimensional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-variables-dimensionales-a-relaciones-adimensionales">6.4. De variables dimensionales a relaciones adimensionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-buckingham-pi">6.5. Teorema de Buckingham Pi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedimiento-practico">6.6. Procedimiento práctico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-elegir-variables-repetitivas">6.7. Cómo elegir variables repetitivas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microejemplo-1-fuerza-de-arrastre">6.8. Microejemplo 1: fuerza de arrastre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microejemplo-2-caida-de-presion-en-tuberia">6.9. Microejemplo 2: caída de presión en tubería</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-numeros-adimensionales-caracteristicos">6.10. Definición de números adimensionales característicos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-reynolds-inercia-frente-a-viscosidad">6.10.1. Número de Reynolds: inercia frente a viscosidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-froude-inercia-frente-a-gravedad">6.10.2. Número de Froude: inercia frente a gravedad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-de-euler-y-mach-presion-y-compresibilidad">6.10.3. Números de Euler y Mach: presión y compresibilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-weber-y-rugosidad-relativa-tension-superficial-y-pared">6.10.4. Número de Weber y rugosidad relativa: tensión superficial y pared</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensionalizacion-de-las-ecuaciones-basicas">6.11. Adimensionalización de las ecuaciones básicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escalas-de-referencia-y-variables-adimensionales">6.11.1. Escalas de referencia y variables adimensionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuidad-y-cantidad-de-movimiento-en-forma-adimensional">6.11.2. Continuidad y cantidad de movimiento en forma adimensional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-que-emergen-desde-las-ecuaciones-y-las-condiciones-de-contorno">6.11.3. Parámetros que emergen desde las ecuaciones y las condiciones de contorno</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-semejanza-segun-el-tipo-de-flujo">6.12. Criterios de semejanza según el tipo de flujo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#del-analisis-dimensional-a-la-semejanza">6.13. Del análisis dimensional a la semejanza</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-geometrica">6.13.1. Semejanza geométrica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-cinematica">6.13.2. Semejanza cinemática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-dinamica">6.13.3. Semejanza dinámica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-prototipos-y-leyes-de-escala">6.14. Modelos, prototipos y leyes de escala</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones-practicas-de-la-semejanza-completa">6.15. Limitaciones prácticas de la semejanza completa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-hace-entonces-el-ingeniero">6.16. ¿Qué hace entonces el ingeniero?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-dimensional-y-semejanza">
+<h1><span class="section-number">6. </span>Análisis dimensional y semejanza<a class="headerlink" href="#analisis-dimensional-y-semejanza" title="Link to this heading">#</a></h1>
+<section id="introduccion">
+<h2><span class="section-number">6.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">#</a></h2>
+<p>En mecánica de fluidos rara vez podemos ensayar directamente el prototipo final. Un avión, un aliviadero, una tubería o una bomba suelen estudiarse primero mediante modelos, correlaciones o datos de laboratorio. El análisis dimensional entrega el lenguaje para conectar esos ensayos con el sistema real.</p>
+<p>Consideremos que la fuerza de arrastre sobre una esfera de diámetro <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/figure1_drag_sphere.png"><img alt="../_images/figure1_drag_sphere.png" class="align-center" src="../_images/figure1_drag_sphere.png" style="width: 400px;" />
+</a>
+<center> <small><b>Figura 1.</b> Fotografía del arrastre en una esfera sumergida en agua. <i>Van Dyke, An Album of Fluid Motion (1982)</i> </small></center>
+<p>Mediante un análisis fenomenológico, se puede demostrar que esta fuerza depende de la densidad del fluido, la viscosidad, la velocidad y una longitud característica:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b6b4fc54-9273-4de6-836c-2a9065e67021">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-b6b4fc54-9273-4de6-836c-2a9065e67021" title="Permalink to this equation">#</a></span>\[\begin{equation}
+F = f(\rho,\mu,V,D)
+\end{equation}\]</div>
+<p>Debido a la gran cantidad de parámetros, si quisieramos elavorar un estudio variando cada uno por separado, el análisis del problema se vuelve costoso y dificil de interpretar.</p>
+<p>La idea del análisis dimensional es reorganizar el fenómeno para encontrar una descripción más compacta y útil. Para ello, se identifican las variables relevantes y se agrupan en términos adimensionales, lo que permite simplificar el problema y revelar relaciones fundamentales entre ellas.</p>
+<p>Por ejemplo, en el caso de la fuerza de arrastre, podemos demostrar que los cuátro parámetros pueden agruparse en una función de la forma:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-531ce165-6aab-4bb0-aa0a-0341482f4a29">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-531ce165-6aab-4bb0-aa0a-0341482f4a29" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{F}{\rho V^2 D^2} = f\left(\frac{\rho V D}{\mu}\right)
+\end{equation}\]</div>
+<a class="reference internal image-reference" href="../_images/figura1_demo_analisis_dimensional.png"><img alt="../_images/figura1_demo_analisis_dimensional.png" class="align-center" src="../_images/figura1_demo_analisis_dimensional.png" style="width: 600px;" />
+</a>
+<center> <small><b>Figura 1.</b> Evaluación experimental del arrastre en una esfera en función de parámetros adimensionales. <i>Mitchell, Fox and and McDonald's Introduction to Fluid Mechanics (2020)</i> </small> </center><blockquote>
+<div><p><strong>Nota.</strong> El factor 1/2 <span class="math notranslate nohighlight">\(\pi\)</span> en el denominador del eje <span class="math notranslate nohighlight">\(y\)</span> no afecta la dimensionalidad de la formulación</p>
+</div></blockquote>
+</section>
+<section id="dimensiones-y-unidades">
+<h2><span class="section-number">6.2. </span>Dimensiones y unidades<a class="headerlink" href="#dimensiones-y-unidades" title="Link to this heading">#</a></h2>
+<p>Una <strong>unidad</strong> es una convención de medida, como <span class="math notranslate nohighlight">\(\mathrm{m}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{s}\)</span> o <span class="math notranslate nohighlight">\(\mathrm{kg}\)</span>.
+Una <strong>dimensión</strong> expresa la naturaleza física de una variable, como longitud <span class="math notranslate nohighlight">\(L\)</span>, masa <span class="math notranslate nohighlight">\(M\)</span> o tiempo <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>El análisis dimensional trabaja con dimensiones, no con unidades particulares.</p>
+<p>Por ejemplo:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-54ccfb63-11b1-4669-af5a-82e7460f76dc">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-54ccfb63-11b1-4669-af5a-82e7460f76dc" title="Permalink to this equation">#</a></span>\[\begin{align}
+[V] &amp;= LT^{-1} \\
+[\rho] &amp;= ML^{-3} \\
+[\mu] &amp;= ML^{-1}T^{-1} \\
+[p] &amp;= ML^{-1}T^{-2}
+\end{align}\]</div>
+<p>Dos ecuaciones pueden estar escritas en unidades distintas y seguir representando la misma física, siempre que conserven la misma estructura dimensional.</p>
+<center><b>Tabla 5.1</b>: Dimensiones de algunas cantidades comunes en mecánica de fluidos</center>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Cantidad</p></th>
+<th class="head text-center"><p>Símbolo</p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\mathrm{MLT}\Theta\)</span></p></th>
+<th class="head text-left"><p><span class="math notranslate nohighlight">\(\mathrm{FLT}\Theta\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Longitud</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Área</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L^2\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Volumen</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\forall\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L^3\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocidad</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(LT^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(LT^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Aceleración</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{d}V/\mathrm{d}t\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(LT^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(LT^{-2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocidad del sonido</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(LT^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(LT^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Flujo volumétrico o caudal</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L^3T^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L^3T^{-1}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo másico</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\dot{m}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(MT^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FTL^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Presión o esfuerzo</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>, <span class="math notranslate nohighlight">\(\tau\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^{-1}T^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FL^{-2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocidad de deformación</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\dot{\varepsilon}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(T^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Ángulo</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td class="text-center"><p>adimensional</p></td>
+<td class="text-left"><p>adimensional</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocidad angular</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\omega\)</span>, <span class="math notranslate nohighlight">\(\Omega\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(T^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Viscosidad dinámica</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^{-1}T^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FTL^{-2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Viscosidad cinemática</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\nu\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L^2T^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L^2T^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Tensión superficial</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(MT^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FL^{-1}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fuerza</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(F\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(MLT^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(F\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Momento o par</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(M\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^2T^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FL\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Potencia</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(P\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^2T^{-3}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FLT^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Trabajo o energía</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^2T^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FL\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Densidad</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^{-3}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FT^2L^{-4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Temperatura</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Theta\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\Theta\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Calor específico</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(c_p\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(L^2T^{-2}\Theta^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L^2T^{-2}\Theta^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Peso específico</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\gamma\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(ML^{-2}T^{-2}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FL^{-3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Conductividad térmica</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(MLT^{-3}\Theta^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(FT^{-1}\Theta^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Coeficiente de expansión térmica</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\beta\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\Theta^{-1}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\Theta^{-1}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="homogeneidad-dimensional">
+<h2><span class="section-number">6.3. </span>Homogeneidad dimensional<a class="headerlink" href="#homogeneidad-dimensional" title="Link to this heading">#</a></h2>
+<p>El principio de homogeneidad dimensional establece que una ecuación físicamente válida debe tener la misma dimensión en todos sus términos aditivos.</p>
+<p>Dicho de otra forma: no se pueden sumar magnitudes de distinta naturaleza física.</p>
+<p>Por ejemplo,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d5072df7-6116-458e-bfa1-6729ff6ee7c2">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-d5072df7-6116-458e-bfa1-6729ff6ee7c2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+s = s_0 + V_0 t + \frac{1}{2}gt^2
+\end{equation}\]</div>
+<p>es homogénea porque todos los términos tienen dimensión de longitud.</p>
+</section>
+<section id="de-variables-dimensionales-a-relaciones-adimensionales">
+<h2><span class="section-number">6.4. </span>De variables dimensionales a relaciones adimensionales<a class="headerlink" href="#de-variables-dimensionales-a-relaciones-adimensionales" title="Link to this heading">#</a></h2>
+<p>Cuando una relación es homogénea, muchas veces puede reescribirse en forma adimensional, como en el caso de la fuerza de arrastre:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9865607c-8e66-47ff-9a54-985135781b3a">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-9865607c-8e66-47ff-9a54-985135781b3a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{F}{\rho V^2 L^2} = \phi\left(\frac{\rho V L}{\mu}\right)
+\end{equation}\]</div>
+<p>Ahora el fenómeno queda descrito con dos cantidades adimensionales en vez de cuatro variables dimensionales independientes.</p>
+</section>
+<section id="teorema-de-buckingham-pi">
+<h2><span class="section-number">6.5. </span>Teorema de Buckingham Pi<a class="headerlink" href="#teorema-de-buckingham-pi" title="Link to this heading">#</a></h2>
+<p><em><strong>Si un fenómeno depende de <span class="math notranslate nohighlight">\(n\)</span> variables dimensionales y esas variables involucran <span class="math notranslate nohighlight">\(r\)</span> dimensiones fundamentales independientes, entonces la relación física puede expresarse mediante <span class="math notranslate nohighlight">\(n-r\)</span> grupos adimensionales independientes.</strong></em></p>
+<p>Ese resultado no reemplaza el juicio físico: primero hay que identificar correctamente qué variables son relevantes.</p>
+</section>
+<section id="procedimiento-practico">
+<h2><span class="section-number">6.6. </span>Procedimiento práctico<a class="headerlink" href="#procedimiento-practico" title="Link to this heading">#</a></h2>
+<p>Una ruta de trabajo razonable es la siguiente:</p>
+<ol class="arabic simple">
+<li><p>Listar las variables que intervienen en el problema.</p></li>
+<li><p>Elegir la variable de salida que interesa predecir.</p></li>
+<li><p>Escribir las dimensiones de cada variable.</p></li>
+<li><p>Seleccionar variables repetitivas que cubran las dimensiones fundamentales.</p></li>
+<li><p>Formar grupos adimensionales y reconocer los que tienen significado físico conocido.</p></li>
+</ol>
+</section>
+<section id="como-elegir-variables-repetitivas">
+<h2><span class="section-number">6.7. </span>Cómo elegir variables repetitivas<a class="headerlink" href="#como-elegir-variables-repetitivas" title="Link to this heading">#</a></h2>
+<p>Las variables repetitivas deben cumplir tres criterios:</p>
+<ul class="simple">
+<li><p>En conjunto deben contener todas las dimensiones fundamentales del problema.</p></li>
+<li><p>No deben formar por sí solas un grupo adimensional.</p></li>
+<li><p>No conviene incluir entre ellas la variable de salida que se quiere correlacionar.</p></li>
+</ul>
+<p>Además, es preferible que representen geometría, cinemática y propiedades del fluido de una forma físicamente clara.</p>
+<p>Errores típicos al construir grupos adimensionales:</p>
+<ul class="simple">
+<li><p>olvidar una variable físicamente importante, como <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span>, <span class="math notranslate nohighlight">\(a\)</span> o la rugosidad;</p></li>
+<li><p>confundir viscosidad dinámica con viscosidad cinemática;</p></li>
+<li><p>elegir variables repetitivas que no cubren <span class="math notranslate nohighlight">\(M\)</span>, <span class="math notranslate nohighlight">\(L\)</span> y <span class="math notranslate nohighlight">\(T\)</span>;</p></li>
+<li><p>usar Buckingham Pi como receta algebraica sin pensar en el régimen de flujo.</p></li>
+</ul>
+</section>
+<section id="microejemplo-1-fuerza-de-arrastre">
+<h2><span class="section-number">6.8. </span>Microejemplo 1: fuerza de arrastre<a class="headerlink" href="#microejemplo-1-fuerza-de-arrastre" title="Link to this heading">#</a></h2>
+<p>Para un cuerpo de forma fija en un flujo incompresible, sin superficie libre y a baja velocidad, planteamos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-35703aa0-ff9c-4bb3-aa97-52ae6b6ea96f">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-35703aa0-ff9c-4bb3-aa97-52ae6b6ea96f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+F = f(\rho,\mu,V,D)
+\end{equation}\]</div>
+<p>Aquí hay <span class="math notranslate nohighlight">\(n=5\)</span> variables si contamos a <span class="math notranslate nohighlight">\(F\)</span>, y aparecen <span class="math notranslate nohighlight">\(r=3\)</span> dimensiones fundamentales. Por lo tanto, esperamos <span class="math notranslate nohighlight">\(5-3=2\)</span> grupos adimensionales.</p>
+<p>Si elegimos <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(V\)</span> y <span class="math notranslate nohighlight">\(D\)</span> como variables repetitivas, una forma conveniente es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cf6a6cf0-a265-4f2b-84ce-bbd326bbf71e">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-cf6a6cf0-a265-4f2b-84ce-bbd326bbf71e" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Pi_1 &amp;= \frac{F}{\rho V^2 D^2} \\
+\Pi_2 &amp;= \frac{\rho V D}{\mu} = \mathrm{Re}
+\end{align}\]</div>
+<p>Entonces la relación puede escribirse como</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5db9e35e-9f1d-4d3f-bdf1-77d477d4b3d8">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-5db9e35e-9f1d-4d3f-bdf1-77d477d4b3d8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+C_D = \phi(\mathrm{Re})
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(C_D\)</span> es un coeficiente de arrastre.</p>
+</section>
+<section id="microejemplo-2-caida-de-presion-en-tuberia">
+<h2><span class="section-number">6.9. </span>Microejemplo 2: caída de presión en tubería<a class="headerlink" href="#microejemplo-2-caida-de-presion-en-tuberia" title="Link to this heading">#</a></h2>
+<p>Para una tubería recta de diámetro <span class="math notranslate nohighlight">\(D\)</span>, longitud <span class="math notranslate nohighlight">\(L\)</span> y rugosidad <span class="math notranslate nohighlight">\(\varepsilon\)</span>, una formulación general es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-416f9072-0e19-46f7-b2e6-b22f32ddba7f">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-416f9072-0e19-46f7-b2e6-b22f32ddba7f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\Delta p = f(\rho,\mu,V,D,L,\varepsilon)
+\end{equation}\]</div>
+<p>La estructura del problema ya sugiere que no basta con la viscosidad: la geometría también importa.</p>
+<p>Una forma adimensional útil es</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ec1317ca-d403-41cd-9b90-97860a214490">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-ec1317ca-d403-41cd-9b90-97860a214490" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\Delta p}{\rho V^2} = \phi\left(\mathrm{Re},\frac{L}{D},\frac{\varepsilon}{D}\right)
+\end{equation}\]</div>
+<p>Esto anticipa por qué en flujo interno las pérdidas no dependen solo de <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>, sino también de la escala geométrica y de la rugosidad relativa.</p>
+</section>
+<section id="definicion-de-numeros-adimensionales-caracteristicos">
+<h2><span class="section-number">6.10. </span>Definición de números adimensionales característicos<a class="headerlink" href="#definicion-de-numeros-adimensionales-caracteristicos" title="Link to this heading">#</a></h2>
+<p>Un número adimensional no es solo una abreviatura algebraica. En general expresa la competencia entre efectos físicos.</p>
+<p>Interpretarlo bien es más importante que memorizar su fórmula.</p>
+<section id="numero-de-reynolds-inercia-frente-a-viscosidad">
+<h3><span class="section-number">6.10.1. </span>Número de Reynolds: inercia frente a viscosidad<a class="headerlink" href="#numero-de-reynolds-inercia-frente-a-viscosidad" title="Link to this heading">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-086d536a-f9ce-42a5-8232-19fba6a517db">
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-086d536a-f9ce-42a5-8232-19fba6a517db" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\mathrm{Re} = \frac{\rho V L}{\mu}
+\end{equation}\]</div>
+<p>Compara efectos de inercia con efectos viscosos.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> es pequeño, la viscosidad domina y amortigua el movimiento.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> es grande, la inercia domina en gran parte del flujo, aunque la viscosidad sigue siendo importante cerca de paredes y capas de corte.</p></li>
+</ul>
+<p>En mecánica de fluidos, <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> casi siempre merece atención.</p>
+</section>
+<section id="numero-de-froude-inercia-frente-a-gravedad">
+<h3><span class="section-number">6.10.2. </span>Número de Froude: inercia frente a gravedad<a class="headerlink" href="#numero-de-froude-inercia-frente-a-gravedad" title="Link to this heading">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-44235f5d-60dd-45e9-a953-0c914b06efd7">
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-44235f5d-60dd-45e9-a953-0c914b06efd7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\mathrm{Fr} = \frac{V}{\sqrt{gL}}
+\end{equation}\]</div>
+<p>Compara inercia con gravedad.</p>
+<p>Es el parámetro dominante en flujos con superficie libre, como canales, vertederos, aliviaderos, oleaje y resistencia de buques. Si el comportamiento está gobernado por ondas gravitacionales, igualar <span class="math notranslate nohighlight">\(\mathrm{Fr}\)</span> suele ser prioritario.</p>
+</section>
+<section id="numeros-de-euler-y-mach-presion-y-compresibilidad">
+<h3><span class="section-number">6.10.3. </span>Números de Euler y Mach: presión y compresibilidad<a class="headerlink" href="#numeros-de-euler-y-mach-presion-y-compresibilidad" title="Link to this heading">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-cb0eafb7-1fd7-4381-a633-315497938882">
+<span class="eqno">(6.13)<a class="headerlink" href="#equation-cb0eafb7-1fd7-4381-a633-315497938882" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathrm{Eu} &amp;= \frac{\Delta p}{\rho V^2} \\
+\mathrm{Ma} &amp;= \frac{V}{a}
+\end{align}\]</div>
+<p>El número de Euler (<span class="math notranslate nohighlight">\(\mathrm{Eu}\)</span>) mide la relevancia de diferencias de presión frente a la inercia.
+El número de Mach (<span class="math notranslate nohighlight">\(\mathrm{Ma}\)</span>) compara la velocidad del flujo con la velocidad del sonido y marca cuándo la compresibilidad deja de ser despreciable.</p>
+<p>Como regla práctica, cuando <span class="math notranslate nohighlight">\(\mathrm{Ma} \gtrsim 0.3\)</span>, ya conviene vigilar efectos compresibles.</p>
+</section>
+<section id="numero-de-weber-y-rugosidad-relativa-tension-superficial-y-pared">
+<h3><span class="section-number">6.10.4. </span>Número de Weber y rugosidad relativa: tensión superficial y pared<a class="headerlink" href="#numero-de-weber-y-rugosidad-relativa-tension-superficial-y-pared" title="Link to this heading">#</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-2b4c4301-dc96-47e4-ac0a-d2c6ec3bd99a">
+<span class="eqno">(6.14)<a class="headerlink" href="#equation-2b4c4301-dc96-47e4-ac0a-d2c6ec3bd99a" title="Permalink to this equation">#</a></span>\[\begin{align}
+\mathrm{We} &amp;= \frac{\rho V^2 L}{\sigma}
+\end{align}\]</div>
+<p>El número de Weber compara inercia con tensión superficial.</p>
+<p>Es importante cuando la curvatura de la superficie libre o de la interfase es relevante, como en gotas, chorros, capilaridad o modelos hidráulicos muy pequeños.</p>
+<p>Otro parámetro útil es la rugosidad relativa, <span class="math notranslate nohighlight">\(\varepsilon/D\)</span>, especialmente en flujo turbulento interno.</p>
+<p>La siguiente tabla resume algunos de los grupos adimensionales más comunes:
+<small><center><b>Tabla 5.2</b>: grupos adimensionales de uso frecuente de mecánica de fluidos</center></small></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head text-center"><p>Definición</p></th>
+<th class="head text-center"><p>Efectos</p></th>
+<th class="head text-left"><p>Importancia típica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Número de Reynolds</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{\rho U L}{\mu}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Inercia}{Viscosidad}}\)</span></p></td>
+<td class="text-left"><p>siempre</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de Mach</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Ma}=U/a\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Velocidad~del~flujo}{Velocidad~del~sonido}}\)</span></p></td>
+<td class="text-left"><p>flujo compresible</p></td>
+</tr>
+<tr class="row-even"><td><p>Número de Froude</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Fr}=\frac{U}{\sqrt{gL}}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Inercia}{Gravedad}}\)</span></p></td>
+<td class="text-left"><p>flujos con superficie libre</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de Weber</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{We}=\frac{\rho U^2 L}{\sigma}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Inercia}{Tensión~superficial}}\)</span></p></td>
+<td class="text-left"><p>flujos con superficie libre</p></td>
+</tr>
+<tr class="row-even"><td><p>Número de Euler</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Eu}=\frac{\Delta p}{\rho U^2}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Presión}{Inercia}}\)</span></p></td>
+<td class="text-left"><p>cavitación y efectos de presión</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coeficiente de presión</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_p=\frac{\Delta p}{\tfrac{1}{2}\rho U^2}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Presión~estática}{Presión~dinámica}}\)</span></p></td>
+<td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
+</tr>
+<tr class="row-even"><td><p>Coeficiente de sustentación</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_L=\frac{L}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Fuerza~de~sustentación}{Fuerza~dinámica}}\)</span></p></td>
+<td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coeficiente de resistencia</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_D=\frac{D}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Arrastre}{Fuerza~dinámica}}\)</span></p></td>
+<td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
+</tr>
+<tr class="row-even"><td><p>Factor de fricción</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f=\frac{h_f}{\left(\frac{L}{D}\right)\frac{V^2}{2g}}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Pérdida~de~carga~por~fricción}{(L/D)\times Altura~dinámica}}\)</span></p></td>
+<td class="text-left"><p>flujo de tuberías (<span class="math notranslate nohighlight">\(D\)</span> diámetro de tubería y <span class="math notranslate nohighlight">\(L\)</span> longitud)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Coeficiente de fricción superficial</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_f=\frac{\tau_w}{\tfrac{1}{2}\rho V^2}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Esfuerzo~cortante~en~la~pared}{Presión~dinámica}}\)</span></p></td>
+<td class="text-left"><p>capa límite</p></td>
+</tr>
+<tr class="row-even"><td><p>Rugosidad relativa</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\varepsilon/L\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Rugosidad~de~la~pared}{Longitud~del~cuerpo}}\)</span></p></td>
+<td class="text-left"><p>flujo turbulento con pared rugosa</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><small><center><b>Tabla 5.3</b>: grupos adimensionales de uso frecuente en termofluidos</center></small></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head text-center"><p>Definición</p></th>
+<th class="head text-center"><p>Efectos</p></th>
+<th class="head text-left"><p>Importancia típica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Número de Prandtl</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Pr}=\frac{\mu c_p}{k}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Difusión~de~cantidad~de~movimiento}{Difusión~térmica}}\)</span></p></td>
+<td class="text-left"><p>convección de calor</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de Eckert</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Ec}=\frac{U^2}{c_p\Delta T}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Energía~cinética}{Entalpía}}\)</span></p></td>
+<td class="text-left"><p>disipación</p></td>
+</tr>
+<tr class="row-even"><td><p>Número de Grashof</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Gr}=\frac{g\beta\Delta T L^3}{\nu^2}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Flotabilidad}{Viscosidad}}\)</span></p></td>
+<td class="text-left"><p>convección natural</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de Rayleigh</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Ra}=\mathrm{Gr}\,\mathrm{Pr}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Flotabilidad}{Difusión~viscosa~y~térmica}}\)</span></p></td>
+<td class="text-left"><p>convección natural</p></td>
+</tr>
+<tr class="row-even"><td><p>Relación de temperaturas</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(T_w/T_{\infty}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Temperatura~en~la~pared}{Temperatura~de~la~corriente}}\)</span></p></td>
+<td class="text-left"><p>transporte de calor</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><small><center><b>Tabla 5.4</b>: Otros grupos adimensionales característicos</center></small></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head text-center"><p>Definición</p></th>
+<th class="head text-center"><p>Efectos</p></th>
+<th class="head text-left"><p>Importancia típica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Relación de calores específicos</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(k=\frac{c_p}{c_v}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Entalpía}{Energía~interna}}\)</span></p></td>
+<td class="text-left"><p>flujo compresible</p></td>
+</tr>
+<tr class="row-odd"><td><p>Número de Rossby</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{Ro}=\frac{U}{\Omega L}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Velocidad~del~flujo}{Efecto~Coriolis}}\)</span></p></td>
+<td class="text-left"><p>flujos geofísicos</p></td>
+</tr>
+<tr class="row-even"><td><p>Número de Strouhal</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{St}=\frac{\omega L}{U}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Oscilación}{Velocidad~media}}\)</span></p></td>
+<td class="text-left"><p>flujos oscilatorios</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="adimensionalizacion-de-las-ecuaciones-basicas">
+<h2><span class="section-number">6.11. </span>Adimensionalización de las ecuaciones básicas<a class="headerlink" href="#adimensionalizacion-de-las-ecuaciones-basicas" title="Link to this heading">#</a></h2>
+<p>En lugar de construir grupos adimensionales problema por problema, también podemos partir directamente de las ecuaciones básicas del movimiento.</p>
+<p>La idea es elegir escalas de referencia para longitud, velocidad, tiempo y presión, y luego reescribir las ecuaciones en forma adimensional.</p>
+<p>Esta estrategia no resuelve el flujo por sí sola, pero sí muestra con claridad qué parámetros gobiernan la física y en qué términos aparecen.</p>
+<section id="escalas-de-referencia-y-variables-adimensionales">
+<h3><span class="section-number">6.11.1. </span>Escalas de referencia y variables adimensionales<a class="headerlink" href="#escalas-de-referencia-y-variables-adimensionales" title="Link to this heading">#</a></h3>
+<p>Para un flujo incompresible con viscosidad constante, una elección natural es usar una longitud característica <span class="math notranslate nohighlight">\(L\)</span> y una velocidad característica <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>Con esas escalas, podemos definir:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9d0a3b46-e314-4e96-a6ec-33f7044ec608">
+<span class="eqno">(6.15)<a class="headerlink" href="#equation-9d0a3b46-e314-4e96-a6ec-33f7044ec608" title="Permalink to this equation">#</a></span>\[\begin{align}
+x^* &amp;= \frac{x}{L}, &amp; y^* &amp;= \frac{y}{L}, &amp; z^* &amp;= \frac{z}{L}, \\
+t^* &amp;= \frac{tU}{L}, &amp; \vec{V}^* &amp;= \frac{\vec{V}}{U}, &amp; p^* &amp;= \frac{p+\rho g z}{\rho U^2}
+\end{align}\]</div>
+<p>La forma de <span class="math notranslate nohighlight">\(p^*\)</span> incorpora el efecto gravitatorio de manera consistente con la interpretación energética del flujo.</p>
+</section>
+<section id="continuidad-y-cantidad-de-movimiento-en-forma-adimensional">
+<h3><span class="section-number">6.11.2. </span>Continuidad y cantidad de movimiento en forma adimensional<a class="headerlink" href="#continuidad-y-cantidad-de-movimiento-en-forma-adimensional" title="Link to this heading">#</a></h3>
+<p>Al sustituir estas variables en continuidad y Navier-Stokes, las ecuaciones toman una forma mucho más informativa:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3a0c22f7-aa13-4833-9efa-e2cf7960a5d3">
+<span class="eqno">(6.16)<a class="headerlink" href="#equation-3a0c22f7-aa13-4833-9efa-e2cf7960a5d3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\nabla^*\cdot\vec{V}^* &amp;= 0 \\
+\frac{\mathrm{D}\vec{V}^*}{\mathrm{D}t^*} &amp;= -\nabla^* p^* + \frac{1}{\mathrm{Re}}\nabla^{*2}\vec{V}^*
+\end{align}\]</div>
+<p>Aquí aparece de inmediato el papel del número de Reynolds: el término viscoso queda ponderado por <span class="math notranslate nohighlight">\(1/\mathrm{Re}\)</span> frente a la inercia.</p>
+<p>Eso explica por qué <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> organiza tantos regímenes de flujo, incluso antes de resolver las ecuaciones.</p>
+</section>
+<section id="parametros-que-emergen-desde-las-ecuaciones-y-las-condiciones-de-contorno">
+<h3><span class="section-number">6.11.3. </span>Parámetros que emergen desde las ecuaciones y las condiciones de contorno<a class="headerlink" href="#parametros-que-emergen-desde-las-ecuaciones-y-las-condiciones-de-contorno" title="Link to this heading">#</a></h3>
+<p>La continuidad no introduce parámetros nuevos, pero la ecuación de cantidad de movimiento y sus condiciones de contorno sí lo hacen.</p>
+<ul class="simple">
+<li><p>En flujos sin superficie libre, el parámetro dominante suele ser <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>.</p></li>
+<li><p>Si existe superficie libre, aparecen además <span class="math notranslate nohighlight">\(\mathrm{Fr}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{Eu}\)</span> y, cuando la tensión superficial importa, también <span class="math notranslate nohighlight">\(\mathrm{We}\)</span>.</p></li>
+<li><p>En gases a velocidades altas, la compresibilidad introduce <span class="math notranslate nohighlight">\(\mathrm{Ma}\)</span> y la relación de calores específicos <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ul>
+<p>El punto clave es este: muchos números adimensionales importantes no se eligen de forma arbitraria. Surgen directamente de la forma no dimensional de las ecuaciones básicas.</p>
+</section>
+</section>
+<section id="criterios-de-semejanza-segun-el-tipo-de-flujo">
+<h2><span class="section-number">6.12. </span>Criterios de semejanza según el tipo de flujo<a class="headerlink" href="#criterios-de-semejanza-segun-el-tipo-de-flujo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Flujo externo incompresible y sin superficie libre: típicamente domina <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>.</p></li>
+<li><p>Flujo con superficie libre: suele dominar <span class="math notranslate nohighlight">\(\mathrm{Fr}\)</span>; <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> y, a veces, <span class="math notranslate nohighlight">\(\mathrm{We}\)</span> también pueden importar.</p></li>
+<li><p>Flujo compresible: suelen importar <span class="math notranslate nohighlight">\(\mathrm{Ma}\)</span> y <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>.</p></li>
+<li><p>Flujo interno en tuberías: aparecen <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon/D\)</span> y con frecuencia <span class="math notranslate nohighlight">\(L/D\)</span>.</p></li>
+</ul>
+<p>La física decide qué grupos son relevantes; el método solo los organiza.</p>
+</section>
+<section id="del-analisis-dimensional-a-la-semejanza">
+<h2><span class="section-number">6.13. </span>Del análisis dimensional a la semejanza<a class="headerlink" href="#del-analisis-dimensional-a-la-semejanza" title="Link to this heading">#</a></h2>
+<p>El objetivo de un modelo no es solo entregar resultados. El objetivo es que esos resultados representen al prototipo mediante una ley de escala bien fundamentada.</p>
+<p>Habrá semejanza útil cuando los grupos adimensionales relevantes del modelo y del prototipo alcancen los mismos valores.</p>
+<section id="semejanza-geometrica">
+<h3><span class="section-number">6.13.1. </span>Semejanza geométrica<a class="headerlink" href="#semejanza-geometrica" title="Link to this heading">#</a></h3>
+<p>Existe semejanza geométrica si todas las longitudes homólogas conservan la misma razón de escala:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9af224e5-747a-4471-8bcc-27bafa679d93">
+<span class="eqno">(6.17)<a class="headerlink" href="#equation-9af224e5-747a-4471-8bcc-27bafa679d93" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\lambda_L = \frac{L_m}{L_p} = \frac{x_m}{x_p} = \frac{y_m}{y_p} = \frac{z_m}{z_p}
+\end{equation}\]</div>
+<p>Eso incluye forma, ángulos, posiciones relativas y detalles geométricos que afecten el flujo.</p>
+<p>Sin semejanza geométrica, cualquier comparación posterior queda debilitada desde el inicio.</p>
+<a class="reference internal image-reference" href="../_images/figura2_semenajanza_geom.png"><img alt="../_images/figura2_semenajanza_geom.png" class="align-center" src="../_images/figura2_semenajanza_geom.png" style="width: 700px;" />
+</a>
+<center> <small><b>Figura 2.</b> Semejanza geométrica en ensayos con modelos: prototipo y modelo a escala con puntos homólogos y una misma razón de escala lineal.</small></center><a class="reference internal image-reference" href="../_images/figura3_no-semenajanza_geom.png"><img alt="../_images/figura3_no-semenajanza_geom.png" class="align-center" src="../_images/figura3_no-semenajanza_geom.png" style="width: 700px;" />
+</a>
+<center> <small><b>Figura 3.</b> Flujos con y sin semejanza geométrica: la similitud exige conservar la forma y la razón entre dimensiones homólogas.</small></center></section>
+<section id="semejanza-cinematica">
+<h3><span class="section-number">6.13.2. </span>Semejanza cinemática<a class="headerlink" href="#semejanza-cinematica" title="Link to this heading">#</a></h3>
+<p>Existe semejanza cinemática cuando, además de la geometría, los campos de velocidad y las trayectorias homólogas mantienen una escala temporal consistente.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b004cd86-a2de-4ee3-8828-fe3a18c4c5de">
+<span class="eqno">(6.18)<a class="headerlink" href="#equation-b004cd86-a2de-4ee3-8828-fe3a18c4c5de" title="Permalink to this equation">#</a></span>\[\begin{align}
+\lambda_V &amp;= \frac{V_m}{V_p} \\
+\lambda_T &amp;= \frac{T_m}{T_p} \\
+\lambda_V &amp;= \frac{\lambda_L}{\lambda_T}
+\end{align}\]</div>
+<p>Si los efectos de viscosidad, tensión superficial o de compresibilidad son importantes, la semejanza cinemática está condicionada a que haya semejanza dinámica.</p>
+<a class="reference internal image-reference" href="../_images/figura4_semenjanza_cine.png"><img alt="../_images/figura4_semenjanza_cine.png" class="align-center" src="../_images/figura4_semenjanza_cine.png" style="width: 700px;" />
+</a>
+<center> <small><b>Figura 4.</b> Semejanza cinemática en flujo sin superficie libre: las velocidades homólogas del modelo y del prototipo conservan una razón de escala común.</small></center></section>
+<section id="semejanza-dinamica">
+<h3><span class="section-number">6.13.3. </span>Semejanza dinámica<a class="headerlink" href="#semejanza-dinamica" title="Link to this heading">#</a></h3>
+<p>Existe semejanza dinámica cuando las razones entre fuerzas correspondientes son equivalentes en modelo y prototipo.</p>
+<p>En la práctica, esto se logra igualando los grupos adimensionales relevantes:</p>
+<ul class="simple">
+<li><p>flujo incompresible sin superficie libre: <span class="math notranslate nohighlight">\(\mathrm{Re}_m = \mathrm{Re}_p\)</span>;</p></li>
+<li><p>flujo con superficie libre: <span class="math notranslate nohighlight">\(\mathrm{Fr}_m = \mathrm{Fr}_p\)</span> y, si es posible, también <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> y quizá <span class="math notranslate nohighlight">\(\mathrm{We}\)</span>;</p></li>
+<li><p>flujo compresible: <span class="math notranslate nohighlight">\(\mathrm{Ma}_m = \mathrm{Ma}_p\)</span> y <span class="math notranslate nohighlight">\(\mathrm{Re}_m = \mathrm{Re}_p\)</span>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/figura5_semenjanza_dina.png"><img alt="../_images/figura5_semenjanza_dina.png" class="align-center" src="../_images/figura5_semenjanza_dina.png" style="width: 650px;" />
+</a>
+<center> <small><b>Figura 5.</b> Semejanza din?mica en flujo bajo compuerta: modelo y prototipo reproducen pol?gonos de fuerzas hom?logos cuando se igualan los par?metros adimensionales relevantes.</small></center></section>
+</section>
+<section id="modelos-prototipos-y-leyes-de-escala">
+<h2><span class="section-number">6.14. </span>Modelos, prototipos y leyes de escala<a class="headerlink" href="#modelos-prototipos-y-leyes-de-escala" title="Link to this heading">#</a></h2>
+<p>Si modelo y prototipo tienen el mismo coeficiente de arrastre, entonces:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-69e643cc-40b2-4ed8-8a18-599253c572a6">
+<span class="eqno">(6.19)<a class="headerlink" href="#equation-69e643cc-40b2-4ed8-8a18-599253c572a6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+F_p = F_m\left(\frac{\rho_p}{\rho_m}\right)\left(\frac{V_p}{V_m}\right)^2\left(\frac{L_p}{L_m}\right)^2
+\end{equation}\]</div>
+<p>Si el fenómeno está dominado por gravedad y se impone igualdad de Froude, entonces:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ce474f37-f90e-4866-aa9b-b18168d36575">
+<span class="eqno">(6.20)<a class="headerlink" href="#equation-ce474f37-f90e-4866-aa9b-b18168d36575" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{V_m}{V_p} = \sqrt{\frac{L_m}{L_p}}
+\end{equation}\]</div>
+<p>La ley de escala correcta depende del mecanismo físico dominante, no del instrumento de ensayo.</p>
+</section>
+<section id="limitaciones-practicas-de-la-semejanza-completa">
+<h2><span class="section-number">6.15. </span>Limitaciones prácticas de la semejanza completa<a class="headerlink" href="#limitaciones-practicas-de-la-semejanza-completa" title="Link to this heading">#</a></h2>
+<p>La semejanza completa suele ser más un ideal que una rutina de laboratorio.</p>
+<ul class="simple">
+<li><p>En modelos hidráulicos con superficie libre, igualar simultáneamente <span class="math notranslate nohighlight">\(\mathrm{Fr}\)</span> y <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> con el mismo fluido casi nunca es posible cuando cambia la escala.</p></li>
+<li><p>En túneles de viento, igualar a la vez <span class="math notranslate nohighlight">\(\mathrm{Ma}\)</span> y <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> puede exigir cambios de presión, temperatura o incluso de gas de ensayo.</p></li>
+<li><p>La tensión superficial, la rugosidad, los soportes y las tolerancias geométricas introducen discrepancias adicionales.</p></li>
+</ul>
+</section>
+<section id="que-hace-entonces-el-ingeniero">
+<h2><span class="section-number">6.16. </span>¿Qué hace entonces el ingeniero?<a class="headerlink" href="#que-hace-entonces-el-ingeniero" title="Link to this heading">#</a></h2>
+<p>Cuando la semejanza completa no es viable, la estrategia no es abandonar el problema, sino priorizar los efectos dominantes:</p>
+<ul class="simple">
+<li><p>igualar el o los parámetros dominantes;</p></li>
+<li><p>asegurar que los parámetros secundarios sean despreciables o corregibles;</p></li>
+<li><p>declarar explícitamente qué similitudes se cumplen y cuáles no;</p></li>
+<li><p>evitar extrapolaciones fuera del rango donde la física y los datos siguen siendo confiables.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./6_dimensional_analisis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../5_navier-stokes/navier-stokes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Ecuación de Navier-Stokes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../7_perdida_de_carga/perdida_de_carga.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Flujo viscoso en ductos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">6.1. Introducción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensiones-y-unidades">6.2. Dimensiones y unidades</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneidad-dimensional">6.3. Homogeneidad dimensional</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-variables-dimensionales-a-relaciones-adimensionales">6.4. De variables dimensionales a relaciones adimensionales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-buckingham-pi">6.5. Teorema de Buckingham Pi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#procedimiento-practico">6.6. Procedimiento práctico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-elegir-variables-repetitivas">6.7. Cómo elegir variables repetitivas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microejemplo-1-fuerza-de-arrastre">6.8. Microejemplo 1: fuerza de arrastre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microejemplo-2-caida-de-presion-en-tuberia">6.9. Microejemplo 2: caída de presión en tubería</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-numeros-adimensionales-caracteristicos">6.10. Definición de números adimensionales característicos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-reynolds-inercia-frente-a-viscosidad">6.10.1. Número de Reynolds: inercia frente a viscosidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-froude-inercia-frente-a-gravedad">6.10.2. Número de Froude: inercia frente a gravedad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-de-euler-y-mach-presion-y-compresibilidad">6.10.3. Números de Euler y Mach: presión y compresibilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-weber-y-rugosidad-relativa-tension-superficial-y-pared">6.10.4. Número de Weber y rugosidad relativa: tensión superficial y pared</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adimensionalizacion-de-las-ecuaciones-basicas">6.11. Adimensionalización de las ecuaciones básicas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#escalas-de-referencia-y-variables-adimensionales">6.11.1. Escalas de referencia y variables adimensionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuidad-y-cantidad-de-movimiento-en-forma-adimensional">6.11.2. Continuidad y cantidad de movimiento en forma adimensional</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-que-emergen-desde-las-ecuaciones-y-las-condiciones-de-contorno">6.11.3. Parámetros que emergen desde las ecuaciones y las condiciones de contorno</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-semejanza-segun-el-tipo-de-flujo">6.12. Criterios de semejanza según el tipo de flujo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#del-analisis-dimensional-a-la-semejanza">6.13. Del análisis dimensional a la semejanza</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-geometrica">6.13.1. Semejanza geométrica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-cinematica">6.13.2. Semejanza cinemática</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#semejanza-dinamica">6.13.3. Semejanza dinámica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-prototipos-y-leyes-de-escala">6.14. Modelos, prototipos y leyes de escala</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones-practicas-de-la-semejanza-completa">6.15. Limitaciones prácticas de la semejanza completa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-hace-entonces-el-ingeniero">6.16. ¿Qué hace entonces el ingeniero?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco V. Ramirez-Cuevas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

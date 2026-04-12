@@ -1,0 +1,175 @@
+﻿300   Capítulo 5. Análi sis dimensional y semejanza
+
+
+                           Paso 6      Ya hemos terminado; este es el segundo y último grupo adimensional. El teorema pi garantiza
+                                       que la relación funcional debe ser de la forma
+
+                                                                                 F      (pUL)                                        Resp.
+                                                                               pU2L2 = g M
+                                       que coincide exactamente con la Ecuación (5.2) .
+
+
+
+
+                                       EJEMPLO 5.3
+                                       La potencia P requerida para accionar una bomba centrífuga es función del caudal Q, el
+                                       diámetro del rotor D, la velocidad de giro D, y la densidad p y viscos idad J.l del fluido:
+
+                                                                              P = J(Q , D, D , p , µ)
+
+                                       Reescriba esto como un a relación adimensional. (Consejo : Use D, p y D como variab les
+                                       dimensionalmente independientes.)
+
+
+                                       Solución
+                           Paso 1      Contamos las variables. Hay seis (no olvide la del lado izquierdo de la ecuación, P) .
+
+                           Paso 2      En el sistema {FLT0) , las dimensiones de cada variable, tomadas de la Tabla 5.1, son:
+
+                                                       p              Q          D          n              p             µ
+                                                    {FLY- 1}                    {L}
+
+                           Paso3       Determinamos j. Afortunadamente, nos han recomendado usar (D, p, D) para adimensiona-
+                                       lizar, luego probablemente j = 3, el número de dimensiones (FLT). Comprobemos qu e es tas
+                                       tres variables no forman un grupo ad imensional:
+
+                                                                                                 sólo si       a = O, b = O, c = O
+                                       En erecto, j = 3. Demostrarlo no fue tan inmediato como con el grupo (L, U, p) del Ejemplo
+                                       5.2, pero es así. Ahora sabemos, del teorema, que añadiendo una variable más obtendremos
+                                       de hecho un grupo adimensional.
+
+                          Paso .fa     Combinando (D, p, D) con la potencia P se obtiene el primer grupo adimensional:
+
+                                                           II 1 = DªlD'P = (T - 1)"(FT 2 C 4 )"(L)' (FL1 1) = F ºLº Tº
+
+                                       Agrupando expo nentes:
+
+                                       Fuerza:                                       b     +     =O
+
+                                       Longillld:                               -4b + c +        =O
+
+                                       Tiempo:                             -a+ 2b                = o
+
+                                       Resol viendo este sistema obtenemos a = - 3, b = - 1 y c = - 5. Este primer grupo adi-
+                                       mensional , la variable dependiente adimensional, se denomina coeficiente de potencia de la
+                                       bomba, e,.:
+                                                                                    5.3. El teorema-pi   301
+
+
+Paso 4b   Combinando (ü, p, D) con el caudal Q se obtiene el segundo grupo adimensional:
+
+                           Il2 = üªp"D'Q = (T- 1)"(FT 2L- 4 )"(L)"(L3 T- 1) = FºLºTº
+
+          Después de agrupar los exponentes, ahora resulta a= - 1, b = O y c = -3. Este segundo
+          grupo adimensional se denomina coeficiente de flujo de la bomba, Cº:
+
+                                         II2 = n - 1P°D- 3Q = n~3 = eº
+
+Paso 4c   Combinando (D, p, D) con la viscosidad µ se obtiene el tercero y último grupo adimensional:
+
+                           Il3 = üªp"D'µ = (T - 1)"(FT2L- 4 /(Lt(FTL- 2 ) = FºLºTº
+
+          En esta ocasión , a = - l , b = - 1 y c = - 2; o I1 3 = µl(pÜD 2) , una especie de número de
+          Reynolds.
+
+ Paso 5   La relación original entre las seis variables se ha reducido así a una relación entre tres grupos
+          ad imensionales:
+                                               p       ( Q    µ )
+                                                                                                     Resp.
+                                             pü3 D5 = f nD3' püIY
+
+          Comentario: Estos tres grupos adimensionales so n los coeficientes utili zados habitualmente
+          para correlacionar la potencia de las bombas, como veremos en el Capítulo 11 .
+
+
+
+
+          EJEMPLO 5.4
+          A bajas velocidades (fl ujo laminar), el caudal Q a través de un tubo de pequeño diámetro es
+          sólo función del radio del tubo R, la viscosidad del fluido µ y la caída de presión por unidad
+          de longitud dpldx. Utilizando el teorema pi, halle una relación adimensional que refleje estas
+          dependencias.
+
+
+          Solución
+          Escribimos la relación y contamos las variables:
+
+                               Q =   1( !)
+                                       R, µ ,         hay cuatro variables (n = 4)
+
+          Consultando la Tabla 5.1 podemos hacer una li sta de las dimensiones de estas variables
+          usando el sistema {MLT):
+
+                                   Q            R            µ              dp/dx
+                                                {L}
+
+          Hay tres dimensiones primarias (M, L, T), luego j s 3. Por ensayo y error determinamos
+          que R, µ y dp/dx no pueden formar un grupo adimensional. Entonces j = 3 y n - j = 4 -
+          3 = 1. Sólo hay un grupo adimensional , que obtenemos combinando Q en un producto de
+          potencias con las otras tres variables:
+
+
+                           II1 = Rªµb(dp)CQI = (L)"(ML-1 T-1l(ML-2T- 2t(L3Y- 1)
+                                        dx
+                              = MºLºTº
+302   Capítulo 5. Análisis dimensional y semejanza
+
+
+                                      Agrupando exponentes :
+
+                                      Masa:                                   b + e             =O
+                                      Longitud:                          a - b - 2c + 3 = O
+
+                                      Tie mpo:                               - b - 2c - l = O
+
+                                      Reso lviendo de forma simultánea. ob tenemos a = -4, b = 1 y e = - 1. Emonces
+
+                                                                         111 = R -4µ,l(d'. )) - IQ
+                                                                                          d.x
+
+                                                                                    Qµ,
+                                      o                                  11 1 = - - - - = cte                                   Resp.
+                                                                                R-\dp/dx)
+
+                                      Co mo sólo hay un grupo adimensional , éste debe se r igual a una constante. Esto es todo lo
+                                      que nos puede proporcionar el análisis dimensiona l. La teoría del !l ujo lam inar de la Sección
+                                                                                         1T
+                                      4.1 1 muestra que el va lor de esta constante es - - .
+                                                                                          8
+
+
+
+
+                                      EJEMPLO 5.5
+                                       Supongamos que la flexión 8 de la puma de una viga en voladizo es función de la carga
+                                       aplicada en la punta P. la longitud de la viga L. el momento de inercia de la secció n / y el
+                                       módulo de elasticidad del material E: esto es, 8 = f(P, L, /, E). Reescriba esta función en
+                                       forma adimensional y discuta su complejidad y el valor peculiar de j.
+
+
+                                      Solución
+                                       Enumeremos las variables y sus dimensiones:
+
+                                                              8          p           L                    E
+
+                                                             {L}                    {L}         {L-1}
+
+                                       Hay cinco vaiiables (11 = 5) y tres dimensiones primarias (M, L, T), luego j :s; 3. Pero hagamo
+                                       lo que hagamos, 110 podemos encontrar ninguna combinación de tres variab les que no pueda
+                                       formar un grupo adimens ional. Esto se debe a que {M} y {T} sólo aparecen en P y E, y en
+                                       ambos casos lo hacen de la misma forma, {Mr- 2 ). Así, nos hallamos ante un caso especial
+                                       donde j = 2. que es menor que el número de dimensiones (M, L, T) . Para comprender mejor
+                                       lo que ocurre en este caso particular, debemos rehacer e l problema usando el sistema de
+                                       dimensiones (F, L, T). En este caso se observa que las variables sólo com ienen las dimen-
+                                       siones {F} y {L}, luego j = 2.
+                                          Con j = 2. elegimos L y E como dos variables que no pueden formar un grupo adimen-
+                                       sional y vamos añadiendo el resto de las variables para formar los tres grupos adimensionales
+                                       buscados:
+                                                             11 1 = L"E" I 1 = (L)"(ML- 1T- 2 )'' (L4 ) = MºLºTº
+                                       de donde , tras agrupar los exponentes, se obtiene que a = -4, b = O, o 11,= l/L4 . A con-
+                                       tinuación,
+                                                           112 = L"E'P 1 = (L)"(ML- 1T- 2 )''(MLT- 2 ) = MºLºTº
+                                       de donde se obtiene a = -2, b = - 1, o 112 = Pl(EL2), y
+
+                                                              Il3 = L"E:'8 1 = (L)"(MC 1T - 2 i(L) = MºLºTº
+

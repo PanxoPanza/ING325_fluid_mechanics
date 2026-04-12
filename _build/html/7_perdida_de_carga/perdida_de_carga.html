@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. Flujo viscoso en ductos &#8212; ING325 - Mecánica de Fluidos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '7_perdida_de_carga/perdida_de_carga';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Flujo externo" href="../8_flujo_externo/flujo_externo.html" />
+    <link rel="prev" title="6. Análisis dimensional y semejanza" href="../6_dimensional_analisis/dimensional_analisis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ING325 - Mecánica de Fluidos</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bienvenidos al curso
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de la mecánica de fluidos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_conceptos_basicos/conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_estatica_de_fluidos/estatica_de_fluidos.html">2. Estática de fluidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción y modelación de flujos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_navier-stokes/navier-stokes.html">5. Ecuación de Navier-Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_dimensional_analisis/dimensional_analisis.html">6. Análisis dimensional y semejanza</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Flujos aplicados y sistemas fluidomecánicos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_flujo_externo/flujo_externo.html">8. Flujo externo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas0.html">9. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas1.html">9.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas2.html">9.3. Turbinas</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndice</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio2/Lab2_BombasCentrifugas.html">Ensayo de Bombas Centrífugas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apendice/Laboratorio3/Lab3_FlujoExterno.html">Ensayo en Tunel de Viento</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/7_perdida_de_carga/perdida_de_carga.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Flujo viscoso en ductos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">7.1. Ecuación de conservación de energía para una línea de flujo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-reynolds">7.2. Número de Reynolds</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#longitud-caracteristica-l-c">7.2.1. Longitud característica (<span class="math notranslate nohighlight">\(L_c\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perdida-de-carga">7.3. Pérdida de carga</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perdida-de-carga-en-la-longitud-mayores">7.3.1. Pérdida de carga en la longitud (mayores)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-laminar">7.3.1.1. Factor de fricción para flujo laminar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-turbulento">7.3.1.2. Factor de fricción para flujo turbulento</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perdidas-de-carga-por-singularidades-menores">7.3.2. Pérdidas de carga por singularidades (menores)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-en-serie-y-paralelo">7.3.3. Tuberías en serie y paralelo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">7.4. Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="flujo-viscoso-en-ductos">
+<h1><span class="section-number">7. </span>Flujo viscoso en ductos<a class="headerlink" href="#flujo-viscoso-en-ductos" title="Link to this heading">#</a></h1>
+<section id="ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">
+<h2><span class="section-number">7.1. </span>Ecuación de conservación de energía para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo" title="Link to this heading">#</a></h2>
+<p>Recordando la unidad 3, tenemos que para <strong>(1) flujo incompresible, (2) volúmen de control con una línea de corriente, y (3) flujo estacionario</strong>, tenemos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0911d88c-e6dd-47ba-80f1-4faab2206e5e">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-0911d88c-e6dd-47ba-80f1-4faab2206e5e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{entra} + h_\mathrm{bomba} = \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{sale} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho Qg}\)</span>, (<span class="math notranslate nohighlight">\(i=\)</span> <span class="math notranslate nohighlight">\(\mathrm{bomba}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{turbina}\)</span> y <span class="math notranslate nohighlight">\(L\)</span>) es la <strong>altura de presión equivalente</strong> asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.</p>
+<p>El término <span class="math notranslate nohighlight">\(h_\mathrm{L}\)</span> se conoce como la <strong>pérdida de carga,</strong> asociada al pérdida irreversible de energía mecánica por fricción y viscosidad.</p>
+<p>La ecuación (4.7) representa la forma más utilizada de la ecuación de conservación energía mecánica. Se expresa en forma de <strong>alturas hidrostáticas,</strong> ya que permite facilmente identificar los cambios de presión en el ducto.</p>
+<a class="reference internal image-reference" href="../_images/mechanical_energy_conservation1.png"><img alt="../_images/mechanical_energy_conservation1.png" class="align-center" src="../_images/mechanical_energy_conservation1.png" style="width: 750px;" />
+</a>
+</section>
+<section id="numero-de-reynolds">
+<h2><span class="section-number">7.2. </span>Número de Reynolds<a class="headerlink" href="#numero-de-reynolds" title="Link to this heading">#</a></h2>
+<p>Antes de discutir las relaciones matemáticas para la pérdida de carga es importante revisar nuevamente el concepto de flujo laminar y turbulento
+<a class="reference internal" href="../_images/laminar_vs_turbulent_illustration.png"><img alt="../_images/laminar_vs_turbulent_illustration.png" class="align-center" src="../_images/laminar_vs_turbulent_illustration.png" style="width: 800px;" /></a></p>
+<ul class="simple">
+<li><p><strong>Flujo laminar</strong>: flujo ordenado caracterizado por líneas suaves</p></li>
+<li><p><strong>Flujo turbulento</strong>: flujo desordenado, caracterizado por fluctuaciones en torno a valores promedio</p></li>
+</ul>
+<p>Necesitamos un parámetro de referencia para distinguir el tipo de flujo con el que trabajamos</p>
+<p>Físicamente, las características que definen si un flujo es laminar o turbulento son:</p>
+<ul class="simple">
+<li><p>Viscosidad dinámica</p></li>
+<li><p>Densidad</p></li>
+<li><p>Velocidad del flujo</p></li>
+</ul>
+<p>La relación entre estos tres parámetros está dada por el <strong>número de Reynolds</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-2a1b1c3b-058d-4134-8fd9-6b8cbffa4d68">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-2a1b1c3b-058d-4134-8fd9-6b8cbffa4d68" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\mathrm{Re} = \frac{VL_c}{\nu}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\nu = \mu/\rho,~(\mathrm{m^2/s})\)</span> es la viscosidad cinemática y <strong><span class="math notranslate nohighlight">\(L_c\)</span> es una longitud caractéristica</strong> relativa al problema estudiado.</p>
+<p>En el caso de <strong>flujo en ductos</strong>, los límites para determinar el tipo de flujo son:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{eqnarray*}
+&amp;~\mathrm{Re}_D &amp;\lesssim 2300,\quad&amp;&amp;\mathrm{Flujo~laminar}\\
+2300\lesssim &amp;~\mathrm{Re}_D &amp;\lesssim 4000,\quad&amp;&amp;\mathrm{Flujo~en~transición}\\
+4000\lesssim &amp;~\mathrm{Re}_D&amp;\quad&amp;&amp;\mathrm{Flujo~turbulento}\\
+\end{eqnarray*}\]</div>
+<section id="longitud-caracteristica-l-c">
+<h3><span class="section-number">7.2.1. </span>Longitud característica (<span class="math notranslate nohighlight">\(L_c\)</span>)<a class="headerlink" href="#longitud-caracteristica-l-c" title="Link to this heading">#</a></h3>
+<p>En el caso de flujo en ductos circulares de diámetro <span class="math notranslate nohighlight">\(D\)</span>, la longitud característica <span class="math notranslate nohighlight">\(L_c = D\)</span>.</p>
+<p>En el caso de ductos no circulares, utilizamos el <strong>diámetro hidráulico</strong>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e5294831-c140-4365-80e9-cd0bf02ce632">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-e5294831-c140-4365-80e9-cd0bf02ce632" title="Permalink to this equation">#</a></span>\[\begin{equation}
+D_h = \frac{4A}{P_h}
+\end{equation}\]</div>
+<p>donde <strong><span class="math notranslate nohighlight">\(A\)</span> es el área de la sección transversal del ducto</strong> y <strong><span class="math notranslate nohighlight">\(P_h\)</span> es el perímetro mojado</strong> (perímetro del ducto en contacto con el fluido).</p>
+<a class="reference internal image-reference" href="../_images/diametro_hidraulico.png"><img alt="../_images/diametro_hidraulico.png" class="align-center" src="../_images/diametro_hidraulico.png" style="width: 700px;" />
+</a>
+</section>
+</section>
+<section id="perdida-de-carga">
+<h2><span class="section-number">7.3. </span>Pérdida de carga<a class="headerlink" href="#perdida-de-carga" title="Link to this heading">#</a></h2>
+<p>Podemos diferenciar dos grandes grupos para la pérdida de carga en sistemas de tuberías:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-096acc70-d267-4fa5-8eca-7868cb23d21d">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-096acc70-d267-4fa5-8eca-7868cb23d21d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_L = h_{L,\mathrm{mayor}} + h_{L,\mathrm{menor}}
+\end{equation}\]</div>
+<p>Donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h_{L,\mathrm{mayor}}\)</span>: <strong>pérdidas mayores</strong>, asociadas a pérdidas por fricción en la longitud del ducto</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_{L,\mathrm{menor}}\)</span>: <strong>pérdidas menores</strong>, asociadas a pérdidas por fricción en singularidades, como: válvulas, codos, cambios de sección, etc.</p></li>
+</ul>
+<blockquote>
+<div><p>El término “mayor” y “menor” no está directamente relacionado con la magnitud de cada pérdida. Es decir, es posible encontrar casos donde las pérdidas menores sean superiores a las mayores, y viceversa.</p>
+</div></blockquote>
+<section id="perdida-de-carga-en-la-longitud-mayores">
+<h3><span class="section-number">7.3.1. </span>Pérdida de carga en la longitud (mayores)<a class="headerlink" href="#perdida-de-carga-en-la-longitud-mayores" title="Link to this heading">#</a></h3>
+<p>Es posible demostrar que, para ductos circulares de diámetro <span class="math notranslate nohighlight">\(D\)</span>, la pérdida de carga entre dos puntos separados por una longitud <span class="math notranslate nohighlight">\(L\)</span> está dada por la <strong>ecuación de Darcy-Weisbach:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-a6440d28-3dd4-40c2-a446-053a5d1cc733">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-a6440d28-3dd4-40c2-a446-053a5d1cc733" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_L = f\frac{L}{D}\frac{V^2}{2g},\quad(\mathrm{m})
+\end{equation}\]</div>
+<p>donde <strong><span class="math notranslate nohighlight">\(f\)</span> es el factor de fricción de Darcy,</strong> y <span class="math notranslate nohighlight">\(V\)</span> es la velocidad promedio del flujo en el ducto</p>
+<p>La fórmula para el factor de fricción depende de si el flujo es laminar o turbulento.</p>
+<section id="factor-de-friccion-para-flujo-laminar">
+<h4><span class="section-number">7.3.1.1. </span>Factor de fricción para flujo laminar<a class="headerlink" href="#factor-de-friccion-para-flujo-laminar" title="Link to this heading">#</a></h4>
+<p>En el caso de flujo laminar, el factor de fricción está dado por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6d4352c5-0645-475a-85ac-2ba132cae0d3">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-6d4352c5-0645-475a-85ac-2ba132cae0d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f = \frac{64}{\mathrm{Re}_D}
+\end{equation}\]</div>
+<p>Para ductos no circulares, usamos las siguientes relaciones en función del diámetro hidráulico (<span class="math notranslate nohighlight">\(D_h\)</span>)</p>
+<a class="reference internal image-reference" href="../_images/head_loss_laminar_non-circular.png"><img alt="../_images/head_loss_laminar_non-circular.png" class="align-center" src="../_images/head_loss_laminar_non-circular.png" style="width: 850px;" />
+</a>
+</section>
+<section id="factor-de-friccion-para-flujo-turbulento">
+<h4><span class="section-number">7.3.1.2. </span>Factor de fricción para flujo turbulento<a class="headerlink" href="#factor-de-friccion-para-flujo-turbulento" title="Link to this heading">#</a></h4>
+<p>Para flujo en transición y turbulento, el factor de fricción depende de la rugosidad del ducto, <span class="math notranslate nohighlight">\(\epsilon\)</span>. Esto porque <em>la inestabilidad del flujo será mayor cuando la rugosidad aumenta.</em></p>
+<p>El factor de fricción, así, depende de <span class="math notranslate nohighlight">\(\mathrm{Re}_D\)</span> y la rugosidad relativa <span class="math notranslate nohighlight">\(\epsilon_R =\epsilon/D\)</span>, y se define por
+<strong>ecuación de Colebrook:</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{\sqrt{f}} = - 2 \log\left(\frac{\epsilon_R}{3.7} + \frac{2.51}{\mathrm{Re}_D\sqrt{f}}\right)
+\end{equation*}\]</div>
+<p>Esta ecuación es no lineal y su solución, por lo tanto, requiere de métodos númericos.</p>
+<p>Una alternativa a la ecuación de Colebrook es el diagrama de Moody.</p>
+<div class="full-width">
+<a class="reference internal image-reference" href="../_images/Moody_diagram.png"><img alt="../_images/Moody_diagram.png" class="align-center" src="../_images/Moody_diagram.png" style="width: 1000px;" />
+</a>
+</div><p>Otra alternativa es utilizar relaciones empíricas que expresan <span class="math notranslate nohighlight">\(f\)</span> de forma explicita, pero aproximada. Por ejemplo:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2904fe55-3dd0-46aa-9d36-51e0d879c83a">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-2904fe55-3dd0-46aa-9d36-51e0d879c83a" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+f &amp;=&amp; 0.25\left[\log\left(\frac{\epsilon_R}{3.7}+\frac{5.74}{\mathrm{Re}_D^{0.9}}\right)\right]^{-2}\quad\quad&amp;&amp;\mathrm{Miller}
+\\[10pt]
+\frac{1}{\sqrt{f}} &amp;=&amp; -1.8\log\left[\left(\frac{\epsilon_R}{3.7}\right)^{1.11}+\frac{6.9}{\mathrm{Re}_D}\right]\quad\quad&amp;&amp;\mathrm{Haaland}
+\end{eqnarray}\]</div>
+</section>
+</section>
+<section id="perdidas-de-carga-por-singularidades-menores">
+<h3><span class="section-number">7.3.2. </span>Pérdidas de carga por singularidades (menores)<a class="headerlink" href="#perdidas-de-carga-por-singularidades-menores" title="Link to this heading">#</a></h3>
+<p>Estas pérdidas están dadas por singularidades, tales como: cambios de sección en el flujo, cambios de dirección en codos, válvulas, etc.</p>
+<p>La relación universal es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3f8cb731-2573-4526-a115-e9e471d9a171">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-3f8cb731-2573-4526-a115-e9e471d9a171" title="Permalink to this equation">#</a></span>\[\begin{equation}
+h_{L,\mathrm{menores}} = \sum_i K_i\frac{V_i^2}{2g}
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(K_i\)</span> y <span class="math notranslate nohighlight">\(V_i\)</span> son el coeficiente de pérdida y la velocidad en la singularidad <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<blockquote>
+<div><p>Notar que el valor de <span class="math notranslate nohighlight">\(V_i\)</span> depende del tipo de singularidad.</p>
+</div></blockquote>
+<p>A continuación mostramos algunos ejemplos</p>
+<p><strong>Singularidad a la entrada y salida</strong></p>
+<a class="reference internal image-reference" href="../_images/singularidad1.png"><img alt="../_images/singularidad1.png" class="align-center" src="../_images/singularidad1.png" style="width: 800px;" />
+</a>
+<p><strong>Expansión y contracción brusca</strong></p>
+<a class="reference internal image-reference" href="../_images/singularidad2.png"><img alt="../_images/singularidad2.png" class="align-center" src="../_images/singularidad2.png" style="width: 800px;" />
+</a>
+<p><strong>Codos y “tes”</strong></p>
+<a class="reference internal image-reference" href="../_images/singularidad3.png"><img alt="../_images/singularidad3.png" class="align-center" src="../_images/singularidad3.png" style="width: 800px;" />
+</a>
+<p><strong>Válvulas</strong></p>
+<a class="reference internal image-reference" href="../_images/valves.png"><img alt="../_images/valves.png" class="align-center" src="../_images/valves.png" style="width: 600px;" />
+</a>
+</section>
+<section id="tuberias-en-serie-y-paralelo">
+<h3><span class="section-number">7.3.3. </span>Tuberías en serie y paralelo<a class="headerlink" href="#tuberias-en-serie-y-paralelo" title="Link to this heading">#</a></h3>
+<p>Los sistemas de cañerías a menudo consideran sistemas conectados en série y paralelo. En este caso, las relaciones para caudal y diferencia de presiones se ajustan como indica la figura:</p>
+<a class="reference internal image-reference" href="../_images/series_and_parallel_pipe.png"><img alt="../_images/series_and_parallel_pipe.png" class="align-center" src="../_images/series_and_parallel_pipe.png" style="width: 700px;" />
+</a>
+</section>
+</section>
+<section id="referencias">
+<h2><span class="section-number">7.4. </span>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
+<p><strong>Çengel Y. A. y Cimbala M. J. <em>Mecánica de Fluidos: Fundamentos y Aplicaciones</em>, 4ta Ed., McGraw Hill, 2018</strong></p>
+<ul class="simple">
+<li><p>Capítulo 8: Flujo en tuberías</p></li>
+</ul>
+<p><strong>White F. M. <em>Mecánica de Fluidos</em>, 5ta Ed., McGraw Hill, 2004</strong></p>
+<ul class="simple">
+<li><p>Capítulo 6: Flujo viscoso en conductos</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./7_perdida_de_carga"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../6_dimensional_analisis/dimensional_analisis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Análisis dimensional y semejanza</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../8_flujo_externo/flujo_externo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Flujo externo</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-de-conservacion-de-energia-para-una-linea-de-flujo">7.1. Ecuación de conservación de energía para una línea de flujo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-reynolds">7.2. Número de Reynolds</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#longitud-caracteristica-l-c">7.2.1. Longitud característica (<span class="math notranslate nohighlight">\(L_c\)</span>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perdida-de-carga">7.3. Pérdida de carga</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perdida-de-carga-en-la-longitud-mayores">7.3.1. Pérdida de carga en la longitud (mayores)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-laminar">7.3.1.1. Factor de fricción para flujo laminar</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-friccion-para-flujo-turbulento">7.3.1.2. Factor de fricción para flujo turbulento</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perdidas-de-carga-por-singularidades-menores">7.3.2. Pérdidas de carga por singularidades (menores)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-en-serie-y-paralelo">7.3.3. Tuberías en serie y paralelo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">7.4. Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco V. Ramirez-Cuevas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

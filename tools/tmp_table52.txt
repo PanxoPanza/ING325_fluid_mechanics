@@ -1,0 +1,215 @@
+﻿                                                                                         5.4. Adimensionalización de las ecuaciones básicas              311
+
+Tabla 5.2. Grupos ad imensionales
+                                                                                              Relación cualitatini
+en la Mecánica de Fluidos.             Parárnl'tro                 l)cfinici<Ín                    de cft-dos                lmport,mcia
+
+                                                                  Re= pUL                         Inercia
+                                    Número de Reynolds                                                                     Siempre
+                                                                       µ.                       Viscosidad
+
+                                                                  Ma= -
+                                                                          u                      Velocidad de l flujo
+                                    Número de Match                                                                        Flujo compres ible
+                                                                           a                    Ve loc idad cid so nido
+                                                                          u2                      Inercia
+                                    Número de Froude              Fr                                                       Flujos con superficie libre
+                                                                          gl                    Gra vedad
+
+                                                                           pU2L                        Inercia
+                                    Número de Weber               We = y                                                   Flujos con superficie libre
+                                                                                                Tens ió n s uperfi c ial
+
+                                                                  Ro=-- -
+                                                                               u                Velocidad del flujo
+                                    Número de Rossby                                                                       Flujos geofís icos
+                                                                          .0. Tu:rra l            Efocto Corio li s
+
+                                                                                                Presión
+                                    N úmero de cav itación                                                                 Cavitación
+                                                                                                Inercia
+                                    (N úmero de Euler)
+
+                                                                  Pr = µ.e,,                    Di sipación
+                                    Número de Prandtl                                                                      Convección de ca lor
+                                                                        A                       Conducci ón
+
+                                                                                                Energía cinética
+                                    Número de Eckert                                                                       Disipac ión
+                                                                                                   Entalpía
+
+                                                                                                    Entalp ía
+                                    Relación de calores                                                                    Flujo compresible
+                                                                                                Energía interna
+                                    específicos
+                                                                          wl                    Oscilación
+                                    Número de Strouhal            St=-                                                     Fluj o osc ilatorio
+                                                                     U                          Velocidad med ia
+
+                                                                  E                             Rugosidad de la pared
+                                    Rugosidad relativa                                                                     Flujo turbulento, pared rugosa
+                                                                  L                              Lo ngitud cid cuerpo
+
+                                                                          {3/:,.Tf!.L3p2        Flotabilidad
+                                    Nú mero de Grashof            Gr =             ,                                       Convección natural
+                                                                                µ.-             Vi scosidad
+
+                                                                          {3/:,.T¡.:L3pc1,      Flotabi li dad
+                                    Número de Ray leigh           Ra =                                                     Convección natural
+                                                                                µ. k            Viscosidad
+
+                                                                                                Temperatura en la pared
+                                    Relación de temperaturas                                                               Transporte de calor
+                                                                                                Temperatura de co1Tiente
+
+                                                                                                  Presión estáti ca
+                                    Coeficiente de presión                                                                 Aerodinámica, hidrodinámica
+                                                                                                Presión dinámi ca
+
+                                                                                                 Fuerza estática
+                                    Coeficiente de sustentación                                                            Aerodinámica, hidrodinámica
+                                                                                                Fuerza dinámica
+
+                                                                         D                            Arrastre
+                                    Coefic iente de resistencia                                                            Aerodinámica, hidrodinámica
+                                                                  Cv = ½PV2A                    Fuerza dinámica
+
+                                                                                                 Pérdida de carga
+                                                                             h,-                   por fri cc ión
+                                    Factor de fricción            f = -2-~ -                                               Flujo de lllberías
+                                                                      ( V /2¡.:)(LI d)
+                                                                                                 Altura dinámica
+                                                                                                Esfuerzo co1tante
+                                                                                                   en la pared
+                                    Coeficiente de                e =-r"""'d
+                                                                        ~                                                  Capa límite
+                                                                      1   pV2/2                  Presión dinámica
+                                    fricción supe rficial
+312    Capítulo S. Análisis dimensional y semejanza
+
+                                             5
+
+
+
+                                             4                                                                              Efecto longitud
+                                                                                                                               cilindro
+                                                                                  Transición a capa
+                                                                                     límite turbulenta                      (10 4 <Re< 10 5)
+                                             3                                                                               Lid
+                                                                                                                                      1.20
+                                                                                                                             40      0.98
+                                                                                                                             20      0.91
+                                                                                                                             10      0.82
+                                                                                                                             5       0.74
+                                                                        Cilindro (bidimensional)                             3       0.72
+                                                                                                                             2       0.68
+                                             1-                                                                                      0.64
+
+                                                                                      Esfera
+
+
+                                             o           1        1             1               1
+                                             10         10 2     10 3          10 4            10 5                  10 7
+                                                                                  pUd
+                                                                         Red   =µ
+                                                                               (a)
+
+
+                                           1.5
+                                                                                                         Cilindro:
+                                           1.0-     ~ =0.02
+
+Figura 5.3. Demostración
+práctica del análisis dimensional:
+                                        Cv 0.7   =     0.009
+                                                                                                         ~=oo
+
+
+
+                                           0.5-
+coeficientes de resistencia de un
+cilindro y una esfera:
+(a) cilindro y esfera lisos (datos de      0.3
+                                             10 4
+varias fuentes); (b) al aumentar la
+rugosidad se adelanta la transición
+de la capa límite a la turbulencia.                                              (b)
+
+
+
+
+                                           Si el lector no está satisfecho con los 19 parámetros dados en la Tabla 5.2, en la Refe-
+                                        rencia 28 puede encontrar alrededor de 300 parámetros adimensionales de uso frecuente
+                                        en ingeniería. También puede consultar la Referencia 29.
+
+
+Una aplicación de gran utilidad         El análisis dimensional es divertido, pero ¿sirve para algo? Sí; si todas las variables se
+                                        incluyen en la función propuesta, la función adimensional obtenida mediante el análisis
+                                        dimensional agrupará todos los datos en una curva única o en una serie de curvas.
+                                            Un ejemplo de la utilidad del análisis dimensional se da en la Figura 5.3 para la resis-
+                                        tencia medida en cilindros y esferas lisas. La corriente es perpendicular al eje del cilindro,
+                                        que es muy largo, Lid~ 00 • Los datos proceden de muchas fuentes , corresponden tanto
+                                        a flujos de líquidos como de gases, e incluyen desde sól idos de varios metros de diámetro
+                                        hasta hilos delgados y bolas de menos de I mm de diámetro. Las dos curvas de la Figura
+                                        5.3a son totalmente experimentales; el análisis de la resistencia de cuerpos sumergidos es
+                                        una de las áreas más débiles de la teoría moderna de la Mecánica de Fluidos. Si se excep-
+                                      5.4. Adimensionalización de las ecuaciones básicas     313
+
+túan algunos cálculos aislados mediante ordenador, no existe ninguna teoría que permita
+determin ar la resistencia de un cilindro o una esfera, salvo en el caso de movimientos
+lentos, Re < 1.
+   El número de Reynolds para ambos casos está basado en el diámetro de los cuerpos,
+de ahí la notación Re,r Sin embargo, los coeficientes de resistencia se definen de forma
+diferente:
+
+                                           ;;:~~:      cilindro
+
+                                      {    arrastre
+                                          ½PV2¼1rd2
+                                                        esfera
+                                                                                         (5 .26)
+
+
+
+Ambos tienen un factor½ como tributo tradicional a Bernoulli y Euler, pues en la ecua-
+ción de Bernoulli también aparece el término ½ pU2 , y ambos están basados en el área
+proyectada; esto es, el área que se ve cuando se- mira hacia el cuerpo desde aguas arriba.
+La definición corriente de CO es, pues,
+                               CD = _¡_ _? _arrastre
+                                            _ _ _ _ __
+                                                                                         (5.27)
+                                    2pU-(área proyectada)
+Sin embargo, se deben comprobar cuidadosamente las definiciones de C 0 , Re, etc., antes
+de utilizar los datos de la literatura. Los perfiles aerodinámicos, por ejemplo, utilizan la
+superficie de la forma en planta.
+   La Figura 5.3a corresponde a cilindros largos y lisos. Si se incluyen la rugosidad y
+longitud del cilindro como variables del análisis dimensional, obtenemos una función
+más complicada con tres parámetros:
+
+                                     C0   =!(Red,~,~)                                    (5.28)
+
+Para describir adecuadamente esta función se requerirían más de 1000 experimentos o
+simulaciones CFD. Sin embargo, es costumbre explorar los efectos de la longitud y rugo-
+sidad por separado para establecer tendencias.
+   La tabla que se añade a la Figura 5.3a muestra el efecto de la longitud del cilindro en
+el caso de paredes lisas. Cuando la longitud decrece, la resistencia decrece más del 50%.
+Esto se debe a que la sobrepresión cae en los extremos, ya que allí la corriente puede
+rodearlos en lugar de deflectarse hacia un lado y otro del cuerpo.
+    La Figura 5.3b muestra el efecto de la rugosidad en un cilindro infinito. La caída brus-
+ca de la resistencia ocurre a Re" más bajos, cuando la rugos idad aumenta a causa de que la
+capa límite se hace antes turbulenta. La rugosidad produce el mismo efecto en la resisten-
+cia de una esfera, un hecho que se explota en deportes como el golf, donde los hoyuelos
+                                                                                      5
+de las pelotas les proporcionan una menor resistencia en su movimiento a Re""" l0 •
+    La Figura 5.3 corresponde a un análisis experimental típico, con ayuda del análisis
+dimensional, de un problema de Mecánica de Fluidos. Cuando el tiempo, el dinero y la
+demanda lo permitan, la relación triparamétrica (5.28) podría ampliarse con más experi-
+mentos.
+
+
+ EJEMPLO 5.7
+ Un cilindro liso, de 1 cm de diámetro y 20 cm de longitud, se prueba en un túnel de viento
+ con un flujo de 45 mis de aire a 20 ºC y 1 atm. Se mide una resistencia de 2.2 ± 0.1 N.
+ (a) ¿Coincide este resultado con los datos de la Figura 5.3? (b) ¿Puede usarse este punto para
+ predecir la resistencia que una chimenea de ! m de diámetro y 20 m de longitud ofrece a
+

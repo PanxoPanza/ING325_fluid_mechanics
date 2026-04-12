@@ -4,26 +4,27 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Parte 1. Fundamentos de estática y dinámica de fluidos
+  - caption: Parte 1. Fundamentos de la mecánica de fluidos
     numbered: 3
     chapters:
     - file: 1_conceptos_basicos/conceptos_basicos
     - file: 2_estatica_de_fluidos/estatica_de_fluidos
     - file: 3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos
-  - caption: Parte 2. Descripción de una partícula fluida
+  - caption: Parte 2. Descripción y modelación de flujos
     numbered: true
     chapters:
     - file: 4_analisis_diferencial_intro/analisis_diferencial_intro
     - file: 5_navier-stokes/navier-stokes
-  - caption: Parte 3. Mecánica de Fluidos aplicada
+    - file: 6_dimensional_analisis/dimensional_analisis
+  - caption: Parte 3. Flujos aplicados y sistemas fluidomecánicos
     numbered: true
     chapters:
-    - file: 6_perdida_de_carga/perdida_de_carga
-    - file: 7_flujo_externo/flujo_externo
-    - file: 8_turbomaquinas/turbomaquinas0
+    - file: 7_perdida_de_carga/perdida_de_carga
+    - file: 8_flujo_externo/flujo_externo
+    - file: 9_turbomaquinas/turbomaquinas0
       sections:
-      - file: 8_turbomaquinas/turbomaquinas1
-      - file: 8_turbomaquinas/turbomaquinas2
+      - file: 9_turbomaquinas/turbomaquinas1
+      - file: 9_turbomaquinas/turbomaquinas2
   - caption: Apéndice
     numbered: False
     chapters:
