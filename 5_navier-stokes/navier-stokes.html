@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '5_navier-stokes/navier-stokes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Flujo viscoso en ductos" href="../6_perdida_de_carga/perdida_de_carga.html" />
+    <link rel="next" title="6. Análisis dimensional y semejanza" href="../6_dimensional_analisis/dimensional_analisis.html" />
     <link rel="prev" title="4. Análisis diferencial de flujos" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,24 +176,25 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de estática y dinámica de fluidos</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de la mecánica de fluidos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_conceptos_basicos/conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_estatica_de_fluidos/estatica_de_fluidos.html">2. Estática de fluidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción de una partícula fluida</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción y modelación de flujos</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../4_analisis_diferencial_intro/analisis_diferencial_intro.html">4. Análisis diferencial de flujos</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Ecuación de Navier-Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_dimensional_analisis/dimensional_analisis.html">6. Análisis dimensional y semejanza</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Flujos aplicados y sistemas fluidomecánicos</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_perdida_de_carga/perdida_de_carga.html">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_flujo_externo/flujo_externo.html">8. Flujo externo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas0.html">9. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas1.html">9.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas2.html">9.3. Turbinas</a></li>
 </ul>
 </details></li>
 </ul>
@@ -426,16 +427,16 @@ document.write(`
 \end{equation*}\]</div>
 <p>Los <strong>elementos de la diagonal</strong> (<span class="math notranslate nohighlight">\(\varepsilon_{xx}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{yy}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_{zz}\)</span>) representan la <strong>deformación por esfuerzos normales</strong>. El <strong>resto de los elementos</strong>, corresponde a la <strong>deformación por esfuerzos cortantes</strong>.</p>
 <p>Usando el operador <span class="math notranslate nohighlight">\(\nabla\)</span>, el tensor de deformación se puede representar como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71b7e5aa-f591-4a2e-b939-cdca788f718e">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-71b7e5aa-f591-4a2e-b939-cdca788f718e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8bbb9827-65c1-44ad-a32a-6c0e40789efd">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-8bbb9827-65c1-44ad-a32a-6c0e40789efd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
 \end{equation}\]</div>
 </section>
 <section id="tensor-de-esfuerzos">
 <h3><span class="section-number">5.2.2. </span>Tensor de esfuerzos<a class="headerlink" href="#tensor-de-esfuerzos" title="Link to this heading">#</a></h3>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87225284-3cad-404b-beb6-2e3c7f7b2563">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-87225284-3cad-404b-beb6-2e3c7f7b2563" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cf06ecd9-48ba-408c-a330-e37653ff4ef3">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-cf06ecd9-48ba-408c-a330-e37653ff4ef3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>done <span class="math notranslate nohighlight">\(\mu\)</span> es la viscosidad dinámica del fluido</p>
@@ -456,8 +457,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b69e2fdc-0f57-4b66-90c2-2444a48aeb8a">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-b69e2fdc-0f57-4b66-90c2-2444a48aeb8a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f93c1042-d19f-4168-98aa-3ad429a6c897">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-f93c1042-d19f-4168-98aa-3ad429a6c897" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Para este caso particular, tenemos entonces:</p>
@@ -466,8 +467,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\nabla^2\vec{V}
 \end{align*}\]</div>
 <p>Reemplazando este resultado en la ecuación de Cauchy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-75209d94-2bd0-41ef-b2a5-510397a4567d">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-75209d94-2bd0-41ef-b2a5-510397a4567d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2206d629-538c-4e9b-89d6-838dc961ad46">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-2206d629-538c-4e9b-89d6-838dc961ad46" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuación de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -538,8 +539,8 @@ document.write(`
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a2198c27-e1c5-4659-88e6-95b72f323b10">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-a2198c27-e1c5-4659-88e6-95b72f323b10" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ccad01bd-24d9-4545-ae46-d24bc8fb9a91">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-ccad01bd-24d9-4545-ae46-d24bc8fb9a91" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -636,14 +637,14 @@ document.write(`
 </a>
 <p>La <strong>condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil</strong>.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a8d3769f-2011-4e01-97c1-480084ff924c">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-a8d3769f-2011-4e01-97c1-480084ff924c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-536c9281-4b0c-44f7-a9e9-bc1d36843b38">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-536c9281-4b0c-44f7-a9e9-bc1d36843b38" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), obtenemos la <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-295c15e6-a722-48fc-bd4a-c66bd288f642">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-295c15e6-a722-48fc-bd4a-c66bd288f642" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-db305433-50a8-4913-948b-38314ef1d1dd">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-db305433-50a8-4913-948b-38314ef1d1dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
@@ -709,11 +710,11 @@ u(y=y_0) = 0
       </div>
     </a>
     <a class="right-next"
-       href="../6_perdida_de_carga/perdida_de_carga.html"
+       href="../6_dimensional_analisis/dimensional_analisis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Flujo viscoso en ductos</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Análisis dimensional y semejanza</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

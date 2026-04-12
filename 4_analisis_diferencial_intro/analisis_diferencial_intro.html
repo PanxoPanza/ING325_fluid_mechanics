@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom_edits.css?v=4f657593" />
@@ -176,24 +176,25 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de estática y dinámica de fluidos</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 1. Fundamentos de la mecánica de fluidos</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_conceptos_basicos/conceptos_basicos.html">1. Introducción a la mecánica de fluidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2_estatica_de_fluidos/estatica_de_fluidos.html">2. Estática de fluidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../3_intro_dinamica_de_fluidos/intro_dinamica_de_fluidos.html">3. Introducción a la dinámica de fluidos</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción de una partícula fluida</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 2. Descripción y modelación de flujos</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Análisis diferencial de flujos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_navier-stokes/navier-stokes.html">5. Ecuación de Navier-Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_dimensional_analisis/dimensional_analisis.html">6. Análisis dimensional y semejanza</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Mecánica de Fluidos aplicada</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte 3. Flujos aplicados y sistemas fluidomecánicos</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../6_perdida_de_carga/perdida_de_carga.html">6. Flujo viscoso en ductos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_flujo_externo/flujo_externo.html">7. Flujo externo</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas0.html">8. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas1.html">8.2. Bombas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../8_turbomaquinas/turbomaquinas2.html">8.3. Turbinas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_perdida_de_carga/perdida_de_carga.html">7. Flujo viscoso en ductos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_flujo_externo/flujo_externo.html">8. Flujo externo</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas0.html">9. Turbomáquinas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas1.html">9.2. Bombas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../9_turbomaquinas/turbomaquinas2.html">9.3. Turbinas</a></li>
 </ul>
 </details></li>
 </ul>
@@ -410,8 +411,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 \vec{V}(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~velocidad~(campo~vectorial)}
 \end{align*}\]</div>
 <p>El campo de velocidad, en particular, se define por tres componentes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a888fc6-99f6-4815-8e5e-2b99990b8020">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-4a888fc6-99f6-4815-8e5e-2b99990b8020" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-be553eca-8f68-45e3-a0da-4738057cb37a">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-be553eca-8f68-45e3-a0da-4738057cb37a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \vec{V} = u(x,y,z,t)~\hat{x} + v(x,y,z,t)~\hat{y} + w(x,y,z,t)~\hat{z}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> y <span class="math notranslate nohighlight">\(w\)</span> son las componentes de la velocidad e direcciones <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> y <span class="math notranslate nohighlight">\(z\)</span>, respectivamente.</p>
@@ -420,8 +421,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <h3><span class="section-number">4.2.3. </span>Operadores diferenciales<a class="headerlink" href="#operadores-diferenciales" title="Link to this heading">#</a></h3>
 <p>Debido a la cantidad de variables independientes presentes en cada parámetro, es conveniente utilizar operadores para analizar tasas de cambio y otras caracteristicas.</p>
 <p>Para esto definimos el operador <span class="math notranslate nohighlight">\(\nabla\)</span> o “del”, como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-365028a0-370d-42ec-b006-c002ecc3c9d3">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-365028a0-370d-42ec-b006-c002ecc3c9d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0e9c38d9-4ee4-4e12-8138-920a29ce5192">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-0e9c38d9-4ee4-4e12-8138-920a29ce5192" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla= \left( \hat{x}\frac{\partial }{\partial x} + \hat{y}\frac{\partial }{\partial y} + \hat{z}\frac{\partial }{\partial z} \right)
 \end{equation}\]</div>
 <p>El operador <span class="math notranslate nohighlight">\(\nabla\)</span> es un <em>vector que aplica una derivada espacial a una variable de campo</em>. <strong>La forma que toma este operador depende del tipo de variable y del producto vectorial aplicado.</strong></p>
@@ -429,13 +430,13 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <h4><span class="section-number">4.2.3.1. </span>Gradiente. <span class="math notranslate nohighlight">\(\nabla(\quad)\)</span><a class="headerlink" href="#gradiente-nabla-quad" title="Link to this heading">#</a></h4>
 <p>Es equivalente a la derivada de una función, pero en múltiples dimenciones. Permite identificar zonas de crecimiento o decrecimiento de una variable de campo.</p>
 <p><strong>Si el gradiente se aplica a un campo escalar, el resultado es un campo vectorial.</strong> Por ejemplo, el gradiente de la densidad es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54308224-3a89-4f99-9e65-16e9520e33fd">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-54308224-3a89-4f99-9e65-16e9520e33fd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7f508c5e-507b-4985-9da7-e4d70d5bdf14">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-7f508c5e-507b-4985-9da7-e4d70d5bdf14" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla \rho= \frac{\partial \rho}{\partial x}\hat{x} + \frac{\partial \rho}{\partial y}\hat{y}+ \frac{\partial \rho}{\partial z}\hat{z}
 \end{equation}\]</div>
 <p><strong>Si el gradiente se aplica a un campo vectorial, el resultado es un tensor de orden 2.</strong> Por ejemplo, el gradiente de la velocidad es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-75dbd493-6249-4ed2-a6b6-6202a1bcb103">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-75dbd493-6249-4ed2-a6b6-6202a1bcb103" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-edd9d255-ca65-42a1-acb5-12e075326e74">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-edd9d255-ca65-42a1-acb5-12e075326e74" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla \vec{V} = 
 \frac{\partial \vec{V}}{\partial x}\hat{x} + \frac{\partial \vec{V}}{\partial y}\hat{y}+ \frac{\partial \vec{V}}{\partial z}\hat{z}
 = \begin{bmatrix}
@@ -448,8 +449,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <section id="divergente-nabla-cdot-quad">
 <h4><span class="section-number">4.2.3.2. </span>Divergente. <span class="math notranslate nohighlight">\(\nabla\cdot(\quad)\)</span><a class="headerlink" href="#divergente-nabla-cdot-quad" title="Link to this heading">#</a></h4>
 <p><strong>Solo se aplica a campos vectoriales</strong>. Se define como el producto punto entre el operador Del y un campo vectorial:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ddf2a6e5-0aa5-4487-af86-f074f2dd78a8">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-ddf2a6e5-0aa5-4487-af86-f074f2dd78a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-df79e44d-56ee-404e-b640-de340b3cac64">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-df79e44d-56ee-404e-b640-de340b3cac64" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla \cdot \vec{V}= \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z}
 \end{equation}\]</div>
 <p>El divergente permite medir cuanto un campo vectorial diverge o converge respecto de un punto en cuestión.</p>
@@ -463,8 +464,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <section id="rotacional-nabla-times-quad">
 <h4><span class="section-number">4.2.3.3. </span>Rotacional. <span class="math notranslate nohighlight">\(\nabla\times(\quad)\)</span><a class="headerlink" href="#rotacional-nabla-times-quad" title="Link to this heading">#</a></h4>
 <p>Solo se aplica a campos vectoriales. Se define como el producto cruz entre el operador Del y un campo vectorial:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1c9b6981-87a3-4c73-ba6a-c1e28c24bcdf">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-1c9b6981-87a3-4c73-ba6a-c1e28c24bcdf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-25f25db6-5b42-4bdc-9e6a-ba518ede252c">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-25f25db6-5b42-4bdc-9e6a-ba518ede252c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla \times \vec{V}= 
 \left(\frac{\partial w}{\partial y} - \frac{\partial v}{\partial z}\right)\hat{x}+
 \left(\frac{\partial u}{\partial z} - \frac{\partial w}{\partial x}\right)\hat{y}+
@@ -494,8 +495,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <ul class="simple">
 <li><p>Según el <strong>enfoque euleriano</strong>, la aceleración de una partícula en un volumen de control:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-6a6b61ea-86b9-4ada-b414-de797270fe89">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-6a6b61ea-86b9-4ada-b414-de797270fe89" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a7e7b64d-dfaa-491e-bc0d-dd4c87c26b85">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-a7e7b64d-dfaa-491e-bc0d-dd4c87c26b85" title="Permalink to this equation">#</a></span>\[\begin{align}
 \vec{a}=\frac{d\vec{V}}{dt} &amp;= \frac{\partial \vec{V}}{\partial t}\frac{dt}{dt} +
         \frac{\partial \vec{V}}{\partial x}\frac{dx}{dt}
         +
@@ -514,8 +515,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
         \vec{V}\cdot\nabla\vec{V}
 \end{align}\]</div>
 <p>En el desarrollo anterior, hemos definido un nuevo operador denominado <strong>derivada material (o sustancial), <span class="math notranslate nohighlight">\(\frac{D}{Dt}\)</span> o <span class="math notranslate nohighlight">\(\frac{d}{dt}\)</span></strong> que describe la <em>variación temporal de una partícula de fluido a medida que se mueve por el campo de flujo:</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-7845c091-36ea-42e6-8527-54c0c326d3fd">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-7845c091-36ea-42e6-8527-54c0c326d3fd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c892b95c-2801-40b6-a9bc-db4e89faa573">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-c892b95c-2801-40b6-a9bc-db4e89faa573" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}(\quad) = \frac{\partial}{\partial t}(\quad) + \vec{V}\cdot\nabla(\quad)
 \end{equation}\]</div>
 <ul class="simple">
@@ -551,8 +552,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <li><p>Utilizando el <em>teorema de Gauss</em> o <em>teorema de la divergencia</em> que establece:</p>
 <blockquote>
 <div><p><strong>Teorema de la divergencia:</strong> <em>la integral en una superficie cerrada <span class="math notranslate nohighlight">\(S\)</span> de un campo vectorial <span class="math notranslate nohighlight">\(\vec{f}\)</span> es igual a la integral de la divergencia de <span class="math notranslate nohighlight">\(\vec{f}\)</span> sobre un volumen <span class="math notranslate nohighlight">\(V\)</span> dentro de la superficie</em></p>
-<div class="amsmath math notranslate nohighlight" id="equation-6783574c-c9e0-4b4f-b7a4-5f8b8dc5159c">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-6783574c-c9e0-4b4f-b7a4-5f8b8dc5159c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f227d9f8-f182-4832-87a8-d956445a6821">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-f227d9f8-f182-4832-87a8-d956445a6821" title="Permalink to this equation">#</a></span>\[\begin{equation}
  \oint_A \vec{f}\cdot\hat{n} dA = \int_V \nabla\cdot \vec{f} d\forall
  \end{equation}\]</div>
 </div></blockquote>
@@ -576,8 +577,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 \frac{\partial\rho}{\partial t} + \nabla\cdot\left(\rho\vec{V} \right) = 0
 \end{equation*}\]</div>
 <p>A partir de la identidad, <span class="math notranslate nohighlight">\( \nabla\cdot(\rho\vec{V}) = \vec{V}\cdot\nabla\rho + \rho(\nabla\cdot\vec{V})\)</span>, derivamos la <strong>ecuación de conservación de masa en su forma diferencial</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9306d3cd-9dbd-43f9-948c-ca6aa148caec">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-9306d3cd-9dbd-43f9-948c-ca6aa148caec" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f4c815a1-17fa-4df5-8ba7-8c670b2507e7">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-f4c815a1-17fa-4df5-8ba7-8c670b2507e7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d\rho}{dt} + \rho\left(\nabla\cdot\vec{V}\right) = 0
 \end{equation}\]</div>
 <p>Esta ecuación también se conoce como la <strong>ecuación de continuidad</strong>.</p>
@@ -589,8 +590,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <section id="ecuacion-de-conservacion-de-momento-lineal">
 <h3><span class="section-number">4.4.2. </span>Ecuación de conservación de momento lineal<a class="headerlink" href="#ecuacion-de-conservacion-de-momento-lineal" title="Link to this heading">#</a></h3>
 <p>Podemos aplicar el teorema de Gauss sobre el lado derecho de la ecuación de conservación de momento lineal para determinar su forma diferencial:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c077ebcf-0496-42b8-ad2f-22635739212a">
-<span class="eqno">(4.11)<a class="headerlink" href="#equation-c077ebcf-0496-42b8-ad2f-22635739212a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f80861fe-da2e-4ddf-8b4e-2c548447a173">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-f80861fe-da2e-4ddf-8b4e-2c548447a173" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sum\vec{F}_\mathrm{ext} &amp;= \frac{d}{dt}\int_\mathrm{VC} \rho\vec{V} d\forall + \int_\mathrm{VC} \rho\vec{V}(\vec{V}\cdot\hat{n})dA \notag
 \\
  &amp;= \int_\mathrm{VC} \left[\frac{\partial}{\partial t}\left(\rho\vec{V}\right)  + \nabla\cdot\left(\rho\vec{V}\vec{V}\right)\right]d\forall
@@ -600,13 +601,13 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 <a class="reference internal image-reference" href="../_images/drag_and_lift_force.png"><img alt="../_images/drag_and_lift_force.png" class="align-center" src="../_images/drag_and_lift_force.png" style="width: 700px;" />
 </a>
 <p>Matemáticamente, podemos representar el efecto de las fuerzas externas como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ccf31826-9a6d-4bc7-b1e0-ababab3a0094">
-<span class="eqno">(4.12)<a class="headerlink" href="#equation-ccf31826-9a6d-4bc7-b1e0-ababab3a0094" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-70dacffd-3174-405c-bcd4-6e782c14aed6">
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-70dacffd-3174-405c-bcd4-6e782c14aed6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{F}_\mathrm{ext} = - \int_A p~\hat{n}dA + \int_A \bar{\tau}\cdot\hat{n}dA  + \int_\mathrm{VC} \rho\vec{g}d\forall
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(\bar{\tau}\)</span> es el <strong>tensor de esfuerzos</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-d670c464-6562-4e33-869f-1831897cb189">
-<span class="eqno">(4.13)<a class="headerlink" href="#equation-d670c464-6562-4e33-869f-1831897cb189" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b6c20258-f6a2-4dbb-8241-1ba269c196df">
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-b6c20258-f6a2-4dbb-8241-1ba269c196df" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} =
 \begin{bmatrix}
 \tau_{xx} &amp; \tau_{xy} &amp; \tau_{xz} \\
@@ -615,8 +616,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 \end{bmatrix}
 \end{equation}\]</div>
 <p>Usando el teorema de la divergencia, podemos reordenar la expresión (7.12) como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-60d736c6-2403-4a38-9f6c-6b9370692965">
-<span class="eqno">(4.14)<a class="headerlink" href="#equation-60d736c6-2403-4a38-9f6c-6b9370692965" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-643679ed-dd16-4ef2-a318-6072ec3f6d3b">
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-643679ed-dd16-4ef2-a318-6072ec3f6d3b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{F}_\mathrm{ext} = \int_\mathrm{VC} \left[\nabla\cdot\left( - p\bar{I} + \bar{\tau}\right)  + \rho\vec{g}\right]d\forall 
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\bar{I}\)</span> es el tensor identidad.</p>
@@ -631,8 +632,8 @@ P(x,y,z,t) &amp;\quad\quad\mathrm{Campo~de~presión~(campo~escalar)}\\
 \vec{V}\left[\frac{\partial\rho}{\partial t} + \nabla\cdot\left(\rho\vec{V}\right)\right] + \rho\left[\frac{\partial\vec{V}}{\partial t}+ \vec{V}\cdot\nabla\vec{V}\right] = - \nabla p + \nabla\cdot\bar{\tau} +  \rho\vec{g}
 \end{equation*}\]</div>
 <p>El primer término de la izquierda corresponde a la ecuación de continuidad (7.10). Así, la <strong>ecuación de conservación de momento lineal en su forma diferencial</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-418188e9-37cd-4f12-9b04-47f026ee4f40">
-<span class="eqno">(4.15)<a class="headerlink" href="#equation-418188e9-37cd-4f12-9b04-47f026ee4f40" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3c058f6b-8ede-4ee2-8db5-c62d67f36d97">
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-3c058f6b-8ede-4ee2-8db5-c62d67f36d97" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \nabla\cdot\bar{\tau} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta ecuación también se conoce como la <strong>Ecuación de Cauchy.</strong></p>
