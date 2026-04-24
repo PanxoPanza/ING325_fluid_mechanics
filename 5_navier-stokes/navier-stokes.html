@@ -427,16 +427,16 @@ document.write(`
 \end{equation*}\]</div>
 <p>Los <strong>elementos de la diagonal</strong> (<span class="math notranslate nohighlight">\(\varepsilon_{xx}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{yy}\)</span> y <span class="math notranslate nohighlight">\(\varepsilon_{zz}\)</span>) representan la <strong>deformación por esfuerzos normales</strong>. El <strong>resto de los elementos</strong>, corresponde a la <strong>deformación por esfuerzos cortantes</strong>.</p>
 <p>Usando el operador <span class="math notranslate nohighlight">\(\nabla\)</span>, el tensor de deformación se puede representar como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8bbb9827-65c1-44ad-a32a-6c0e40789efd">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-8bbb9827-65c1-44ad-a32a-6c0e40789efd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4d4b3150-174c-4280-9e0b-51e637f7f50f">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-4d4b3150-174c-4280-9e0b-51e637f7f50f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\varepsilon} = \frac{1}{2}\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right] 
 \end{equation}\]</div>
 </section>
 <section id="tensor-de-esfuerzos">
 <h3><span class="section-number">5.2.2. </span>Tensor de esfuerzos<a class="headerlink" href="#tensor-de-esfuerzos" title="Link to this heading">#</a></h3>
 <p>Si el fluido es newtoniano, el tensor esfuerzos de corte es directamente proporcional a la razón de deformación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf06ecd9-48ba-408c-a330-e37653ff4ef3">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-cf06ecd9-48ba-408c-a330-e37653ff4ef3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-71a4c39a-b079-4b97-8d9f-579f865da529">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-71a4c39a-b079-4b97-8d9f-579f865da529" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = 2\mu \bar{\varepsilon}= \mu\left[\left(\nabla\vec{V}\right) + \left(\nabla\vec{V}\right)^T \right]
 \end{equation}\]</div>
 <p>done <span class="math notranslate nohighlight">\(\mu\)</span> es la viscosidad dinámica del fluido</p>
@@ -457,8 +457,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\left[\nabla^2\vec{V} + \vec{V}\left(\nabla\cdot\vec{V}\right)\right]
 \end{align*}\]</div>
 <p>En el caso particular de un flujo incompresible, la ecuación de coservación de masa es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f93c1042-d19f-4168-98aa-3ad429a6c897">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-f93c1042-d19f-4168-98aa-3ad429a6c897" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-62976d1d-7b71-46a0-ad8c-bfb11ee5676f">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-62976d1d-7b71-46a0-ad8c-bfb11ee5676f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \nabla\cdot\vec{V} = 0
 \end{equation}\]</div>
 <p>Para este caso particular, tenemos entonces:</p>
@@ -467,8 +467,8 @@ document.write(`
 \nabla\cdot\bar{\tau} = \mu\nabla^2\vec{V}
 \end{align*}\]</div>
 <p>Reemplazando este resultado en la ecuación de Cauchy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2206d629-538c-4e9b-89d6-838dc961ad46">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-2206d629-538c-4e9b-89d6-838dc961ad46" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a397da8f-dc5a-41d6-ab6f-6b3f9b210640">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-a397da8f-dc5a-41d6-ab6f-6b3f9b210640" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \rho\frac{d\vec{V}}{dt} = - \nabla p + \mu\nabla^2\vec{V} + \rho\vec{g}
 \end{equation}\]</div>
 <p>Esta es la <strong>ecuación de Navier-Stokes.</strong> Corresponde a una ecuación diferencial parcial de segundo orden, no lineal y no estacionaria.</p>
@@ -539,8 +539,8 @@ document.write(`
 \end{align*}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(u_r\)</span>, <span class="math notranslate nohighlight">\(u_\theta\)</span> y <span class="math notranslate nohighlight">\(u_z\)</span> son las componentes de la velocidad en la dirección radial, azimutal y longitudinal, respectivamente.</p>
 <p>El tensor de esfuerzos es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ccad01bd-24d9-4545-ae46-d24bc8fb9a91">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-ccad01bd-24d9-4545-ae46-d24bc8fb9a91" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c6cfcb8e-c37a-4b44-8fee-23becba3bce2">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-c6cfcb8e-c37a-4b44-8fee-23becba3bce2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\tau} = \mu
 \begin{bmatrix}
 2 \dfrac{\partial u_r}{\partial r} &amp; 
@@ -637,14 +637,14 @@ document.write(`
 </a>
 <p>La <strong>condición de interface constituye una condición generalizada del contacto de un fluido con una frontera mobil</strong>.</p>
 <p>Por ejemplo, si el fluido está en contacto con una pared móvil a velocidad <span class="math notranslate nohighlight">\(V_\mathrm{pared}\)</span>, la condición de borde es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-536c9281-4b0c-44f7-a9e9-bc1d36843b38">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-536c9281-4b0c-44f7-a9e9-bc1d36843b38" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-73cc3f3f-5cf4-410d-8daa-035d4adf2dff">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-73cc3f3f-5cf4-410d-8daa-035d4adf2dff" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = V_\mathrm{pared}
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(y_0\)</span> es la posición de la interface entre el fluido y la pared.</p>
 <p>El caso de una pared fija (<span class="math notranslate nohighlight">\(V_\mathrm{pared} = 0\)</span>), obtenemos la <strong>condición de no-deslizamiento:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-db305433-50a8-4913-948b-38314ef1d1dd">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-db305433-50a8-4913-948b-38314ef1d1dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f3606b41-33e6-4ebe-8303-09c10dc7477a">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-f3606b41-33e6-4ebe-8303-09c10dc7477a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u(y=y_0) = 0
 \end{equation}\]</div>
 </section>
