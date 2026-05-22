@@ -356,7 +356,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneidad-dimensional">6.2.2. Homogeneidad dimensional</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-buckingham-pi">6.3. Teorema de Buckingham Pi</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-pi-buckingham">6.3. Teorema de Pi Buckingham</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-fuerza-de-arrastre">6.3.1. Ejemplo 1: Fuerza de arrastre</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2-caida-de-presion-en-tuberia">6.3.2. Ejemplo 2: caída de presión en tubería</a></li>
 </ul>
@@ -593,8 +593,8 @@ x(t) = x_0 + V_0 t + \frac{1}{2}gt^2
 <p>Ahora el fenómeno queda descrito con dos cantidades adimensionales en vez de cuatro variables dimensionales independientes.</p>
 </section>
 </section>
-<section id="teorema-de-buckingham-pi">
-<h2><span class="section-number">6.3. </span>Teorema de Buckingham Pi<a class="headerlink" href="#teorema-de-buckingham-pi" title="Link to this heading">#</a></h2>
+<section id="teorema-de-pi-buckingham">
+<h2><span class="section-number">6.3. </span>Teorema de Pi Buckingham<a class="headerlink" href="#teorema-de-pi-buckingham" title="Link to this heading">#</a></h2>
 <p><em><strong>Si un fenómeno depende de <span class="math notranslate nohighlight">\(n\)</span> variables dimensionales y esas variables involucran <span class="math notranslate nohighlight">\(r\)</span> dimensiones fundamentales independientes, entonces la relación física puede expresarse mediante <span class="math notranslate nohighlight">\(n-r\)</span> grupos adimensionales independientes.</strong></em></p>
 <p>Ese resultado no reemplaza el juicio físico: primero hay que identificar correctamente qué variables son relevantes.</p>
 <p><strong>Procedimiento práctico.</strong></p>
@@ -733,8 +733,8 @@ C_D = \phi(\mathrm{Re})
 <section id="numero-de-reynolds-inercia-frente-a-viscosidad">
 <h3><span class="section-number">6.4.1. </span>Número de Reynolds: inercia frente a viscosidad<a class="headerlink" href="#numero-de-reynolds-inercia-frente-a-viscosidad" title="Link to this heading">#</a></h3>
 <p>Para una longitud característica <span class="math notranslate nohighlight">\(L_c\)</span> (el diámetro, por ejemplo), el número de Reynolds se define como</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a20b3b5-3405-4f18-bae6-4a3e20230130">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-1a20b3b5-3405-4f18-bae6-4a3e20230130" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-087634d5-a8c6-48c8-9667-ba708dec0488">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-087634d5-a8c6-48c8-9667-ba708dec0488" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Re} = \frac{\rho V L_c}{\mu}
 \end{equation}\]</div>
 <p>Compara efectos de inercia (<span class="math notranslate nohighlight">\(\propto\rho V^2\)</span>) con esfuerzos viscosos (<span class="math notranslate nohighlight">\(\propto \mu V/L_c\)</span>).</p>
@@ -745,8 +745,8 @@ C_D = \phi(\mathrm{Re})
 </section>
 <section id="numero-de-froude-inercia-frente-a-gravedad">
 <h3><span class="section-number">6.4.2. </span>Número de Froude: inercia frente a gravedad<a class="headerlink" href="#numero-de-froude-inercia-frente-a-gravedad" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-44756100-3a09-4c50-acff-d55bd316ca4a">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-44756100-3a09-4c50-acff-d55bd316ca4a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-16c3b5b3-97e3-4328-aed6-3b7d764e6b75">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-16c3b5b3-97e3-4328-aed6-3b7d764e6b75" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Fr} = \frac{V}{\sqrt{gL_c}}
 \end{equation}\]</div>
 <p>Compara fuerzas de inercia (<span class="math notranslate nohighlight">\(\propto\rho V^2\)</span>) con fuerzas de gravedad (<span class="math notranslate nohighlight">\(\propto \rho g L_c\)</span>).</p>
@@ -754,16 +754,16 @@ C_D = \phi(\mathrm{Re})
 </section>
 <section id="numero-de-euler-presion-frente-a-inercia">
 <h3><span class="section-number">6.4.3. </span>Número de Euler: presión frente a inercia<a class="headerlink" href="#numero-de-euler-presion-frente-a-inercia" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-113f0000-a7ed-4ac7-8d0d-eed0e1d8bd23">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-113f0000-a7ed-4ac7-8d0d-eed0e1d8bd23" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f4c0ae5f-1ab3-4ca3-b8f9-dba960ce100a">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-f4c0ae5f-1ab3-4ca3-b8f9-dba960ce100a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Eu} = \frac{\Delta p}{\rho V^2}
 \end{equation}\]</div>
 <p>El número de Euler (<span class="math notranslate nohighlight">\(\mathrm{Eu}\)</span>) se utiliza, principalmente, en flujos con grandes caidas de presión <span class="math notranslate nohighlight">\(\Delta p\)</span>. Particularmente, en problemas de cavitación, <span class="math notranslate nohighlight">\(\Delta p = p_a - p_v\)</span>, donde <span class="math notranslate nohighlight">\(p_a\)</span> es la presión absoluta y <span class="math notranslate nohighlight">\(p_v\)</span> es la presión de vapor del fluido.</p>
 </section>
 <section id="numero-de-mach-compresibilidad">
 <h3><span class="section-number">6.4.4. </span>Número de Mach: compresibilidad<a class="headerlink" href="#numero-de-mach-compresibilidad" title="Link to this heading">#</a></h3>
-<div class="amsmath math notranslate nohighlight" id="equation-225e03ae-957e-43cb-947c-0d2215fc4a64">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-225e03ae-957e-43cb-947c-0d2215fc4a64" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d254cea8-2a80-4420-989f-7a834dea7b02">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-d254cea8-2a80-4420-989f-7a834dea7b02" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \mathrm{Ma} = \frac{V}{a}
 \end{equation}\]</div>
 <p>El número de Mach (<span class="math notranslate nohighlight">\(\mathrm{Ma}\)</span>) compara la velocidad del flujo con la velocidad del sonido y marca cuándo la compresibilidad deja de ser despreciable.</p>
@@ -810,12 +810,12 @@ C_D = \phi(\mathrm{Re})
 <td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
 </tr>
 <tr class="row-even"><td><p>Coeficiente de sustentación</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(C_L=\frac{L}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_L=\frac{F_L}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
 <td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Fuerza~de~sustentación}{Fuerza~dinámica}}\)</span></p></td>
 <td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
 </tr>
 <tr class="row-odd"><td><p>Coeficiente de resistencia</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(C_D=\frac{D}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(C_D=\frac{F_D}{\tfrac{1}{2}\rho U^2 A}\)</span></p></td>
 <td class="text-center"><p><span class="math notranslate nohighlight">\(\mathrm{\frac{Arrastre}{Fuerza~dinámica}}\)</span></p></td>
 <td class="text-left"><p>aerodinámica e hidrodinámica</p></td>
 </tr>
@@ -928,7 +928,7 @@ t^* &amp;= \frac{tU}{L}, &amp; \vec{V}^* &amp;= \frac{\vec{V}}{U}, &amp; p^* &am
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \nabla^*\cdot\vec{V}^* &amp;= 0 \\
-\frac{\mathrm{D}\vec{V}^*}{\mathrm{D}t^*} &amp;= -\frac{ 1}{\text{Eu}}\nabla^* p^* + \frac{1}{\text{Fr}^2}\hat{g} + \frac{1}{\mathrm{Re}}\nabla^{*2}\vec{V}^*
+\frac{\mathrm{D}\vec{V}^*}{\mathrm{D}t^*} &amp;= -\text{Eu}\nabla^* p^* + \frac{1}{\text{Fr}^2}\hat{g} + \frac{1}{\mathrm{Re}}\nabla^{*2}\vec{V}^*
 \end{align*}\]</div>
 </li>
 </ul>
@@ -1078,7 +1078,7 @@ de escala de fuerzas (o de masa).</strong></em> Por lo tanto, la semejanza diná
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneidad-dimensional">6.2.2. Homogeneidad dimensional</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-buckingham-pi">6.3. Teorema de Buckingham Pi</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-de-pi-buckingham">6.3. Teorema de Pi Buckingham</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-1-fuerza-de-arrastre">6.3.1. Ejemplo 1: Fuerza de arrastre</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-2-caida-de-presion-en-tuberia">6.3.2. Ejemplo 2: caída de presión en tubería</a></li>
 </ul>

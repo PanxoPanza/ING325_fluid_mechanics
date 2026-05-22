@@ -478,8 +478,8 @@ document.write(`
 <h3><span class="section-number">3.2.2. </span>Formulación general<a class="headerlink" href="#formulacion-general" title="Link to this heading">#</a></h3>
 <p>El <strong>teorema de transporte de Reynolds</strong> establece una relación entre la <strong>variación temporal de una propiedad extensiva del sistema (<span class="math notranslate nohighlight">\(B_\mathrm{sys}\)</span>)</strong> y su respectiva <strong>propiedad intensiva dentro del volumen de control (<span class="math notranslate nohighlight">\(\beta\)</span>)</strong></p>
 <p>En su forma más general, para un <strong>volumen de control móvil y deformable</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5684824b-fe62-43dc-a960-737db6476c2e">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-5684824b-fe62-43dc-a960-737db6476c2e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6f66b282-c387-4cc9-924a-2ada6123db99">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-6f66b282-c387-4cc9-924a-2ada6123db99" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall + \int_\mathrm{VC} \rho\beta\vec{V}_r\cdot\hat{n}dA
 \end{equation}\]</div>
 <p>donde:</p>
@@ -509,32 +509,32 @@ document.write(`
 <ul class="simple">
 <li><p><strong>Propiedades aproximadamente uniformes dentro del volúmen de control</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-c8b4d491-3639-4c65-a108-8d7dba04ea5b">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-c8b4d491-3639-4c65-a108-8d7dba04ea5b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8b90ed29-ab3c-42e0-a2b9-174a799aeb1c">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-8b90ed29-ab3c-42e0-a2b9-174a799aeb1c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}\int_\mathrm{VC} \rho\beta d\forall \approx \frac{d}{dt}(\rho\beta \forall)
 \end{equation}\]</div>
 <ul class="simple">
 <li><p><strong>Valores promedio en la entrada y salida</strong></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-631a215f-7d4c-4695-bb63-54311bbd1526">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-631a215f-7d4c-4695-bb63-54311bbd1526" title="Permalink to this equation">#</a></span>\[\begin{equation}\int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA \approx \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
+<div class="amsmath math notranslate nohighlight" id="equation-f54b6ec2-bfff-4d9f-8671-5abf36311578">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-f54b6ec2-bfff-4d9f-8671-5abf36311578" title="Permalink to this equation">#</a></span>\[\begin{equation}\int_\mathrm{VC} \rho\beta\vec{V}\cdot\hat{n}dA \approx \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(\bar{\beta}\)</span> y <span class="math notranslate nohighlight">\(\overline{\rho}\)</span> representan, respectivamente, el <strong>valor promedio por área de la propiedad intensiva <span class="math notranslate nohighlight">\(\beta\)</span> y de la densidad <span class="math notranslate nohighlight">\(\rho\)</span></strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-05e0b9ba-c5ef-49ca-8a50-64106c96f4d6">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-05e0b9ba-c5ef-49ca-8a50-64106c96f4d6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27b43bcf-e72e-4e31-aa75-ee241e385a37">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-27b43bcf-e72e-4e31-aa75-ee241e385a37" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \bar{\beta} = \frac{1}{A}\int_A \beta dA \quad\quad\quad
 \bar{\rho} = \frac{1}{A}\int_A \rho dA,
 \end{equation}\]</div>
 <p>y <span class="math notranslate nohighlight">\(\overline{V}\)</span> es la <strong>velocidad promedio respecto al área <span class="math notranslate nohighlight">\(A\)</span></strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b67c4dfb-bb7e-4118-a544-bcc4043c9192">
-<span class="eqno">(3.5)<a class="headerlink" href="#equation-b67c4dfb-bb7e-4118-a544-bcc4043c9192" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-799e0ec6-4601-405a-8917-4afc976c64cb">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-799e0ec6-4601-405a-8917-4afc976c64cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \overline{V} = \frac{1}{A}\int_A \vec{V}\cdot\hat{n}dA.
 \end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/average_velocity.png"><img alt="../_images/average_velocity.png" class="align-center" src="../_images/average_velocity.png" style="width: 250px;" />
 </a>
 <p>A partir de estas aproximaciones deducimos la formulación simplificada del teorema de transporte de Reynolds:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d434272-2f0e-43aa-8bf9-43db0d0cbbeb">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-2d434272-2f0e-43aa-8bf9-43db0d0cbbeb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1656f4ea-aa5a-4475-a095-ee2d806ebc10">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-1656f4ea-aa5a-4475-a095-ee2d806ebc10" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(\rho\beta \forall) + \sum_\mathrm{sale}\overline{\rho}\overline{\beta}~\overline{V}A - \sum_\mathrm{entra}\overline{\rho}\overline{\beta}~\overline{V}A
 \end{equation}\]</div>
 </section>
@@ -547,8 +547,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt}m_\mathrm{sys} = 0\]</div>
 <p>Aplicando el teorema de transporte de Reynold con <span class="math notranslate nohighlight">\(B_\mathrm{sys} = m_\mathrm{sys}\)</span> y <span class="math notranslate nohighlight">\(\beta = 1\)</span>, deducimos la ecuación de <strong>conservación de masa para un volúmen de control</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b57cba9d-ecc3-43fd-b7e0-ed27220f46e6">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-b57cba9d-ecc3-43fd-b7e0-ed27220f46e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b82f0d71-82c1-4568-b16b-7325e62a1f41">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-b82f0d71-82c1-4568-b16b-7325e62a1f41" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{dt}\int_\mathrm{VC} \rho d\forall + \int_\mathrm{VC} \rho\vec{V}\cdot\hat{n}dA
 \end{equation}\]</div>
 <p><em>Cualquier cambio en la masa dentro del volúmen de control (<span class="math notranslate nohighlight">\( \frac{d}{dt}\int_\mathrm{VC} \rho d\forall\)</span>) se debe al flujo de masa hacia o desde el volúmen de control (<span class="math notranslate nohighlight">\(\int_\mathrm{VC} \rho\vec{V}\cdot\hat{n}dA\)</span>).</em></p>
@@ -574,8 +574,8 @@ V_2 &gt; V_1
 <section id="caudal-q">
 <h4>Caudal (<span class="math notranslate nohighlight">\(Q\)</span>)<a class="headerlink" href="#caudal-q" title="Link to this heading">#</a></h4>
 <p>Se define como la <strong>tasa de cambio del volúmen de fluido que cruza un área</strong>, matemáticamente:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b51df122-ff5c-4f16-a828-d43b648141a7">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-b51df122-ff5c-4f16-a828-d43b648141a7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5d5e8d7-5d7e-402d-9017-c5a4c150f82a">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-a5d5e8d7-5d7e-402d-9017-c5a4c150f82a" title="Permalink to this equation">#</a></span>\[\begin{align}
 Q &amp;= \int_A \vec{V}\cdot\hat{n}dA&amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
 \\
 Q &amp;=  \overline{V}A &amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad\mathrm{(valores~promedio)}
@@ -584,20 +584,20 @@ Q &amp;=  \overline{V}A &amp;\quad\left(\mathrm{\frac{m^3}{s}}\right) &amp;\quad
 <section id="flujo-masico-dot-m">
 <h4>Flujo másico (<span class="math notranslate nohighlight">\(\dot{m}\)</span>)<a class="headerlink" href="#flujo-masico-dot-m" title="Link to this heading">#</a></h4>
 <p>Se define como la <strong>tasa de cambio de la mása que cruza un área</strong>, matemáticamente:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a90529c2-69b3-4992-a4f8-5a650dfa5af8">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-a90529c2-69b3-4992-a4f8-5a650dfa5af8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ec01edbc-0e4f-40f8-9792-87602f0d16b1">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-ec01edbc-0e4f-40f8-9792-87602f0d16b1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \dot{m} &amp;= \int_A \rho \vec{V}\cdot\hat{n}dA &amp;\quad\left(\mathrm{\frac{kg}{s}}\right) &amp;\quad\mathrm{(fórmula~general)}
 \\
 \dot{m} &amp;= \overline{\rho} \overline{V}A = \rho Q &amp;\quad\left(\mathrm{\frac{kg}{s}}\right) &amp;\quad\mathrm{(valores~promedio)}
 \end{align}\]</div>
 <p>Si aplicamos esto considerando valores promedio, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-56a83c2f-deb1-4836-92e8-853fe634c214">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-56a83c2f-deb1-4836-92e8-853fe634c214" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8906da43-7cfb-4f8c-95ac-f34ba22e0490">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-8906da43-7cfb-4f8c-95ac-f34ba22e0490" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{d t} \rho \forall + \sum_\mathrm{sale}\dot{m} - \sum_\mathrm{entra}\dot{m}
 \end{equation}\]</div>
 <p>En el caso de un fluido incompresible:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9c0dfad-0bf1-4573-a059-98a40439da43">
-<span class="eqno">(3.11)<a class="headerlink" href="#equation-e9c0dfad-0bf1-4573-a059-98a40439da43" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-58a94cbe-eb6e-4826-a0f3-2cdaed8b7cac">
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-58a94cbe-eb6e-4826-a0f3-2cdaed8b7cac" title="Permalink to this equation">#</a></span>\[\begin{equation}
 0 = \frac{d}{d t} \forall + \sum_\mathrm{sale}Q - \sum_\mathrm{entra}Q
 \end{equation}\]</div>
 </section>
@@ -626,8 +626,8 @@ medida desde el centro del agujero, y <span class="math notranslate nohighlight"
 <li><p>Conservación de momento lineal aplicado al sistema <span class="math notranslate nohighlight">\(\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}(m\vec{V})_\mathrm{sys} = \sum\vec{F}_\mathrm{ext}\)</span>.</p></li>
 </ul>
 <p>La <strong>ecuación de conservación de momento lineal para un V.C.</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6bc78ba1-dbdf-471b-b3bc-2e4a645f6d93">
-<span class="eqno">(3.12)<a class="headerlink" href="#equation-6bc78ba1-dbdf-471b-b3bc-2e4a645f6d93" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27847273-e7ef-4364-82e4-68aa418ce12d">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-27847273-e7ef-4364-82e4-68aa418ce12d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{F}_\mathrm{ext} = \frac{d}{dt}\int_\mathrm{VC} \rho\vec{V} d\forall + \int_\mathrm{VC} \rho\vec{V}(\vec{V}_r\cdot\hat{n})dA
 \end{equation}\]</div>
 <p><em>la suma de fuerzas externas aplicadas en un V.C. es igual a la tasa de cambio de momento lineal dentro del V.C. y al balance de momento lineal en la entrada y salida del V.C.</em></p>
@@ -635,8 +635,8 @@ medida desde el centro del agujero, y <span class="math notranslate nohighlight"
 <div><p><strong>Importante.</strong> <span class="math notranslate nohighlight">\(\vec{V}\)</span> es la velocidad absoluta del fluido, es decir, la velocidad del fluido respecto a un marco de referencia fijo (por ejemplo, el suelo).</p>
 </div></blockquote>
 <p>La expresión para valores promedio es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c3b0748-f926-4190-ad10-afc62abdc039">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-6c3b0748-f926-4190-ad10-afc62abdc039" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bddc2f48-ef42-4a86-91d2-161349c50ab6">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-bddc2f48-ef42-4a86-91d2-161349c50ab6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum \vec{F}_\mathrm{ext} = \frac{d}{d t} \rho \vec{V}\forall + \sum_\mathrm{sale}\dot{m}\vec{V} - \sum_\mathrm{entra}\dot{m}\vec{V}
 \end{equation}\]</div>
 </section>
@@ -645,8 +645,8 @@ medida desde el centro del agujero, y <span class="math notranslate nohighlight"
 <p>La expresión anterior es una versión universal de la ecuación de conservación de momentum. Aunque la expresión es siempre efectiva, a veces, es más práctico considerar expresiones explícitas para un volumen de control fijo o móvil en base a la velocidad relativa del fluido respecto a la frontera del volumen de control, <span class="math notranslate nohighlight">\(\vec{V}_r\)</span>. Estas expresiones nacen de un análisis que considera la ecuación de conservación de masa.</p>
 <p><strong>Volumen de control fijo.</strong> La velocidad relativa del fluido respecto a la frontera del volumen de control es igual a la velocidad absoluta del fluido, es decir, <span class="math notranslate nohighlight">\(\vec{V}_r = \vec{V}\)</span>. Por lo tanto, la ecuación de conservación de momento lineal se mantiene</p>
 <p><strong>Volumen de control móvil.</strong> La velocidad relativa del fluido respecto a la frontera del volumen de control es diferente a la velocidad absoluta del fluido. En este caso, la expresión relativa a <span class="math notranslate nohighlight">\(\vec{V}_r\)</span> debe considerar la aceleración del volumen de control, <span class="math notranslate nohighlight">\(\vec{a}_\mathrm{VC}\)</span>, respecto a un marco de referencia inercial.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3eae8318-9136-4e15-84ff-36c35a7383ac">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-3eae8318-9136-4e15-84ff-36c35a7383ac" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c08f7610-71e6-4421-960e-5af772a4962a">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-c08f7610-71e6-4421-960e-5af772a4962a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{F}_\mathrm{ext} - m_\mathrm{VC}\frac{d\vec{V}_\mathrm{VC}}{dt} = \frac{d}{d t} \rho \vec{V}_r\forall + \sum_\mathrm{sale}\dot{m}\vec{V}_r - \sum_\mathrm{entra}\dot{m}\vec{V}_r
 \end{equation} \]</div>
 </section>
@@ -665,13 +665,13 @@ medida desde el centro del agujero, y <span class="math notranslate nohighlight"
 <a class="reference internal image-reference" href="../_images/fuerza_neta_presion.png"><img alt="../_images/fuerza_neta_presion.png" class="align-center" src="../_images/fuerza_neta_presion.png" style="width: 700px;" />
 </a>
 <p>Si la presión tiene un valor uniforme, la resultante es nula. Por ejemplo, en la figura de la izquierda:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77cf3525-dd56-4098-9a77-4bdb12a90919">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-77cf3525-dd56-4098-9a77-4bdb12a90919" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f06078c6-a9a4-4f14-a8d4-cf64b413932d">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-f06078c6-a9a4-4f14-a8d4-cf64b413932d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_p = \int_S p_a (-\hat{n})dA = -p_a\int_S \hat{n}dA = 0
 \end{equation}\]</div>
 <p>Si no, la resultante tomará relevancia en las regiones con diferencia de presiones. Por ejemplo, en el caso de la figura derecha:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa5a8d80-3d89-4f60-bff9-90c7b022cebd">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-fa5a8d80-3d89-4f60-bff9-90c7b022cebd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ed35e29e-f2d4-4d63-a435-361a1cca7621">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-ed35e29e-f2d4-4d63-a435-361a1cca7621" title="Permalink to this equation">#</a></span>\[\begin{equation}
 F_p = \int_S p (-\hat{n})dA = \sum_i p_{i, \mathrm{man}}A_i (-\hat{n}_i)
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(A_i\)</span> y <span class="math notranslate nohighlight">\(\hat{n}_i\)</span> corrseponden, respectivamente, al área y vector normal (apuntando hacia afuera del volumen) de las superficies con presión diferencia de presiones.</p>
@@ -710,8 +710,8 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <li><p>Conservación de momento angular aplicado al sistema <span class="math notranslate nohighlight">\(\frac{d}{dt}B_\mathrm{sys} = \frac{d}{dt}\vec{L}_\mathrm{sys} = \sum\vec{M}_O\)</span>.</p></li>
 </ul>
 <p>La <strong>ecuación de conservación de momento angular para un V.C.</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2747fe2d-6587-4b0d-ad56-4eb792e0474d">
-<span class="eqno">(3.17)<a class="headerlink" href="#equation-2747fe2d-6587-4b0d-ad56-4eb792e0474d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4ce940fa-5b35-4c79-83b0-867acd0d61d5">
+<span class="eqno">(3.17)<a class="headerlink" href="#equation-4ce940fa-5b35-4c79-83b0-867acd0d61d5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum\vec{M}_{O, \mathrm{ext}} = \frac{d}{dt}\int_\mathrm{VC} \rho(\vec{r}\times\vec{V}) d\forall + \int_\mathrm{VC} \rho(\vec{r}\times\vec{V})(\vec{V}_r\cdot\hat{n})dA
 \end{equation}\]</div>
 <p><em>la suma de momentos externos aplicados en un V.C. es igual a la tasa de cambio de momento angular dentro del V.C. y al balance de momento angular en la entrada y salida del V.C.</em></p>
@@ -719,16 +719,16 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <div><p><strong>Importante.</strong> Similar a la ecuación de conservación de momento lineal, <span class="math notranslate nohighlight">\(\vec{r}\times\vec{V}\)</span> representa el momento angular respecto a un eje inercial de referencia (por ejemplo, el suelo).</p>
 </div></blockquote>
 <p>Si aplicamos esto considerando valores promedio, tenemos la siguiente expresión para la ecuación de conservación de masa:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-75d2ee77-46e9-42ec-9fd0-db1a7d602f81">
-<span class="eqno">(3.18)<a class="headerlink" href="#equation-75d2ee77-46e9-42ec-9fd0-db1a7d602f81" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-775c8921-51b4-4f75-9106-08bdfdddef3d">
+<span class="eqno">(3.18)<a class="headerlink" href="#equation-775c8921-51b4-4f75-9106-08bdfdddef3d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sum \vec{M}_{O, \mathrm{ext}} = \frac{d}{d t} \rho\forall (\vec{r} \times \vec{V}) + \sum_\mathrm{sale}\dot{m}(\vec{r} \times \vec{V}) - \sum_\mathrm{entra}\dot{m}(\vec{r} \times \vec{V})
 \end{equation}\]</div>
 </section>
 <section id="torque-externo-neto-vec-m-o">
 <h3><span class="section-number">3.5.2. </span>Torque externo neto <span class="math notranslate nohighlight">\(\vec{M}_O\)</span><a class="headerlink" href="#torque-externo-neto-vec-m-o" title="Link to this heading">#</a></h3>
 <p>Al igual que el caso de momento lineal, el torque externo neto <span class="math notranslate nohighlight">\(\vec{M}_O\)</span> resulta de la acción de las fuerzas externas sobre el sistema, y se puede expresar como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e4dd9c8-c08f-4ab6-a16a-ef6dff9c5a0c">
-<span class="eqno">(3.19)<a class="headerlink" href="#equation-7e4dd9c8-c08f-4ab6-a16a-ef6dff9c5a0c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-68c6861c-3a49-4a98-a024-93fe016b11f5">
+<span class="eqno">(3.19)<a class="headerlink" href="#equation-68c6861c-3a49-4a98-a024-93fe016b11f5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \vec{M}_O = \vec{r}\times \vec{F}_s +  \vec{r}_\mathrm{G} \times m\vec{g} + \vec{T}_\mathrm{eje}
 \end{equation}\]</div>
 <p>donde:</p>
@@ -747,8 +747,8 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <li><p>Fuerzas de superficie uniformes alrededor de la superficie, es decir <span class="math notranslate nohighlight">\(\vec{r}\times \vec{F}_s = 0\)</span></p></li>
 </ul>
 <p>En este caso, la ecuación de conservación de momento angular se simplifica a:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a942b8f-f85b-4fee-8f7c-2131d1507a12">
-<span class="eqno">(3.20)<a class="headerlink" href="#equation-8a942b8f-f85b-4fee-8f7c-2131d1507a12" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2794cff4-b0a1-4bb7-89d6-f9af3be76245">
+<span class="eqno">(3.20)<a class="headerlink" href="#equation-2794cff4-b0a1-4bb7-89d6-f9af3be76245" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \vec{T}_\mathrm{eje} - I\frac{d\omega}{dt}= \sum_\mathrm{sale}\dot{m}(\vec{r} \times \vec{V}) - \sum_\mathrm{entra}\dot{m}(\vec{r} \times \vec{V})
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(I\)</span> es el momento de inercia del rotor respecto al eje de rotación, y <span class="math notranslate nohighlight">\(\omega\)</span> es la velocidad angular del rotor.</p>
@@ -774,8 +774,8 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <section id="id5">
 <h3><span class="section-number">3.6.1. </span>Formulación general<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>A partir del teorema de transporte de Reynolds, y considerando la propiedad intensiva de la energía, <span class="math notranslate nohighlight">\(\tilde{e}\)</span>, definida como la <strong>energía por unidad de masa</strong> (<span class="math notranslate nohighlight">\(\mathrm{kJ/kg}\)</span>, por ejemplo), tenemos que la <strong>ecuación de conservación de energía aplicada a un volúmen de control</strong> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54bf5e98-c35e-4355-968b-112a813ca657">
-<span class="eqno">(3.21)<a class="headerlink" href="#equation-54bf5e98-c35e-4355-968b-112a813ca657" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-81b32952-2d6e-4420-83bf-0137cca183da">
+<span class="eqno">(3.21)<a class="headerlink" href="#equation-81b32952-2d6e-4420-83bf-0137cca183da" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \dot{Q} - \dot{W} = \frac{d}{dt}\int_\mathrm{VC} \rho\tilde{e}d\forall + \int_\mathrm{VC} \rho\tilde{e}\vec{V}\cdot\hat{n}dA,\quad(\mathrm{kW})
 \end{equation}\]</div>
 <p>donde:</p>
@@ -860,8 +860,8 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <section id="ecuacion-de-conservacion-de-energia-mecanica-para-una-linea-de-flujo">
 <h3><span class="section-number">3.6.3. </span>Ecuación de conservación de energía mecánica para una línea de flujo<a class="headerlink" href="#ecuacion-de-conservacion-de-energia-mecanica-para-una-linea-de-flujo" title="Link to this heading">#</a></h3>
 <p>En base a los casos anteriores, y considerando <strong>(1) flujo incompresible y (2) volúmen de control con una única entrada y salida</strong>, tenemos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-206a19f4-ec31-4577-bc9e-dd871935e785">
-<span class="eqno">(3.22)<a class="headerlink" href="#equation-206a19f4-ec31-4577-bc9e-dd871935e785" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bc6d90a4-cf52-4079-b02a-3a72b27d7018">
+<span class="eqno">(3.22)<a class="headerlink" href="#equation-bc6d90a4-cf52-4079-b02a-3a72b27d7018" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{entra} + h_\mathrm{bomba} = \left(\frac{P}{\rho g}+\frac{V^2}{2g}+z\right)_\mathrm{sale} + h_\mathrm{turbina} + h_L,\quad(\mathrm{m})
 \end{equation}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(h_\mathrm{i} = \frac{\dot{W}_\mathrm{i}}{\rho gVA}\)</span>, (<span class="math notranslate nohighlight">\(i=\)</span> <span class="math notranslate nohighlight">\(\mathrm{bomba}\)</span>, <span class="math notranslate nohighlight">\(\mathrm{turbina}\)</span> y <span class="math notranslate nohighlight">\(L\)</span>) es la <strong>altura de presión equivalente</strong> asociada a la energía transferida por una bomba, turbina o viscosidad, respectivamente.</p>
@@ -873,8 +873,8 @@ uno hacia arriba y otro hacia abajo.</em></p>
 <section id="ecuacion-de-bernoulli">
 <h3><span class="section-number">3.6.4. </span>Ecuación de Bernoulli<a class="headerlink" href="#ecuacion-de-bernoulli" title="Link to this heading">#</a></h3>
 <p>Si aplicamos la ecuación anterior en un tramo de un ducto, donde <span class="math notranslate nohighlight">\(h_\mathrm{bomba} = h_\mathrm{turbina} = 0\)</span>, y asumimos <strong>fluido ideal, es decir, sin fricciones por viscosidad (<span class="math notranslate nohighlight">\(h_L = 0\)</span>)</strong>, tenemos la <strong>ecuación de Bernoulli.</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b74afb3b-34fc-4d71-b5af-f7496db40b01">
-<span class="eqno">(3.23)<a class="headerlink" href="#equation-b74afb3b-34fc-4d71-b5af-f7496db40b01" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-97ebdf33-36d8-4939-b85a-768b8fcec905">
+<span class="eqno">(3.23)<a class="headerlink" href="#equation-97ebdf33-36d8-4939-b85a-768b8fcec905" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{sale} = \left(\frac{P}{\rho}+\frac{V^2}{2}+gz\right)_\mathrm{entra}
 \end{equation}\]</div>
 <p>Esta ecuación, aunque tiene poco uso práctico, permite comprender en términos simples la conservación de energía en un fluido producto de los cambios de presión, velocidad y elevación.</p>
