@@ -30,15 +30,39 @@ div.inner_cell>div.text_cell_render.rendered_html h4{
     font-size: 35px;
 }
 
-div.inner_cell>div.text_cell_render.rendered_html img{
-    max-width: 90%;
-    max-height: 100%;
+body.rise-enabled .reveal .slides section img,
+body.rise-enabled .text_cell_render img,
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html img {
+    display: block;
+    margin: 0 auto;
     height: auto;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:0px;
-    margin-bottom:0px;
+    max-width: 88vw !important;
+    max-height: 72vh !important;
+    object-fit: contain;
+}
+
+/* Scale images that define HTML width (e.g. width="400px") to match larger RISE typography. */
+body.rise-enabled {
+    --rise-image-scale: 1.6;
+    --rise-caption-scale: 1.4;
+}
+
+body.rise-enabled .reveal .slides section img[width],
+body.rise-enabled .text_cell_render img[width],
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html img[width] {
+    /* Use zoom instead of transform so the image keeps layout space and does not overlap text. */
+    zoom: var(--rise-image-scale);
+    max-width: calc(88vw / var(--rise-image-scale)) !important;
+    max-height: calc(72vh / var(--rise-image-scale)) !important;
+}
+
+/* Scale figure captions written as HTML, e.g. <center><small>...</small></center>. */
+body.rise-enabled .reveal .slides section center small,
+body.rise-enabled .text_cell_render center small,
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html center small {
+    display: inline-block;
+    zoom: var(--rise-caption-scale);
+    line-height: 1.25;
 }
 
 .reveal blockquote {
